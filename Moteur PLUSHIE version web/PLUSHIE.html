@@ -10,97 +10,130 @@
     </style>
 </head>
 <body>
-    
-        <h1>PLUSHIE Version Javascript </h1>
-    
-        <div id="zones">
-            <div class="toolbar">
 
-                <button onclick="executer()">Exécuter</button>
+    <div class="toolbar">
+        <h1 style="flex-direction:column">
+            PLUSHIE Version Javascript
+            <button class="tooltip" onclick="AfficherDémos()">Démos<span class="tooltiptext">Affiche les démos</span></button>
+            <button class="démo" onclick="charger('Éveil')" style="display: none;">Éveil</button>
+            <button class="démo" onclick="charger('Étoiles')" style="display:none;">Étoiles</button>
 
 
+            <label style="font-size:0.5em">
+                <input type="checkbox" id="cachertooltips" onclick="Cacher()">
+                Cacher les infobulles
+            </label>
+        </h1>
+    </div>
+    <div id="zones">
+        <div class="toolbar">
+
+            <button class="tooltip" onclick="executer()">Exécuter<span class="tooltiptext">Exécute le code texte de la boite d'entrée</span></button>
+
+
+            <span class="tooltip">
                 <label class="fileButton">
                     Charger code
                     <input type="file"
                            id="chargeCode"
                            accept=".txt">
 
-                </label>
+                </label><span class="tooltiptext" style="margin-left:-300px;width:500px;margin-top:25px">Charge un fichier .txt depuis votre disque dur</span>
+            </span>
 
-                <button onclick="RAZ()">Remise à Zéro</button>
+            <button class="tooltip" onclick="RAZ()">Remise à Zéro<span class="tooltiptext">Efface tout pour réinitialiser</span></button>
+        </div>
+        <div class="toolbar">
+            <button class="tooltip" onclick="AfficherExpert()">⚠ experts ⚠ <span class="tooltiptext">Affiche les boutons expert</span></button>
+            <span class="avancé" style="display:none;">
+                <span class="tooltip">
+                    <label class="fileButton">
+                        Charger mémoire
+                        <input type="file"
+                               id="chargeMemoire"
+                               accept=".mem">
+
+                    </label><span class="tooltiptext">Charge un fichier mémoire.mem depuis votre disque dur</span>
+                </span>
+                <span class="avancé" style="display:none;">
+                    <button class="tooltip" onclick="SauverMemoire()">
+                        💾 Sauvegarder mémoire
+                        <span class="tooltiptext">Télécharge le fichier mémoire actuel sur vore disque dur</span>
+                    </button>
+                </span>
+
+            </span>
+            <span class="tooltip">
+                <a href="../index.html" title="Retour à la page d'accueil" ><img class="logo" src="../Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+                <span class="tooltiptext"  style="margin-left: 500px; top: 100px">Retour à la page d'accueil</span>
+            </span>
+
+        </div>
+    </div>
+    <div id="zones">
+        <div class="panel-title">
+            Entrée Code
+
+
+            <button class="tooltip" onclick="effacerEntree()">
+                Effacer entrée
+                <p class="tooltiptext">Efface juste le contenu de la boite d'entrée</p>
+            </button>
+
+            <label>
+                <input type="checkbox" id="exécutersurentrée">
+                Exécuter sur Entrée
+                (Ctrl + Entrée fonctionne toujours)
+            </label>
+            <button class="tooltip" onclick="Initialiser()">
+                initialiser
+                <p class="tooltiptext">Initialise PLUSHIE avec le fichier ini.txt</p>
+            </button>
+
+            <textarea id="input" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off"></textarea>
+        </div>
+        <div class="panel-title">
+            Sortie
+            <button class="tooltip" onclick="effacerSortie()">
+                Effacer sortie
+                <p class="tooltiptext">Efface juste le contenu de la boite de sortie</p>
+            </button>
+
+
+            <div id="output"></div>
+
+            <div class="status" id="status">
+                <i>Prêt</i>
             </div>
+
             <div class="toolbar">
-                <label class="fileButton">
-                    Charger mémoire
-                    <input type="file"
-                           id="chargeMemoire"
-                           accept=".mem">
 
-                </label>
-                <button onclick="SauverMemoire()" style="display:none;">
-                    💾 Sauvegarder mémoire
+                Mémoire
+
+                <button class="tooltip" onclick="afficherMemoire()">
+                    Voir mémoire
+                    <p class="tooltiptext">Affiche le contenu de la mémoire</p>
                 </button>
-                <a href="../index.html" title="Retour au menu principal"><img class="logo" src="../Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+
+                <button class="tooltip" onclick="effacerMemoire()">
+                    Effacer
+                    <p class="tooltiptext">Efface le contenu de la boite d'affichage de la mémoire, pas la mémoire</p>
+                </button>
+                <button class="tooltip" onclick="étendreMemoire()">
+                    + Etendre zone mémoire
+                    <p class="tooltiptext">Augmente la taille de la boite d'affichage de la mémoire</p>
+                </button>
+                <button class="tooltip" onclick="réduireMemoire()">
+                    - réduire zone mémoire
+                    <p class="tooltiptext">Remet la boite d'affichage de la mémoire à sa taille initiale</p>
+                </button>
+                <div id="memoire"></div>
+
             </div>
+
         </div>
-        <div id="zones">
-            <div class="panel-title">
-                Entrée Code
 
-
-                <button onclick="effacerEntree()">
-                    Effacer entrée
-                </button>
-                
-                <label>
-                    <input type="checkbox" id="exécutersurentrée">
-                    Exécuter sur Entrée 
-                    (Ctrl + Entrée fonctionne toujours)
-                </label>
-                <button onclick="initialiser()">
-                    initialiser
-                </button>
-           
-                <textarea id="input" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off"></textarea>
-            </div>
-            <div class="panel-title">
-                Sortie
-                <button onclick="effacerSortie()">
-                    Effacer sortie
-
-                </button>
-                
-
-                <div id="output"></div>
-
-                <div class="status" id="status">
-                    <i>Prêt</i>
-                </div>
-
-                <div class="toolbar">
-                    <div class="panel-title">
-                        Mémoire
-
-                        <button onclick="afficherMemoire()">
-                            Voir mémoire
-                        </button>
-
-                        <button onclick="effacerMemoire()">
-                            Effacer mémoire
-                        </button>
-                        <button onclick="étendreMemoire()">
-                            Etendre zone mémoire
-                        </button>
-                        <button onclick="réduireMemoire()">
-                            réduire zone mémoire
-                        </button>
-                        <div id="memoire"></div>
-                    </div>
-                </div>
-               
-            </div>
-            
-        </div>
+    </div>
 
 </body>
 </html>

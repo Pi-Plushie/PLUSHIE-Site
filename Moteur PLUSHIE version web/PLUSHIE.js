@@ -30,7 +30,7 @@ let executionInterrompue = false;       //
 let texte = document.getElementById("input");
 let Fichiercode = [];                   // pas utilisé
 let ecranoutput = "";
-let Numérocaractère = 0;
+let Numérocaractère = 0;                // mise au début du fichier texte
 let Timer = 0                           // Pour mesurer la performance
 
 let running = false;                    // contrôle de l'exécution par javascript pour éviter deux runs en //
@@ -47,7 +47,7 @@ window.onload = async function () {
     try {
         await ChargerMémoirededémarrage();
 
-        setStatus("Bootstrap plusbase.mem chargé:" + prochaineAdresseMemoire + " cellules");
+        setStatus("Bootstrap Plusbase.mem chargé:" + prochaineAdresseMemoire + " cellules");
     }
     catch (e) {
         console.error(e);
@@ -60,7 +60,7 @@ window.onload = async function () {
 // CHARGER PLUSBASE.MEM |
 // =====================|
 async function ChargerMémoirededémarrage() {
-    const response = await fetch("plusbase.mem");
+    const response = await fetch("Plusbase.mem");
 
     if (!response.ok) {
         throw new Error("Impossible de charger plusbase.mem");
@@ -204,11 +204,20 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-// ============|
-// INITIALISER |                              charger et exécuter le fichier ini.txt
-//=============|
-async function initialiser() {
-    const response = await fetch("ini.txt");
+
+// ===========================|
+// INITIALISER                |                              charger et exécuter le fichier ini.txt
+//============================|
+function Initialiser() {
+    RAZ();
+    charger("ini")
+    }
+
+// ===========================|
+// CHARGER UN FICHIER DE DEMO |                              charger et exécuter lun fichier de démo
+//============================|
+async function charger(fichier) {
+    const response = await fetch( fichier + ".txt" );
 
     if (!response.ok) {
         throw new Error("Fichier ini introuvable");
@@ -493,6 +502,59 @@ function afficherMemoire() {
 
     setStatus("Mémoire affichée : " + i + " cellules");
 }
+// ============================================|
+// CACHER LES INFOBULLES                       |
+// ============================================|
+
+function Cacher() {
+   
+    let infobullescachées = document.getElementById("cachertooltips").checked;
+
+    if (infobullescachées) {
+
+        let buttons = document.querySelectorAll(".tooltip");
+
+        buttons.forEach(btn => {
+          
+            btn.className = "notooltip";
+        });
+    }
+    else {
+      
+        let buttons = document.querySelectorAll(".notooltip");
+
+        buttons.forEach(btn => {
+            btn.className = "tooltip";
+        });
+    }
+}
+// ============================================|
+// AFFICHER LES BOUTONS DE Démo web            |
+// ============================================|
+
+function AfficherDémos() {
+    let buttons = document.querySelectorAll(".démo");
+    
+    buttons.forEach(btn => {
+        if (btn.style.display === "none") btn.style.display = "initial"; else btn.style.display = "none"
+
+    });
+
+}
+// ============================================|
+// AFFICHER LES BOUTONS avancés                |
+// ============================================|
+
+function AfficherExpert() {
+    let buttons = document.querySelectorAll(".avancé");
+
+    buttons.forEach(btn => {
+        if (btn.style.display === "none") btn.style.display = "initial"; else btn.style.display = "none"
+       
+    });
+
+}
+
 // ==============================================|
 // SAUVEGARDER MEMOIRE (utilitaire niveau avancé)|
 // ==============================================|

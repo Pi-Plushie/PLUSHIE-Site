@@ -78,8 +78,10 @@ textarea {
 }
 #toolbar {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
+    text-align: right
 }
 button {
     background: linear-gradient( 145deg, #2b3150, #1a1f33 );
@@ -138,5 +140,27 @@ button {
     color: #db7717;
     margin-bottom: 10px;
     font-style:italic;
+}
+.tooltip {
+    
+}
+
+.tooltiptext {
+    visibility: hidden; /* Hidden by default */
+    width: 400px;
+    margin-top: 15px;
+    margin-left: -50px;
+    background-color: none;
+    color: #86efac;
+    text-align: left;
+    padding: 10px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1; /* Ensure tooltip is displayed above content */
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 

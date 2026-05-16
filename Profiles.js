@@ -115,7 +115,7 @@ function applyProfile(profile) {
         math: "PLUSHIE est rigoureux et simple, proche de la génèse des mathématiques. Il permet de construire des concepts précis à partir de rien",
         hacker: "PLUSHIE est une expérience radicale qui casse les bonnes pratiques de programmation : il ne possède pas de syntaxe, pas de type de variables, le code peut se modifier lui-même en temps réel. Envie d'expérimenter ?",
         geek: "PLUSHIE est volontairement minimaliste à l'extrême. Son instruction unique et sa capacité à s'auto modifier permettent l'émergence de comportements inattendus. Il est fourni avec une interface afin de pouvoir explorer ses possibilités",
-        philo: "PLUSHIE cherche à redéfinir les fondements du langage, qui est naturellement auto-référencé, et à explorer ce qui fait que le tout est plus que la somme de ses parties. Sa nature même force à se poser des questions sur la nature profonde du monde",
+        philo: "PLUSHIE cherche à redéfinir les fondements du langage, qui est naturellement auto-référencé, et à explorer ce qui fait que le tout est plus que la somme de ses parties. Son existence seule force à se poser des questions sur la nature profonde du monde",
         poete: "PLUSHIE est plus qu'un langage informatique. Il pose des questions profondes sur la nature même de notre univers. Laissez-vous entraîner dans cette expérience.",
     }
     
