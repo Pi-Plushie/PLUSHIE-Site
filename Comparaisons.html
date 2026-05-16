@@ -7,6 +7,11 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="profiles.js" defer></script>
+    <style>
+        h2 {
+            font-size: 1em;
+        }
+    </style>
 </head>
 <p id="dynamic-text">
 
@@ -30,22 +35,12 @@
         <h1>PLUSHIE et tous ses amis</h1>
 
         <div class="subtitle">Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</div>
-        <div> <h1>Comparaison de PLUSHIE avec les autres langages et modèles informatiques</h1></div>
+        <div> <h2>Comparaison de PLUSHIE avec les autres langages et modèles informatiques</h2></div>
     </header>
-
 
     <div class="container">
 
         <div class="section">
-
-
-
-
-
-
-
-
-
 
             <p class="intro">
                 PLUSHIE fait partie de la grande famille des langages informatiques et partage des points communs avec ce qui existe déjà.
@@ -68,10 +63,12 @@
 
         <!-- Comparaison générale -->
 
-        <div class="comparison-block">
-            <div class="section">
-                <h2>Vue d’ensemble</h2>
 
+        <div class="section">
+            <details>
+                <summary>
+                    <h2>Vue d’ensemble</h2>
+                </summary>
                 <table>
                     <tr>
                         <th>Aspect</th>
@@ -126,68 +123,72 @@
                     </tr>
 
                 </table>
-            </div>
-        </div>
+            </details>
 
 
-        <!-- Assembleur -->
 
 
-        <div class="section">
-            <h2>PLUSHIE et l’assembleur</h2>
-
-            <p>
-                L’assembleur est proche du matériel.
-                Il expose explicitement :
-            </p>
-
-            <ul>
-                <li>les registres ;</li>
-                <li>la mémoire ;</li>
-                <li>les adresses ;</li>
-                <li>les instructions processeur.</li>
-            </ul>
-
-            <p>
-                PLUSHIE partage avec l’assembleur :
-            </p>
-
-            <ul>
-                <li>une proximité conceptuelle avec les structures mémoire ;</li>
-                <li>une vision explicite des liens ;</li>
-                <li>une faible abstraction initiale.</li>
-            </ul>
-
-            <p>
-                Mais contrairement à l’assembleur,
-                PLUSHIE ne cherche pas à représenter une machine réelle et ne multiplie pas les instructions
-            </p>
-
-            <p>
-                Il explore plutôt un univers computationnel autonome,
-                homogène et potentiellement émergent.
-            </p>
-
-        </div>
+            <!-- Assembleur -->
 
 
-        <!-- Langages modernes -->
 
-        <div class="comparison-block">
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et l’assembleur</h2>
+                </summary>
+                <p>
+                    L’assembleur est proche du matériel.
+                    Il expose explicitement :
+                </p>
 
-            <div class="section">
-                <h2>PLUSHIE et les langages modernes (Python, JavaScript, C#, Java…)</h2>
+                <ul>
+                    <li>les registres.</li>
+                    <li>la mémoire.</li>
+                    <li>les adresses.</li>
+                    <li>les instructions processeur.</li>
+                </ul>
 
+                <p>
+                    PLUSHIE partage avec l’assembleur :
+                </p>
+
+                <ul>
+                    <li>une proximité conceptuelle avec les structures mémoire.</li>
+                    <li>une vision explicite des liens.</li>
+                    <li>une faible abstraction initiale.</li>
+                </ul>
+
+                <p>
+                    Mais contrairement à l’assembleur,
+                    PLUSHIE ne cherche pas à représenter une machine réelle et ne multiplie pas les instructions
+                </p>
+
+                <p>
+                    Il explore plutôt un univers computationnel autonome,
+                    homogène et potentiellement émergent.
+                </p>
+            </details>
+
+
+
+            <!-- Langages modernes -->
+
+
+
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et les langages modernes (Python, JavaScript, C#, Java…)</h2>
+                </summary>
                 <p>
                     Les langages modernes privilégient généralement :
                 </p>
 
                 <ul>
-                    <li>la lisibilité ;</li>
-                    <li>la sécurité ;</li>
-                    <li>la productivité ;</li>
-                    <li>la stabilité ;</li>
-                    <li>les bibliothèques ;</li>
+                    <li>la lisibilité.</li>
+                    <li>la sécurité.</li>
+                    <li>la productivité.</li>
+                    <li>la stabilité.</li>
+                    <li>les bibliothèques.</li>
                     <li>les outils industriels.</li>
                 </ul>
 
@@ -196,27 +197,27 @@
                 </p>
 
                 <ul>
-                    <li>les structures sont minimales ;</li>
-                    <li>la frontière entre programme et données est floue ;</li>
-                    <li>la stabilité n’est pas garantie ;</li>
-                    <li>le comportement peut évoluer dynamiquement ;</li>
+                    <li>les structures sont minimales.</li>
+                    <li>la frontière entre programme et données est floue.</li>
+                    <li>la stabilité n’est pas garantie.</li>
+                    <li>le comportement peut évoluer dynamiquement.</li>
                     <li>les mécanismes émergents sont volontairement explorés.</li>
                 </ul>
 
                 <div class="warning">
                     PLUSHIE n’est actuellement pas conçu comme un langage de production généraliste.
                 </div>
+            </details>
 
-            </div>
-        </div>
 
-        <!-- Lisp -->
 
-        <div class="comparison-block">
+            <!-- Lisp -->
 
-            <div class="section">
-                <h2>PLUSHIE et Lisp</h2>
 
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et Lisp</h2>
+                </summary>
                 <p>
                     Lisp est probablement l’un des langages historiquement les plus proches de l’esprit de PLUSHIE.
                 </p>
@@ -226,9 +227,9 @@
                 </p>
 
                 <ul>
-                    <li>importance des listes chaînées ;</li>
-                    <li>code manipulable comme donnée ;</li>
-                    <li>homogénéité structurelle ;</li>
+                    <li>importance des listes chaînées.</li>
+                    <li>code manipulable comme donnée.</li>
+                    <li>homogénéité structurelle.</li>
                     <li>forte réflexivité.</li>
                 </ul>
 
@@ -237,33 +238,35 @@
                 </p>
 
                 <ul>
-                    <li>PLUSHIE pousse plus loin le minimalisme ;</li>
-                    <li>PLUSHIE n'a pas de séparateur prédéfini (pas de parenthèses)</li>
-                    <li>PLUSHIE n'a pas une structure synatxique rigide</li>
-                    <li>la structure mémoire y est plus explicite ;</li>
-                    <li>l’auto-modification y est plus centrale ;</li>
+                    <li>PLUSHIE pousse plus loin le minimalisme.</li>
+                    <li>PLUSHIE n'a pas de séparateur prédéfini (pas de parenthèses).</li>
+                    <li>PLUSHIE n'a pas une structure syntaxique rigide.</li>
+                    <li>la structure mémoire y est plus explicite.</li>
+                    <li>l’auto-modification y est plus centrale.</li>
                     <li>la notion d’émergence y est davantage explorée.</li>
                 </ul>
+            </details>
 
-            </div>
-        </div>
 
-        <!-- Forth -->
 
-        <div class="comparison-block">
+            <!-- Forth -->
 
-            <div class="section">
-                <h2>PLUSHIE et Forth</h2>
 
+
+
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et Forth</h2>
+                </summary>
                 <p>
                     Comme Forth,
                     PLUSHIE favorise :
                 </p>
 
                 <ul>
-                    <li>des primitives minimales ;</li>
-                    <li>la composition ;</li>
-                    <li>l’extension progressive du langage ;</li>
+                    <li>des primitives minimales.</li>
+                    <li>la composition.</li>
+                    <li>l’extension progressive du langage.</li>
                     <li>une forte proximité avec les mécanismes internes.</li>
                     ... et il peut manipuler des piles
                 </ul>
@@ -273,41 +276,44 @@
                     PLUSHIE reste plus homogène structurellement
                     et davantage orienté vers l’auto-transformation du système lui-même.
                 </p>
+            </details>
 
-            </div>
-        </div>
-        <!-- Machines à instructions uniques -->
 
-        <div class="comparison-block">
+            <!-- Machines à instructions uniques -->
 
-            <div class="section">
-                <h2>PLUSHIE et les machines à instructions uniques comme subleq</h2>
 
+
+
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et les machines à instructions uniques comme subleq</h2>
+                </summary>
                 <p>
                     Comme elles,
                     PLUSHIE ne possède qu'une instruction
                     <i><p style="font-size:0.7em">(en vrai elles en ont deux, <a href="Questions.html">comme PLUSHIE)</a></p></i>
                 </p>
-                <p> Mais PLUSHIE est </p>
+                <p> Mais PLUSHIE </p>
                 <ul>
-                    <li>plus lisible;</li>
-                    <li>fondé sur les mots plus que sur les bits;</li>
-                    <li>étend son langage et apprend</li>
-                    <li>pas de syntaxe figée</li>
+                    <li>est plus lisible.</li>
+                    <li>se fonde sur les mots plus que sur les bits.</li>
+                    <li>étend son langage et apprend.</li>
+                    <li>n'a pas de syntaxe figée.</li>
                 </ul>
+            </details>
 
-            </div>
-        </div>
-        <!-- Langages ésotériques -->
 
-        <div class="comparison-block">
+            <!-- Langages ésotériques -->
 
-            <div class="section">
-                <h2>PLUSHIE et les langages ésotériques comme brainfuck</h2>
 
+
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et les langages ésotériques comme brainfuck</h2>
+                </summary>
                 <p>
                     Comme eux PLUSHIE cherche un minimalisme extrême et est une approche expérimentale.
-                    Comme eux PLUSHIE peut utiliser des symboles incompréhensibles si l'utilisateur le souhaite.'
+                    Comme eux PLUSHIE peut utiliser des symboles incompréhensibles si l'utilisateur le souhaite.
 
                 </p>
                 <p> Mais PLUSHIE est </p>
@@ -316,24 +322,24 @@
                     <li>étend son langage et apprend</li>
                     <li>n'a pas de syntaxe figée</li>
                 </ul>
+            </details>
 
-            </div>
-        </div>
-        <!-- Programmation fonctionnelle -->
 
-        <div class="comparison-block">
+            <!-- Programmation fonctionnelle -->
 
-            <div class="section">
-                <h2>PLUSHIE et la programmation fonctionnelle</h2>
 
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et la programmation fonctionnelle</h2>
+                </summary>
                 <p>
                     Les langages fonctionnels privilégient généralement :
                 </p>
 
                 <ul>
-                    <li>l’absence d’effets de bord ;</li>
-                    <li>l’immutabilité ;</li>
-                    <li>la pureté ;</li>
+                    <li>l’absence d’effets de bord.</li>
+                    <li>l’immutabilité.</li>
+                    <li>la pureté.</li>
                     <li>la démonstration formelle.</li>
                 </ul>
 
@@ -343,22 +349,21 @@
 
                 <ul>
                     <li>la stabilité n’est pas l’objectif principal.</li>
-                    <li>les structures peuvent muter ;</li>
-                    <li>l’évolution dynamique est encouragée ;</li>
+                    <li>les structures peuvent muter.</li>
+                    <li>l’évolution dynamique est encouragée.</li>
 
                 </ul>
+            </details>
 
-            </div>
-        </div>
-        <!-- systèmes d'apprentissage symboliques' -->
 
-        <div class="comparison-block">
+            <!-- systèmes d'apprentissage symboliques' -->
 
-            <div class="section">
-                <h2>PLUSHIE et les systèmes d'apprentissage symboliques'</h2>
-
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et les systèmes d'apprentissage symboliques</h2>
+                </summary>
                 <p>
-                   comme eux, PLUSHIE apprend ses symboles
+                    comme eux, PLUSHIE apprend ses symboles
                 </p>
 
                 <p>
@@ -368,18 +373,18 @@
                 <ul>
                     <li>Ils sont rarements couplés à une machine de calcul aussi minimale.</li>
                     <li>Les phases d'apprentissage et d'exécution sont séparées</li>
-            
+                    <li>Ses symboles sont des expressions usuelles</li>
                 </ul>
+            </details>
 
-            </div>
-        </div>
-        <!-- IA -->
 
-        <div class="comparison-block">
+            <!-- IA -->
 
-            <div class="section">
-                <h2>PLUSHIE et l’intelligence artificielle</h2>
 
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et l’intelligence artificielle</h2>
+                </summary>
                 <p>
                     PLUSHIE <a href="ce qu'est Plushie.html">n'est pas </a> un système d’intelligence artificielle.
                 </p>
@@ -390,11 +395,11 @@
                 </p>
 
                 <ul>
-                    <li>adaptation dynamique ;</li>
-                    <li>évolution interne ;</li>
-                    <li>réécriture ;</li>
-                    <li>comportements émergents ;</li>
-                    <li>méta-programmation ;</li>
+                    <li>adaptation dynamique.</li>
+                    <li>évolution interne.</li>
+                    <li>réécriture.</li>
+                    <li>comportements émergents.</li>
+                    <li>méta-programmation.</li>
                     <li>structures réflexives.</li>
                 </ul>
 
@@ -402,25 +407,23 @@
                     Ces propriétés peuvent évoquer certains systèmes adaptatifs,
                     mais PLUSHIE reste avant tout un modèle computationnel expérimental.
                 </p>
+            </details>
 
-            </div>
-        </div>
 
-        <!-- Vie artificielle -->
+            <!-- Vie artificielle -->
 
-        <div class="comparison-block">
-
-            <div class="section">
-                <h2>PLUSHIE et la vie artificielle</h2>
-
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et la vie artificielle</h2>
+                </summary>
                 <p>
                     Certains comportements observés dans PLUSHIE peuvent rappeler :
                 </p>
 
                 <ul>
-                    <li>des systèmes auto-organisés ;</li>
-                    <li>des dynamiques cellulaires ;</li>
-                    <li>des phénomènes émergents ;</li>
+                    <li>des systèmes auto-organisés.</li>
+                    <li>des dynamiques cellulaires.</li>
+                    <li>des phénomènes émergents.</li>
                     <li>des structures évolutives.</li>
                 </ul>
 
@@ -428,14 +431,12 @@
                     L’objectif n’est cependant pas de simuler la biologie,
                     mais d’explorer les conséquences computationnelles d’un minimalisme radical.
                 </p>
+            </details>
 
-            </div>
-        </div>
-        <div class="comparison-block">
-
-            <div class="section">
-                <h2>PLUSHIE et les automates cellulaires</h2>
-
+            <details>
+                <summary>
+                    <h2>⊚ PLUSHIE et les automates cellulaires</h2>
+                </summary>
                 <p>
 
                 </p>
@@ -448,102 +449,102 @@
                 <p>
 
                 </p>
-
+            </details>
             </div>
-        </div>
 
 
-
-        <!-- Philosophie -->
-
-        <div class="comparison-block">
-
+            <!-- Philosophie -->
             <div class="section">
-                <h2>Une philosophie différente</h2>
-
-                <p>
-                    La plupart des langages modernes cherchent à réduire :
-                </p>
-
-                <ul>
-                    <li>l’ambiguïté ;</li>
-                    <li>l’instabilité ;</li>
-                    <li>la mutation ;</li>
-                    <li>l’imprévisibilité.</li>
-                </ul>
-
-                <p>
-                    PLUSHIE explore au contraire ce qui peut émerger
-                    lorsque certaines de ces contraintes sont volontairement relâchées.
-                </p>
-
                 <details>
-                    <summary>Voir une formulation plus philosophique</summary>
-
+                    <summary>
+                        <h2>Une philosophie différente</h2>
+                    </summary>
                     <p>
-                        Là où les langages classiques cherchent souvent à contrôler,
-                        figer et sécuriser le comportement computationnel,
-                        PLUSHIE explore la possibilité de systèmes capables de se transformer eux-mêmes,
-                        de réécrire leurs propres structures,
-                        et de faire émerger des comportements inattendus à partir d’un noyau extrêmement simple.
+                        La plupart des langages modernes cherchent à réduire :
                     </p>
 
+                    <ul>
+                        <li>l’ambiguïté.</li>
+                        <li>l’instabilité.</li>
+                        <li>la mutation.</li>
+                        <li>l’imprévisibilité.</li>
+                    </ul>
+
+                    <p>
+                        PLUSHIE explore au contraire ce qui peut émerger
+                        lorsque certaines de ces contraintes sont volontairement relâchées.
+                    </p>
+
+                    <details>
+                        <summary>Voir une formulation plus philosophique</summary>
+
+                        <p>
+                            Là où les langages classiques cherchent souvent à contrôler,
+                            figer et sécuriser le comportement computationnel,
+                            PLUSHIE explore la possibilité de systèmes capables de se transformer eux-mêmes,
+                            de réécrire leurs propres structures,
+                            et de faire émerger des comportements inattendus à partir d’un noyau extrêmement simple.
+                        </p>
+
+                    </details>
                 </details>
-
             </div>
-        </div>
 
-        <!-- Conclusion -->
 
-        <div class="comparison-block">
+            <!-- Conclusion -->
+
+
 
             <div class="section">
-                <h2>Conclusion</h2>
-                <p>
-                    PLUSHIE réunit plusieurs approches:
+                <details>
+                    <summary>
+                        <h2>Conclusion</h2>
+                    </summary>
+                    <p>
+                        PLUSHIE réunit plusieurs approches:
+                        <ul>
+                            <li>Minimalisme extrême</li>
+                            <li>Réécriture structurelle</li>
+                            <li>Réflexivité maximale</li>
+                            <li>Apprentissage intégré</li>
+                            <li>Lisibilité humaine</li>
+                        </ul>
+                        C'est en cela qu'il est unique: PLUSHIE explore une approche minimaliste où le langage s’apprend et devient exécutable à mesure qu’il est lu.
+
+
+                    </p>
+
+
+                    <p>
+                        <a href="ce qu'est PLUSHIE.html">PLUSHIE est :</a>
+                    </p>
+
                     <ul>
-                        <li>Minimalisme extrême</li>
-                        <li>Réécriture structurelle</li>
-                        <li>Réflexivité maximale</li>
-                        <li>Apprentissage intégré</li>
-                        <li>Lisibilité humaine</li>
+                        <li>une expérimentation.</li>
+                        <li>un terrain de recherche.</li>
+                        <li>un modèle computationnel atypique.</li>
+                        <li>une exploration du minimalisme et de l’émergence.</li>
                     </ul>
-                    C'est en cela qu'il est unique: PLUSHIE explore une approche minimaliste où le langage s’apprend et devient exécutable à mesure qu’il est lu.
 
-
-                </p>
-                <p>
-                    PLUSHIE n’a pas vocation à remplacer les langages existants.
-                </p>
-
-                <p>
-                    Il constitue plutôt :
-                </p>
-
-                <ul>
-                    <li>une expérimentation ;</li>
-                    <li>un terrain de recherche ;</li>
-                    <li>un modèle computationnel atypique ;</li>
-                    <li>une exploration du minimalisme et de l’émergence.</li>
-                </ul>
-
-                <p>
-                    Son intérêt réside peut-être moins dans les réponses qu’il apporte
-                    que dans les questions qu’il soulève.
-                </p>
-
+                    <p>
+                        Son intérêt réside peut-être moins dans les réponses qu’il apporte
+                        que dans les questions qu’il soulève.
+                    </p>
+                    <a href="Aller plus loin.html"> Aller plus loin </a>
+                </details>
             </div>
-        </div>
 
 
 
 
-        <footer>
-            <div class="barredeliens">
-                <a href="index.html">← Retour à l’accueil</a>
-                PLUSHIE — expérimentation en cours
-            </div>
-        </footer>
+
+            <footer>
+                <div class="barredeliens">
+                    <a href="index.html">← Retour à l’accueil</a>
+                    PLUSHIE — expérimentation en cours
+                </div>
+                <a href="ce qu'est PLUSHIE.html">ce qu'est / n'est pas PLUSHIE</a>
+            </footer>
 
 </body>
 </html>
