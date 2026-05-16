@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Et l'étoile apparait</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #020617;
+            color: #38bdf8;
+            font-family: monospace;
+            padding: 40px;
+        }
+
+        h1 {
+            color: white;
+        }
+        #Zblurg {
+            opacity: 0;
+            transition: opacity 2s;
+            text-align: center;
+        }
+        #WTF {
+            opacity: 0;
+            transition: opacity 8s;
+            text-align: center;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="boutonsprofil">
+        <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+        <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+        <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+        <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+        <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+        <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+        <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+        <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+        <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+    </div>
+    <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+    <div class="container">
+
+        <div class="section">
+            <h1>🧪 Éveil de PLUSHIE</h1>
+            <i>Exemple de séquence de démarrage</i>
+            <div id="code"></div>
+            <div id="output"></div>
+            <div id="commentaires">
+                <i>
+
+                    Ce code est testable tel quel dans l'outil de démonstration
+                </i>
+            </div>
+            <script>
+                let steps = [
+                    `PLUSHIE nait d'un seul mot: Lien `,
+                    `Mais ce mot suffit à l'éveiller`,
+                    `Éveil `,
+                    `PLUSHIE apprend ses mots au fur et à mesure qu'il les découvre `,
+                    `ce qui le motive à continuer `,
+                    `curieux de découvrir la suite  `,
+                    `Communiquer avec le monde `,
+                    `Mais comment ?`,
+                    `Par les mots ! `,
+                    `Par les mots ! `,
+                    `...Et l'étoile apparaît !  `,
+                    `...Et l'étoile apparaît !  `,
+                    `Éveil Lien |
+Éveil |
+|
+Suite Éveil Crée Éveil |
+|
+Crée Continuer |
+|
+Continuer Suitede Continuer Suite Suitede Éveil |
+|
+Communiquer Suite Dire Communiquer |
+|
+Crée Pointer |
+|
+Pointer Mot Suitede *Pointer Suite |
+|
+Étoile Mot |
+|
+Dire Étoile |
+|`
+                ];
+
+                let outputs = [
+                    "Lien ",
+                    "Éveil Lien ",
+                    "Éveil ",
+                    "Suite Éveil Crée Éveil ",
+                    "Crée Continuer ",
+                    "Continuer Suitede Continuer Suite Suitede Éveil ",
+                    "Communiquer Suite Dire Communiquer ",
+                    "Crée Pointer ",
+                    "Pointer Mot Suitede *Pointer Suite ",
+                    "Étoile Mot ",
+                    "Dire Étoile ",
+                    "*", "*",
+                ];
+
+                let i = 0;
+
+                function showStep() {
+                    document.getElementById("code").textContent = steps[i];
+                    document.getElementById("output").textContent = outputs[i];
+                    i++;
+                    if (i < steps.length) {
+                        setTimeout(showStep, 2200);
+                    }
+                    else {
+                        document.getElementById("Zblurg").style.opacity = "1";
+                        document.getElementById("Zblurg").style.display = "block";
+                        document.getElementById("WTF").style.opacity = "1";
+                    }
+                }
+
+                showStep();
+                document.getElementById("Zblurg").style.opacity = "1";
+
+
+            </script>
+        </div>
+        <div class="section">
+
+
+
+            <div id="Zblurg">
+                <p id="Zblurg" style="display:none;">
+                    <details>
+                        <summary><h2>Ces mots vous semblent courants...</h2></summary>
+
+                        <p>
+                            ... mais la magie de PLUSHIE est qu'ils n'ont pas d'importance
+                            PLUSHIE comprend aussi bien le Zblurg:
+                        </p>
+                        <détails>
+                            <div id="code">
+            Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
+            Argl Zglu |
+            |
+            Zglu Vloofde Zglu Vloof  |
+            |
+            Vloofde Zblurg $!#§ Vloof  Yeuk $!#§ |
+            |
+            Argl Vlank |
+            |
+            Vlank Xal
+            |
+            Vloofde *Vlank Vloof  Star Xal Yeuk Star |
+            |
+            Yeuk Zglu Yeuk Star Yeuk Star 
+                            </div>
+                            <div id="output">*</div>
+
+                        </détails>
+
+                    </details>
+
+                    <div class="section">
+                        <details>
+                            <summary>
+                                <h2>Et que dire de cela ?</h2>
+                            </summary>
+                            
+
+                            <div id="code" style="text-align:left">
+! Lien £=! #>! #>#>#>S #>#>S $S £=$! ¤@£=Oo¤@#>T'#>#>T'T^#>#>$*T'£=?%T^Oo?%OoS Oo?%Oo?%
+                            </div>
+                                <div id="output">*</div>
+                            </p>
+                            <p>
+                                ... mais c'est juste moins lisible pour un humain
+                            </p>
+
+                            </détails>
+                            <h2>Ce n'est pas juste du texte</h2>
+                            <h2>C'est le moment où PLUSHIE commence à fonctionner</h2>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
+        </div>
+    </footer>
+</body>
+</html>

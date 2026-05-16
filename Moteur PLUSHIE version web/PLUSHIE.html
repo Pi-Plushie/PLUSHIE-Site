@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PLUSHIE Web</title>
+
+    <script src="PLUSHIE.js" defer ></script>
+
+    <link rel="stylesheet" href="apparence.css">
+    <style>
+    </style>
+</head>
+<body>
+    
+        <h1>PLUSHIE Version Javascript </h1>
+    
+        <div id="zones">
+            <div class="toolbar">
+
+                <button onclick="executer()">Exécuter</button>
+
+
+                <label class="fileButton">
+                    Charger code
+                    <input type="file"
+                           id="chargeCode"
+                           accept=".txt">
+
+                </label>
+
+                <button onclick="RAZ()">Remise à Zéro</button>
+            </div>
+            <div class="toolbar">
+                <label class="fileButton">
+                    Charger mémoire
+                    <input type="file"
+                           id="chargeMemoire"
+                           accept=".mem">
+
+                </label>
+                <button onclick="SauverMemoire()" style="display:none;">
+                    💾 Sauvegarder mémoire
+                </button>
+                <a href="../index.html" title="Retour au menu principal"><img class="logo" src="../Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+            </div>
+        </div>
+        <div id="zones">
+            <div class="panel-title">
+                Entrée Code
+
+
+                <button onclick="effacerEntree()">
+                    Effacer entrée
+                </button>
+                
+                <label>
+                    <input type="checkbox" id="exécutersurentrée">
+                    Exécuter sur Entrée 
+                    (Ctrl + Entrée fonctionne toujours)
+                </label>
+                <button onclick="initialiser()">
+                    initialiser
+                </button>
+           
+                <textarea id="input" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off"></textarea>
+            </div>
+            <div class="panel-title">
+                Sortie
+                <button onclick="effacerSortie()">
+                    Effacer sortie
+
+                </button>
+                
+
+                <div id="output"></div>
+
+                <div class="status" id="status">
+                    <i>Prêt</i>
+                </div>
+
+                <div class="toolbar">
+                    <div class="panel-title">
+                        Mémoire
+
+                        <button onclick="afficherMemoire()">
+                            Voir mémoire
+                        </button>
+
+                        <button onclick="effacerMemoire()">
+                            Effacer mémoire
+                        </button>
+                        <button onclick="étendreMemoire()">
+                            Etendre zone mémoire
+                        </button>
+                        <button onclick="réduireMemoire()">
+                            réduire zone mémoire
+                        </button>
+                        <div id="memoire"></div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+
+</body>
+</html>

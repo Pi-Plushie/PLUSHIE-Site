@@ -1,0 +1,142 @@
+body {
+    margin: 20px;
+    padding: 0;
+    background: radial-gradient(circle at top left, #2a2f4a 0%, #12141f 45%, #090b12 100%);
+    color: #38bdf8;
+    font-family: "Consolas", "Cascadia Code", "Fira Code", monospace;
+    height: 100vh;
+    overflow: auto;
+}
+#interface {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+textarea {
+    width: 98%;
+    height: 650px;
+    background: #1b1b1b;
+    color: #38bdf8;
+    border: 1px solid #444;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    resize: both;
+    caret-color: #f8dd38;
+}
+#zones {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100% 100%;
+    gap: 14px;
+    flex: 1;
+    min-height: 0;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 24, 38, 0.82);
+    border: 1px solid rgba(120,160,255,0.28);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    min-width: 0;
+    min-height: 0;
+    resize: both;
+}
+.panel-title {
+    padding: 10px 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #38bdf8;
+    border-bottom: 1px solid rgba(120,160,255,0.18);
+    background: linear-gradient( to right, rgba(80,120,255,0.15), rgba(0,0,0,0) );
+}
+#output {
+    width: 98%;
+    color: #22c55e;
+    white-space: pre-wrap;
+    background: #000;
+    border: 1px solid #444;
+    padding: 10px;
+    height: 440px;
+    min-height: 150px;
+    max-height: 800px;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    resize: both;
+    font-family: "Times New Roman"
+}
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+button {
+    background: linear-gradient( 145deg, #2b3150, #1a1f33 );
+    color: #eef2ff;
+    border: 1px solid #5ea2ff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+    button:hover, .fileButton:hover {
+        transform: translateY(-2px);
+        border-color: #8bc2ff;
+        box-shadow: 0 8px 24px rgba(70,120,255,0.35);
+    }
+.fileButton {
+    background: linear-gradient( 145deg, #38bdf8, #1a1f33 );
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.logo {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
+}
+
+#memoire {
+    width: 98%;
+    white-space: pre-wrap;
+    background: #080808;
+    border: 1px solid #444;
+    padding: 10px;
+    min-height: 30px;
+    height: 60px;
+    overflow: auto;
+    margin-top: 10px;
+    resize: both;
+    transition: height 0.3s;
+}
+#status {
+    padding: 10px;
+    color: #db7717;
+    margin-bottom: 10px;
+    font-style:italic;
+}
+

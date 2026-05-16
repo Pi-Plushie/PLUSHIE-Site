@@ -1,0 +1,35 @@
+Affiche Comment saluer ? À l'écran Voir Saut |
+|
+Comment saluer ? Salutations Comment saluer ? Hello |
+|
+Affiche Salutations À l'écran Voir Saut |
+|
+Salutations Bonjour |
+|
+Affiche Salutations À l'écran Voir Saut |
+|
+Hello le monde |
+|
+Affiche Salutations À l'écran Affiche Bonjour À l'écran Voir Saut |
+|
+Commentaire:
+démonstration de ce que l'on peut faire facilement avec PLUSHIE
+
+
+Bonjour Salut |
+|
+Pourafficher Bonjour Exécuter Afficher Voir Saut |
+|
+Salut Goodmorning |
+|
+Pourafficher Bonjour Exécuter Afficher Voir Saut |
+|
+Pourafficher Bonjour Exécuter Afficher Voir Saut |
+|
+Voir Saut Voir Saut Quitter Code 
+
+
+Commentaire:
+démonstration de ce que l'on peut faire facilement avec PLUSHIE
+
+ et maintenant rééxécutez le même fichier.

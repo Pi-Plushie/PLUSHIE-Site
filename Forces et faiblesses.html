@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PLUSHIE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header img {
+            width: 50px;
+            margin-bottom: 20px;
+                   }
+        
+    </style>
+</head>
+<p id="dynamic-text">
+    Sélectionnez un profil pour adapter la présentation.
+</p>
+<body>
+
+    <header>
+
+        <div class="boutonsprofil">
+            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+        </div>
+        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+
+        <h1>PLUSHIE</h1>
+        <div class="subtitle">Un langage qui apprend et se transforme</div>
+        <div class="subtitle">Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</div>
+    </header>
+
+
+    <div class="container">
+
+        <div class="section">
+
+            <h2>Forces</h2>
+
+            <ul>
+                <li>Tout est modifiable</li>
+                <p>
+                    Si un mot clé ne vous plait pas ou ne vous parait pas pratique, changez-le, ou créez-en un synonyme pour conserver la compatibilité.
+                    PLUSHIE peut ainsi se décliner en plusieurs langues ou dialectes, ou même imiter les langages ésotériques si ça vous amuse.
+                </p>
+                <li>les instructions ne sont pas prédéfinies</li>
+                <p>
+                    On peut donc les nommer de manière à obtenir des formulations proches du langage naturel même avant de modifier l'interpréteur de base.
+                    <h2>💡 Exemple</h2>
+                    <pre>
+                    Calculer Trois Fois Deux Effectuer Calcul Afficher Résultat À l'écran
+                       </pre>
+                    <pre> <font color="#22c55e">
+                       Six </font>
+                    </pre>
+                    La formulation du code est beaucoup plus lisible que celle des langages ésotériques de type Braainfuck , les parenthèses du LISP ou les langages à instruction unique comme SUBLEQ
+                </p>
+                <li>Les procédures s'apprenent progressivement</li>
+                <p>
+                    On peut donc observer la construction d'un système informatique complet à partir de sa base la plus simple
+
+                </p>
+
+                <li>PLUSHIE est radicalement minimaliste</li>
+                <p>
+                    Une seule procédure primitive (copie en double indirection), une mémoire simple (tête/suite), un mécanisme d'exécution unique
+
+                </p>
+                <li>PLUSHIE apprend en permanence</li>
+                <p>
+                    Son langage est appris de manière incrémentale: les mots émergent du texte, les instructions apparaissent de manière dynamique.
+                    Il n'y a pas de grammaire prédéfinie, ni fixe.
+                </p>
+                <li>Les programmes en PLUSHIE peuvent se modifier eux-même pendant leur exécution</li>
+                <p>
+                    cela inclut la chaîne d'exécution de l'interpréteur initial qui peut donc être intégralement remplacé, jusqu'à ce qu'on en arrive à se demander comment ça a commencé
+                </p>
+                <li>unification forte</li>
+                <p>
+                    pas de distinction données / programme / contrôle:
+                    la chaîne d'exécution est dans la mémoire, elle est modifiable en temps réel, par elle-même. Les instructions sont des structures en mémoire.
+                </p>
+                <li>homogénéité structurelle ;</li>
+
+                <li>minimalisme radical ;</li>
+
+                <li>fort potentiel pédagogique ;</li>
+                <p>
+                    Il ya très peu de choses à apprendre pour coder en PLUSHIE. Les termes que PLUSHIE utilisera seront le fruit de votre propre production. Même les fonctions définies dans le fichier ini peuvent être remplacées puis oubliées.
+                    et pourtant PLUSHIE reste un langage complet, offre des défis de programmation, et peut gérer la récursivité, les piles, les arbres...
+                </p>
+                <li>exploration des systèmes auto-modifiants ;</li>
+                <li>proximité avec les structures mémoire ;</li>
+                <li>terrain d’expérimentation sur l’émergence ;</li>
+                <li>souplesse conceptuelle ;</li>
+                <li>réflexivité importante.</li>
+                <p>la récursivité est intrinsèque: toute procédure ou fonction peut non seulement s'appeler elle-même mais aussi se modifier pendant son exécution.
+                Le pointeur d'exécution est manipulable et le système peut modifier son propre comportement</p>
+                <li>potentiel d'élégance au sens théorique</li>
+
+            </ul>
+            <p>
+
+            </p>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="section">
+            <h2>Faiblesses</h2>
+
+            <ul>
+                <li>PLUSHIE a les défauts de ses qualités.</li>
+                <p>
+                    Comme on peut utiliser les mots que l'on souhaite, on arrive rapidement à créer des dialectes non compatibles ou non compréhensible d'une application de PLUSHIE à l'autre (comme dans le cas du langage humain).
+                    Comme les programmes peuvent se modifier pendant leur exécution, il est très facile de "planter" PLUSHIE (vous allez faire chauffer la touche Echap et le bouton RAZ)
+                    Le minimalisme du langage ne guide pas le programmeur. Ceci dit, PLUSHIE peut être fourni avec un set de fonctions de base aussi large que souhaité.
+
+
+                </p>
+                <li>Vitesse d'exécution</li>
+                <p>
+                    Avec l'interpréteur de base, PLUSHIE lit caractère par caractère les fichier textes et teste à chaque caractère s'il connait le mot. C'est donc lent. Le seul fichier ini.txt met une seconde à se charger sur
+                    un ordinateur raisonnablement performant. Toutefois, une fois chargés en mémoire, les programmes s'exécutent nettement plus vite.
+                    La répétition de l'instruction unique peut conduire à une efficacité faible
+                    PLUSHIE n'est pas un langage efficace
+                </p>
+                <p>
+
+
+                </p>
+                <li>Instabilité et bugs</li>
+                <p>
+                    Avec des programmes qui peuvent se modifier pendant leur exécution, pas besoin de faire un dessin. Si ?
+                </p>
+                <li>Sensibilité à la syntaxe</li>
+                chaque caractère a son importance pour PLUSHIE. Une simple erreur de frappe crée donc un mot différent. Si on garde la convention facultative de terminer les mots par des espaces (il n'y a pas de caractère
+                séparateur en PLUSHIE), un double espace suffit à planter le code.
+
+                <li>Compréhension réelle du code</li>
+                <p>
+                    En se laissant porter par le sens humain usuel des mots utilisés, on peut perdre de vue assez rapidement ce que fait réellement le programme. La copie en double indirection elle-même n'est pas intuitive et produit des effets
+                    difficiles à anticiper quand on n'est pas habitué. Sous se dehors simple, PLUSHIE peut produire des structures et comportement très complexes. Il peut devenir difficile à suivre ce qu'il se passe, même pour quelqu'un de technique.
+
+                </p>
+                <li>prévisibilité réduite ;</li>
+                Puisque PLUSHIE peut se modifier lui-même, il peut générer des programmes aux propriétés imprévisibles (reste à le démontrer formellement)
+                <li>débogage potentiellement complexe ;</li>
+                <p>pas de séparation claire des niveaux, effets globaux de petites modifications, propagation non locale, variables publiques uniquement</p>
+                <li>absence d’écosystème mature ;</li>
+                <p>PLUSHIE is not GNU...</p>  
+                <li> stade expérimental
+                <p>pas d'outil de débogage fournis (mais si il existe des astuces, des espions possibles
+                    pas d'optimisation native</p></li>
+
+                <li>courbe conceptuelle atypique ;</li>
+               
+               
+                <li>performance non optimisée ;</li>
+                <li>faible adéquation aux usages industriels classiques.
+                <p>où le contrôle absolu est recherché</p>
+                /li>
+                <li>Crédibilité scientifique, analyse formelle
+                <p>Il manque encore des définitions mathématiques précises, des invariants et un cadre de preuve</p></li>
+                <li>positionnnement pas clair<p>vous non plus vous ne savez pas si PLUSHIE est:
+                      un langage de programmation
+                      un langage formel
+                      une machine abstraite
+                      un système expérimental
+                      un modèle de calcul
+                      un environnement d'évolution pour des programmes autonomes ?</p></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- Forces -->
+
+    <div class="comparison-block">
+
+
+    </div>
+
+
+    <!-- Faiblesses -->
+
+    <div class="comparison-block">
+
+        <h2>Limites et difficultés</h2>
+
+        <ul>
+        </ul>
+
+    </div>
+    <div class="container">
+        <div class="section" style="text-align:center;">
+            <div Class="entravaux">
+                🏗
+            </div>
+            En construction, plus à venir
+        </div>
+    </div>
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
+        </div>
+    </footer>
+
+</body>
+</html>
+

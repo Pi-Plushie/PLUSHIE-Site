@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Démo PLUSHIE — émergence</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #020617;
+            color: white;
+            font-family: Arial;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 20px;
+            opacity: 0.7;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PLUSHIE — émergence d'une structure</h1>
+    <canvas id="canvas"></canvas>
+
+    <script>const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let nodes = [];
+let links = [];
+
+function addNode() {
+    let node = {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 1,
+        vy: (Math.random() - 0.5) * 1
+    };
+
+    nodes.push(node);
+
+    if (nodes.length > 1) {
+        let target = nodes[Math.floor(Math.random() * (nodes.length - 1))];
+        links.push([node, target]);
+    }
+}
+
+function update() {
+    ctx.fillStyle = "rgba(2,6,23,0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // bouger les nodes
+    nodes.forEach(n => {
+        n.x += n.vx;
+        n.y += n.vy;
+
+        if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    });
+
+    // dessiner liens
+    ctx.strokeStyle = "#38bdf8";
+    links.forEach(([a, b]) => {
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+    });
+
+    // dessiner nodes
+    nodes.forEach(n => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 4, 0, Math.PI * 2);
+        ctx.fillStyle = "#22c55e";
+        ctx.fill();
+    });
+
+    requestAnimationFrame(update);
+}
+
+// croissance progressive
+setInterval(addNode, 500);
+
+update();</script>
+
+</body>
+</html>

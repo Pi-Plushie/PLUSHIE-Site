@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment ça marche, PLUSHIE ? </title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="profiles.js"></script>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="boutonsprofil">
+            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+        </div>
+        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+        <h1>Comment ça marche, PLUSHIE ?</h1>
+        <div class="subtitle" id="Tag line">Détails techniques</div>
+        <div class="subtitle"></div>
+    </header>
+    <div class="container">
+        <div class="section-schéma ">
+            <h2>Architecture Minimale Nécessaire</h2>
+            outre un ordinateur et son système d'exploitation (voir niveaux de complexité), PLUSHIE se repose sur:
+            <details>
+                <ul>
+                    <li />Mémoire</li>
+                    <p>
+                        PLUSHIE Manipule uniquement des adresses mémoires.
+                        En pratique, on simule la mémoire par un tableau unidimensionnel extensible d'entiers de type Mémoire()
+                        Le moteur automate de PLUSHIE doit juste pouvoir générer une nouvelle adresse mémoire disponible quand la dernière adresse disponible a été utilisée.
+                        '
+                    </p>
+                    <li />Données de base</li>
+                    <p>
+                        Pour pouvoir construire des architectures de données complexes, une adresse mémoire doit permettre d'accéder à 2 adresses mémoires au moins.
+                        La première est appelée Tête et la seconde Suite
+                    </p>
+                </ul>
+                <div class="section">
+                    <div class="section-schéma ">
+                        Cellule mémoire élémentaire :
+                    </div>
+                    <div class="cellule">
+                        <div class="case tete">Tête</div>
+                        <div class="case suite">Suite</div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            Complément
+                        </summary>
+                        <p>
+                            Mais toute autre convention est recevable: droite/gauche première/seconde etc. On peut même choisir qu'une adresse pointe vers plus que 2 adresses pour faciliter la gestion des hypergraphes.
+                        </p>
+                    </details>
+                </div>
+             </details">
+        </div>
+ 
+        <div class="section-schéma ">
+            <h2>Moteur</h2>
+            Le moteur de PLUSHIE est un programme mécanique de type automate, non modifiable pendant l'exécution, qui assure les actions suivantes:
+            <details>
+                <summary>
+                    Instructions de niveau -1
+                </summary>
+                <ul>
+                    <li />Si mémoire saturée, obtenir une nouvelle cellule mémoire</li>
+                    <p> </p>
+                    <li />Copier sur le registre Destination la valeur mémoire pointée par le pointeur d'exécution</li>
+                    <p>Destination=Mémoire(Mémoire(Exec)) </p>
+                    <li />Avancer le pointeur d'exécution</li>
+                    <p> Mémoire(Exec)=Mémoire(Suiv(Mémoire(Exec))</p>
+                    <li />Copier sur le registre Source la valeur mémoire pointée par le pointeur d'exécution</li>
+                    <p> Mémoire(Exec)=Mémoire(Suiv(Tete(Exec))</p>
+                    <li />Avancer le pointeur d'exécution</li>
+                    <p> </p>
+                    <li />Effectuer l'instruction unique</li>
+                    <p>Mémoire(Mémoire(Destination))=Mémoire(Mémoire(Source)) </p>
+                    <li />Pointer Suite sur la seconde adresse </li>
+                    <p>Mémoire(Mémoire(Adressedesuite)) = Suiv(Mémoire(Mémoire(Variablesuite))) </p>
+                    <li />Si le registre Entrée est vide, lire un caractère dans le registre Entrée'</li>
+                    <li />Si Le registre Sortie est non vide, Afficher Sortie </li>
+                    <li />Boucle tant que fin non atteinte</li>
+                </ul>
+            </details>
+            <p>
+                Et c'est tout. Le moteur ne comprend rien il avance, copie, lit et écrit. Et pourtant le comportement supérieur apparait.
+            <p>
+                <i>
+                    En pratique, ce moteur automate est programmé en VB.net dans un module commenté de 400 lignes, dans l'interface proposée au téléchargement.
+                    Le code source est disponible sur simple demande.
+                </i>
+            </p>  </p>
+            
+
+        </div>
+        <div class="section-schéma ">
+            <h2>Fichier mémoire de démarrage</h2>
+            <p>
+                Afin de pouvoir analyser du texte et interagir, il est nécessaire de disposer d'une structure déjà chargée en mémoire, donc un fichier de boot.
+                Ce fichier, plusbase.mem est composé de 300 cellules mémoires environ, soit presque 600 adresses entières. Il est de niveau 0, c'est à dire qu'il est modifiable pendant l'exécution du système (au prix de grandes
+                précautions). Il contient l'interpréteur de base fourni avec PLUSHIE, qui pourra être modifié ultérieurement pendant son exécution, et même totalement oublié.
+                L'interpréteur de base est lui-même écrit en PLUSHIE. Il est généré par un fichier de création de mémoire écrit en simili plushie d'environ 600 lignes non fourni avec l'interface de démonstration( mais peut-être entièrement entré à la main, adresse par adresse)
+
+                L'algorithme de l'interpréteur actuel est fourni ici
+            <p>   </p>
+            <i>Cet interpréteur n'est qu'une proposition. Il se veut minimaliste et ne présuppose l'existence d'aucun séparateur. La seule necessité est la connaissance d'un premier mot connu, programmé en dur dans le fichier mémoire de démarrage</i>
+            <details>
+                Ce mot, actuellement Lien, est un pointeur de niveau 2 vers l'adresse Suite qui donne la seconde valeur pointée par la variable Suitede. Suite pointe au départ vers Suitede ce qui permet de l'externaliser'
+                Ainsi, la séquence d'initialisation
+                <pre>Éveil Lien Suite Éveil </pre>
+                donne au mot clé Suite la valeur de l'adresse à laquelle le moteur de base donne toujours la valeur de la suite de l'adresse pointée par Suitede
+                puis
+                <pre>Suitede< Suite </pre> Externalise la variable Suitede. À partir de là, dès que Suitede recevra une valeur, Suite donnera la seconde adresse que cette valeur pointe
+            </details>
+            </p>
+            <p>            </p>
+        </div>
+        <div class="section-schéma ">
+            <h2>Fichier d'initialisation</h2>
+            Le fichier d'initialisation ini.txt est un fichier texte composé de plusieurs parties:
+            <p>
+                Le niveau 1, ou éveil, sert à "externaliser" les variables de fonctionnement du niveau -1, c'est à dire à leur donner un nom sous forme d'une chaîne de caractères affichables (qui pourra être modifié plus tard)
+                afin de pouvoir les adresser dans les fichiers de code au format .txt (en ANSI)
+                <details>
+                    <summary>
+                        Variables minimales à nommer au niveau 1:
+                    </summary>
+                    <ul>
+                        <li />Suitede et Suite</li>
+                        <p>Suite contient l'adresse de la seconde case mémoire pointée par Suitede </p>
+                     
+                        <li />Mémoirelibre</li>
+                        <p> Mémoirelibre contient la valeur de la prochaine adresse mémoire disponible</p>
+                        
+                        <li />Exécuter</li>
+                        <p> Pointeur de la chaîne d'exécution'</p>
+                        
+                        <li />Sortie</li>
+                        <p>l'adresse ou le caractère affecté à Sortie est affiché à l'écran</p>
+                         </ul>
+                    Note: <i>on peut donner le nom que l'on souhaite à ces variables dans le fichier ini.txt, ou en créer des alias plus tard.</i>
+                </details>
+            </p>
+            <p>
+                Le niveau 2 du fichier ini.txt crée les premières fonctions fondamentales qui facilitent l'écriture des fonctions suivantes.
+            </p>
+        </div>
+        <div class="section-schéma ">
+            <h2>Fichiers de code</h2>
+
+            <p>
+                Les fichiers de code sont des fichiers au format texte brut (.txt en ANSI).
+                Leur niveau de complexité dépend des fonctions de niveau inférieures utilisées
+            </p>
+            <i>La plupart des fichiers de code fournis nécessitent le chargement préalable du fichier ini.txt en mémoire pour être correctement exécutés</i>
+</div>
+    </div>
+    <div class="container">
+        <div class="section-schéma ">
+            <h2>Niveaux de complexité</h2>
+            <details>
+                <p>
+                    Par convention, on distingue les différentes couches nécessaires au fonctionnement de PLUSHIE par "niveaux de complexité". Les niveaux négatifs sont ceux qui ne peuvent pas être modifiés pendant l'exécution d'un programme en PLUSHIE
+                    <ul>
+                        <li />Niveau - 5 </li>
+                        <p>Hardware</p>
+                        <li />Niveau - 4 </li>
+                        <p>Séquence de boot (BIOS)</p>
+                        <li />Niveau - 3</li>
+                        <p>Système d'exploitation (Windows)</p>
+                        <li />Niveau - 2</li>
+                        <p>Interface utilisateur (form Windows)</p>
+                        <li />Niveau - 1</li>
+                        <p>Moteur automate écrit en vb.net</p>
+                        <li />Niveau 0 </li>
+                        <p>Fichier mémoire initial en PLUSHIE</p>
+                        <li />Niveau 1 </li>
+                        <p>Externalisation des variables</p>
+                        <li />Niveau 2 </li>
+                        <p>Fonctions primaires</p>
+                        <li />Niveau 3 et plus </li>
+                        <p>Code avancé</p>
+                        Notons que les niveaux négatifs peuvent être remplacés par un automate en hardware
+                        <i>(voir la proposition de définition de la complexité dans la page dédiée)</i>
+                    </ul>
+                </p>
+            </details>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-schéma ">
+            <h2>Fonctionnement de l'interpréteur de base</h2>
+            Cet interpréteur est codé en PLUSHIE dans le ficher plusbase.mem
+            <div class="section-schéma ">
+                Il lit le caractère contenu dans le registre d'entrée plus l'ajoute à la liste chaînée de lecture
+            </div>
+
+            <p>    </p>
+            <div class="section-schéma ">
+
+                Liste chaînée:
+            </div>
+            <div class="atome-zone">
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+                <div class="cellule">
+
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="20">
+                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                        <polyline points="-30,10,-30,40,-65,40,-65,30"
+                                  stroke="#22c55e"
+                                  stroke-width="2"
+                                  Fill="none" />
+                        <polygon points="-65,30 -70,35 -60,35"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+            </div>
+            <p>
+                Il détermine si les derniers caractères de la liste de lecture correspondent à un mot connu.
+                Sinon, il continue à lire
+                Si oui, il apprend le mot correspondant à la partie de la liste de lecture qui précède le mot connu, sous forme d'un atome connu:'
+            </p>
+            <div class="section-schéma ">
+            </div><div class="section-schéma ">
+                Atome connu :
+            </div>
+            <div class="atome-zone">
+
+                <div class="cellule">
+                    <div class="case tete">Valeur</div>
+                    <div class="case suite">Nom</div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+
+                <div class="cellule">
+                    <div class="case tete">P</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">L</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">U</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">S</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">H</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">I</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-30"
+                              y1="20"
+                              x2="20"
+                              y2="20"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="13,20 8,15 8,25"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+                <div class="cellule">
+
+                    <div class="case tete">E</div>
+                    <div class="case suite"></div>
+
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="20">
+                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                        <polyline points="-30,10,-30,40,-65,40,-65,30"
+                                  stroke="#22c55e"
+                                  stroke-width="2"
+                                  Fill="none" />
+                        <polygon points="-65,30 -70,35 -60,35"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+            </div>
+            <p>
+                et effectue immédiatement l'instruction principale de PLUSHIE: <font color="#facc15">la copie en double indirection</font>
+            </p>
+            <div class="instruction">
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-130"
+                              y1="20"
+                              x2="-130"
+                              y2="80"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="-130,85 -135,80 -125,80"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-130"
+                              y1="20"
+                              x2="-130"
+                              y2="80"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="-130,85 -135,80 -125,80"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+            </div>
+            <div class="instruction"><p></p></div>
+
+            <div class="instruction">
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-130"
+                              y1="20"
+                              x2="-130"
+                              y2="80"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="-130,85 -135,80 -125,80"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+                <div class="cellule">
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="40">
+                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                        <line x1="-130"
+                              y1="20"
+                              x2="-130"
+                              y2="80"
+                              stroke="#22c55e"
+                              stroke-width="2" />
+                        <polygon points="-130,85 -135,80 -125,80"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+
+            </div>
+            <div class="instruction"><p></p></div>
+            <div class="instruction">
+                <div class="cellule">
+                    <div class="case tete">X</div>
+                    <div class="case suite"></div>
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="20">
+                        <circle cx="100" cy="10" r="4" fill="#facc15" />
+                        <polyline points="-65,10,100,10"
+                                  stroke="#facc15"
+                                  stroke-width="2"
+                                  Fill="none" />
+                        <polygon points="-65,10 -60,5 -60,15"
+                                 fill="#facc15" />
+                    </svg>
+                </div>
+                <div class="cellule">
+                    <div class="case tete">X</div>
+                    <div class="case suite"></div>
+                </div>
+
+            </div>
+
+
+            <div class="section-schéma ">
+                Atome :
+            </div>
+            <div class="atome-zone">
+                <div class="cellule">
+
+                    <div class="case tete"></div>
+                    <div class="case suite"></div>
+
+                </div>
+                <div class="zone-pointeur">
+                    <svg class="pointeur-svg" width="3" height="20">
+                        <circle cx="-75" cy="10" r="4" fill="#22c55e" />
+                        <polyline points="-75,10,-75,40,-110,40,-110,10,-95,10"
+                                  stroke="#22c55e"
+                                  stroke-width="2"
+                                  Fill="none" />
+
+                        <polygon points="-95,10 -100,5 -100,15"
+                                 fill="#22c55e" />
+                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                        <polyline points="-30,10,-30,40,-65,40,-65,30"
+                                  stroke="#22c55e"
+                                  stroke-width="2"
+                                  Fill="none" />
+                        <polygon points="-65,30 -70,35 -60,35"
+                                 fill="#22c55e" />
+                    </svg>
+                </div>
+            </div>
+            <div class="section">
+
+            </div>
+
+            <div class="section">
+
+
+
+                <h2>💡 Exemple</h2>
+                <pre>
+    Affiche Bonjour le monde À l'écran
+    Bonjour le monde 
+        </pre>
+                <p>
+                    Ici, un nouveau mot, Bonjour le monde, est défini puis utilisé immédiatement.
+                </p>
+                <a href="demo.html">Voir la démo</a>
+            </div>
+            <div class="container">
+                <div class="section" style="text-align:center;">
+                    <div Class="entravaux">
+                        🏗
+                    </div>
+                    En construction, plus à venir
+                </div>
+            </div>
+
+        </div>
+            </div> 
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
+        </div>
+    </footer>
+
+</body>
+</html>
+<script>
+       
+
+</script>

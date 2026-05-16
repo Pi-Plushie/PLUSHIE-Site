@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PLUSHIE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="profiles.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="boutonsprofil">
+            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+        </div>
+        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+
+        <h1>Mode d'emploi de l'interface web</h1>
+
+    </header>
+    <div class="screenshot"><img src="Moteur PLUSHIE version web/Interface PLUSHIE commentée.png" style="width: 1200px"></div>
+    <div class="container">
+
+
+
+        <div class="section">
+            PLUSHIE
+
+            <h2><strong class="orange">⚠ Attention ! ⚠</strong></h2>
+            PLUSHIE est un langage expérimental. L'interface a été testée mais des comportements imprévisibles sont à prévoir.
+            En général, l'appui sur la touche entrée permet de stopper l'exécution de PLUSHIE.
+            Le code javascript qui sous tend le fonctionnement de l'interface n'est pas en mesure d'affecter votre machine,
+            mais la prudence reste de mise
+            Si vous rencontrez des difficultés, merci d'en faire part à l'adresse Plushie.langage (at) free.fr
+        </div>
+        <h2>Zone Entrée:</h2>
+        <div class="section">
+            Le bouton
+            <label class="fileButton">
+                Charger code
+            </label>
+            Ouvre un dialogue qui permet de naviguer pour sélectionner un fichier de code <br><br>au format .txt en ANSI et le charger dans la boîte d'entrée
+        </div>
+        <div class="section">
+            Le bouton <button>Exécuter</button> lance l'éxécution par PLUSHIE du texte de code de la boite d'entrée
+        </div>
+        <div class="section">
+            Le bouton <button>Remise à Zéro</button> Efface tout, y compris la mémoire interne PLUSHIE pour repartir à zéro, <br><br>et recharge en mémoire le fichier de mémoire initial Plusbase.mem.
+            Le rechargement de la page a le même effet.
+        </div>
+        <div class="section">
+            Le bouton <button>Effacer Entrée</button> N'efface que le contenu de la boite d'entrée. Le code de cette boite, si il a été exécuté, reste en mémoire.
+        </div>
+        <div class="section">
+            La case à cocher <input type="checkbox"> Permet d'éxécuter le code texte de la boite d'entrée par un simple appui de la touche entrée. Par défaut, l'appui simultané sur Contrôle et Entrée a le même effet.
+            L'effet est identique à celui du bouton exécuter.
+        </div>
+        <div class="section">
+            Le bouton <button>Initialiser</button> Charge et Exécute le fichier ini.txt
+        </div>
+        <h2>Zone Sortie:</h2>
+        <div class="section">
+            L'icône PLUSHIE permet le retour au menu principal (page index.html)
+        </div>
+        <div class="section">
+            Le bouton
+            <label class="fileButton">
+                Charger mémoire
+            </label>
+            Ouvre un dialogue qui permet de naviguer pour sélectionner un fichier de mémoire<br><br> au format .mem et le charger en mémoire.<br><br>
+            Par défaut, au chargement, ou après l'appui sur le bouton <button>Remise à Zéro</button>, le fichier Plusbase.mem est chargé en mémoire
+        </div>
+         <div class="section">
+            Le bouton <button>Effacer Sortie</button> N'efface que le contenu de la boite de sortie qui fait office d'écran, et rien d'autre
+        </div>
+        <div class="section">
+            La zone d'information affiche le statut durant l'exécution du programme PLUSHIE. Quand le temps défile et que le programme ne semble pas s'arrêter, c'est qu'il a planté.
+            Un appui sur la touche Échap permet alors de l'arrêter. Il faudra probablement repartir de zéro ensuite
+        </div>
+
+        <h2>Zone Mémoire:⚠ Utilisateurs avertis ⚠</h2>
+        <div class="section">
+            Le bouton <button>Voir mémoire</button> affiche dans la petite zone réservée l'état actuel de la mémoire de PLUSHIE, octet par octet.<br><br>
+            Le bouton <button>Effacer mémoire</button> efface la zone d'affichage de la mémoire, <strong>mais n'efface pas </strong> la mémoire de PLUSHIE qui peut continuer à s'exécuter à partir de son état actuel.
+            Les boutons <button>Étendre zone mémoire</button> et <button>réduire zone mémoire</button> permettent de visualiser la mémoire dans des conditions plus confortables.
+            Comme les autres zones de texte, la zone d'affichage de la mémoire peut être redimensionnée manuellement à volonté.
+        </div>
+        <div class="barredeliens">
+            Maintenant que vous savez manipuler l'interface, il est de temps de faire vos
+            <a href="Premiers pas.html"> premiers pas </a> en PLUSHIE
+            
+        </div>
+
+
+    </div>
+
+
+        
+
+        <footer>
+            <div class="barredeliens">
+                <a href="index.html">← Retour à l’accueil</a>
+                PLUSHIE — expérimentation en cours
+            </div>
+        </footer>
+</body>
+</html>
+

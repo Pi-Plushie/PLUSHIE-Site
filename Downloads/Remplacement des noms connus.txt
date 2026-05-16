@@ -1,0 +1,49 @@
+Commentaire:
+en plushie, on peut à loisir utiliser des alias des mots connus pour les utiliser à la place.
+exemple avec afficher que l'on remplace par visualiser 
+il suffit pour cela de déclarer le nouveau nom pour disposer de son pointeur de niveau1 visualiser< 
+et d'affecter afficher< à ce pointeur
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Variable Visualiser Exécuter Déclarer |
+|
+Visualiser< Afficher< |
+|
+Pourafficher et le tour est joué ! Exécuter Visualiser |
+|
+Commentaire:
+Maintenant, on peut réutiliser afficher pour autre chose, par exemple remplacer pourafficher en faisant afficher< pourafficher< 
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Afficher< Pourafficher< |
+|
+Afficher le remplacement est effectif, mais on ne peut plus exécuter afficher Exécuter Visualiser |
+|
+Commentaire:
+on peut donc complètement changer la forme de l'instruction, par exemple:
+afficher phrase rafraîchir écran 
+
+Variable Rafraîchir Exécuter Déclarer Variable Écran Exécuter Déclarer |
+|
+Rafraîchir< Exécuter< Écran< Visualiser< |
+|
+Afficher Commentaire:Rafraîchir Écran |
+|
+Commentaire:
+on peut également effectuer une copie complète de la fonction 
+
+Afficher Commentaire:Rafraîchir Écran |
+|
+Variable Dialogue Exécuter Déclarer |
+|
+Retourafficher Subretour Afficher *** copie *** Rafraîchir Écran |
+|
+Listeàcopier Visualiser Exécuter Copierliste Dialogue Listecopiée |
+|
+Voir Saut Voir Saut Afficher le tout est de ne pas se tromper ensuite et de se souvenir ce que fait chaque mot au delà de son sens commun Rafraîchir Dialogue |
+|
+Voir Saut Voir Saut Afficher *** Fin *** Rafraîchir Dialogue |
+|
+Quitter Code 

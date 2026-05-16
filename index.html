@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PLUSHIE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="profiles.js"></script>
+
+</head>
+<body>
+    <img src="Logo Nounours PLUSHIE.png" class="logo-gauche">
+    <header>
+        <div class="boutonsprofil">
+
+            <img src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE">
+        </div>
+        <h1>PLUSHIE </h1>
+        <i>Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</i>
+        <h1> ⊚_⊚ </h1>
+
+        <div class="subtitle" id="Tag line">Un langage qui apprend et se transforme</div>
+    </header>
+
+
+    <div class="container">
+
+        <div class="section">
+
+            <h2>👋 Comment voulez-vous découvrir PLUSHIE ?</h2>
+            <i>
+                <p id="Choix de présentation">
+                    Sélectionnez un profil pour adapter la présentation.
+
+                </p>
+            </i>
+            <div class="boutonsprofil">
+                <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+                <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+                <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+                <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+                <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+                <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+                <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+                <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+                <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+            </div>
+            <div class="boutonsprofil">
+                <button onclick="openPresentation()"> Présentation PLUSHIE </button>
+            </div>
+        </div>
+        <div class="section">
+            <h2>🧠 Le concept</h2>
+            <p>
+                PLUSHIE est un langage informatique minimaliste fondé sur <strong class="orange">une seule instruction</strong> et qui utilise des mots courants.
+            </p>
+            <div data-profile="public">
+                ainsi les programmes ressemblent à des phrases.
+            </div>
+            <div data-profile="philo">
+                il est donc un langage textuel minimal où le sens émerge de la succession, de la répétition, des relations et des motifs déjà connus.
+            </div>
+            <div data-profile="poete">
+                Pour lui, les rimes, les rythmes sont importants. Sans grammaire imposée, c'est un langage libre.
+            </div>
+            <div data-profile="chercheur">
+                Tout le reste — structures, comportements, logique —
+                émerge de la manipulation de mots et de listes.
+            </div>
+            <p id="Pitch"></p>
+            <br><br>
+            <div class="barredeliens">
+                <a href="Plushie en 2 min.html">⏳ PLUSHIE en 2 min</a> <a href="Pourquoi PLUSHIE.html">Pourquoi PLUSHIE ? </a> <a href="Présentations.html">Présentations</a><a href="ce qu'est PLUSHIE.html">ce qu'est / n'est pas PLUSHIE</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔁 Un langage qui apprend</h2>
+            <p>
+                PLUSHIE apprend de nouveaux mots, modifie ses propres règles
+                et évolue pendant son exécution.
+            </p>
+            <p>
+                Le programme n’est plus figé : il devient <strong class="orange">dynamique</strong>.
+            </p>  <div class="barredeliens">
+                <a href="Et l'étoile apparait.html"> 🌟 Et l'étoile apparait</a>  <a href="Capacités.html"> Capacités</a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>✨ Pourquoi c’est différent</h2>
+            <ul>
+                PLUSHIE est au point de convergence de plusieurs approches
+                <li>Ultra minimaliste (une seule instruction)</li>
+                <li>facile à lire (si les mots descriptifs sont bien choisis)</li>
+                <li>Auto-modification du code</li>
+                <li>Approche exploratoire de la programmation</li>
+                Existe-t-il un équivalent ?
+            </ul>
+            <div class="barredeliens">
+                <a href="Comparaisons.html">Plushie et les autres langages</a> <a href="Forces et faiblesses.html">Forces et faiblesses</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Exemple</h2>
+            <pre>
+    Affiche Bonjour le monde À l'écran
+            </pre>
+            <pre> <font color="#22c55e">
+     Bonjour le monde</font>
+</pre>
+            <p>
+                Ici, un nouveau mot, Bonjour le monde, est défini puis utilisé immédiatement.
+            </p>
+            <div class="barredeliens">
+                <a href="demo.html"> ↪ Voir la démo      </a>
+                <a href="Et l'étoile apparait.html">    🌟 Et l'étoile apparaît (l'éveil de PLUSHIE)    </a>
+                <a href="Moteur PLUSHIE version web/PLUSHIE.html"> 🖥 PLUSHIE en vrai: interface utilisateur web </a>
+
+            </div>
+        </div>
+        <div class="section">
+            <h2>🚧 État d'avancement du projet</h2>
+            <p>
+                PLUSHIE est en évolution permanente.
+                L’objectif est d’explorer une nouvelle manière de penser la programmation et de décrire l'émergence de la complexité.
+                Et vous pouvez y participer ! rien que poser des questions est déjà beaucoup.
+                <br><br>
+                Le présent site est également en développement et chaque page n'est pas encore adaptée pour chaque profil de visiteur.
+            </p>
+            <div class="barredeliens">
+                <a href="État actuel de PLUSHIE.html"> État actuel de PLUSHIE </a> <a href="Capacités.html">Capacités</a> <a href="Aller plus loin.html"> Aller plus loin </a>
+            </div>
+
+        </div>
+        <div class="section">
+            <h2>🧪 L'expérience PLUSHIE</h2>
+            <p>
+                Envie d'essayer ? à votre disposition:<br>
+                - <a href="Moteur PLUSHIE version web/PLUSHIE.html">Une interface dans votre navigateur</a> <br>
+                <div data-profile="geek hacker chercheur">- ou <a href="downloads.html"> 🖥 Une interface indépendante </a> windows form et ses fichiers de code de démonstration à télécharger sur votre ordinateur <br> </div>
+                <br>
+                - une aide : <a href="Premiers pas.html">    Vos premiers pas en PLUSHIE</a><br><br>
+
+                <center><strong class="orange">⚠ Attention ! PLUSHIE est un langage expérimental ⚠</strong></center> <br>
+            <p>
+
+                En dépit du soin apporté au développement de ces interfaces, des comportements inattendus sont possibles.
+                Le site décline toute responsabilité sur les conséquences éventuelles de leur utilisation.
+                Elles ne comportent pas de code caché (virus ou autres malwares) ni de publicité, mais restez vigilants, même un site honnête peut se faire hacker.
+                L'exécution du code PLUSHIE en lui-même reste circonscrit à la machine virtuelle et ne doit pas être capable de causer des problèmes.
+
+            </p>
+
+
+        </div>
+    </div>
+    <footer>
+        <a href="Qui suis-je.html">Qui suis-je ? </a> — Contact: <strong>Plushie.langage (à) free.fr</strong> — <a href="mentions-legales.html">Mentions légales</a>
+    </footer>
+
+</body>
+</html>
+<script>
+       
+
+</script>

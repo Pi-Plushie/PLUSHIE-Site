@@ -1,0 +1,206 @@
+Requiert Outils_de_présentation Exécuter Testrequis |
+|
+Requiert Afficher<< Exécuter Testrequis |
+|
+Exécuter Bilanprérequis |
+|
+Exécuter Sautdeligne |
+|
+Commentaire:
+>>>>> présentation de l'organisation de la mémoire pour PLUSSIE. <<<<<
+chaque adresse mémoire permet d'accéder à deux autres adresses mémoire
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher /        \Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Exécuter Sautdeligne |
+|
+Exécuter Sautdeligne |
+|
+Commentaire:
+ces paires d'adresses mémoires, ou atomes, sont chaînées entre elles
+
+Chaîne finalisée :
+^^^^^^^^^^^^^^^ 
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+|
+|
+Pourafficher Flècheàdroite Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+|
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |@|<<| Exécuter Afficher |
+|
+Exécuter Sautdeligne Exécuter Sautdeligne |
+|
+Commentaire:
+une fin de chaine est atteinte quand la suite de l'atome l'adresse lui même (noté |<< sur le shéma)
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+|
+|
+Commentaire:
+objet de base de valeur v qui s'appelle Nom: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher /        \Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher |v_|__|Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher  |  _|__|Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher  |m_|__|Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+|
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |o_|__| Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+|
+Exécuter Sautdeligne |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |N_|<<| Exécuter Afficher |
+|
+Exécuter Sautdeligne Exécuter Sautdeligne Exécuter Sautdeligne |
+|
+|
+|
+Commentaire:
+action de l'instruction unique: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+AVANT
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher |A_|__| Exécuter Afficher Pourafficher  <<  Exécuter Afficher Pourafficher |B_|__| Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Commentaire:
+
+
+APRÈS
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher |B_|__| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |B_|__| Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Quitter Code 

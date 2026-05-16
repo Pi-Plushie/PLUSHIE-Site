@@ -1,0 +1,88 @@
+Profondeur Ppp Variable Étoile Exécuter Déclarer |
+|
+Variable Symbole* Exécuter Déclaration |
+|
+Varsuite Symbole*<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole* Tete |
+|
+Étoile< Symbole*< |
+|
+Profondeur Ppp Variable Vue Exécuter Déclarer |
+|
+Vue< Voir< |
+|
+Variable Listeétoiles Exécuter Déclarer Variable Retourlisteétoiles Exécuter Déclarer |
+|
+Variable Retnouv1_listeétoiles Exécuter Déclarer Variable Retnouv2_listeétoiles Exécuter Déclarer |
+|
+Exécuter Fonctionnouvelle Listeétoiles Nouvelle Instruction< Nouvelle Instruction Vue<< |
+|
+Exécuter Apprendre Instruction Étoile<< |
+|
+Exécuter Apprendre Instruction Vue<< |
+|
+Exécuter Apprendre Instruction Saut<< |
+|
+Exécuter Apprendre Instruction Retournouvelle<< |
+|
+Exécuter Apprendre Instruction Retnouv1_listeétoiles<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Fonctionnouvelle<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Retnouv1_listeétoiles Instruction< |
+|
+Exécuter Apprendre Instruction Listeétoiles<< |
+|
+Exécuter Apprendre Instruction Nouvelle< |
+|
+Exécuter Apprendre Instruction Étoile<<<< |
+|
+Exécuter Apprendre Instruction Listeétoiles<< |
+|
+Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Retournouvelle<< |
+|
+Exécuter Apprendre Instruction Retnouv2_listeétoiles<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Fonctionnouvelle<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Retnouv2_listeétoiles Instruction< |
+|
+Exécuter Apprendre Instruction Listeétoiles<< |
+|
+Exécuter Apprendre Instruction Nouvelle< |
+|
+Exécuter Apprendre Instruction Vue<<<< |
+|
+Exécuter Apprendre Instruction Listeétoiles<< |
+|
+Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Retourlisteétoiles<< |
+|
+Suitede Instruction< Retourlisteétoiles< Suite Tete< Suite Tete Instruction< |
+|
+Retourlisteétoiles Retour |
+|
+Voir Saut |
+|
+Pourafficher copiez et exécutez plusieurs fois l'instruction:
+Exécuter Afficher Pourafficher Exécuter<< Exécuter Afficher Pourafficher Listeétoiles<< Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher inspectez le code, il n'y a pas de boucle, pas de variable cachée, la procédure se modifie elle-même Exécuter Afficher Voir Saut Exécuter Listeétoiles |
+|
+Quitter Code |
+|
+
