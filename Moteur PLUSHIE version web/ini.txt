@@ -2,7 +2,7 @@
 Crée Commentaire:|
 |
 Commentaire:
-crée, commentaire et le séparateur retour de ligne ne sont là que pour la lisibilité du code mais ne servent à rien d'autre et ne font rien.
+Version Web crée, commentaire et le séparateur retour de ligne ne sont là que pour la lisibilité du code mais ne servent à rien d'autre et ne font rien.
 | est surtout là pour visualiser les retours à la ligne dans le code car si on ne met qu'un double retour à la ligne ce n'est pas assez visible et
 les bugs s'accumulent, en particulier avec les commentaires et les espaces oubliées.
 lien, avec un l majuscule, est la seule variable de niveau 0 externalisée au départ c'est à dire dont le nom est déjà connu et défini dans le fichier plusbase.mem
