@@ -106,8 +106,7 @@ button {
     border: none;
     border-radius: 8px;
     padding: 10px 18px;
-    margin-right: 10px;
-    cursor: pointer;
+        cursor: pointer;
 }
 .logo {
     margin-bottom: 0px;
@@ -148,13 +147,13 @@ button {
 .tooltiptext {
     visibility: hidden; /* Hidden by default */
     width: 400px;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: -50px;
     background-color: none;
     color: #86efac;
     text-align: left;
-    padding: 10px 0;
-    border-radius: 6px;
+    padding: 0px 0;
+    border-radius: 0px;
     position: absolute;
     z-index: 1; /* Ensure tooltip is displayed above content */
 }
