@@ -15,8 +15,8 @@
         <h1 style="flex-direction:column">
             PLUSHIE Version Javascript
             <button class="tooltip" onclick="AfficherDémos()">Démos<span class="tooltiptext">Affiche les démos</span></button>
-            <button class="démo" onclick="charger('Éveil')" style="display: none;">Éveil</button>
-            <button class="démo" onclick="charger('Étoiles')" style="display:none;">Étoiles</button>
+            <span class="tooltip" style="font-size:0.5em"><button class="démo" onclick="charger('Éveil')" style="display: none;">Éveil</button><span class="tooltiptext" >Lancer après Remise à Zéro</span></span>
+            <span class="tooltip" style="font-size:0.5em; margin-top:50px"><button class="démo" onclick="charger('Étoiles')" style="display:none;">Étoiles</button><span class="tooltiptext">Lancer après Réinitialisation</span></span>
 
 
             <label style="font-size:0.5em">
@@ -42,7 +42,8 @@
             </span>
 
             <button class="tooltip" onclick="RAZ()">Remise à Zéro<span class="tooltiptext">Efface tout pour réinitialiser</span></button>
-        </div>
+            <a href="../Emploi interface.html" ><button class="tooltip">Aide<span class="tooltiptext">Aide en ligne</span></button></a>
+</div>
         <div class="toolbar">
             <button class="tooltip" onclick="AfficherExpert()">⚠ experts ⚠ <span class="tooltiptext">Affiche les boutons expert</span></button>
             <span class="avancé" style="display:none;">

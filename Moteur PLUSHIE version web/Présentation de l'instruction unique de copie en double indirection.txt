@@ -1,0 +1,202 @@
+Commentaire:
+requiert documentation présentation de la structure
+
+Requiert Outils_de_présentation Exécuter Testrequis |
+|
+Exécuter Bilanprérequis |
+|
+Commentaire:
+
+****** illustration du fonctionnement de l'instruction fondamentale, la copie en double indirection *****
+
+
+création des variables A et D
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Crée A< |
+|
+A<< A< A< A |
+|
+Crée D< |
+|
+D<< D< D< D |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Commentaire:
+initialisation des deux chaînes de pointeurs 
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+A B A C |
+|
+D E D F |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+|
+|
+Pourafficher exécution de l'instruction Exécuter Afficher |
+|
+Pourafficher A<< Exécuter Afficher |
+|
+Pourafficher <== Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher |
+|
+A D |
+|
+|
+|
+Voir Saut Voir Saut |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Commentaire:
+comme ce fichier contient des affectations initiales de variables, si on l'exécute une
+seconde fois on n'obtient pas le même résultat. c'est parce que Plushie apprend et retient
+les informations ainsi a b a c à la seconde interprétation écrit b à la place du c initial
+
+
+En shéma cela donne:
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+Pourafficher Situation intiale Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+|
+Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|B_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|E_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|C_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|F_| Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+Pourafficher exécution de l'instruction Exécuter Afficher |
+|
+Pourafficher A<< Exécuter Afficher |
+|
+Pourafficher <== Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher Voir Tiretbas Décalageboite Exécuter Afficher Voir Espace Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+|
+Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|B_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|E_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|F_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|F_| Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+Pourafficher conséquences: Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher si on commence par déclarer un atome comme bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et qu'on s'en sert pour en déclarer un autre Exécuter Afficher |
+|
+Bonjour Salut! Pourafficher comme cela : Exécuter Afficher Voir Saut Pourafficher bonjour salut! suivi d'un mot connu Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher alors quand on exécute à nouveau Pourafficher bonjour exécuter afficher Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher on obtient : Exécuter Afficher Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et la seconde fois qu'on crée un nouvel atome en faisant bonjour vous allez bien ? Exécuter Afficher |
+|
+Voir Saut |
+|
+Bonjour Vous allez bien? |
+|
+Pourafficher on obtient en affichant bonjour : Exécuter Afficher Voir Saut |
+|
+Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et plus fort, si on affiche salut! on obtient en fait: Exécuter Afficher Voir Saut |
+|
+Pourafficher Salut! Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et la troisième fois me direz-vous ? cela change la valeur de bonjour! et vous allez bien est perdu car l'instruction unique engage deux étages d'indirection Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher bonjour et bienvenue donne alors quand on affiche bonjour Exécuter Afficher Bonjour et bienvenue ! Pourafficher Bonjour Exécuter Afficher Pourafficher et salut! devient aussi Exécuter Afficher |
+|
+Pourafficher Salut! Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher sans pointeur vers bonjour il est difficile de le faire afficher à nouveau. la chaine de caractère n'est pas perdue, le mot reste connu
+mais pour le voir à l'écran il faut l'appeler par un pointeur de niveau deux Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher un pointeur de niveau un peut être recrée en cherchant le mot bonjour ! dans le dictionnaire des mots connus avec une fonction avancée Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et pour la chaîne vous allez bien, c'est pareil si on n'a pas sauvegardé avant sa référence Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Saut |
+|

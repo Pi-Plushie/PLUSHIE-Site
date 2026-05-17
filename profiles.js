@@ -108,7 +108,7 @@ function applyProfile(profile) {
 
     let Textpitch =
     {
-        public: "PLUSHIE c'est de la programmation simple à apprendre, proche du langage naturel. Mais PLUSHIE est plus que ça: il apprend, se modifie lui-même et s'adapte aux besoins de l'utilisateur. PLUSHIE apprivoise l'informatique pour vous ",
+        public: "PLUSHIE, c'est de la programmation simple à apprendre, proche du langage naturel. Mais PLUSHIE est plus que ça : il apprend, se modifie lui-même et s'adapte aux besoins de l'utilisateur. PLUSHIE apprivoise l'informatique pour vous.",
         curieux: "PLUSHIE est une découverte, une aventure. Minimaliste et pourtant d'une portée infinie, il permet d'explorer et de comprendre comment se construit le complexe à partir du simple. Une expérience intrigante.",
         chercheur: "PLUSHIE explore un modèle computationnel basé sur l’auto-modification et les systèmes émergents. Même si le nom peut prêter à sourire(et c'est le but), PLUSHIE est un langage à portée universelle avec des fondements solides et rigoureux",
         prof: "PLUSHIE est très simple, presque dépouillé, à une seule instruction, sans syntaxe lourde, utilisant des mots usuels choisis par le programmeur. Un bijou à enseigner",

@@ -1,0 +1,149 @@
+Commentaire:
+éléments graphiques pour produire des shémas explicatifs en texte
+
+au passage on voit comment créer des chaînes de caractères sans mot appris pour éviter de planter le système...
+
+Crée Casemémoire Crée Doubleboite Casemémoire Doubleboite |
+|
+Doubleboite |__|__| |
+|
+Crée Tiretbas_ |
+|
+Profondeur Pp Variable Tiretbas Exécuter Déclaration |
+|
+Tiretbas Tiretbas_ Varsuite Tiretbas_ Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Tiretbas Tete |
+|
+Variable Séparateurvertical Exécuter Déclarer |
+|
+Varsuite |
+Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Séparateurvertical Tete |
+|
+Crée Flèchedroite |
+|
+Flèchedroite Tflèche\ Varsuite Tflèche\ Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Flèchedroite Tete |
+|
+Profondeur Pp Variable Tab Exécuter Déclaration |
+|
+Tab Ttab	Varsuite Tab Tete< Suite Tete< Tete Tab Tete |
+|
+Profondeur Pp Variable Tabulation Exécuter Déclaration Tabulation< Tab< |
+|
+Profondeur Pp Variable Symbole* Exécuter Déclaration |
+|
+Varsuite Symbole*<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole* Tete |
+|
+Profondeur Pp Variable Symbole@ Exécuter Déclaration |
+|
+Varsuite Symbole@<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole@ Tete |
+|
+Profondeur Pp Variable Lettreo Exécuter Déclarer |
+|
+Varsuite Lettreo<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Lettreo Tete |
+|
+Profondeur Pp Variable Point. Exécuter Déclarer |
+|
+Varsuite Point.<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Point. Tete |
+|
+Crée Hautdecase |
+|
+Hautdecase< Hautdecase Hautdecase Quintupletiretbas Exécuter Fonctionnouvelle Quintupletiretbas Nouvelle |
+|
+Varsuite Hautdecase Tete< Suite Tete Hautdecase Tete< Hautdecase Tete Tiretbas |
+|
+Listeàinsérer Hautdecase Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas Hautdecase Listeàinsérer |
+|
+|
+|
+Variable Espacementnoeud Exécuter Déclarer Exécuter Fonctionnouvelle Espacementnoeud Nouvelle |
+|
+Varsuite Espacementnoeud Tete< Suite Tete Espacementnoeud Tete< Espacementnoeud Tete Séparateurvertical |
+|
+Listeàinsérer Espacementnoeud Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace Espacementnoeud Listeàinsérer |
+|
+|
+|
+Crée Décalageboite |
+|
+Décalageboite< Décalageboite Décalageboite Xespaces Exécuter Fonctionnouvelle Xespaces Nouvelle |
+|
+Varsuite Décalageboite Tete< Suite Tete Décalageboite Tete< Décalageboite Tete Espace |
+|
+Listeàinsérer Décalageboite Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace Décalageboite Listeàinsérer |
+|
+|
+|
+Crée Flècheàdroite |
+|
+Flècheàdroite< Flècheàdroite Flècheàdroite Tfd Exécuter Fonctionnouvelle Tfd Nouvelle |
+|
+Varsuite Flècheàdroite Tete< Suite Tete Flècheàdroite Tete< Flècheàdroite Tete Espace |
+|
+Listeàinsérer Flècheàdroite Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Flèchedroite |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Flèchedroite Flècheàdroite Listeàinsérer |
+|
+Crée Liendepointeur |
+|
+Liendepointeur  _|___ |
+|
+|
+|
+Chargée Outils_de_présentation Exécuter Noterchargée |
+|
+Pourafficher Outils_de_présentation_Chargés_OKExécuter Afficher |
+|
+Voir Saut Voir Saut Quitter Code 

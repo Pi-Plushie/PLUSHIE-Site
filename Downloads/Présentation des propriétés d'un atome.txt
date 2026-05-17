@@ -1,0 +1,66 @@
+Requiert Outils_de_présentation Exécuter Testrequis |
+|
+Exécuter Bilanprérequis |
+|
+Exécuter Sautdeligne |
+|
+Commentaire:
+l'interpréteur de base du fichier base mem de niveau 0 crée les atomes en les bouclant sur eux mêmes
+ainsi:
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher l'atome A est crée : Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher sa valeur est: Exécuter Afficher Voir A |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher il pointe vers: tete(A)= Exécuter Afficher Tete< A Voir Tete |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher la seconde adresse vers laquelle il point est: suite(A)= Exécuter Afficher Varsuite A Voir Suite |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher qui pointe vers : tete(suite(A))= Exécuter Afficher Varsuite A Tete< Suite Voir Tete Tete< Tete Voir Tete |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher son nom est accessible en tete(suite(A))= Exécuter Afficher Varsuite A Tete< Suite Tete< Tete Voir Tete |
+|
+Varsuite Tete< Tete< Suite Tete< Tete Voir Tete |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher 
+________________________ 
+| illustration de la structure  |  
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher |@|__| Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |  _|__| Exécuter Afficher |
+|
+Exécuter Sautdeligne |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Exécuter Sautdeligne Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |A_|<<| Exécuter Afficher |
+|
+Exécuter Sautdeligne Exécuter Sautdeligne |
+|
+Pourafficher où @ désigne un bouclage sur soi-même et << un pointage vers la tête de la cellule Exécuter Afficher 
