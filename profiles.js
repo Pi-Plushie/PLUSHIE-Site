@@ -66,13 +66,13 @@ function applyProfile(profile) {
      
     let textchoix =
     {
-        public: " ✦_✦ une nouvelle manière simple d'aborder la programmation.",
+        public: " ✦_✦ une nouvelle manière simple d'aborder la programmation",
         curieux: " ?_? un langage original et intrigant",
-        chercheur: " 🔬 un modèle computationnel basé sur l’auto-modification et les systèmes émergents.",
-        prof: " Abc un langage facile à apprendre... et à enseigner",
+        chercheur: " 🔬 un modèle computationnel basé sur l’auto-modification et les systèmes émergents",
+        prof: " ABC un langage facile à apprendre... et à enseigner",
         math: "Σλ un langage précis et rigoureux, simple mais riche de possibilités",
-        hacker: " >_◉ un code qui se modifie lui-même en temps réel.",
-        geek: " 💻 un langage minimaliste, une seule instruction.",
+        hacker: " >_◉ un code qui se modifie lui-même en temps réel",
+        geek: " 💻 un langage minimaliste, une seule instruction",
         philo: " ♾️ un langage rigoureux universel ?",
         poete: " ☾ une porte vers l'infini",
     }
@@ -110,13 +110,13 @@ function applyProfile(profile) {
     {
         public: "PLUSHIE, c'est de la programmation simple à apprendre, proche du langage naturel. Mais PLUSHIE est plus que ça : il apprend, se modifie lui-même et s'adapte aux besoins de l'utilisateur. PLUSHIE apprivoise l'informatique pour vous.",
         curieux: "PLUSHIE est une découverte, une aventure. Minimaliste et pourtant d'une portée infinie, il permet d'explorer et de comprendre comment se construit le complexe à partir du simple. Une expérience intrigante.",
-        chercheur: "PLUSHIE explore un modèle computationnel basé sur l’auto-modification et les systèmes émergents. Même si le nom peut prêter à sourire(et c'est le but), PLUSHIE est un langage à portée universelle avec des fondements solides et rigoureux",
-        prof: "PLUSHIE est très simple, presque dépouillé, à une seule instruction, sans syntaxe lourde, utilisant des mots usuels choisis par le programmeur. Un bijou à enseigner",
-        math: "PLUSHIE est rigoureux et simple, proche de la génèse des mathématiques. Il permet de construire des concepts précis à partir de rien",
+        chercheur: "PLUSHIE explore un modèle computationnel basé sur l’auto-modification et les systèmes émergents. Même si le nom peut prêter à sourire (et c'est le but), PLUSHIE est un langage à portée universelle avec des fondements solides et rigoureux.",
+        prof: "PLUSHIE est très simple, presque dépouillé, sans syntaxe lourde, utilisant des mots usuels choisis par le programmeur. Un bijou à enseigner.",
+        math: "PLUSHIE est rigoureux et simple, proche de la génèse des mathématiques. Il permet de construire des concepts précis à partir de rien.",
         hacker: "PLUSHIE est une expérience radicale qui casse les bonnes pratiques de programmation : il ne possède pas de syntaxe, pas de type de variables, le code peut se modifier lui-même en temps réel. Envie d'expérimenter ?",
-        geek: "PLUSHIE est volontairement minimaliste à l'extrême. Son instruction unique et sa capacité à s'auto modifier permettent l'émergence de comportements inattendus. Il est fourni avec une interface afin de pouvoir explorer ses possibilités",
-        philo: "PLUSHIE cherche à redéfinir les fondements du langage, qui est naturellement auto-référencé, et à explorer ce qui fait que le tout est plus que la somme de ses parties. Son existence seule force à se poser des questions sur la nature profonde du monde",
-        poete: "PLUSHIE est plus qu'un langage informatique. Il pose des questions profondes sur la nature même de notre univers. Laissez-vous entraîner dans cette expérience.",
+        geek: "PLUSHIE est volontairement minimaliste à l'extrême. Son instruction unique et sa capacité à s'auto-modifier permettent l'émergence de comportements inattendus. Il est fourni avec une interface afin de pouvoir explorer ses possibilités.",
+        philo: "PLUSHIE cherche à redéfinir les fondements du langage, qui est naturellement auto-référencé, et à explorer ce qui fait que le tout est plus que la somme de ses parties. Son existence seule force à se poser des questions sur la nature profonde du monde.",
+        poete: "PLUSHIE est plus qu'un langage informatique. Il est une porte vers l'imaginaire. PLUSHIE rêve, laissez-vous entraîner dans cette expérience.",
     }
     
     setText("Pitch", Textpitch[profile]);

@@ -45,17 +45,17 @@
                     <ul>
                         <li> <u>Convention de typographie des mots</u></li>
                         <ul>
-                            La typographie suivante est recommandée:
-                            les expressions à découper commencent si possible par une majuscule et se terminent par un caractère espace.
-                            <strong class="orange">cela ne fait pas de l'espace un séparateur au sens usuel.</strong> l'interpréteur de base de PLUSHIE n'a aucune notion de séparateur.
+                            La typographie suivante est recommandée :
+                            les expressions à découper commencent, si possible, par une majuscule et se terminent par un caractère espace.
+                            <strong class="orange">Cela ne fait pas de l'espace un séparateur au sens usuel.</strong> L'interpréteur de base de PLUSHIE n'a aucune notion de séparateur.
                         </ul>
                         <br>
                         <li> <u>Convention de nommage des pointeurs</u></li>
                         <ul>
-                            Les étages successifs de pointeurs son notés par des symboles "<" placés à la fin du mot (mais avant l'espace de séparation)
+                            Les étages successifs de pointeurs son notés par des symboles "<" placés à la fin du mot (mais avant l'espace de séparation).
                             <details>
                                 <summary> Exemple </summary>
-                                Ainsi "A<<< " Désigne un pointeur de niveau 3 vers A qui pointe donc en intermédiaire vers "A<< ", puis vers "A< " et enfin vers "A "<br>
+                                Ainsi "A<<< " désigne un pointeur de niveau 3 vers A, qui pointe donc en intermédiaire vers "A<< ", puis vers "A< " et enfin vers "A ".<br>
                             </details>
                         </ul>
                     </ul>
@@ -64,24 +64,24 @@
         </div>
 
         <div class="section">
-            Mais... Comment ça peut marcher, il n'y a pas de test, pas de GOTO, pas d'appel de fonction, de récursivité de...?
+            Mais... comment ça peut marcher? Il n'y a pas de test, pas de GOTO, pas d'appel de fonction, de récursivité de...?
 
             <p>
-                Au départ, non. Il n'y a que ce qui a été décrit: un moteur automate qui répète inlassablement les mêmes actions, une mémoire, 5 variables externalisées (ou registres), une instruction unique de copie en double indirection.
+                Au départ, non. Il n'y a que ce qui a été décrit : un moteur automate qui répète inlassablement les mêmes actions, une mémoire, 5 variables externalisées (ou registres), une instruction unique de copie en double indirection.
                 Mais on peut tout reconstruire à partir de cela.
             </p>
             <div class="section" id="goto"></div>
             <h2>Saut non conditionnel</h2>
 
             <p>
-                Le GOTO du basic donc. Le branchement est simplement obtenu en pointant le pointeur d'exécution à une autre adresse:
+                Soit donc le GOTO du basic. Le branchement est simplement obtenu en pointant le pointeur d'exécution à une autre adresse :
                 <pre>
                 Exécuter Destinationdusaut
                 </pre>
             </p>
             <details>
-                <summary>attention</summary>
-                il faut s'assurer qu'à un moment donné, la chaîne d'exécution revienne à un interpréteur capable de lire les caractères d'entrée et de les analyser. Sinon PLUSHIE part dans les limbes (et la touche echap chauffe)
+                <summary>Attention</summary>
+                Il faut s'assurer qu'à un moment donné, la chaîne d'exécution revienne à un interpréteur capable de lire les caractères d'entrée et de les analyser. Sinon PLUSHIE part dans les limbes (et la touche <button>Échap </button> chauffe).
             </details>
 
             <br>
@@ -100,20 +100,20 @@
                 </pre>
                 selon le nom qu'on a choisi pour externaliser le registre de sortie.
                 Par construction, le driver de sortie affichera un caractère à la place de l'adresse si la valeur est inférieure à 256
-                (mais on peut modifier le driver de sortie pour <b>afficher</b> tous les caractères UTF-8), ce qui est fait dans  <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne</a>
+                (mais on peut modifier le driver de sortie pour <b>afficher</b> tous les caractères UTF-8), ce qui est fait dans  <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne</a>.
             </p>
 
         </div>
         <div class="section">
-            <h2>valeur d'une variable</h2>
-            <p>ou comment se prendre la tête</p>
+            <h2>Valeur d'une variable...</h2>
+            <p><i>...ou comment se prendre la tête ! </i></p>
             <p>
-                Problème: avec la double indirection qui saute un étage de pointeur, comment récupérer la première adresse vers laquelle pointe une adresse ?<br><br>
+                Problème : avec la double indirection qui saute un étage de pointeur, comment récupérer la première adresse vers laquelle pointe une adresse ?<br><br>
                 Les cases mémoire étant repérées par d'autres adresses mémoires avec un étage d'indirection supplémentaire, il faut effectivement penser à conserver l'adresse d'un atome nommé avant de lui affecter
-                une valeur. Sinon il ne sera pas simplement adressable (on peut le retrouver dans le dictionnaire des mots connus, mais c'est compliqué)<br>
-                Il faut donc créer un pointeur vers l'atome et un pointeur vers ce pointeur (oui, double indirection)
-                C'est pourquoi vous verrez souvent, au moins avant que la fonction déclarer ne soit définie, des créations de variables de la forme:
-                (les signes < désignent les étages de pointeurs, voir conventions)
+                une valeur. Sinon il ne sera pas simplement adressable. On pourrait le retrouver dans le dictionnaire des mots connus, mais c'est' compliqué.<br>
+                Il faut donc créer un pointeur vers l'atome et un pointeur vers ce pointeur (oui, double indirection oblige).
+                C'est pourquoi vous verrez souvent, au moins avant que la fonction <i>Déclarer</i> ne soit définie, des créations de variables de la forme :
+
 
 
                 <pre>
@@ -122,30 +122,32 @@
                 Variable<< Variable< Variable< Variable 
 
                 </pre>
+                <i>(les signes < désignent les étages de pointeurs, voir conventions)</i>
 
-                L'instruction:
+                <br><br>L'instruction 
                 <pre>
                    Tête< Variable 
                </pre>
-                Permet de récupérer à l'adresse de Tête la valeur pointée par Variable. Cela revient à déterminer la "valeur" de la Variable
+                permet de récupérer à l'adresse de Tête la valeur pointée par Variable. Cela revient à déterminer la "valeur" de la Variable.
 
             </p>
         </div>
         <div class="section" id="test">
-            <h2>Saut Conditionnel</h2>
+            <h2>Saut conditionnel</h2>
             <p>
                 Ah ! Là on tient un argument pour démontrer que PLUSHIE ne peut pas marcher ! Sans test, pas d'algorithme complexe !
             </p>
             <p>
-                Et pourtant... On peut effectuer un saut conditionnel en utilisant uniquement la copie d'adresses mémoire:
-            </p> En PLUSHIE, le test prendra la forme suivante:
+                Et pourtant... On peut effectuer un saut conditionnel en utilisant uniquement la copie d'adresses mémoire :
+            </p> En PLUSHIE, le test prendra la forme suivante :
             <pre>Si Valeur1 Égale Valeur2 Alors Procédurea Sinon Procédureb Exécuter Test </pre>
-            Il suffit de copier Procédureb sur l'adresse pointée par Si puis copier Procédurea sur celle pointée par Égale puis d'exécuter la valeur pointée par Si
-            Ainsi si Valeur2 est égale à valeur1, la seconde copie écrase la première et on exécute Procédurea
-            et sinon on exécute procédure B
+            Il suffit de copier Procédureb sur l'adresse pointée par Si, puis copier Procédurea sur celle pointée par Égale, puis d'exécuter la valeur pointée par Si.<br><br>
+            Ainsi si Valeur2 est égale à Valeur1, la seconde copie écrase la première et on exécute Procédurea
+            et sinon on exécute Procédureb.<br><br>
 
-            Tout informaticien va détecter la faille majeure: ce test est destructif: les valeurs initiales pointées par Si et Alors sont écrasées.
-            Il convient donc au préalable de les sauvegarder, puis de les restaurer en fin de test.(Tête< désigne toujours un pointeur vers Tête)
+            Tout informaticien détectera la faille majeure. Ce test est destructifv: les valeurs initiales pointées par Si et Alors sont écrasées.
+            Il convient donc au préalable de les sauvegarder, puis de les restaurer en fin de test.(Tête< désigne toujours un pointeur vers Tête).<br>
+            Le code suivant
 
             <pre>
             Tête< Si Sauvegardesi Tête
@@ -157,35 +159,35 @@
             Tête< Égale Tête Sauvegardeégale
             Exécuter Identique
              </pre></p>
-            Permet de contourner le problème.
+            permet de contourner le problème.
 
-            Bien entendu, il  n'est pas question de réécrire tout ce code à chaque test. Le fichier ini.txt propose ainsi une fonction testidentique dont la syntaxe est:
+            Bien entendu, il  n'est pas question de réécrire tout ce code à chaque test. Le fichier ini.txt propose ainsi une fonction testidentique dont la syntaxe est :
             <pre>Si Valeur1 Égale Valeur2 Alors Procédurea Sinon ProcédurebExécuter Testidentique</pre>
         </div>
         <div class="section">
             <h2>Suite</h2>
-            Pour obtenir la seconde adresse pointée par une variable:
+            Pour obtenir la seconde adresse pointée par une variable :
             <pre>
             Suitede Variable Tete< Suite 
             </pre>
-            Tete contient alors la seconde valeur pointée par Variable (sa suite). Le registre pointé par Suite contient toujours (grâce au fonctionnement du moteur automate de niveau -1) l'adresse de la seconde adresse mémoire
-            pointée par la valeur entrée dans Suitede. (en pratique c'est juste adresse+1)
+            Tete contient alors la seconde valeur pointée par Variable (sa suite). Le registre pointé par <i>Suite</i> contient toujours (grâce au fonctionnement du moteur automate de niveau -1) l'adresse de la seconde adresse mémoire
+            pointée par la valeur entrée dans <i>Suitede</i> (en pratique c'est juste adresse+1).
         </div>
         <div class="section">
-            <h2>Les Nombres</h2>
+            <h2>Les nombres</h2>
             Au contraire de la plupart des langages informatiques, PLUSHIE n'a, au départ, pas accès à la valeur numérique des adresses mémoires qu'il manipule. C'est assez difficile à comprendre sans se plonger
             dans les <a href="Technique">détails techniques</a> pointus.
-            Mais PLUSHIE accède à une notion émergente de nombres naturels: la longueur des listes chaînées, ou des piles, ou des cascades.
+            Mais PLUSHIE accède à une notion émergente de nombres naturels : la longueur des listes chaînées, ou des piles, ou des cascades.
             Un nombre est le nombre de fois où un test de fin de liste ne donne pas un résultat positif.
         </div>
         <div class="section">
             <h2>Les boucles</h2>
-            dès que PLUSHIE a la notion de nombre, il peut apprendre à faire des boucles (du genre for i = 1 to 10, do procédure dans d'autres langages)
+            Dès que PLUSHIE a la notion de nombre, il peut apprendre à faire des boucles (du genre for i = 1 to 10, do procédure dans d'autres langages).
 
             <pre>
             Tantque Nombre Répéter Procédure Retourboucle Findeboucle Retourprocédure Boucle Exécuter Boucle 
             </pre>
-            et puis, en utilisant les fonctions qu'il connait, il peut bâtir des fonctions plus avancées
+            Et puis, en utilisant les fonctions qu'il connaît, il peut bâtir des fonctions plus avancées.
 
         </div>
 
