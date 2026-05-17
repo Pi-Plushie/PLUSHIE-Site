@@ -12,61 +12,67 @@
 </head>
 <body>
     <header>
-        <div class="boutonsprofil">
-            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
-            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
-            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
-            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
-            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
-            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
-            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
-            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
-            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+        <div class="container">
+            <div class="boutonsprofil">
+                <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+                <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+                <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+                <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+                <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+                <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+                <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+                <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+                <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+            </div>
         </div>
-        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+            <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
     </header>
     <div class="container">
         <div class="section">
             <h1>Entrez au coeur de PLUSHIE</h1>
             <p data-profile="public curieux philo poete"> <i>Attention , partie plus technique</i></p>
             <div class="section">
-                Mise en abîme: Le fichier de mémoire initial de plushie contient un interpréteur écrit en PLUSHIE et interprété en PLUSHIE. <br>
-                Il est modifiable durant l'exécution. Il peut lui même être généré à partir d'un programme en simili PLUSHIE dont les instructions ne sont pas du texte d'un fichier.txt<br>
+                Mise en abîme: <br>Le <a href="Technique.html#moteur">fichier de mémoire </a>initial de plushie contient un <a href="Technique.html#interpréteur">interpréteur</a> écrit en PLUSHIE et interprété en PLUSHIE. <br><br>
+                Il est modifiable durant l'exécution. Il peut lui même être généré à partir d'un programme en simili PLUSHIE dont les instructions ne sont pas du texte d'un fichier.txt
                 mais directement des instructions mémoire.
                 <br><br>
                 Réduire cela à sa plus simple expression fait partie des objectifs de développement de PLUSHIE
                 <br>
-                Même, le moteur de base peut être écrit partiellement en PLUSHIE !
-                <br><br>
-                <h2 id="aider">Comment aider ?</h2>
-
-                Oui, vous pouvez aider !<br>
-                même en posant tout simplement des questions des questions.
-                PlUSHIE est un projet ouvert vous pouvez donc explorer, tester et partager vos observations.
-                PLUSHIE a besoin de vous pour grandir et améliorer son site web.
+                Même le <a href="Technique.html#moteur">moteur-automate</a> de base peut être écrit partiellement en PLUSHIE !
+                <br>
             </div>
+        </div>
 
             <div class="section">
-            </div>
                 <div class="barredeliens">
-                    <a href="Code Source.html">Code Source</a>   <a href="Questions.html">Questions</a> <a href="Fonctions Classiques.html">Fonctions usuelles</a> <a href="Conventions.html">Conventions</a>
-                    <a href="Technique.html">Technique</a>
+                    <a href="Questions.html">Questions</a> <a href="Conventions.html">Conventions</a>
+                    <a href="Technique.html">Technique</a><a href="Fonctions Classiques.html">Fonctions usuelles</a><a href="Code Source.html">Code Source (à venir)</a>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="section" style="text-align:center;">
-                <div Class="entravaux">
-                    🏗
-                </div>
-                En construction, plus à venir
+           
+            <div class="section">
+                <h2 id="aider">Comment aider ?</h2>
+
+                Oui, vous pouvez <a href="Questions.html#aider">aider !</a><br>
+                même en posant tout simplement des question ou en donnant vos ressentis, en signalant les soucis sur le site (liens brisés, dysfonctionnements).
+                PLUSHIE est un projet ouvert vous pouvez donc explorer, tester et partager vos observations.<br><br>
+                <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+
+                PLUSHIE a besoin de vous pour grandir et améliorer son site web.
             </div>
-        </div>
-        <footer>
-            <div class="barredeliens">
-                <a href="index.html">← Retour à l’accueil</a>
-                PLUSHIE — expérimentation en cours
+    <div class="container">
+        <div class="section" style="text-align:center;">
+            <div Class="entravaux">
+                🏗
             </div>
-        </footer>
+            En construction, plus à venir
+        </div>
+    </div>
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
+        </div>
+    </footer>
 
 </body>

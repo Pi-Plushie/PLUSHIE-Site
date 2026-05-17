@@ -5,12 +5,12 @@
     <title>PLUSHIE</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="profiles.js" defer></script>
     <style>
         header img {
             width: 50px;
             margin-bottom: 20px;
-                   }
-        
+        }
     </style>
 </head>
 <p id="dynamic-text">
@@ -41,46 +41,78 @@
     <div class="container">
 
         <div class="section">
-            <h2>Une seule instruction ? Hum...</h2>
+            <h2>Une seule instruction ?</h2>
+            <details>
+                <summary>Hum...</summary>
 
-            <p>
-                En effet, on ne vous la fait pas. Avec 1 on ne crée pas de ramifications, de branches, de complexité.
+                <p>
+                    En effet, on ne vous la fait pas. Avec 1 on ne crée pas de ramifications, de branches, de complexité.
 
-                Alors s'il est vrai que PLUSHIE n'utilise qu'une seule instruction versatile et ne fait en permanence que copier (indirectement) une adresse mémoire à une autre adresse, il s'appuie
-                sur un support non modifiable qui peut être considéré comme transmettant des fonctions implicites, bien que rigides.
-                <ul>
-                    <li>L'accès à la suite</li>
-                    <p>
-                        Le simple fait de pouvoir adresser 2 adresses mémoires à partir d'une seule peut légitimement être considéré comme une fonction. Sans cette possibilité, PLUSHIE ne pourrait pas explorer des structures de type arbre et ne
-                        pourrait pas gérer des données d'un niveau de complexité équivalent à l'arithmétique
-                    </p>
-                    <li>                Variables prédéfinies            </li>
-                    <p>
-                        Comme PLUSHIE ne fait pas la différence entre une donnée, une variable ou une demi-instruction de l'instruction unique Destination ↞ Source, la donnée d'une variable sous-jacente peut
-                        également être considérée comme une fonction. Dans le moteur minimal actuel, elles sont au nombre de trois (en plus de la semi-fonction à une variable suite):
-                    </p>
-
+                    Alors s'il est vrai que PLUSHIE n'utilise qu'une seule instruction versatile et ne fait en permanence que copier (indirectement) une adresse mémoire à une autre adresse, il s'appuie
+                    sur un support non modifiable qui peut être considéré comme transmettant des fonctions implicites, bien que rigides.
                     <ul>
-                        <li>L'entrée de donnée</li>
+                        <li>L'accès à la suite</li>
                         <p>
-                            PLUSHIE (comme le cerveau humain) a besoin d'informations provenant de l'extérieur pour se développer. Le plus simple est la lecture de caractère qui est proposée actuellement. Si l'on veut disposer d'autres sources d'entrées
-                            il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique (il faut a minima une adresse identifiée réservée comme entrée pour le nouveau media)
+                            Le simple fait de pouvoir adresser 2 adresses mémoires à partir d'une seule peut légitimement être considéré comme une fonction. Sans cette possibilité, PLUSHIE ne pourrait pas explorer des structures de type arbre et ne
+                            pourrait pas gérer des données d'un niveau de complexité équivalent à l'arithmétique
                         </p>
-                        <li>La sortie de donnée</li>
+                        <li>                Variables prédéfinies            </li>
                         <p>
-                            Afin de pouvoir interagir avec son environnement, PLUSHIE a besoin d'au moins une possibilité de le modifier.
-                        </p>
-                        <li>L'exécution</li>
-                        <p>
-                            Il est également nécessaire de savoir à quel endroit du code on se situe pour la partie interprétée des données.
+                            Comme PLUSHIE ne fait pas la différence entre une donnée, une variable ou une demi-instruction de l'instruction unique Destination ↞ Source, la donnée d'une variable sous-jacente peut
+                            également être considérée comme une fonction. Dans le moteur minimal actuel, elles sont au nombre de trois (en plus de la semi-fonction à une variable suite):
                         </p>
 
+                        <ul>
+                            <li>L'entrée de donnée</li>
+                            <p>
+                                PLUSHIE (comme le cerveau humain) a besoin d'informations provenant de l'extérieur pour se développer. Le plus simple est la lecture de caractère qui est proposée actuellement. Si l'on veut disposer d'autres sources d'entrées
+                                il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique (il faut a minima une adresse identifiée réservée comme entrée pour le nouveau media)
+                            </p>
+                            <li>La sortie de donnée</li>
+                            <p>
+                                Afin de pouvoir interagir avec son environnement, PLUSHIE a besoin d'au moins une possibilité de le modifier.
+                            </p>
+                            <li>L'exécution</li>
+                            <p>
+                                Il est également nécessaire de savoir à quel endroit du code on se situe pour la partie interprétée des données.
+                            </p>
+
+                        </ul>
                     </ul>
-                </ul>
-                <div class="section"></div>
-                <h2>D'autres questions ?'</h2>
-                Demandez à PLUSHIE ! : Plushie.langage (at) free.fr
-</div>
+            </details>
+        </div>
+        <div class="section">
+            <h2>Pourquoi PLUSHIE ?</h2>
+            Cette question se voit consacrer <a href="Pourquoi PLUSHIE.html">une page entière</a>, rien que pour elle.
+
+        </div>
+        <div class="section">
+            <h2>Qui est derrière PLUSHIE ?</h2>
+            Voir la page <a href="Qui suis-je.html">Qui suis-je ?</a>
+
+        </div>
+        <div class="section">
+            <h2>En quoi c'est nouveau ?</h2>
+            Voir la page <a href="index.html#différent">Pourquoi c'est différent</a> et aussi la <a href="Comparaisons.html">Comparaison</a> avec les autres langages et concepts informatiques.
+
+        </div>
+        <div class="section">
+            <h2>Comment ça marche ?</h2>
+            Attention, détails techniques pas forcément immédiats à comprendre ! :
+            Voir <a href="Conventions.html">les conventions</a> de notation, puis plongez dans les aspects <a href="Technique.html">techniques</a>
+        </div>
+        <div class="section" id="aider">
+
+            <h2>Puis-je participer ?</h2>
+            Bien entendu ! La page GitHub sera bientôt accessible ! Mais en attendant, faites vos commentaires sur le site via  <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+            Essayez les interfaces et rapportez ce qui vous a posé problème (ou au contraire ce qui vous a plu).
+            Parlez-en autour de vous, faites le buzz autour de PLUSHIE !
+        </div>
+        <div class="section">
+            <h2>D'autres questions ?'</h2>
+            Demandez à PLUSHIE ! : <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+
+        </div>
     </div>
     <div class="container">
         <div class="section" style="text-align:center;">

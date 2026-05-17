@@ -71,14 +71,14 @@
         <div class="section">
             <h2> 2/ Affectation des rôles des cases mémoire</h2>
             Le minimalisme a imposé de n'avoir que 2 adresses adressables par une adresse donnée, ce qui est le minimum pour construire des structures complexes.<br>
-            <div class="espacement">
-                <div class="section-schéma ">
+            
+                
                     Cellule mémoire élémentaire :
-                </div>
+               
                 <div class="cellule">
                     <div class="case tete">Tête</div>
                     <div class="case suite">Suite</div>
-                </div>
+             
             </div><br><br>Elles sont appelées tête et suite mais pourraient être appelées gauche et droite ou première et seconde. Les chaînes de caractères caractérisant les mots appris doivent être pointées soit par l'une, soit par l'autre.
             Une forme de chiralité apparaît entre :
 
@@ -143,27 +143,28 @@
 
                     <div class="section-schéma ">
 
-                        <div class="atome-zone">
-                            <div class="espacement">
-                                <span>Atome (nommé) </span>
+                        <div class="section-schéma">
+
+                            <span>Atome (nommé) </span>
+                            <div class="atome-zone">
                                 <div class="cellule">
                                     <div class="case tete"></div>
                                     <div class="case suite"></div>
                                 </div>
                                 <div class="zone-pointeur">
                                     <svg class="pointeur-svg" width="3" height="40">
-                                        <circle cx="-40" cy="20" r="4" fill="#22c55e" />
+                                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
                                         <polygon points="3,20 -2,15 -2,25"
                                                  fill="#22c55e" />
-                                        <circle cx="-85" cy="20" r="4" fill="#22c55e" />
-                                        <polyline points="-85,20,-85,50,-125,50,-125,20,-105,20"
+                                        <circle cx="-72" cy="20" r="4" fill="#22c55e" />
+                                        <polyline points="-72,20,-72,50,-115,50,-115,20,-95,20"
                                                   stroke="#22c55e"
                                                   stroke-width="2"
                                                   fill="none" />
-                                        <polygon points="-105,20 -110,15 -110,25"
+                                        <polygon points="-95,20 -100,15 -100,25"
                                                  fill="#22c55e" />
 
-                                        <line x1="-40"
+                                        <line x1="-30"
                                               y1="20"
                                               x2="-0"
                                               y2="20"
@@ -171,9 +172,15 @@
                                               stroke-width="2" />
                                     </svg>
                                 </div>
+
                                 <span>Nom de l'atome (liste chaînée) </span>
-                                <span>  | | </span>
-                                <span>  Atome élémentaire: </span>
+
+                            </div>
+                        </div>
+                        <div class="section-schéma">
+
+                            <span>  Atome élémentaire: </span>
+                            <div class="atome-zone">
                                 <div class="cellule">
 
                                     <div class="case tete"></div>
@@ -182,26 +189,28 @@
                                 </div>
                                 <div class="zone-pointeur">
                                     <svg class="pointeur-svg" width="3" height="20">
-                                        <circle cx="-85" cy="10" r="4" fill="#22c55e" />
-                                        <polyline points="-85,10,-85,40,-120,40,-120,10,-105,10"
+                                        <circle cx="-73" cy="10" r="4" fill="#22c55e" />
+                                        <polyline points="-73,10,-73,40,-110,40,-110,10,-95,10"
                                                   stroke="#22c55e"
                                                   stroke-width="2"
                                                   fill="none" />
 
-                                        <polygon points="-105,10 -110,5 -110,15"
+                                        <polygon points="-95,10 -100,5 -100,15"
                                                  fill="#22c55e" />
-                                        <circle cx="-45" cy="10" r="4" fill="#22c55e" />
-                                        <polyline points="-45,10,-45,40,-75,40,-75,30"
+
+
+                                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                                        <polyline points="-30,10,-30,40,-65,40,-65,30"
                                                   stroke="#22c55e"
                                                   stroke-width="2"
                                                   fill="none" />
-                                        <polygon points="-75,30 -80,35 -70,35"
+                                        <polygon points="-65,30 -70,35 -60,35"
                                                  fill="#22c55e" />
                                     </svg>
                                 </div>
                             </div>
                         </div>
-                    </div>
+          
                 <li>la suite pointe vers l'adresse de la suite de la cellule. Cela caractérise une fin de liste, en toute logique</li>
                 <br>
                 <div class="section-schéma ">
@@ -267,7 +276,7 @@
 
                 <li>
                     La suite pointe vers sa propre adresse: Cela constitue potentiellement une <span class="red"> anomalie de structure </span>et peut conduire à des comportements inattendus.
-                    Cela peut également être considéré comme la caractérisation d'un atome chiral d'un atome standard'<br>
+                    Cela peut également être considéré comme la caractérisation d'un atome chiral d'un atome standard<br>
                 </li>
                 
 
@@ -317,7 +326,7 @@
         </div>
 
         </ul>
-        <br>
+     
         <div class="section">
             <h2> 5/ Convention de typographie des mots</h2>
             comme le montre <a href="Et%20l'%C3%A9toile%20apparait.html#Zblurg">cet exemple</a>, PLUSHIE fonctionne très bien sans convention.
@@ -331,7 +340,7 @@
                 D'autres conventions sont possibles et peuvent être mélangées indistinctement dans un code PLUSHIE.
                 Mais il convient d'être rigoureux, les pseudo-bugs liés au découpage des phrases par l'interpréteur de base peuvent parfois se montrer retors dans ces cas de figure.
             </details>
-
+        </div>
             <div class="section">
                 <h2> 6/ Convention de nommage des pointeurs</h2>
                 Rien n'oblige à identifier clairement par le nom qu'un mot pointe vers un nombre.<br>
@@ -350,16 +359,13 @@
 
         <div class="container">
             <div class="section" style="text-align:center;">
-                <div Class="entravaux">
-                    🏗
-                </div>
-                En construction, plus à venir
+                ⏩ <a href="Technique.html">Continuer vers technique</a>
             </div>
         </div>
     <footer>
         <div class="barredeliens">
             <a href="index.html">← Retour à l’accueil</a>
-            PLUSHIE — expérimentation en cours
+            PLUSHIE — expérimentation en cours <a href="Technique.html">Technique</a>
         </div>
     </footer>
 

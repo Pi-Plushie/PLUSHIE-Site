@@ -123,15 +123,20 @@ function updateDynamicText() {
 setInterval(updateDynamicText, 1000);
 
 let frames = [
-  
+    "↞ ↞ ↞ ↞",
+    "↞ ↞ ↞ ↞",
+    "↞ ↞ ↞ ↞",
 
-    "← ← ← ●",
+    "↞ ↞ ↞ ●",
 
-    "← ← ● ←",
+    "↞ ↞ ● ↞",
 
-    "← ● ← ←",
+    "↞ ● ↞ ↞",
 
-    "● ← ← ←"
+    "● ↞ ↞ ↞",
+    
+    "↞ ↞ ↞ ↞",
+
 ];
 
 let frame = 0;
@@ -150,4 +155,4 @@ function updateTransfer() {
     }
 }
 
-setInterval(updateTransfer, 250);
+setInterval(updateTransfer, 1200);

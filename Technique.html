@@ -35,42 +35,46 @@
             <h2>Architecture Minimale Nécessaire</h2>
             outre un ordinateur et son système d'exploitation (voir niveaux de complexité), PLUSHIE se repose sur:
             <details>
+                <summary>une structure légère</summary>
                 <ul>
-                    <li />Mémoire</li>
+                    <li> La mémoire</li>
                     <p>
-                        PLUSHIE Manipule uniquement des adresses mémoires.
+                        PLUSHIE manipule uniquement des adresses mémoires.
                         En pratique, on simule la mémoire par un tableau unidimensionnel extensible d'entiers de type Mémoire()
                         Le moteur automate de PLUSHIE doit juste pouvoir générer une nouvelle adresse mémoire disponible quand la dernière adresse disponible a été utilisée.
-                        '
+
                     </p>
-                    <li />Données de base</li>
+                    <br>
+                    <li>Données de base</li>
                     <p>
                         Pour pouvoir construire des architectures de données complexes, une adresse mémoire doit permettre d'accéder à 2 adresses mémoires au moins.
                         La première est appelée Tête et la seconde Suite
                     </p>
                 </ul>
+               
                 <div class="section">
                     <div class="section-schéma ">
                         Cellule mémoire élémentaire :
-                    </div>
-                    <div class="cellule">
-                        <div class="case tete">Tête</div>
-                        <div class="case suite">Suite</div>
-                    </div>
-
-                    <details>
-                        <summary>
-                            Complément
-                        </summary>
-                        <p>
-                            Mais toute autre convention est recevable: droite/gauche première/seconde etc. On peut même choisir qu'une adresse pointe vers plus que 2 adresses pour faciliter la gestion des hypergraphes.
-                        </p>
-                    </details>
+                    </div> <ul>
+                               <ul>
+                                   <div class="cellule">
+                                       <div class="case tete">Tête</div>
+                                       <div class="case suite">Suite</div>
+                                   </div>
+                               </ul>
+                            <details>
+                                <summary>
+                                    Complément
+                                </summary>
+                                <p>
+                                    Mais toute autre convention est recevable: droite/gauche première/seconde etc. On peut même choisir qu'une adresse pointe vers plus que 2 adresses pour faciliter la gestion des hypergraphes.
+                                </p>
+                            </details>
                 </div>
-             </details">
-        </div>
+                        </details">
+</div>
  
-        <div class="section-schéma ">
+        <div class="section-schéma " id="moteur">
             <h2>Moteur</h2>
             Le moteur de PLUSHIE est un programme mécanique de type automate, non modifiable pendant l'exécution, qui assure les actions suivantes:
             <details>
@@ -79,21 +83,21 @@
                 </summary>
                 <ul>
                     <li />Si mémoire saturée, obtenir une nouvelle cellule mémoire</li>
-                    <p> </p>
-                    <li />Copier sur le registre Destination la valeur mémoire pointée par le pointeur d'exécution</li>
+                    <br>
+                    <li />Copier sur le registre Destination la valeur mémoire pointée par le pointeur d'exécution:</li>
                     <p>Destination=Mémoire(Mémoire(Exec)) </p>
-                    <li />Avancer le pointeur d'exécution</li>
+                    <li />Avancer le pointeur d'exécution:</li>
                     <p> Mémoire(Exec)=Mémoire(Suiv(Mémoire(Exec))</p>
-                    <li />Copier sur le registre Source la valeur mémoire pointée par le pointeur d'exécution</li>
+                    <li />Copier sur le registre Source la valeur mémoire pointée par le pointeur d'exécution:</li>
                     <p> Mémoire(Exec)=Mémoire(Suiv(Tete(Exec))</p>
-                    <li />Avancer le pointeur d'exécution</li>
-                    <p> </p>
-                    <li />Effectuer l'instruction unique</li>
-                    <p>Mémoire(Mémoire(Destination))=Mémoire(Mémoire(Source)) </p>
-                    <li />Pointer Suite sur la seconde adresse </li>
+                    <li />Avancer à nouveau le pointeur d'exécution</li>
+                    <br>
+                    <li />Effectuer l'instruction unique:</li>
+                    <p>  <strong color="green">Mémoire(Mémoire(Destination))=Mémoire(Mémoire(Source))</strong> </p>
+                    <li />Pointer Suite sur la seconde adresse: </li>
                     <p>Mémoire(Mémoire(Adressedesuite)) = Suiv(Mémoire(Mémoire(Variablesuite))) </p>
-                    <li />Si le registre Entrée est vide, lire un caractère dans le registre Entrée'</li>
-                    <li />Si Le registre Sortie est non vide, Afficher Sortie </li>
+                    <li />Si le registre Entrée est vide, lire un caractère dans le registre Entrée</li><br>
+                    <li />Si Le registre Sortie est non vide, Afficher Sortie </li><br>
                     <li />Boucle tant que fin non atteinte</li>
                 </ul>
             </details>
@@ -102,30 +106,34 @@
             <p>
                 <i>
                     En pratique, ce moteur automate est programmé en VB.net dans un module commenté de 400 lignes, dans l'interface proposée au téléchargement.
-                    Le code source est disponible sur simple demande.
+                    Le code source est disponible sur simple demandeà  <strong class="green">Plushie.langage (à) free.fr</strong>
                 </i>
-            </p>  </p>
-            
+         
 
         </div>
         <div class="section-schéma ">
             <h2>Fichier mémoire de démarrage</h2>
             <p>
-                Afin de pouvoir analyser du texte et interagir, il est nécessaire de disposer d'une structure déjà chargée en mémoire, donc un fichier de boot.
-                Ce fichier, plusbase.mem est composé de 300 cellules mémoires environ, soit presque 600 adresses entières. Il est de niveau 0, c'est à dire qu'il est modifiable pendant l'exécution du système (au prix de grandes
-                précautions). Il contient l'interpréteur de base fourni avec PLUSHIE, qui pourra être modifié ultérieurement pendant son exécution, et même totalement oublié.
-                L'interpréteur de base est lui-même écrit en PLUSHIE. Il est généré par un fichier de création de mémoire écrit en simili plushie d'environ 600 lignes non fourni avec l'interface de démonstration( mais peut-être entièrement entré à la main, adresse par adresse)
+                Afin de pouvoir analyser du texte et interagir, il est nécessaire de disposer d'une structure déjà chargée en mémoire, donc un fichier de boot.<br>
+                Ce fichier, plusbase.mem est composé de 300 cellules mémoires environ, soit presque 600 adresses entières.<br>
+                Il est de niveau 0, c'est à dire qu'il est modifiable pendant l'exécution du système (au prix de grandes précautions).<br>
+                Il contient l'interpréteur de base fourni avec PLUSHIE, qui pourra être modifié ultérieurement pendant son exécution, et même totalement oublié.<br>
+                L'interpréteur de base est lui-même écrit en PLUSHIE. <br>
+                Il est généré par un fichier de création de mémoire écrit en simili plushie d'environ 600 lignes, non fourni avec l'interface de démonstration, (mais peut-être entièrement entré à la main, adresse par adresse)
 
-                L'algorithme de l'interpréteur actuel est fourni ici
-            <p>   </p>
+                L'algorithme de l'interpréteur actuel sera fourni sur simple demande à  <strong class="green">Plushie.langage (à) free.fr</strong>. Il est expliqué plus en détail <a href="#interpréteur">ici même</a>
+<p>   </p>
             <i>Cet interpréteur n'est qu'une proposition. Il se veut minimaliste et ne présuppose l'existence d'aucun séparateur. La seule necessité est la connaissance d'un premier mot connu, programmé en dur dans le fichier mémoire de démarrage</i>
             <details>
-                Ce mot, actuellement Lien, est un pointeur de niveau 2 vers l'adresse Suite qui donne la seconde valeur pointée par la variable Suitede. Suite pointe au départ vers Suitede ce qui permet de l'externaliser'
+                <br>
+                Ce mot, actuellement <b><span style="color:var(--green)">Lien</span></b>, est un pointeur de niveau 2 vers l'adresse Suite qui donne la seconde valeur pointée par la variable Suitede.
+                Suite pointe au départ vers Suitede ce qui permet de l'externaliser.
                 Ainsi, la séquence d'initialisation
                 <pre>Éveil Lien Suite Éveil </pre>
                 donne au mot clé Suite la valeur de l'adresse à laquelle le moteur de base donne toujours la valeur de la suite de l'adresse pointée par Suitede
                 puis
-                <pre>Suitede< Suite </pre> Externalise la variable Suitede. À partir de là, dès que Suitede recevra une valeur, Suite donnera la seconde adresse que cette valeur pointe
+                <pre>Suitede< Suite </pre> Externalise un pointeur vers la variable Suitede. À partir de là, dès que Suitede recevra une valeur, Suite donnera la seconde adresse que cette valeur pointe.<br><br>
+    <i>Dans les différentes séquences de démarrages proposées ici, vous trouverez des mots différents. Mais le principe (et leurs valeurs) reste identique.</i>
             </details>
             </p>
             <p>            </p>
@@ -148,7 +156,7 @@
                         <p> Mémoirelibre contient la valeur de la prochaine adresse mémoire disponible</p>
                         
                         <li />Exécuter</li>
-                        <p> Pointeur de la chaîne d'exécution'</p>
+                        <p> Pointeur de la chaîne d'exécution</p>
                         
                         <li />Sortie</li>
                         <p>l'adresse ou le caractère affecté à Sortie est affiché à l'écran</p>
@@ -157,7 +165,7 @@
                 </details>
             </p>
             <p>
-                Le niveau 2 du fichier ini.txt crée les premières fonctions fondamentales qui facilitent l'écriture des fonctions suivantes.
+                Le niveau 2 du fichier ini.txt crée les premières fonctions fondamentales qui facilitent l'écriture des fonctions suivantes de niveau supérieur.
             </p>
         </div>
         <div class="section-schéma ">
@@ -165,7 +173,7 @@
 
             <p>
                 Les fichiers de code sont des fichiers au format texte brut (.txt en ANSI).
-                Leur niveau de complexité dépend des fonctions de niveau inférieures utilisées
+                Leur niveau de complexité dépend des fonctions de niveau inférieures utilisées.
             </p>
             <i>La plupart des fichiers de code fournis nécessitent le chargement préalable du fichier ini.txt en mémoire pour être correctement exécutés</i>
 </div>
@@ -196,25 +204,20 @@
                         <li />Niveau 3 et plus </li>
                         <p>Code avancé</p>
                         Notons que les niveaux négatifs peuvent être remplacés par un automate en hardware
-                        <i>(voir la proposition de définition de la complexité dans la page dédiée)</i>
+                        <i>(voir la proposition de définition de la complexité dans la page dédiée à venir)</i>
                     </ul>
                 </p>
             </details>
         </div>
     </div>
     <div class="container">
-        <div class="section-schéma ">
+        <div class="section-schéma " id="interpréteur">
             <h2>Fonctionnement de l'interpréteur de base</h2>
             Cet interpréteur est codé en PLUSHIE dans le ficher plusbase.mem
             <div class="section-schéma ">
                 Il lit le caractère contenu dans le registre d'entrée plus l'ajoute à la liste chaînée de lecture
-            </div>
-
-            <p>    </p>
-            <div class="section-schéma ">
-
-                Liste chaînée:
-            </div>
+                            </div>
+            Liste chaînée:
             <div class="atome-zone">
                 <div class="cellule">
                     <div class="case tete"></div>
@@ -269,17 +272,17 @@
                     </svg>
                 </div>
             </div>
-            <p>
-                Il détermine si les derniers caractères de la liste de lecture correspondent à un mot connu.
-                Sinon, il continue à lire
-                Si oui, il apprend le mot correspondant à la partie de la liste de lecture qui précède le mot connu, sous forme d'un atome connu:'
+            <p><br>
+                <ul>
+                    Il détermine ensuite si les derniers caractères de la liste de lecture correspondent à un mot connu.
+                    Sinon, il continue à lire
+                    Si oui, il apprend le mot correspondant à la partie de la liste de lecture qui précède le mot connu, sous forme d'un <b>atome connu:</b>
+                </ul>
             </p>
-            <div class="section-schéma ">
-            </div><div class="section-schéma ">
+            <div class="section">
                 Atome connu :
             </div>
             <div class="atome-zone">
-
                 <div class="cellule">
                     <div class="case tete">Valeur</div>
                     <div class="case suite">Nom</div>
@@ -525,41 +528,7 @@
 
             </div>
 
-
-            <div class="section-schéma ">
-                Atome :
-            </div>
-            <div class="atome-zone">
-                <div class="cellule">
-
-                    <div class="case tete"></div>
-                    <div class="case suite"></div>
-
-                </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="20">
-                        <circle cx="-75" cy="10" r="4" fill="#22c55e" />
-                        <polyline points="-75,10,-75,40,-110,40,-110,10,-95,10"
-                                  stroke="#22c55e"
-                                  stroke-width="2"
-                                  Fill="none" />
-
-                        <polygon points="-95,10 -100,5 -100,15"
-                                 fill="#22c55e" />
-                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
-                        <polyline points="-30,10,-30,40,-65,40,-65,30"
-                                  stroke="#22c55e"
-                                  stroke-width="2"
-                                  Fill="none" />
-                        <polygon points="-65,30 -70,35 -60,35"
-                                 fill="#22c55e" />
-                    </svg>
-                </div>
-            </div>
-            <div class="section">
-
-            </div>
-
+          
             <div class="section">
 
 
@@ -570,25 +539,16 @@
     Bonjour le monde 
         </pre>
                 <p>
-                    Ici, un nouveau mot, Bonjour le monde, est défini puis utilisé immédiatement.
+                    Ici, une nouvelle expression, Bonjour le monde, est définie puis utilisée immédiatement.
                 </p>
                 <a href="demo.html">Voir la démo</a>
             </div>
-            <div class="container">
-                <div class="section" style="text-align:center;">
-                    <div Class="entravaux">
-                        🏗
-                    </div>
-                    En construction, plus à venir
-                </div>
             </div>
-
-        </div>
             </div> 
     <footer>
         <div class="barredeliens">
             <a href="index.html">← Retour à l’accueil</a>
-            PLUSHIE — expérimentation en cours
+            <a href="Aller plus loin.html"> Retour à "aller plus loin" </a><a href="Fonctions Classiques.html">⏩ Fonctions usuelles</a>
         </div>
     </footer>
 
