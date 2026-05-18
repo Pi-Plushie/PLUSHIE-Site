@@ -13,29 +13,31 @@
         }
     </style>
 </head>
-<p id="dynamic-text">
-    Sélectionnez un profil pour adapter la présentation.
-</p>
+
 <body>
 
-    <header>
-        <div class="boutonsprofil">
-            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
-            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
-            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
-            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
-            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
-            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
-            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
-            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
-            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+    <header><p id="Choix de présentation">
+    Sélectionnez un profil pour adapter la présentation.
+</p>
+        <div class="container">
+            <div class="boutonsprofil">
+                <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+                <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+                <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+                <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+                <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+                <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+                <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+                <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+                <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+            </div>
         </div>
-        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+            <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
 
-        <h1>PLUSHIE</h1>
-        <div class="subtitle">Un langage qui apprend et se transforme</div>
-        <div class="subtitle">Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</div>
-    </header>
+            <h1>PLUSHIE</h1>
+            <i> <span class="subtitle" id="Tag line"> Un langage qui apprend et se transforme</span></i>
+            
+</header>
 
 
     <div class="container">
@@ -46,7 +48,7 @@
                 <summary>Hum...</summary>
 
                 <p>
-                    En effet, rien ne vous <button>Échap</button>. Avec 1, on ne crée pas de ramifications, de branches, de complexité.
+                    En effet, <span data-profile="public,curieux,math,philo,prof,poete,philo,all">rien ne vous <button>Échap</button></span> Avec 1, on ne crée pas de ramifications, de branches, de complexité.
 
                     Alors s'il est vrai que PLUSHIE n'utilise qu'une seule instruction versatile et ne fait en permanence que copier (indirectement) une adresse mémoire à une autre adresse, il s'appuie
                     sur un support non modifiable qui peut être considéré comme transmettant des fonctions implicites, bien que rigides.
@@ -66,7 +68,7 @@
                             <li>L'entrée de donnée</li>
                             <p>
                                 PLUSHIE, comme le cerveau humain, a besoin d'informations provenant de l'extérieur pour se développer. Le plus simple est la lecture de caractère qui est proposée actuellement. <br>
-                                Si l'on veut disposer d'autres sources d'entrées, il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique 
+                                Si l'on veut disposer d'autres sources d'entrées, il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique
                                 (il faut a minima une adresse identifiée réservée comme entrée pour le nouveau media).
                             </p>
                             <li>La sortie de donnée</li>
@@ -80,7 +82,7 @@
 
                         </ul>
                     </ul>
-            </details>
+</details>
         </div>
         <div class="section">
             <h2>Pourquoi PLUSHIE ?</h2>

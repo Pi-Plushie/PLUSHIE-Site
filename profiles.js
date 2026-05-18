@@ -111,7 +111,7 @@ function applyProfile(profile) {
         public: "PLUSHIE, c'est de la programmation simple à apprendre, proche du langage naturel. Mais PLUSHIE est plus que ça : il apprend, se modifie lui-même et s'adapte aux besoins de l'utilisateur. PLUSHIE apprivoise l'informatique pour vous.",
         curieux: "PLUSHIE est une découverte, une aventure. Minimaliste et pourtant d'une portée infinie, il permet d'explorer et de comprendre comment se construit le complexe à partir du simple. Une expérience intrigante.",
         chercheur: "PLUSHIE explore un modèle computationnel basé sur l’auto-modification et les systèmes émergents. Même si le nom peut prêter à sourire (et c'est le but), PLUSHIE est un langage à portée universelle avec des fondements solides et rigoureux.",
-        prof: "PLUSHIE est très simple, presque dépouillé, sans syntaxe lourde, utilisant des mots usuels choisis par le programmeur. Un bijou à enseigner.",
+        prof: "PLUSHIE est très simple, presque dépouillé, sans syntaxe lourde. Il utilise des mots usuels choisis par le programmeur. Un bijou à enseigner.",
         math: "PLUSHIE est rigoureux et simple, proche de la génèse des mathématiques. Il permet de construire des concepts précis à partir de rien.",
         hacker: "PLUSHIE est une expérience radicale qui casse les bonnes pratiques de programmation : il ne possède pas de syntaxe, pas de type de variables, le code peut se modifier lui-même en temps réel. Envie d'expérimenter ?",
         geek: "PLUSHIE est volontairement minimaliste à l'extrême. Son instruction unique et sa capacité à s'auto-modifier permettent l'émergence de comportements inattendus. Il est fourni avec une interface afin de pouvoir explorer ses possibilités.",
