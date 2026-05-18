@@ -41,8 +41,8 @@ body {
 
 .slide {
     position: absolute;
-    margin: 20%;
-     width: 50%;
+    margin: 10%;
+     width: 80%;
     max-width: 80%;
     opacity: 0;
     transform: translateY(20px);
