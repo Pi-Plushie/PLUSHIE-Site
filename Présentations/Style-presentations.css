@@ -197,9 +197,11 @@ p {
 /* FOOTER */
 
 #footer {
-    bottom: 20px;
+    bottom: 3%;
+    position:absolute;
     width: 100%;
     text-align: center;
+    vertical-align:bottom;
     color: #475569;
     font-size: 0.9em;
 }
@@ -241,13 +243,13 @@ p {
 }
 .espacement {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 5%;
-            text-align: right;
+            text-align: center;
         }
    
 
-        .cellule {
+.cellule {
             display: inline-flex;
             border: 2px solid #38bdf8;
             border-radius: 6px;
@@ -263,7 +265,7 @@ p {
     min-height: 70px;
     max-width: 160px;
     max-height: 140px;
-    font-size: 1em;
+    font-size: 3em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -271,4 +273,34 @@ p {
     color: white;
     font-family: monospace;
     overflow: visible
+}
+.cycle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #68cfff;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+.arrow {
+    font-size: 1.2em;
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    transform-origin: center 80px;
+    animation: rotateCycle 4s linear infinite;
+}
+
+
+@keyframes rotateCycle {
+
+    from {
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(0px);
+    }
 }
