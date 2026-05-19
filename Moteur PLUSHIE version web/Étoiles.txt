@@ -22,8 +22,6 @@ Varsuite Symbole*<< Tete< Suite Suitede Tete Tete< Suite Suitede Tete Tete< Suit
 |
 Étoile< Symbole*< |
 |
-Variable Retnouv1_listeétoiles Exécuter Déclarer Variable Retnouv2_listeétoiles Exécuter Déclarer |
-|
 Exécuter Fonctionnouvelle Listeétoiles Nouvelle |
 |
 Commentaire:
@@ -110,10 +108,14 @@ Exécuter Apprendre Instruction Retourlisteétoiles<< |
 Commentaire:
 *** fin de la liste des instructions. finalisation de la procédure ***
 
-Suitede Instruction< Retourlisteétoiles< Suite Tete< Suite Tete Instruction< |
+Suitede Instruction< Tete< Suite Tete Instruction< |
 |
 Retourlisteétoiles Subretour |
 |
+Commentaire:
+ à partir de là, la procédure est définie, le reste du code sert à l'affichage 
+
+
 Voir Saut |
 |
 Pourafficher listing de la fonction listeétoiles avant exécution :
@@ -127,7 +129,9 @@ Exécuter Afficher Pourafficher Exécuter<< Exécuter Afficher Pourafficher Listeét
 |
 Voir Saut |
 |
-Pourafficher inspectez le code, il n'y a pas de boucle, pas de variable cachée, la procédure se modifie elle-même Exécuter Afficher Voir Saut Exécuter Listeétoiles |
+Pourafficher inspectez le code, il n'y a pas de boucle, pas de variable cachée, pas de récursion. la procédure se modifie elle-même 
+
+Exécuter Afficher Voir Saut Exécuter Listeétoiles |
 |
 Voir Saut |
 |
@@ -138,6 +142,12 @@ Pourafficher listing de la fonction listeétoiles après exécution :
 Exécuter Afficher |
 |
 Liste Listeétoiles Exécuter Afficherliste |
+|
+Pourafficher 
+
+la différence se voit au début du listing
+
+Exécuter Afficher |
 |
 Quitter Code |
 |

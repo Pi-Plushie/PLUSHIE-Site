@@ -33,10 +33,10 @@
     <div class="container">
         <div class="section">
             <div class="barredeliens">
-                <a href="Emploi Interface.html"> Mode d'emploi de l'interface navigateur </a>  <span data-profile="geek,hacker,chercheur,prof"> à venir: <a href="Mode emploi.html"> Mode d'emploi de l'interface stand alone à télécharger </a>  </span>
+                <a href="Emploi Interface.html"> Mode d'emploi de l'interface navigateur </a>  <span data-profile="geek,hacker,chercheur,prof"> à venir : <a href="Mode emploi.html"> mode d'emploi de l'interface stand alone à télécharger </a>  </span>
             </div>
             <div class="barredeliens">
-                <i>ce tutoriel suppose l'utilisation de <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface web</a> <span data-profile="geek,hacker,chercheur,prof"> mais peut s'utiliser avec l'<a href="downloads.html"> application à downloader </a> </span> </i>
+                <i>Ce tutoriel suppose l'utilisation de <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface web</a>. <span data-profile="geek,hacker,chercheur,prof"> Mais il peut s'utiliser avec l'<a href="downloads.html"> application à downloader </a>.</span> </i>
             </div>
         </div>
         <div class="section">
@@ -50,7 +50,7 @@
         <div class="section">
             <h2> Premier pas </h2>
             <details>
-                <summary> Vérifier que tout fonctionne </summary>
+                <summary> Vérifier que tout fonctionne </summary><br>
                 ☞ passez la souris au dessus des boutons, vous devez voir un texte explicatif en vert apparaître.<br>
                 ☞ cliquez dans la case à cocher <label style="font-size:0.5em"><input type="checkbox" id="cachertooltips">Cacher les info-bulles</label> et vérifiez que quand vous passez la souris au dessus des boutons
                 vous ne voyez <b>plus</b> les informations.<br>
@@ -87,7 +87,7 @@
         <div class="section">
             <h2> Marcher </h2>
             <details>
-                <summary>Premier Exemple: l'éveil de PLUSHIE</summary>
+                <summary>Premier Exemple : l'éveil de PLUSHIE</summary>
 
                 <br><i> c'est l'équivalent d'un hello world réduit au minimum</i><br><br>
                 Appuyez sur <button>Remise à Zéro</button> puis sur <button>Éveil</button> s'il est apparent ou sur <button>Démos</button> puis <button>Éveil</button>.<br><br>
@@ -115,11 +115,11 @@
 
             <details>
                 <summary> Deuxième Exemple: casser </summary>
-                <br> Vous avez déjà du l'expérimenter avec l'exemple précédent: une espace de trop, une majuscule oubliée, et PLUSHIE ne répond plus. Tant que l'on conserve l'interpréteur de base inclus dans le fichier de boot
-                Plusbase.mem, PLUSHIE est extrêmement sensible à la syntaxe. Mais la touche <button>Remise à Zéro</button> est là pour cela.
+                <br> Vous avez déjà du l'expérimenter avec l'exemple précédent: une espace de trop, une majuscule oubliée, et PLUSHIE ne répond plus. <br><br>Tant que l'on conserve l'interpréteur de base inclus dans le fichier de boot
+                Plusbase.mem, PLUSHIE est extrêmement sensible à la syntaxe. <br>Mais pas d'inquiétude, la touche <button>Remise à Zéro</button> est prévue pour ces cas là.<br><br>
                 Maintenant, après <button>Remise à Zéro</button> relancez <button>Éveil</button> deux fois. Normalement, l'indicateur de statut fait défiler le temps et rien d'autre ne se passe. Arretez le déroulement du programme avec
-                <button>Échap</button>
-                Vous venez d'expérimenter que pour PLUSHIE la seconde exécution d'un programme ne donne en général pas le même résultat que la première. Entre temps, il a appris et tout retenu. et ici, comme on touche à des variables
+                <button>Échap</button><br><br>
+                Vous venez d'expérimenter que pour PLUSHIE la <font color="cyan"<b><i>seconde</b></i> </font>exécution d'un programme ne donne en général pas le même résultat que la première. Entre temps, il a appris et tout retenu. et ici, comme on touche à des variables
                 très sensibles, la seconde exécution décale l'adresse de la mémoire.
 
 
@@ -129,33 +129,57 @@
             <h2> Se relever </h2>
             <details>
                 <summary>Troisième exemple : voir des étoiles 🌟</summary>
-                <br> <i>Oui, parce qu'après être tombé, on voit *✦🌟 des étoiles 🌟✦*. Au moins dans les bandes dessinées.</i>
-                Essayez un nouveau bouton, <button>Initialiser</button>. Cette fois on arrive avec un PLUSHIE initialisé qui a déjà appris une liste de fonction.
-                Le bouton initialier fait une remise à zero, charge et exécute le fichier ini.txt dont le listing apparait à droite. Il est commenté, mais ça reste très technique.
-                Maintenant on peut faire plus de chose avec PLUSHIE.
-                <s> Après avoir lu en détail le fichier  ini.txt </s>, appuyer sur la touche <button>Effacer entrée </button> puis sur <button>Effacer sortie </button>
-                et tapez <span id="code"> Exécuter Afficher </span> puis <button>Exécuter</button>.
-                Après l'avoir fait apparaître si nécessaire avec <button>Démos</button>, lancez Étoiles.
-                Rien de bien nouveau, PLUSHIE affiche une étoile et un texte d'accompagnement.
-                <button>Effacer entrée </button> puis copiez plusieurs fois le code <span id="code">Exécuter Listeétoiles Exécuter Listeétoiles </span>.
-                Le nombre d'étoile augmente. Mais il ne s'agit pas d'une boucle. À chaque itération la procédure Listeétoiles se modifie elle même et s'allonge pour afficher à chaque fois une étoile de plus.
+                <br> <i>Oui, parce qu'après être tombé, on voit *✦🌟 des étoiles 🌟✦*, au moins dans les bandes dessinées.</i><br><br>
+                Essayez un nouveau bouton: <button>Initialiser</button> <br><br> Cette fois vous découvrez un PLUSHIE initialisé qui a déjà appris une liste de fonction.<br>
+
+                <i>(Le bouton initialier fait une remise à zero, charge et exécute le fichier ini.txt dont le listing apparait à droite. Il est commenté, mais ça reste très technique.)</i><br><br>
+                Maintenant vous pouvez demander plus à PLUSHIE.<br><br><br>
+                <s> Après avoir lu en détail le fichier  ini.txt </s>, appuyer sur la touche <button>Effacer entrée </button> puis sur <button>Effacer sortie </button><br><br>
+                Ensuite tapez <span id="code"> Exécuter Afficher </span> puis <button>Exécuter</button><br><br>
+                Après l'avoir fait apparaître si nécessaire avec <button>Démos</button>, lancez <button>Étoiles</button><br><br>
+                Rien de bien nouveau, PLUSHIE affiche le listing de Listeétoiles et à nouveau une étoile avec un texte d'accompagnement <br><br>
+                <button>Effacer entrée </button> puis copiez plusieurs fois le code <span id="code">Exécuter Listeétoiles </span><br><br>
+                Le nombre d'étoile augmente ! Mais aucune boucle ni récursion n'a été programmée.<br>
+                À chaque itération la procédure Listeétoiles se modifie elle même et s'allonge pour afficher à chaque fois une étoile de plus, comme le montre son listing.
             </details>
             <details>
-                <summary>Comment lire un code en PLUSHIE avancé ?</summary>
+                <summary>Comment lire un code en PLUSHIE avancé ?</summary><br>
+                Vous pouvez vérifier par vous-même en analysant le code de la procédure Listeétoiles. Au besoin rechargez le fichier de code avec <button>Étoiles</button><br><br>
+                Le code est commenté pour identifier les différentes étapes. Au début cela peut paraître touffu, mais en y allant pas à pas ce n'est pas si compliqué.<br><br>
+                Cela donne l'impression qu'il y a plus d'une seule instruction, mais en réalité chaque paire de mot correspond à une instruction de copie indirecte PLUSHIE.<br><br><br>
 
+                Les premières lignes sont assez explicites et très proches d'une déclaration de variable dans d'autres langages.Dans les lignes suivantes, les variables se voient affecter des valeurs.
+                Étoile se voit affecter le symbole*
 
-
-            </details>
-            <div class="section">
-                <h2> Courir </h2>
                 <details>
-                    <summary>Un arbre qui grandit</summary>
+                    <summary>Pourquoi ne pas faire Étoile *directement ?</summary><br>
 
+                </details>
 
+                Le listing de la fonction suit. On peut oublier les <span id="code">Exécuter Apprendre Instruction</span> , l'instruction se trouve à chaque fois en fin de ligne.<br>
+                <details>
+                    (notons qu'en PLUSHIE Exécuter Apprendre Instruction pourrait être remplacé par >=: par exemple pour revenir à un langage classique avec des caractères réservés)
+                </details><br>
+                Bien entendu, le listing peut être obtenu, une fois la fonction chargée par <span id="code">Liste Listeétoile Exécuter Afficherliste </span> de manière plus lisible.<br><br>
+                Une fois la fonction enregistrée, à la fin de la séquence des <span id="code">Exécuter Apprendre Instruction</span>, la fonction est proprement finalisée.<br> (une liste doit se terminer en bouclant sur elle-même en PLUSHIE)
+                <a href="Conventions.html"> voir Pourquoi</a><br><br>
+                La suite du code correspond à la présentation qui s'affiche à l'écran. <br><br><br>C'est le listing de la fonction qui est important. et on voir que la fonction s'allogne à chaque itération.
+                <br><br>
+                Mise en abîme: on pourra noter aussi que la fonction Afficherliste peut se lister elle-même.<br><br>
 
-
-            </div>
+                <span id="code">Liste Afficherliste Exécuter Afficherliste </span><br><br>
+            </details>
         </div>
+                <div class="section">
+                    <h2> Courir </h2>
+                    <details>
+                        <summary>Un arbre qui grandit</summary>
+                        à venir, PLUSHIE pense que vous allez être bluffés. Quel challenge !
+
+
+
+                </div>
+</div>
     </div>
     </div>
     <div class="container">
