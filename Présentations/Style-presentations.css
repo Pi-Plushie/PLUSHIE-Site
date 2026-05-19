@@ -13,7 +13,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 110px;
+    width: 10%;
     opacity: 0.85;
     z-index: 1000;
     transition: 0.3s;
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
 }
 
 
@@ -41,8 +41,8 @@ body {
 
 .slide {
     position: absolute;
-    margin: 15%;
-     width: 60%;
+    margin: 10%;
+     width: 80%;
     max-width: 80%;
     opacity: 0;
     transform: translateY(20px);
@@ -109,8 +109,8 @@ p {
 
 
 .cell {
-    width: 90px;
-    height: 90px;
+    width: 10%;
+    height: 9%;
     border: 2px solid #38bdf8;
     border-radius: 6px;
     position: relative;
@@ -238,15 +238,15 @@ p {
 
     100% {
         opacity: 0.2;
-
-        .espacement {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            text-align: right;
-        }
     }
 }
+.espacement {
+            display: flex;
+            justify-content: space-between;
+            gap: 5%;
+            text-align: right;
+        }
+   
 
         .cellule {
             display: inline-flex;
@@ -264,7 +264,7 @@ p {
     min-height: 70px;
     max-width: 160px;
     max-height: 140px;
-    font-size: 12px;
+    font-size: 0.8em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
