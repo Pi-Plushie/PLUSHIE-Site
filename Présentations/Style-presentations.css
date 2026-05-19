@@ -109,14 +109,15 @@ p {
 
 
 .cell {
-    width: 10%;
-    height: 9%;
+    width: 80px;
+    height: 75px;
     border: 2px solid #38bdf8;
     border-radius: 6px;
     position: relative;
     animation: pulse 3s infinite;
     align-items: center;
     justify-content: center;
+   
 }
 
     .cell::before {
@@ -265,7 +266,7 @@ p {
     min-height: 70px;
     max-width: 160px;
     max-height: 140px;
-    font-size: 3em;
+    font-size: 2em;
     display: inline-flex;
     align-items: center;
     justify-content: center;

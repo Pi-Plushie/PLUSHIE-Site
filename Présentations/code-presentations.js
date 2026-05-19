@@ -123,7 +123,7 @@ function updateDynamicText() {
 setInterval(updateDynamicText, 1000);
 
 let frames = [
-    "↞ ↞ ↞ ↞",
+ 
     "↞ ↞ ↞ ↞",
     "↞ ↞ ↞ ↞",
 
