@@ -2,7 +2,7 @@ body {
     margin: 0;
     background: #020617;
     color: #e2e8f0;
-    font-family: Consolas, monospace;
+    font-family: 'Noto Sans', sans-serif, Consolas, monospace;
     overflow: hidden;
 }
 
@@ -124,7 +124,7 @@ p {
         position: absolute;
         top: 40px;
         left: 10px;
-        font-size: 0.8em;
+        font-size: 1em;
         color: #94a3b8;
     }
 
@@ -133,7 +133,7 @@ p {
         position: absolute;
         Top: 40px;
         Right: 10px;
-        font-size: 0.8em;
+        font-size: 1em;
         color: #94a3b8;
     }
 
@@ -197,7 +197,6 @@ p {
 /* FOOTER */
 
 #footer {
-    position: fixed;
     bottom: 20px;
     width: 100%;
     text-align: center;
@@ -264,7 +263,7 @@ p {
     min-height: 70px;
     max-width: 160px;
     max-height: 140px;
-    font-size: 0.8em;
+    font-size: 1em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
