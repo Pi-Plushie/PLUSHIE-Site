@@ -1,20 +1,37 @@
-Profondeur Ppp Variable Étoile Exécuter Déclarer |
+Commentaire:
+
+*** déclaration des variables utilisées ***
+
+Variable Vue Profondeur Ppp Exécuter Déclarer |
 |
-Variable Symbole* Exécuter Déclaration |
+Variable Étoile Profondeur Ppp Exécuter Déclarer |
 |
-Varsuite Symbole*<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole* Tete |
+Variable Symbole* Exécuter Déclarer |
+|
+Variable Listeétoiles Exécuter Déclarer |
+|
+Variable Retourlisteétoiles Exécuter Déclarer |
+|
+Commentaire:
+
+*** définitions des variables ***
+
+Vue< Voir< |
+|
+Varsuite Symbole*<< Tete< Suite Suitede Tete Tete< Suite Suitede Tete Tete< Suitede Symbole* Tete |
 |
 Étoile< Symbole*< |
 |
-Profondeur Ppp Variable Vue Exécuter Déclarer |
-|
-Vue< Voir< |
-|
-Variable Listeétoiles Exécuter Déclarer Variable Retourlisteétoiles Exécuter Déclarer |
-|
 Variable Retnouv1_listeétoiles Exécuter Déclarer Variable Retnouv2_listeétoiles Exécuter Déclarer |
 |
-Exécuter Fonctionnouvelle Listeétoiles Nouvelle Instruction< Nouvelle Instruction Vue<< |
+Exécuter Fonctionnouvelle Listeétoiles Nouvelle |
+|
+Commentaire:
+
+*** définition de la fonction listeétoiles ***
+
+
+Instruction< Listeétoiles Instruction Vue<< |
 |
 Exécuter Apprendre Instruction Étoile<< |
 |
@@ -24,15 +41,25 @@ Exécuter Apprendre Instruction Saut<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retnouv1_listeétoiles<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
-Exécuter Apprendre Instruction Suite< |
+Exécuter Apprendre Instruction Suitede<< |
 |
-Retnouv1_listeétoiles Instruction< |
+Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Tete<<< |
+|
+Exécuter Apprendre Instruction Suite<< |
+|
+Exécuter Apprendre Instruction Tete<< |
 |
 Exécuter Apprendre Instruction Listeétoiles<< |
 |
@@ -46,15 +73,25 @@ Exécuter Apprendre Instruction Nouvelle<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retnouv2_listeétoiles<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
-Exécuter Apprendre Instruction Suite< |
+Exécuter Apprendre Instruction Suitede<< |
 |
-Retnouv2_listeétoiles Instruction< |
+Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Tete<<< |
+|
+Exécuter Apprendre Instruction Suite<< |
+|
+Exécuter Apprendre Instruction Tete<< |
 |
 Exécuter Apprendre Instruction Listeétoiles<< |
 |
@@ -70,11 +107,20 @@ Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Retourlisteétoiles<< |
 |
+Commentaire:
+*** fin de la liste des instructions. finalisation de la procédure ***
+
 Suitede Instruction< Retourlisteétoiles< Suite Tete< Suite Tete Instruction< |
 |
-Retourlisteétoiles Retour |
+Retourlisteétoiles Subretour |
 |
 Voir Saut |
+|
+Pourafficher listing de la fonction listeétoiles avant exécution :
+
+Exécuter Afficher |
+|
+Liste Listeétoiles Exécuter Afficherliste |
 |
 Pourafficher copiez et exécutez plusieurs fois l'instruction:
 Exécuter Afficher Pourafficher Exécuter<< Exécuter Afficher Pourafficher Listeétoiles<< Exécuter Afficher |
@@ -82,6 +128,16 @@ Exécuter Afficher Pourafficher Exécuter<< Exécuter Afficher Pourafficher Listeét
 Voir Saut |
 |
 Pourafficher inspectez le code, il n'y a pas de boucle, pas de variable cachée, la procédure se modifie elle-même Exécuter Afficher Voir Saut Exécuter Listeétoiles |
+|
+Voir Saut |
+|
+Voir Saut |
+|
+Pourafficher listing de la fonction listeétoiles après exécution :
+
+Exécuter Afficher |
+|
+Liste Listeétoiles Exécuter Afficherliste |
 |
 Quitter Code |
 |

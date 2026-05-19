@@ -1,15 +1,15 @@
-Éveil Lien Crée Éveil Ensuite Crée Unmot Ensuite Mémoire Unmot Crée |
+Éveil Lien Crée Éveil Ensuite Crée Unmot Ensuite Mémorise Unmot Crée |
 Crée Commentaire:|
 |
 Commentaire:
-Version Web pour tester crée, commentaire et le séparateur retour de ligne ne sont là que pour la lisibilité du code mais ne servent à rien d'autre et ne font rien.
+crée, commentaire et le séparateur retour de ligne ne sont là que pour la lisibilité du code mais ne servent à rien d'autre et ne font rien.
 | est surtout là pour visualiser les retours à la ligne dans le code car si on ne met qu'un double retour à la ligne ce n'est pas assez visible et
 les bugs s'accumulent, en particulier avec les commentaires et les espaces oubliées.
 lien, avec un l majuscule, est la seule variable de niveau 0 externalisée au départ c'est à dire dont le nom est déjà connu et défini dans le fichier plusbase.mem
 elle pointe au départ vers la valeur que l'on veut donner au pointeur vers suite, appelé éveil ici, qui est créé dans la première instruction de deux mots
 suite pointe alors vers sa valeur réelle et se trouve donc aussi externalisée mais on peut lui donner le nom qu'on veut
 on crée ensuite crée, un synonyme de suite, qui peut être remplacé par n'importe quel autre mot mais est plaisant à utiliser pour déclarer de nouveaux mots connus
-par convention les expressions à découper commencent par une majuscule pour éviter les découpages abusifs, et se terminent par un caractère qui permet de trier le dictionnaire des mots connus plus efficacement. on évite les majuscules dans les commentaires. l'espace final est  réservé aux mots instruction et le retour à la ligne aux commentaires. cela permet de nettoyer aisément la mémoire de tous les commentaires si on le souhaite. car sinon plushie retient tout ce qu'il a lu. 
+par convention les expressions à découper commencent par une majuscule pour éviter les découpages abusifs, et se terminent par un caractère qui permet de trier le dictionnaire des mots connus plus efficacement. on évite les majuscules dans les commentaires. l'espace final est réservé aux mots instruction et le retour à la ligne aux commentaires. cela permet de nettoyer aisément la mémoire de tous les commentaires si on le souhaite. car sinon plushie retient tout ce qu'il a lu. 
 
 un nom crée par apprentissage en seconde partie d'instruction est un atome qui pointe vers lui-même par construction du moteur de niveau 0 (et pour éviter des bugs)
 ensuite sert à prendre l'adresse d'une variable utile pour arrêter l'exécution du code enregistrée sur unmot.
@@ -23,7 +23,7 @@ Crée Tete<<< Crée Tete<< Crée Tete< |
 Tete<<<< Tete<<< Tete<<< Tete<< Tete<< Tete< Tete< Tete |
 |
 Commentaire:
-ci-dessus création des pointeurs vers suite et de la fonction tete qui peuvent avoir n'importe quel nom. Tete est une simple cascade de pointeurs vers une variable servant à descendre d'un étage de pointeur selon la formule tete< pointeur pointeur tete.
+ci-dessus création des pointeurs vers suite et de la fonction tete qui peuvent avoir n'importe quel nom. tete est une simple cascade de pointeurs vers une variable servant à descendre d'un étage de pointeur selon la formule tete< pointeur pointeur tete.
 là on apprend une chaine de pointeurs vers tete. par convention les étages d'indirection de pointage sont notés avec le symbole< 
 
 ci dessous 
@@ -50,7 +50,7 @@ création et externalisalisation de la variable de niveau -1 qui pointe vers l'ad
 
 Crée Mémoirelibre< |
 |
-Mémoirelibre<< Mémoirelibre< Mémoirelibre<< Mémoire Mémoirelibre Mémoirelibre< |
+Mémoirelibre<< Mémoirelibre< Mémoirelibre<< Mémorise Mémoirelibre Mémoirelibre< |
 |
 |
 |
@@ -71,7 +71,7 @@ Tete< Quitter Tete< Tete Tete< Tete Tete< Tete Tete< Tete Code Tete |
 |
 |
 Commentaire:
-création et externalisalisation de la variable qui pointe vers le moteur d'exécution codé au niveau 0 dans le fichier basemem. attention ! si on donne à exécuter une valeur d'une chaine pas bien configurée (en particulier, elle doit se terminer par un retour à la chaîne d'exécution principale) on plante l'interpréteur et il faut redémarrer à zéro
+création et externalisalisation de la variable qui pointe vers le moteur d'exécution codé au niveau 0 dans le fichier basemem. attention si on donne à exécuter une valeur d'une chaine pas bien configurée (en particulier, elle doit se terminer par un retour à la chaîne d'exécution principale) on plante l'interpréteur et il faut redémarrer à zéro
 
 Crée Exécuter<< Crée Exécuter< |
 |
@@ -113,6 +113,12 @@ Suitede Tete |
 |
 Enregistrer< Suite |
 |
+Commentaire:
+
+tout le code ci dessus sert à retrouver les adresses des variables internes indispensables au fonctionnement c'est la partie la plus difficile à comprendre puisqu'il fait appel à la structure pré crée de plusbase.mem, fichier de programme de boot de niveau 0 de 2 ko actuellement (300 cellules mémoire). L'initialisation proprement dite est terminée on commence du code normal à partir de là. on passe donc aux instructions de niveau 2
+
+ci dessous, quelques variables synonymes pour enjoliver le code.
+
 Crée Instruction<< Crée Instruction< |
 |
 Instruction<<< Instruction<< Instruction<< Instruction< Instruction< Instruction |
@@ -128,13 +134,10 @@ Crée Enreg< |
 Enreg<< Enreg< Enreg< Enregistrement Enreg< Exécuter< |
 |
 Commentaire:
-les trois dernières variables sont juste pour faire joli dans les codes en texte
 
-tout le code ci dessus sert à retrouver les adresses des variables internes indispensables au fonctionnement c'est la partie la plus difficile à comprendre puisqu'il fait appel à la structure pré crée de plusbase.mem, fichier de programme de niveau 0 de 3 ko actuellement (300 cellules mémoire). L'initialisation proprement dite est terminée on commence du code normal à partir de là. on passe donc aux instructions de niveau 2
+** saut **
 
-***** saut *****
-
-on isole le caractère de retour à la ligne pour permettre des affichages plus conforatbles à lire, sans en faire un objet qui deviendrait un séparateur indésirable avec l'interpréteur de base.
+on isole le caractère de retour à la ligne pour permettre des affichages plus conforatbles à lire, sans en faire un objet qui deviendrait un séparateur indésirable avec l'interpréteur de base. attention l'absence de ligne intercalaire est nécessaire.
 
 Crée Saut<< Crée Saut< Saut<< Saut< Saut< Saut |
 |
@@ -148,7 +151,7 @@ Voir Saut |
 Commentaire:
 création initialisation et test d'une variable qui garde l'adresse de retour à exécuter
 
-Crée Retour<< Crée Retour< Crée Retour Retour<< Retour< Retour< Retour Non Retour Retour Ret |
+Crée Retour<< Crée Retour< Crée Retour Retour<< Retour< Retour< Retour Retour Ret |
 |
 Retour Exécuter |
 |
@@ -181,47 +184,47 @@ Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
 |
 Fonctionnouvelle Nouvelle Instruction< Fonctionnouvelle Instruction Nouvelle<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Mémoirelibre<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Suitede<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Mémoirelibre<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Mémoirelibre<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Suite< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Suitede<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Nouvelle<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Nouvelle< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Nouvelle<< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Suite< |
 |
-Nouvelle Mémoirelibre Suitede Mémoirelibre Tete< Suite Mémoirelibre Tete |
+Nouvelle Mémoirelibre |
 |
 Suitede Instruction< Tete< Suite Tete Nouvelle Instruction< Tete Instruction Nouvelle<< |
 |
@@ -246,7 +249,7 @@ Exécuter Fonctionnouvelle Temp Nouvelle |
 |
 Commentaire:
 
-***** subretour *****
+** subretour **
 
 procédure de retour à coup sur sa définition utilise nouvelle mais pas son fonctionnement, elle est donc de niveau 2 en fait.
 
@@ -265,17 +268,26 @@ Exécuter Subretour |
 |
 |
 Commentaire:
-création d'une variable pour enregistrer les retours de procédures avant leur modification
+création d'une variable pour enregistrer les retours de procédures avant leur modification. devra devenir une pile de retour
+le singulier est pour fin liste protégé. Le 2est pour copier
 
 Crée Sauvretours< |
 |
 Sauvretours<< Sauvretours< Sauvretours< Sauvretours Exécuter Fonctionnouvelle Sauvretours Nouvelle |
 |
+Crée Sauvretour< |
+|
+Sauvretour<< Sauvretour< Sauvretour< Sauvretour Exécuter Fonctionnouvelle Sauvretour Nouvelle |
+|
+Crée Sauvretour2< |
+|
+Sauvretour2<< Sauvretour2< Sauvretour2< Sauvretour2 Exécuter Fonctionnouvelle Sauvretour2 Nouvelle |
+|
 Commentaire:
 
-***** fonction apprendre*****
+** fonction apprendre **
 
-sert à mieux présenter les enregistrement des instructions pour la définition des procédures
+sert à présenter les enregistrement des instructions pour la définition des procédures de manière plus lisible
 
 
 Crée Apprendre< Crée Retourapprendre< Crée Retnouvappr< |
@@ -320,9 +332,9 @@ Retourapprendre Retour |
 |
 Commentaire:
 
-***** saut conditionnel si identique *****
+** saut conditionnel si identique **
 
-déclaration et initialisation des variables pour la fonction test identique :
+déclaration et initialisation des variables pour la fonction test identique, test fondamental du système :
 
 
 Crée Alors<< Crée Alors< Alors<< Alors< Alors< Alors Exécuter Fonctionnouvelle Alors Nouvelle |
@@ -347,9 +359,7 @@ Crée Egale<< Crée Egale< Egale<< Egale< Egale< Egale Egale< Égale< |
 |
 Commentaire:
 
-****corps de la fonction test identique ***
-
-instructions dans l'ordre de la fonction test si identique, test fondamental du système
+** corps de la fonction test identique **
 
 Exécuter Fonctionnouvelle Testidentique Nouvelle Instruction< Testidentique Instruction Ssi<< |
 |
@@ -396,14 +406,320 @@ Exécuter Fonctionnouvelle Historique Nouvelle |
 |
 Tete< Enregistrer Historique Tete |
 |
+Crée Liste< Crée Liste<< |
+|
+Liste<<< Liste<< Liste<< Liste< Liste< Liste Exécuter Fonctionnouvelle Liste Nouvelle |
+|
+Crée Pointeurliste< Crée Pointeurliste<< |
+|
+Pointeurliste<<< Pointeurliste<< Pointeurliste<< Pointeurliste< Pointeurliste< Pointeurliste Exécuter Fonctionnouvelle Pointeurliste Nouvelle |
+|
 Commentaire:
 
-***** fonction insérer dans une liste *****
+*** fonction finliste simple ***
+
+la fonction finliste déplace le pointeur findelaliste à la fin de la liste
+attention, uniquement pour une liste qui se termine
+
+syntaxe liste listedontilfautatteindrelafin exécuter finliste . la fin de la liste est donnée par findelaliste
+
+Crée Findelaliste< |
+|
+Findelaliste<< Findelaliste< Findelaliste< Findelaliste Exécuter Fonctionnouvelle Findelaliste Nouvelle |
+|
+Crée Finliste< Crée Retourfinliste< Crée Bouclefinliste< |
+|
+Finliste<< Finliste< Finliste< Finliste Exécuter Fonctionnouvelle Finliste Nouvelle |
+|
+Retourfinliste<< Retourfinliste< Retourfinliste< Retourfinliste Exécuter Fonctionnouvelle Retourfinliste Nouvelle |
+|
+Bouclefinliste<< Bouclefinliste< Bouclefinliste< Bouclefinliste Exécuter Fonctionnouvelle Bouclefinliste Nouvelle |
+|
+|
+|
+Exécuter Fonctionnouvelle Finliste Nouvelle Instruction< Nouvelle Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Liste<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Bouclefinliste Instruction< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourfinliste<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Bouclefinliste<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Suitede Instruction< Retourfinliste< Suite Tete< Suite Tete Instruction< |
+|
+Retourfinliste Retour |
+|
+|
+|
+Commentaire:
+
+*** fonction de retour après appel de procédure pour éviter des déclarations de variables pour les retours internes aux procédures.
+
+Crée Noteretour< |
+|
+Noteretour<< Noteretour< Noteretour< Noteretour Exécuter Fonctionnouvelle Noteretour Nouvelle |
+|
+Crée Retourdirect< |
+|
+Retourdirect<< Retourdirect< Retourdirect< Retourdirect Exécuter Fonctionnouvelle Retourdirect Nouvelle |
+|
+Exécuter Fonctionnouvelle Retourdirect Nouvelle Instruction< Nouvelle Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Suitede Instruction< Tete< Suite Tete Instruction< |
+|
+|
+|
+Crée Pourafficher< |
+|
+Pourafficher<< Pourafficher< Pourafficher< Pourafficher Exécuter Fonctionnouvelle Pourafficher Nouvelle |
+|
+Commentaire:
+
+*** fonction afficher récursivement***
+
+Fonction afficher simple non protégé contre les bouclages 
+
+Crée Afficher< |
+|
+Afficher<< Afficher< Afficher< Afficher Exécuter Fonctionnouvelle Afficher Nouvelle |
+|
+Crée Retourafficher< Crée Retourafficher |
+|
+Retourafficher<< Retourafficher< Retourafficher< Retourafficher Retourafficher Retaff Exécuter Fonctionnouvelle Retourafficher Nouvelle |
+|
+Crée Affichagerécursif< |
+|
+Affichagerécursif<< Affichagerécursif< Affichagerécursif< Affichagerécursif Exécuter Fonctionnouvelle Affichagerécursif Nouvelle |
+|
+Crée Chercherepère< |
+|
+Chercherepère<< Chercherepère< Chercherepère< Chercherepère Exécuter Fonctionnouvelle Chercherepère Nouvelle |
+|
+Crée Affichecaractère< |
+|
+Affichecaractère<< Affichecaractère< Affichecaractère< Affichecaractère Exécuter Fonctionnouvelle Affichecaractère Nouvelle |
+|
+Crée Pointeuraff< |
+|
+Pointeuraff<< Pointeuraff< Pointeuraff< Pointeuraff Exécuter Fonctionnouvelle Pointeuraff Nouvelle |
+|
+Exécuter Fonctionnouvelle Afficher Nouvelle Instruction< Nouvelle Instruction Liste<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Retourfinliste<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Finliste<< |
+|
+Exécuter Apprendre Instruction Retourfinliste<< |
+|
+Affichagerécursif Instruction< |
+|
+Exécuter Apprendre Instruction Retour<< |
+|
+Exécuter Apprendre Instruction Pointeuraff<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Chercherepère Instruction< |
+|
+Exécuter Apprendre Instruction Pointeuraff<< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Affichecaractère<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Pointeuraff<< |
+|
+Exécuter Apprendre Instruction Pointeuraff<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Chercherepère<< |
+|
+Exécuter Apprendre Instruction Voir<< |
+|
+Affichecaractère Instruction< |
+|
+Exécuter Apprendre Instruction Findelaliste< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Pointeuraff<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourafficher<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Affichagerécursif<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Suitede Instruction< Tete< Suite Tete Instruction< |
+|
+Retourafficher Retour |
+|
+Pourafficher Bonjour Exécuter Afficher |
+|
+Commentaire:
+fin de la première partie, la communication est établie. hello world atteint
+
+
+*** fonction lister ***
+
+création de la fonction lister qui affiche les listes dans l'ordre dans lequelle elles sont enregistrées donc à l'envers pour
+les chaines de caractère et liste les adresses des instructions pour les procédures
+
+Crée Lister< Crée Pourlister< Crée Retourlister< |
+|
+Lister<< Lister< Lister< Lister Exécuter Fonctionnouvelle Lister Nouvelle |
+|
+Pourlister<< Pourlister< Pourlister< Pourlister Exécuter Fonctionnouvelle Pourlister Nouvelle |
+|
+Retourlister<< Retourlister< Retourlister< Retourlister Exécuter Fonctionnouvelle Retourlister Nouvelle |
+|
+Exécuter Fonctionnouvelle Lister Nouvelle Instruction< Nouvelle Instruction Voir<< |
+|
+Exécuter Apprendre Instruction Pourlister< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Pourlister<< |
+|
+Exécuter Apprendre Instruction Pourlister<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Pourlister<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourlister<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Lister<< |
+|
+Exécuter Apprendre Instruction Tete<<< |
+|
+Exécuter Apprendre Instruction Tete<<<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Suitede Instruction< Suite Instruction< Tete< Suite Tete Instruction< |
+|
+Retourlister Retour |
+|
+Commentaire:
+
+*** fonction insérer dans une liste ***
 
 
 syntaxe: aupoint lieud'insertion exécuter insérer
 
-insère à l'intérieur d'une liste. ne fonctionne pas pour insérer en tête.
+insère à l'intérieur d'une liste. ne fonctionne pas pour insérer en tête. fonction de niveau 3 qui utilise les fonctions de niveau 2 nouvelle et identique
 
 Crée Insérer< |
 |
@@ -417,21 +733,13 @@ Crée Aupoint< |
 |
 Aupoint<< Aupoint< Aupoint< Aupoint Exécuter Fonctionnouvelle Aupoint Nouvelle |
 |
-Crée Retnouvins< |
-|
-Retnouvins<< Retnouvins< Retnouvins< Retnouvins Exécuter Fonctionnouvelle Retnouvins Nouvelle |
-|
 Crée Finaliserinsérer< |
 |
 Finaliserinsérer<< Finaliserinsérer< Finaliserinsérer< Finaliserinsérer Exécuter Fonctionnouvelle Finaliserinsérer Nouvelle |
 |
 |
 |
-Exécuter Fonctionnouvelle Insérer Nouvelle Instruction< Nouvelle Instruction Retournouvelle<< |
-|
-Exécuter Apprendre Instruction Retnouvins<< |
-|
-Exécuter Apprendre Instruction Suitede<< |
+Exécuter Fonctionnouvelle Insérer Nouvelle Instruction< Nouvelle Instruction Suitede<< |
 |
 Exécuter Apprendre Instruction Aupoint<< |
 |
@@ -447,13 +755,21 @@ Exécuter Apprendre Instruction Égale<< |
 |
 Exécuter Apprendre Instruction Suite< |
 |
-Exécuter Apprendre Instruction Alors<< |
+Exécuter Apprendre Instruction Sinon<< |
 |
 Exécuter Apprendre Instruction Finaliserinsérer<< |
 |
-Exécuter Apprendre Instruction Sinon<< |
+Exécuter Apprendre Instruction Sauvretour<< |
 |
-Exécuter Apprendre Instruction Retourinsérer<< |
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Retournouvelle<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -461,9 +777,11 @@ Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Retnouvins Instruction< |
-|
 Exécuter Apprendre Instruction Retour<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Nouvelle<< |
 |
 Exécuter Apprendre Instruction Suite< |
 |
@@ -472,16 +790,32 @@ Exécuter Apprendre Instruction Tete<< |
 Exécuter Apprendre Instruction Tete<< |
 |
 Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Nouvelle<< |
+|
 Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Nouvelle<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
 |
 Finaliserinsérer Instruction< |
 |
-Exécuter Apprendre Instruction Nouvelle<< |
+Exécuter Apprendre Instruction Sauvretour<< |
 |
 Suitede Instruction< Retourinsérer< Suite Tete< Suite Tete Instruction< |
 |
@@ -492,9 +826,9 @@ Retourinsérer Retour |
 Commentaire:
 
 
-***** liste des fonctions chargées *****
+**** liste des fonctions chargées ****
 
-la liste des fonctions chargées permettra de suivre plus facilement ce qui a déjà été mis en mémoire. car en plussie si on refait la même instruction on n'obtient pas toujours le même résultat - niveau 1
+la liste des fonctions chargées permettra de suivre plus facilement ce qui a déjà été mis en mémoire. car en plussie si on refait la même instruction on n'obtient pas toujours le même résultat - niveau 4, utilise insérer (peut s'écrie au niveau 3 bien entendu)
 
 Crée Listedesfonctionschargées< |
 |
@@ -510,27 +844,25 @@ Crée Noterchargée<< Crée Noterchargée< Noterchargée<< Noterchargée< Noterchargée
 |
 Crée Retournoterchargée< Crée Retournoterchargée Retournoterchargée< Retournoterchargée Exécuter Fonctionnouvelle Retournoterchargée Nouvelle |
 |
-Crée Retourinschargée< |
-|
-Retourinschargée<< Retourinschargée< Retourinschargée< Retourinschargée Exécuter Fonctionnouvelle Retourinschargée Nouvelle |
 |
 |
-|
-Exécuter Fonctionnouvelle Noterchargée Nouvelle Instruction< Noterchargée Instruction Retourinsérer<< |
-|
-Exécuter Apprendre Instruction Retourinschargée<< |
-|
-Exécuter Apprendre Instruction Aupoint<< |
+Exécuter Fonctionnouvelle Noterchargée Nouvelle Instruction< Noterchargée Instruction Aupoint<< |
 |
 Exécuter Apprendre Instruction Listedesfonctionschargées<< |
+|
+Exécuter Apprendre Instruction Retourinsérer<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Insérer<< |
 |
 Exécuter Apprendre Instruction Nouvelle< |
-|
-Retourinschargée Instruction< |
 |
 Exécuter Apprendre Instruction Chargée<< |
 |
@@ -550,6 +882,14 @@ Chargée Apprendre<< Exécuter Noterchargée |
 |
 Chargée Testidentique<< Exécuter Noterchargée |
 |
+Chargée Liste<< Exécuter Noterchargée |
+|
+Chargée Finliste<< Exécuter Noterchargée |
+|
+Chargée Afficher<< Exécuter Noterchargée |
+|
+Chargée Lister<< Exécuter Noterchargée |
+|
 Chargée Insérer<< Exécuter Noterchargée |
 |
 Chargée Noterchargée<< Exécuter Noterchargée |
@@ -559,7 +899,7 @@ Chargée Noterchargée<< Exécuter Noterchargée |
 Commentaire:
 
 
-***** Fonction insérer en tête de liste *****
+*** fonction insérer en tête de liste ***
 
 syntaxe listeàinsérer liste exécuter insérerentête puis faire liste listeàinsérer
 
@@ -609,7 +949,7 @@ Chargée Insérerentête<< Exécuter Noterchargée |
 |
 |
 Commentaire:
-***** fonction recherche (dans) *****
+*** fonction recherche (dans) ***
 
 fonction de recherche d'un élément dans liste, par adresse. retourne le pointeur dans la liste si l'adressecherchée s'y trouve et retourne vide 
 
@@ -729,25 +1069,15 @@ Chargée Recherche<< Exécuter Noterchargée |
 |
 |
 |
-Crée Liste< Crée Liste<< |
-|
-Liste<<< Liste<< Liste<< Liste< Liste< Liste Exécuter Fonctionnouvelle Liste Nouvelle |
-|
-Chargée Liste<< Exécuter Noterchargée |
-|
 Commentaire:
 
-***** fonction finliste protégée*****
+**** fonction finliste protégée ****
 
 la fonction finliste déplace le pointeur findelaliste à la fin de la liste
-protégée contre tout bouclage de la liste, détermine le point de bouclage.
+protégée contre tout bouclage de la liste, détermine le point de bouclage.niveau 4
 
 syntaxe liste listedontilfautatteindrelafin exécuter finlisteprotégée . la fin de la liste est donnée par findelaliste
 
-Crée Findelaliste< |
-|
-Findelaliste<< Findelaliste< Findelaliste< Findelaliste Exécuter Fonctionnouvelle Findelaliste Nouvelle |
-|
 Crée Listedesadresses< Crée Listedesadresses<< |
 |
 Listedesadresses<<< Listedesadresses<< Listedesadresses<< Listedesadresses< Listedesadresses< Listedesadresses Exécuter Fonctionnouvelle Listedesadresses Nouvelle |
@@ -772,25 +1102,9 @@ Crée Bouclefinlisteprotégée< |
 |
 Bouclefinlisteprotégée<< Bouclefinlisteprotégée< Bouclefinlisteprotégée< Bouclefinlisteprotégée Exécuter Fonctionnouvelle Bouclefinlisteprotégée Nouvelle |
 |
-Crée Retrechfinliste< |
-|
-Retrechfinliste<< Retrechfinliste< Retrechfinliste< Retrechfinliste Exécuter Fonctionnouvelle Retrechfinliste Nouvelle |
-|
-Crée Rettestfinliste< |
-|
-Rettestfinliste<< Rettestfinliste< Rettestfinliste< Rettestfinliste Exécuter Fonctionnouvelle Rettestfinliste Nouvelle |
-|
-Crée Prolongerlisteadresses< |
-|
-Prolongerlisteadresses<< Prolongerlisteadresses< Prolongerlisteadresses< Prolongerlisteadresses Exécuter Fonctionnouvelle Prolongerlisteadresses Nouvelle |
-|
 Crée Enregistreradresse< |
 |
 Enregistreradresse<< Enregistreradresse< Enregistreradresse< Enregistreradresse Exécuter Fonctionnouvelle Enregistreradresse Nouvelle |
-|
-Crée Débutfinlisteprotégée< |
-|
-Débutfinlisteprotégée<< Débutfinlisteprotégée< Débutfinlisteprotégée< Débutfinlisteprotégée Exécuter Fonctionnouvelle Débutfinlisteprotégée Nouvelle |
 |
 Crée Bouclenettoyagefinliste< |
 |
@@ -806,11 +1120,15 @@ Exécuter Fonctionnouvelle Finlisteprotégée Nouvelle Instruction< Nouvelle Instru
 |
 Exécuter Apprendre Instruction Listedesadresses<< |
 |
+Exécuter Apprendre Instruction Sauvretours<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
 Exécuter Apprendre Instruction Pointeuradresses< |
 |
 Bouclenettoyagefinliste Instruction< |
 |
-Exécuter Apprendre Instruction A<< |
+Exécuter Apprendre Instruction Sacrifiée<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
 |
@@ -828,21 +1146,23 @@ Exécuter Apprendre Instruction Égale<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
 |
-Exécuter Apprendre Instruction Alors<< |
-|
-Exécuter Apprendre Instruction Débutfinlisteprotégée<< |
-|
 Exécuter Apprendre Instruction Sinon<< |
 |
 Exécuter Apprendre Instruction Bouclenettoyagefinliste<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Pointeuradresses<< |
-|
-Débutfinlisteprotégée Instruction< |
 |
 Exécuter Apprendre Instruction Listedesadresses<< |
 |
@@ -878,9 +1198,13 @@ Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
-Exécuter Apprendre Instruction Pointeur<< |
+Exécuter Apprendre Instruction Suitede<< |
 |
 Bouclefinlisteprotégée Instruction< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
 |
 Exécuter Apprendre Instruction Suite< |
 |
@@ -894,15 +1218,17 @@ Exécuter Apprendre Instruction Listedesadresses<< |
 |
 Exécuter Apprendre Instruction Retourrecherche<< |
 |
-Exécuter Apprendre Instruction Retrechfinliste<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Recherche<< |
 |
 Exécuter Apprendre Instruction Tete<<< |
-|
-Retrechfinliste Instruction< |
 |
 Exécuter Apprendre Instruction Position< |
 |
@@ -920,15 +1246,17 @@ Exécuter Apprendre Instruction Finfinlisteprotégée<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Rettestfinliste<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
-|
-Rettestfinliste Instruction< |
 |
 Exécuter Apprendre Instruction Pointeuradresses<< |
 |
@@ -940,21 +1268,23 @@ Exécuter Apprendre Instruction Égale<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
 |
-Exécuter Apprendre Instruction Alors<< |
-|
-Exécuter Apprendre Instruction Prolongerlisteadresses<< |
-|
 Exécuter Apprendre Instruction Sinon<< |
 |
 Exécuter Apprendre Instruction Enregistreradresse<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Retourinsérer<< |
-|
-Prolongerlisteadresses Instruction< |
 |
 Exécuter Apprendre Instruction Enregistreradresse<< |
 |
@@ -998,6 +1328,10 @@ Exécuter Apprendre Instruction Findelaliste<< |
 |
 Exécuter Apprendre Instruction Pointeur<< |
 |
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Sauvretours<< |
+|
 Suitede Instruction< Retourfinlisteprotégée< Suite Tete< Suite Tete Instruction< |
 |
 Retourfinlisteprotégée Retour |
@@ -1007,227 +1341,18 @@ Chargée Finlisteprotégée<< Exécuter Noterchargée |
 |
 |
 Commentaire:
-une première étape de franchie, on dispose d'un moyen de communiquer avec l'utilisateur autrement que par les adresses mémoires affichées par voir
 
-Commentaire:
-
-***** fonction finliste simple *****
-
-la fonction finliste déplace le pointeur findelaliste à la fin de la liste
-attention, uniquement pour une liste qui se termine ! la version protégée est dans ini
-
-syntaxe liste listedontilfautatteindrelafin exécuter finliste . la fin de la liste est donnée par findelaliste
-
-Crée Finliste< Crée Retourfinliste< Crée Bouclefinliste< |
-|
-Finliste<< Finliste< Finliste< Finliste Exécuter Fonctionnouvelle Finliste Nouvelle |
-|
-Retourfinliste<< Retourfinliste< Retourfinliste< Retourfinliste Exécuter Fonctionnouvelle Retourfinliste Nouvelle |
-|
-Bouclefinliste<< Bouclefinliste< Bouclefinliste< Bouclefinliste Exécuter Fonctionnouvelle Bouclefinliste Nouvelle |
-|
-|
-|
-Exécuter Fonctionnouvelle Finliste Nouvelle Instruction< Nouvelle Instruction Suitede<< |
-|
-Exécuter Apprendre Instruction Liste<< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Suite< |
-|
-Exécuter Apprendre Instruction Suitede<< |
-|
-Bouclefinliste Instruction< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Si<< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Suite< |
-|
-Exécuter Apprendre Instruction Égale<< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Alors<< |
-|
-Exécuter Apprendre Instruction Retourfinliste<< |
-|
-Exécuter Apprendre Instruction Sinon<< |
-|
-Exécuter Apprendre Instruction Bouclefinliste<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
-|
-Exécuter Apprendre Instruction Testidentique<< |
-|
-Suitede Instruction< Retourfinliste< Suite Tete< Suite Tete Instruction< |
-|
-Retourfinliste Retour |
-|
-Chargée Finliste<< Exécuter Noterchargée |
-|
-|
-|
-Commentaire:
-afficher sans créer de nouvelle liste, mais c'est plus long.
-
-Crée Afficher< |
-|
-Afficher<< Afficher< Afficher< Afficher Exécuter Fonctionnouvelle Afficher Nouvelle |
-|
-Crée Pourafficher< |
-|
-Pourafficher<< Pourafficher< Pourafficher< Pourafficher Exécuter Fonctionnouvelle Pourafficher Nouvelle |
-|
-Crée Retourafficher< |
-|
-Retourafficher<< Retourafficher< Retourafficher< Retourafficher Exécuter Fonctionnouvelle Retourafficher Nouvelle |
-|
-Crée Affichage< |
-|
-Affichage<< Affichage< Affichage< Affichage Exécuter Fonctionnouvelle Affichage Nouvelle |
-|
-Crée Repère< |
-|
-Repère<< Repère< Repère< Repère Exécuter Fonctionnouvelle Repère Nouvelle |
-|
-Crée Chercherep< |
-|
-Chercherep<< Chercherep< Chercherep< Chercherep Exécuter Fonctionnouvelle Chercherep Nouvelle |
-|
-Crée Affichercaractère< |
-|
-Affichercaractère<< Affichercaractère< Affichercaractère< Affichercaractère Exécuter Fonctionnouvelle Affichercaractère Nouvelle |
-|
-Crée Retfinlistaff< |
-|
-Retfinlistaff<< Retfinlistaff< Retfinlistaff< Retfinlistaff Exécuter Fonctionnouvelle Retfinlistaff Nouvelle |
-|
-Crée Contraffréc< |
-|
-Contraffréc<< Contraffréc< Contraffréc< Contraffréc Exécuter Fonctionnouvelle Contraffréc Nouvelle |
-|
-Exécuter Fonctionnouvelle Afficher Nouvelle Instruction< Nouvelle Instruction Liste<< |
-|
-Exécuter Apprendre Instruction Pourafficher<< |
-|
-Exécuter Apprendre Instruction Retourfinlisteprotégée<< |
-|
-Exécuter Apprendre Instruction Retfinlistaff<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
-|
-Exécuter Apprendre Instruction Finlisteprotégée<< |
-|
-Exécuter Apprendre Instruction Repère<< |
-|
-Retfinlistaff Instruction< |
-|
-Exécuter Apprendre Instruction Findelaliste<< |
-|
-Exécuter Apprendre Instruction Voir<< |
-|
-Affichage Instruction< |
-|
-Exécuter Apprendre Instruction Pointeur< |
-|
-Exécuter Apprendre Instruction Pointeur<< |
-|
-Exécuter Apprendre Instruction Pourafficher<< |
-|
-Exécuter Apprendre Instruction Suitede<< |
-|
-Chercherep Instruction< |
-|
-Exécuter Apprendre Instruction Pointeur<< |
-|
-Exécuter Apprendre Instruction Si<< |
-|
-Exécuter Apprendre Instruction Suite< |
-|
-Exécuter Apprendre Instruction Égale<< |
-|
-Exécuter Apprendre Instruction Repère<< |
-|
-Exécuter Apprendre Instruction Alors<< |
-|
-Exécuter Apprendre Instruction Affichercaractère<< |
-|
-Exécuter Apprendre Instruction Sinon<< |
-|
-Exécuter Apprendre Instruction Contraffréc<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
-|
-Exécuter Apprendre Instruction Testidentique<< |
-|
-Exécuter Apprendre Instruction Pointeur<< |
-|
-Contraffréc Instruction< |
-|
-Exécuter Apprendre Instruction Suite< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
-|
-Exécuter Apprendre Instruction Chercherep<< |
-|
-Exécuter Apprendre Instruction Repère<< |
-|
-Affichercaractère Instruction< |
-|
-Exécuter Apprendre Instruction Pointeur<< |
-|
-Exécuter Apprendre Instruction Si<< |
-|
-Exécuter Apprendre Instruction Pourafficher<< |
-|
-Exécuter Apprendre Instruction Égale<< |
-|
-Exécuter Apprendre Instruction Repère<< |
-|
-Exécuter Apprendre Instruction Alors<< |
-|
-Exécuter Apprendre Instruction Retourafficher<< |
-|
-Exécuter Apprendre Instruction Sinon<< |
-|
-Exécuter Apprendre Instruction Affichage<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
-|
-Exécuter Apprendre Instruction Testidentique<< |
-|
-Suitede Instruction< Retourafficher< Suite Tete< Suite Tete Instruction< |
-|
-Retourafficher Retour |
-|
-Chargée Afficher<< Exécuter Noterchargée |
-|
-Pourafficher ****** Bonjour!****** Exécuter Afficher |
-|
-Commentaire:
-
-***** fonction copier protégé*****
+***** fonction copier protégé *****
 
 requiert finlisteprotégé
 
 utilisée dans la création de variables
 syntaxe listeàcopier listeàrecopier exécuter copier résultat dans listecopiée
-protégé contre les listes cycliques
+protégé contre les listes cycliques, niveau 5
 
 Crée Copier< |
 |
 Copier<< Copier< Copier< Copier Exécuter Fonctionnouvelle Copier Nouvelle |
-|
-Crée Retfincopier< |
-|
-Retfincopier<< Retfincopier< Retfincopier< Retfincopier Exécuter Fonctionnouvelle Retfincopier Nouvelle |
 |
 Crée Fincopier< |
 |
@@ -1237,9 +1362,9 @@ Crée Retourcopier< |
 |
 Retourcopier<< Retourcopier< Retourcopier< Retourcopier Exécuter Fonctionnouvelle Retourcopier Nouvelle |
 |
-Crée Parcoursliste< |
+Crée Pointeurcopier< |
 |
-Parcoursliste<< Parcoursliste< Parcoursliste< Parcoursliste Exécuter Fonctionnouvelle Parcoursliste Nouvelle |
+Pointeurcopier<< Pointeurcopier< Pointeurcopier< Pointeurcopier Exécuter Fonctionnouvelle Pointeurcopier Nouvelle |
 |
 Crée Listecopiée<< Crée Listecopiée< |
 |
@@ -1248,14 +1373,6 @@ Listecopiée<<< Listecopiée<< Listecopiée<< Listecopiée< Listecopiée< Listecopiée
 Crée Listeàcopier< |
 |
 Listeàcopier<< Listeàcopier< Listeàcopier< Listeàcopier Exécuter Fonctionnouvelle Listeàcopier Nouvelle |
-|
-Crée Retnouvcopier< |
-|
-Retnouvcopier<< Retnouvcopier< Retnouvcopier< Retnouvcopier Exécuter Fonctionnouvelle Retnouvcopier Nouvelle |
-|
-Crée Retinscopier< |
-|
-Retinscopier<< Retinscopier< Retinscopier< Retinscopier Exécuter Fonctionnouvelle Retinscopier Nouvelle |
 |
 Crée Fincopierliste< |
 |
@@ -1273,10 +1390,6 @@ Crée Premiercopier< |
 |
 Premiercopier<< Premiercopier< Premiercopier< Premiercopier Exécuter Fonctionnouvelle Premiercopier Nouvelle |
 |
-Crée Continuercopier< |
-|
-Continuercopier<< Continuercopier< Continuercopier< Continuercopier Exécuter Fonctionnouvelle Continuercopier Nouvelle |
-|
 Crée Copierdernier< |
 |
 Copierdernier<< Copierdernier< Copierdernier< Copierdernier Exécuter Fonctionnouvelle Copierdernier Nouvelle |
@@ -1287,27 +1400,37 @@ Exécuter Fonctionnouvelle Copier Nouvelle Instruction< Nouvelle Instruction List
 |
 Exécuter Apprendre Instruction Listeàcopier<< |
 |
+Exécuter Apprendre Instruction Sauvretour2<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
 Exécuter Apprendre Instruction Flagcopier<< |
 |
 Exécuter Apprendre Instruction Premiercopier<< |
 |
 Exécuter Apprendre Instruction Retourfinlisteprotégée<< |
 |
-Exécuter Apprendre Instruction Retfincopier<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Finlisteprotégée<< |
 |
-Exécuter Apprendre Instruction Retournouvelle<< |
-|
-Retfincopier Instruction< |
-|
-Exécuter Apprendre Instruction Retnouvcopier<< |
-|
-Exécuter Apprendre Instruction Parcoursliste<< |
+Exécuter Apprendre Instruction Pointeurcopier<< |
 |
 Exécuter Apprendre Instruction Listeàcopier<< |
+|
+Exécuter Apprendre Instruction Retournouvelle<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -1315,35 +1438,29 @@ Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Listecopiée<< |
 |
-Retnouvcopier Instruction< |
-|
 Exécuter Apprendre Instruction Nouvelle<< |
 |
 Exécuter Apprendre Instruction Listecopiée< |
 |
-Exécuter Apprendre Instruction Parcoursliste< |
+Exécuter Apprendre Instruction Pointeurcopier< |
 |
 Exécuter Apprendre Instruction Pointeur<< |
 |
 Exécuter Apprendre Instruction Listecopiée<< |
 |
-Exécuter Apprendre Instruction Retourinsérer<< |
+Exécuter Apprendre Instruction Suitede<< |
 |
 Bouclecopier Instruction< |
 |
-Exécuter Apprendre Instruction Retinscopier<< |
+Exécuter Apprendre Instruction Pointeurcopier<< |
 |
-Exécuter Apprendre Instruction Suitede<< |
-|
-Exécuter Apprendre Instruction Parcoursliste<< |
-|
-Exécuter Apprendre Instruction Parcoursliste<< |
+Exécuter Apprendre Instruction Pointeurcopier<< |
 |
 Exécuter Apprendre Instruction Suite< |
 |
 Exécuter Apprendre Instruction Si<< |
 |
-Exécuter Apprendre Instruction Parcoursliste<< |
+Exécuter Apprendre Instruction Pointeurcopier<< |
 |
 Exécuter Apprendre Instruction Égale<< |
 |
@@ -1355,7 +1472,11 @@ Exécuter Apprendre Instruction Copierdernier<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Continuercopier<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -1363,17 +1484,21 @@ Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Aupoint<< |
 |
-Continuercopier Instruction< |
-|
 Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Retourinsérer<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Insérer<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
-|
-Retinscopier Instruction< |
 |
 Exécuter Apprendre Instruction Pointeur<< |
 |
@@ -1383,11 +1508,11 @@ Exécuter Apprendre Instruction Suite< |
 |
 Exécuter Apprendre Instruction Nouvelle< |
 |
-Exécuter Apprendre Instruction Parcoursliste< |
+Exécuter Apprendre Instruction Pointeurcopier< |
 |
 Exécuter Apprendre Instruction Si<< |
 |
-Exécuter Apprendre Instruction Parcoursliste<< |
+Exécuter Apprendre Instruction Pointeurcopier<< |
 |
 Exécuter Apprendre Instruction Égale<< |
 |
@@ -1403,7 +1528,7 @@ Exécuter Apprendre Instruction Bouclecopier<< |
 |
 Exécuter Apprendre Instruction Nouvelle< |
 |
-Exécuter Apprendre Instruction Parcoursliste< |
+Exécuter Apprendre Instruction Pointeurcopier< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -1423,7 +1548,7 @@ Exécuter Apprendre Instruction Nouvelle< |
 |
 Copierdernier Instruction< |
 |
-Exécuter Apprendre Instruction Parcoursliste< |
+Exécuter Apprendre Instruction Pointeurcopier< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
@@ -1433,7 +1558,11 @@ Exécuter Apprendre Instruction Retour<< |
 |
 Exécuter Apprendre Instruction Retourinsérer<< |
 |
-Exécuter Apprendre Instruction Retournouvelle<< |
+Exécuter Apprendre Instruction Retour<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Sauvretour2<< |
 |
 Suitede Instruction< Retourcopier< Suite Tete< Suite Tete Instruction< |
 |
@@ -1454,7 +1583,7 @@ Tête<<<< Tête<<< Tête<<< Tête<< Tête<< Tête< Tête< Tête Tête< Tête> |
 |
 Commentaire:
 
-***** fonction boucle *****
+*** fonction boucle ***
 
 
 syntaxe: tantque listed'unecertainelongueur répéter procédureàrépéter retourprocédureàrépéter boucle exécuter boucle 
@@ -1517,7 +1646,7 @@ Chargée Boucle<< Exécuter Noterchargée |
 |
 Commentaire:
 
-***** fonction recherche de dictionnaire *****
+*** fonction recherche de dictionnaire ***
 
 
 syntaxe: mot motàtrouver exécuter recherchedico retourne dico comme dictionnaire où se trouve le mot en liste à lister par afficher liste plus tard 
@@ -1549,10 +1678,6 @@ Findico<< Findico< Findico< Findico Exécuter Fonctionnouvelle Findico Nouvelle |
 Crée Dicosuivant< |
 |
 Dicosuivant<< Dicosuivant< Dicosuivant< Dicosuivant Exécuter Fonctionnouvelle Dicosuivant Nouvelle |
-|
-Crée Testdico< |
-|
-Testdico<< Testdico< Testdico< Testdico Exécuter Fonctionnouvelle Testdico Nouvelle |
 |
 |
 |
@@ -1592,15 +1717,21 @@ Exécuter Apprendre Instruction Findico<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Testdico<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Sauvretour2<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Si<< |
-|
-Testdico Instruction< |
 |
 Exécuter Apprendre Instruction Derniercaractère< |
 |
@@ -1634,6 +1765,10 @@ Findico Instruction< |
 |
 Exécuter Apprendre Instruction Dico< |
 |
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Sauvretour2<< |
+|
 Suitede Instruction< Retourrecherchedico< Suite Tete< Suite Tete Instruction< |
 |
 Retourrecherchedico Retour |
@@ -1642,10 +1777,10 @@ Chargée Recherchedico<< Exécuter Noterchargée |
 |
 Commentaire:
 
-***** déclaration de variable partielle *****
+****** déclaration de variable partielle ******
 
  à partir d'un nom de base uniquement pour les variables utilisant la notation <
-
+niveau 6, utilise copier
 
 Crée Inf< |
 |
@@ -1669,26 +1804,6 @@ Crée Retourdécl< |
 |
 Retourdécl<< Retourdécl< Retourdécl< Retourdécl Exécuter Fonctionnouvelle Retourdécl Nouvelle |
 |
-Crée Retourcopierdécl< |
-|
-Retourcopierdécl<< Retourcopierdécl< Retourcopierdécl< Retourcopierdécl Exécuter Fonctionnouvelle Retourcopierdécl Nouvelle |
-|
-Crée Retourinsérerdécl< |
-|
-Retourinsérerdécl<< Retourinsérerdécl< Retourinsérerdécl< Retourinsérerdécl Exécuter Fonctionnouvelle Retourinsérerdécl Nouvelle |
-|
-Crée Retourinsérerdicodécl< |
-|
-Retourinsérerdicodécl<< Retourinsérerdicodécl< Retourinsérerdicodécl< Retourinsérerdicodécl Exécuter Fonctionnouvelle Retourinsérerdicodécl Nouvelle |
-|
-Crée Retourrechdicodécl< |
-|
-Retourrechdicodécl<< Retourrechdicodécl< Retourrechdicodécl< Retourrechdicodécl Exécuter Fonctionnouvelle Retourrechdicodécl Nouvelle |
-|
-Crée Insérerdico< |
-|
-Insérerdico<< Insérerdico< Insérerdico< Insérerdico Exécuter Fonctionnouvelle Insérerdico Nouvelle |
-|
 |
 |
 Exécuter Fonctionnouvelle Décl Nouvelle Instruction< Nouvelle Instruction Suitede<< |
@@ -1701,15 +1816,17 @@ Exécuter Apprendre Instruction Suite< |
 |
 Exécuter Apprendre Instruction Retourcopier<< |
 |
-Exécuter Apprendre Instruction Retourcopierdécl<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Copier<< |
 |
 Exécuter Apprendre Instruction Retourcopier<< |
-|
-Retourcopierdécl Instruction< |
 |
 Exécuter Apprendre Instruction Retour<< |
 |
@@ -1719,15 +1836,17 @@ Exécuter Apprendre Instruction Listecopiée<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retourinsérerdécl<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
-|
-Retourinsérerdécl Instruction< |
 |
 Exécuter Apprendre Instruction Temp<< |
 |
@@ -1759,25 +1878,23 @@ Exécuter Apprendre Instruction Retournouvelle<< |
 |
 Exécuter Apprendre Instruction Retour<< |
 |
-Exécuter Apprendre Instruction Sauvretours<< |
-|
-Exécuter Apprendre Instruction Retourinsérerentête<< |
-|
-Exécuter Apprendre Instruction Retourinsérerentête<< |
-|
-Exécuter Apprendre Instruction Insérerdico<< |
-|
 Exécuter Apprendre Instruction Listeàinsérer<< |
 |
 Exécuter Apprendre Instruction Listecopiée<< |
+|
+Exécuter Apprendre Instruction Retourinsérerentête<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Insérerentête<< |
 |
 Exécuter Apprendre Instruction Mot<< |
-|
-Insérerdico Instruction< |
 |
 Exécuter Apprendre Instruction Variable<< |
 |
@@ -1787,15 +1904,17 @@ Exécuter Apprendre Instruction Listeàinsérer<< |
 |
 Exécuter Apprendre Instruction Retourrecherchedico<< |
 |
-Exécuter Apprendre Instruction Retourrechdicodécl<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Recherchedico<< |
 |
 Exécuter Apprendre Instruction Retourrecherchedico<< |
-|
-Retourrechdicodécl Instruction< |
 |
 Exécuter Apprendre Instruction Retour<< |
 |
@@ -1809,15 +1928,17 @@ Exécuter Apprendre Instruction Dico< |
 |
 Exécuter Apprendre Instruction Retourinsérerentête<< |
 |
-Exécuter Apprendre Instruction Retourinsérerdicodécl<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Insérerentête<< |
 |
 Exécuter Apprendre Instruction Nouvelle< |
-|
-Retourinsérerdicodécl Instruction< |
 |
 Exécuter Apprendre Instruction Listecopiée<< |
 |
@@ -1845,9 +1966,10 @@ Retourdécl Retour |
 |
 Commentaire:
 
-***** déclaration de variable *****
+******* déclaration de variable *******
 
-complète, à plusieurs étages de pointeurs 
+complète, à plusieurs étages de pointeurs . niveau 7, utilise décl
+
 syntaxe profondeur xxx (facultatif, deux par défaut) variable nomdelavariable exécuter déclaration 
 
 Variable Profondeur Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Profondeur Nouvelle |
@@ -1858,13 +1980,9 @@ Variable Retourdéclarer Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Re
 |
 Variable Retourboucledéclarer Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Retourboucledéclarer Nouvelle |
 |
-Variable Retnouvdéclarer Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Retnouvdéclarer Nouvelle |
-|
 Variable Existedéjà Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Existedéjà Nouvelle |
 |
 Variable Continuerdéclarer Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Continuerdéclarer Nouvelle |
-|
-Variable Protectiondéclarer Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Protectiondéclarer Nouvelle |
 |
 Variable Sauvvar Exécuter Décl Exécuter Décl Exécuter Décl Exécuter Décl Exécuter Fonctionnouvelle Sauvvar Nouvelle |
 |
@@ -1890,15 +2008,17 @@ Exécuter Apprendre Instruction Existedéjà<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Protectiondéclarer<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Si<< |
-|
-Protectiondéclarer Instruction< |
 |
 Exécuter Apprendre Instruction Variable<< |
 |
@@ -1968,13 +2088,13 @@ Exécuter Apprendre Instruction Retourboucle<< |
 |
 Exécuter Apprendre Instruction Retour<< |
 |
-Exécuter Apprendre Instruction Sauvretours<< |
-|
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retournouvelle<< |
+Exécuter Apprendre Instruction Retourdirect<< |
 |
-Exécuter Apprendre Instruction Retnouvdéclarer<< |
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -1982,13 +2102,11 @@ Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Sauvvar< |
 |
-Retnouvdéclarer Instruction< |
-|
 Exécuter Apprendre Instruction Nouvelle<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Sauvretours<< |
+Exécuter Apprendre Instruction Retour<< |
 |
 Suitede Instruction< Retourdéclarer< Suite Tete< Suite Tete Instruction< |
 |
@@ -2006,7 +2124,132 @@ Chargée Déclarer<< Exécuter Noterchargée |
 |
 Commentaire:
 
-***** fonction test requis pour enregistrer une procédure dans la liste des requis pour la suite *****
+***** fonction afficher *****
+
+afficher sans créer de nouvelle liste, mais c'est plus long en temps d'exécution. niveau 5 (utilise finliste).
+version protégée contre le bouclage des listes cycliques
+
+Variable Repère Exécuter Déclarer |
+|
+Variable Afficherprotégé Exécuter Déclarer |
+|
+Variable Retourafficherprotégé Exécuter Déclarer |
+|
+Variable Affichage Exécuter Déclarer |
+|
+Variable Chercherepèrep Exécuter Déclarer |
+|
+Variable Affichercaractère Exécuter Déclarer |
+|
+Exécuter Fonctionnouvelle Afficherprotégé Nouvelle Instruction< Nouvelle Instruction Liste<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Retourfinlisteprotégée<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Finlisteprotégée<< |
+|
+Exécuter Apprendre Instruction Repère<< |
+|
+Exécuter Apprendre Instruction Findelaliste<< |
+|
+Exécuter Apprendre Instruction Voir<< |
+|
+Affichage Instruction< |
+|
+Exécuter Apprendre Instruction Pointeur< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Chercherepèrep Instruction< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Repère<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Affichercaractère<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Exécuter Apprendre Instruction Suitede<< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Suite< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Chercherepèrep<< |
+|
+Exécuter Apprendre Instruction Repère<< |
+|
+Affichercaractère Instruction< |
+|
+Exécuter Apprendre Instruction Pointeur<< |
+|
+Exécuter Apprendre Instruction Si<< |
+|
+Exécuter Apprendre Instruction Pourafficher<< |
+|
+Exécuter Apprendre Instruction Égale<< |
+|
+Exécuter Apprendre Instruction Repère<< |
+|
+Exécuter Apprendre Instruction Alors<< |
+|
+Exécuter Apprendre Instruction Retourafficherprotégé<< |
+|
+Exécuter Apprendre Instruction Sinon<< |
+|
+Exécuter Apprendre Instruction Affichage<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Testidentique<< |
+|
+Suitede Instruction< Retourafficherprotégé< Suite Tete< Suite Tete Instruction< |
+|
+Retourafficherprotégé Retour |
+|
+Chargée Afficherprotégé<< Exécuter Noterchargée |
+|
+Voir Saut Voir Saut Pourafficher ***** bonjour le monde! ***** Exécuter Afficherprotégé |
+|
+Commentaire:
+
+**** fonction test requis pour enregistrer une procédure dans la liste des requis pour la suite ****
 remplacer par une recherche bien entendu
 
 syntaxe: requiert procédurenécessaire exécuter testrequis 
@@ -2017,15 +2260,9 @@ Variable Retourtestrequis Exécuter Déclaration |
 |
 Variable Requiert Exécuter Déclaration |
 |
-Variable Testrequismanquant Exécuter Déclaration |
-|
 Variable Estmanquant Exécuter Déclaration |
 |
-Variable Continuertestrequis Exécuter Déclaration |
-|
 Variable Introtestrequis Exécuter Déclaration |
-|
-Variable Retourinsérermanquant Exécuter Déclaration |
 |
 Profondeur Pp Variable Listedesmanquants Exécuter Déclaration |
 |
@@ -2055,15 +2292,17 @@ Exécuter Apprendre Instruction Retourtestrequis<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Testrequismanquant<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
-|
-Testrequismanquant Instruction< |
 |
 Exécuter Apprendre Instruction Pointeur<< |
 |
@@ -2085,7 +2324,11 @@ Exécuter Apprendre Instruction Estmanquant<< |
 |
 Exécuter Apprendre Instruction Sinon<< |
 |
-Exécuter Apprendre Instruction Continuertestrequis<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -2093,9 +2336,7 @@ Exécuter Apprendre Instruction Testidentique<< |
 |
 Exécuter Apprendre Instruction Pointeur<< |
 |
-Continuertestrequis Instruction< |
-|
-Exécuter Apprendre Instruction Suite< |
+Exécuter Apprendre Instruction Égale<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -2109,15 +2350,17 @@ Exécuter Apprendre Instruction Listedesmanquants<< |
 |
 Exécuter Apprendre Instruction Retourinsérerentête<< |
 |
-Exécuter Apprendre Instruction Retourinsérermanquant<< |
+Exécuter Apprendre Instruction Retourdirect<< |
+|
+Exécuter Apprendre Instruction Noteretour<< |
+|
+Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Insérerentête<< |
 |
 Exécuter Apprendre Instruction Listedesmanquants<< |
-|
-Retourinsérermanquant Instruction< |
 |
 Exécuter Apprendre Instruction Listeàinsérer<< |
 |
@@ -2143,7 +2386,7 @@ Exécuter Afficher |
 Commentaire:
 
 
-**** procédure subliste  ****
+****** procédure subliste ******
 
 syntaxe: pointeurliste listeàparcourir exécuter subliste
 
@@ -2160,21 +2403,19 @@ Variable Séparateur Exécuter Déclarer |
 |
 Variable Espace Exécuter Déclarer |
 |
-Variable Pointeurliste Exécuter Déclarer |
-|
 |
 |
 Suitede Espace<< Tete< Suite Tete< Tete Espace Tete Voir Espace |
 |
 Séparateur Espace |
 |
-Exécuter Fonctionnouvelle Subliste Nouvelle Instruction< Nouvelle Instruction Retourafficher<< |
-|
-Exécuter Apprendre Instruction Retouraffichersubliste<< |
-|
-Exécuter Apprendre Instruction Pourafficher<< |
+Exécuter Fonctionnouvelle Subliste Nouvelle Instruction< Nouvelle Instruction Pourafficher<< |
 |
 Exécuter Apprendre Instruction Pointeurliste< |
+|
+Exécuter Apprendre Instruction Retourafficher<< |
+|
+Exécuter Apprendre Instruction Retouraffichersubliste<< |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
@@ -2208,7 +2449,9 @@ Chargée Subliste<< Exécuter Noterchargée |
 |
 Commentaire:
 
-***** fonction afficher une liste *****
+******* fonction afficher une liste *******
+
+non protégée contre le bouclage. ne peut pas lister une procédure qui se termine par retour, uniquement les procédures bouclées se terminant par subretour.
 
 syntaxe: liste listeàafficher exécuter afficherliste
 
@@ -2267,7 +2510,7 @@ Chargée Afficherliste<< Exécuter Noterchargée |
 Commentaire:
 
 
-***** bilan éventuel des prérequis manquants *****
+******** bilan éventuel des prérequis manquants ********
 
 
 Variable Bilanprérequis Exécuter Déclaration |
@@ -2445,27 +2688,30 @@ Retoursaut Retour |
 Commentaire:
 synonymes de compatitiblité
 
-Variable Compteur Exécuter Déclarer Compteur< Quitter< |
-|
-Variable Fincompteur Exécuter Déclarer Fincompteur< Code< |
-|
-Variable Afficherprotégé Exécuter Déclarer Afficherprotégé< Afficher< |
-|
-Variable Retourafficherprotégé Exécuter Déclarer Retourafficherprotégé< Retourafficher< |
-|
-Chargée Afficherprotégé<< Exécuter Noterchargée |
+Variable Varsuite Exécuter Déclarer Varsuite< Suitede< |
 |
 Variable Copierliste Exécuter Déclarer Copierliste< Copier< |
 |
 Variable Retourcopierliste Exécuter Déclarer Retourcopierliste< Retourcopier< |
 |
-Variable Varsuite Exécuter Déclarer Varsuite< Suitede< |
+Commentaire:
+synonymes amusants
+
+Variable Affiche Exécuter Déclarer Affiche< Pourafficher< |
+|
+Variable À Exécuter Déclarer À< Exécuter< |
+|
+Variable L'écran Exécuter Déclarer L'écran< Afficher< |
+|
+Variable Compteur Exécuter Déclarer Compteur< Quitter< |
+|
+Variable Fincompteur Exécuter Déclarer Fincompteur< Code< |
 |
 |
 |
-Pourafficher 
+Affiche 
 >>> Prêt
-Exécuter Afficher |
+À L'écran |
 |
 Exécuter Sautdeligne |
 |

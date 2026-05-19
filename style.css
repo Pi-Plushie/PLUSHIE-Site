@@ -175,16 +175,7 @@ button {
     color: var(--green);
     }
 
-#code {
-    background: #0f172a;
-    color: var(--cyan);
-    padding: 20px;
-    border-radius: 10px;
-    white-space: pre;
-    font-size: 1.2em;
-    min-height: 50px;
-    text-align: left;
-}
+
 
 .container {
     max-width: 900px;
@@ -315,27 +306,43 @@ important {
 
 
 
-    pre {
-        background: #020617;
-        padding: 15px;
-        border-radius: 8px;
-        overflow-x: auto;
-        color: #38bdf8;
-    }
+pre {
+    width: fit-content;
+    max-width: 100%;
+    margin: 5px;
+    background: #020617;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    color: #38bdf8;
+}
 
 
-    #output {
-        background: #0f172a;
-        padding: 20px;
-        border-radius: 10px;
-        white-space: pre;
-        font-size: 1.2em;
-        min-height: 50px;
-        margin-top: 30px;
-        color: #22c55e;
-        font-size: 1.3em;
-    }
-
+#output {
+    width: fit-content;
+    max-width: 100%;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+    white-space: pre;
+    margin-top: 10px;
+    color: #22c55e;
+    text-align: left;
+    font-family: monospace;
+}
+#code {
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 100%;
+    background: #0f172a;
+    color: var(--cyan);
+    padding: 10px;
+    border-radius: 10px;
+    white-space: pre;
+    text-align: left;
+    font-family: monospace;
+}
     #dynamic-text {
         text-align: center;
         font-size: 1.2em;

@@ -444,7 +444,9 @@ function effacerEntree() {
 
 function effacerSortie() {
     ecranoutput = "";
-        document.getElementById("output").textContent = ecranoutput;
+    document.getElementById("output").textContent = ecranoutput;
+    document.getElementById("output").width = 98 %
+
     setStatus("Sortie effacée");
 
 }
