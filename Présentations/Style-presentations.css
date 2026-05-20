@@ -304,4 +304,7 @@ p {
     to {
         transform: rotate(360deg) translateX(0px);
     }
+} 
+.dessin-svg {
+   
 }

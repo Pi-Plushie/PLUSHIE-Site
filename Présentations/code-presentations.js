@@ -143,15 +143,16 @@ let frame = 0;
 
 function updateTransfer() {
 
-    document.getElementById(
+    let line = document.getElementById(
         "transfer-line"
-    ).innerHTML = frames[frame];
+    );
+    if (line) {
+       line.innerHTML = frames[frame];
 
-    frame++;
+        frame++;
 
-    if (frame >= frames.length) {
-
-        frame = 0;
+        if (frame >= frames.length) frame = 0;
+    
     }
 }
 
