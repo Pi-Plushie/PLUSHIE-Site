@@ -2501,9 +2501,13 @@ Exécuter Apprendre Instruction Retoursubliste<< |
 |
 Exécuter Apprendre Instruction Retour<< |
 |
+Exécuter Apprendre Instruction Exécuter<< |
+|
+Exécuter Apprendre Instruction Retourafficherliste<< |
+|
 Suitede Instruction< Retourafficherliste< Suite Tete< Suite Tete Instruction< |
 |
-Retourafficherliste Retour |
+Retourafficherliste Subretour |
 |
 Chargée Afficherliste<< Exécuter Noterchargée |
 |
