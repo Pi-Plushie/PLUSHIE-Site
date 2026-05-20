@@ -52,8 +52,9 @@
             <div class="section">
                 <h1>🧪 Éveil de PLUSHIE</h1>
                 <i>Exemple de séquence de démarrage</i>
+                <div id="entrée"></div><br>
                 <div id="code"></div>
-                <div id="output"></div>
+                <div id="output"> </div>
                 <div id="commentaires">
                     <i>
 
@@ -74,6 +75,21 @@
                         `Par les mots ! `,
                         `...Et l'étoile apparaît !  `,
                         `...Et l'étoile apparaît !  `,
+                       
+                    ];
+
+                    let code = [
+                        "Lien ",
+                        "Éveil Lien ",
+                        "Éveil Lien " + "\n"+ "Éveil ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot ",
+                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot " + "\n" + "\n" + "Dire Étoile ",
                         `Éveil Lien |
 Éveil |
 |
@@ -94,27 +110,18 @@ Pointer Mot Suitede *Pointer Suite |
 Dire Étoile |
 |`
                     ];
-
-                    let outputs = [
-                        "Lien ",
-                        "Éveil Lien ",
-                        "Éveil ",
-                        "Suite Éveil Crée Éveil ",
-                        "Crée Continuer ",
-                        "Continuer Suitede Continuer Suite Suitede Éveil ",
-                        "Communiquer Suite Dire Communiquer ",
-                        "Crée Pointer ",
-                        "Pointer Mot Suitede *Pointer Suite ",
-                        "Étoile Mot ",
-                        "Dire Étoile ",
-                        "*", "*",
+                    let sortie = [
+                        ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
+                        `*`,
+                        `*`,
+                        '*',
                     ];
-
                     let i = 0;
 
                     function showStep() {
-                        document.getElementById("code").textContent = steps[i];
-                        document.getElementById("output").textContent = outputs[i];
+                        document.getElementById("entrée").textContent = steps[i];
+                        document.getElementById("code").textContent = code[i];
+                        document.getElementById("output").textContent = sortie[i];
                         i++;
                         if (i < steps.length) {
                             setTimeout(showStep, 2200);
@@ -147,20 +154,20 @@ Dire Étoile |
                             </p>
                             <détails>
                                 <div id="code">
-                                    Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
-                                    Argl Zglu |
-                                    |
-                                    Zglu Vloofde Zglu Vloof  |
-                                    |
-                                    Vloofde Zblurg $!#§ Vloof  Yeuk $!#§ |
-                                    |
-                                    Argl Vlank |
-                                    |
-                                    Vlank Xal
-                                    |
-                                    Vloofde *Vlank Vloof  Star Xal Yeuk Star |
-                                    |
-                                    Yeuk Zglu Yeuk Star Yeuk Star
+                Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
+                Argl Zglu |
+                |
+                Zglu Vloofde Zglu Vloof  |
+                |
+                Vloofde Zblurg $!#§ Vloof  Yeuk $!#§ |
+                |
+                Argl Vlank |
+                |
+                Vlank Xal |
+                |
+                Vloofde *Vlank Vloof  Star Xal Yeuk Star |
+                |
+                Yeuk Zglu Yeuk Star Yeuk Star
                                 </div>
                                 <div id="output">*</div>
 
@@ -176,7 +183,7 @@ Dire Étoile |
 
 
                                 <div id="code" style="text-align:left">
-                                    ! Lien £=! #>! #>#>#>S #>#>S $S £=$! ¤@£=Oo¤@#>T'#>#>T'T^#>#>$*T'£=?%T^Oo?%OoS Oo?%Oo?%
+                ! Lien £=! #>! #>#>#>S #>#>S $S £=$! ¤@£=Oo¤@#>T'#>#>T'T^#>#>$*T'£=?%T^Oo?%OoS Oo?%Oo?%
                                 </div>
                                 <div id="output">*</div>
                     </p>
