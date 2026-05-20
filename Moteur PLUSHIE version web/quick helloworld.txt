@@ -1,0 +1,28 @@
+Éveil Lien Crée Éveil Ensuite Crée Crée  
+Crée Tete Crée Dire  
+ 
+Tete< Tete Suite Éveil Dire< Dire  
+ 
+Ensuite Éveil Dire< Suite Dire< Dire  
+ 
+ 
+ 
+Crée Lettre Crée Lettrel Lettre Vide Lettrel Empty  
+ 
+ 
+ 
+Ensuite drwoleh Tete< Suite Tete< Tete Dire Tete Lettre Tete  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete Dire Tete Lettrel Tete  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete Dire Lettre Lettre Tete  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete Dire Lettre  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete Dire Lettrel  
+ 
+Ensuite Tete< Tete< Suite Tete< Tete Dire Tete 

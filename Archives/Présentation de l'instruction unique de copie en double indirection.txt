@@ -10,7 +10,7 @@ Commentaire:
 ****** illustration du fonctionnement de l'instruction fondamentale, la copie en double indirection *****
 
 
-création des variables A et D
+création des variables 
 
 Pourafficher Commentaire:Exécuter Afficher |
 |
@@ -79,13 +79,13 @@ En shéma cela donne:
 
 Pourafficher Commentaire:Exécuter Afficher |
 |
-Voir Saut Voir Saut Voir Saut |
+Voir Saut Voir Saut |
 |
 Pourafficher Situation intiale Exécuter Afficher |
 |
 Voir Saut Voir Saut |
 |
-Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+Voir Espace Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
 |
 Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
 |
@@ -113,7 +113,7 @@ Pourafficher D<< Exécuter Afficher |
 |
 Voir Saut Voir Saut |
 |
-Pourafficher Hautdecase Exécuter Afficher Pourafficher Voir Tiretbas Décalageboite Exécuter Afficher Voir Espace Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+Voir Espace Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
 |
 Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
 |

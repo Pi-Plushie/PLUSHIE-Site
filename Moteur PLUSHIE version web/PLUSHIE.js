@@ -70,7 +70,7 @@ async function ChargerMémoirededémarrage() {
     const buffer = await response.arrayBuffer();
 
     LireMemoire(buffer, 2);
-    
+    setStatus("Bootstrap Plusbase.mem chargé:" + prochaineAdresseMemoire + " cellules");
     //RechargerVariables();
    }
 
@@ -468,6 +468,7 @@ function RAZ() {
     effacerSortie();
     effacerMemoire();
     ChargerMémoirededémarrage();
+    setStatus("Entrée effacée" + "/n" + "Sortie effacée" + "/n" + "Mémoire effacée");
 }
 // =================|
 // BARRE DE STATUT  |

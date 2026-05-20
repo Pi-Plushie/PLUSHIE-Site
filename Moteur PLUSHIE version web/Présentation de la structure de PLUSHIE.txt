@@ -1,0 +1,615 @@
+Commentaire:
+éléments graphiques pour produire des shémas explicatifs en texte
+
+au passage on voit comment créer des chaînes de caractères sans mot appris pour éviter de planter le système...
+
+Crée Casemémoire Crée Doubleboite Casemémoire Doubleboite |
+|
+Doubleboite |__|__| |
+|
+Crée Tiretbas_ |
+|
+Profondeur Pp Variable Tiretbas Exécuter Déclaration |
+|
+Tiretbas Tiretbas_ Varsuite Tiretbas_ Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Tiretbas Tete |
+|
+Variable Séparateurvertical Exécuter Déclarer |
+|
+Varsuite |
+Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Séparateurvertical Tete |
+|
+Crée Flèchedroite |
+|
+Flèchedroite Tflèche\ Varsuite Tflèche\ Tete< Suite Varsuite Tete Tete< Suite Tete< Tete Flèchedroite Tete |
+|
+Profondeur Pp Variable Tab Exécuter Déclaration |
+|
+Tab Ttab	Varsuite Tab Tete< Suite Tete< Tete Tab Tete |
+|
+Profondeur Pp Variable Tabulation Exécuter Déclaration Tabulation< Tab< |
+|
+Profondeur Pp Variable Symbole* Exécuter Déclaration |
+|
+Varsuite Symbole*<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole* Tete |
+|
+Profondeur Pp Variable Symbole@ Exécuter Déclaration |
+|
+Varsuite Symbole@<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Symbole@ Tete |
+|
+Profondeur Pp Variable Lettreo Exécuter Déclarer |
+|
+Varsuite Lettreo<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Lettreo Tete |
+|
+Profondeur Pp Variable Point. Exécuter Déclarer |
+|
+Varsuite Point.<< Tete< Suite Varsuite Tete Tete< Suite Varsuite Tete Tete< Varsuite Point. Tete |
+|
+Crée Hautdecase |
+|
+Hautdecase< Hautdecase Hautdecase Quintupletiretbas Exécuter Fonctionnouvelle Quintupletiretbas Nouvelle |
+|
+Varsuite Hautdecase Tete< Suite Tete Hautdecase Tete< Hautdecase Tete Tiretbas |
+|
+Listeàinsérer Hautdecase Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Tiretbas Hautdecase Listeàinsérer |
+|
+|
+|
+Variable Espacementnoeud Exécuter Déclarer Exécuter Fonctionnouvelle Espacementnoeud Nouvelle |
+|
+Varsuite Espacementnoeud Tete< Suite Tete Espacementnoeud Tete< Espacementnoeud Tete Séparateurvertical |
+|
+Listeàinsérer Espacementnoeud Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace Espacementnoeud Listeàinsérer |
+|
+|
+|
+Crée Décalageboite |
+|
+Décalageboite< Décalageboite Décalageboite Xespaces Exécuter Fonctionnouvelle Xespaces Nouvelle |
+|
+Varsuite Décalageboite Tete< Suite Tete Décalageboite Tete< Décalageboite Tete Espace |
+|
+Listeàinsérer Décalageboite Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace Décalageboite Listeàinsérer |
+|
+|
+|
+Crée Flècheàdroite |
+|
+Flècheàdroite< Flècheàdroite Flècheàdroite Tfd Exécuter Fonctionnouvelle Tfd Nouvelle |
+|
+Varsuite Flècheàdroite Tete< Suite Tete Flècheàdroite Tete< Flècheàdroite Tete Espace |
+|
+Listeàinsérer Flècheàdroite Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Espace |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Flèchedroite |
+|
+Exécuter Insérerentête Tete< Listeàinsérer Tete Flèchedroite Flècheàdroite Listeàinsérer |
+|
+Crée Liendepointeur |
+|
+Liendepointeur  _|___ |
+|
+|
+|
+Chargée Outils_de_présentation Exécuter Noterchargée |
+|
+Commentaire:
+l'interpréteur de base du fichier base mem de niveau 0 crée les atomes en les bouclant sur eux mêmes
+
+ainsi:
+
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher l'atome A est crée : Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher sa valeur est: Exécuter Afficher Voir A |
+|
+Voir Saut |
+|
+Pourafficher il pointe vers: tete(A) = Exécuter Afficher Tete< A Voir Tete |
+|
+Voir Saut |
+|
+Pourafficher la seconde adresse vers laquelle il point est: suite(A) = Exécuter Afficher Varsuite A Voir Suite |
+|
+Voir Saut |
+|
+Pourafficher qui pointe vers : tete(suite(A)) = Exécuter Afficher Varsuite A Tete< Suite Voir Tete Tete< Tete Voir Tete |
+|
+Voir Saut |
+|
+Pourafficher son nom est accessible en tete(suite(A)) = Exécuter Afficher Varsuite A Tete< Suite Tete< Tete Voir Tete |
+|
+Varsuite Tete< Tete< Suite Tete< Tete Voir Tete |
+|
+Voir Saut |
+|
+Pourafficher 
+________________________ 
+| illustration de la structure  |  
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher |@|__| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |  _|__| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |A_|<<| Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher où @ désigne un bouclage sur soi-même et << un pointage vers la tête de la cellule Exécuter Afficher |
+|
+Requiert Outils_de_présentation Exécuter Testrequis |
+|
+Requiert Afficher<< Exécuter Testrequis |
+|
+Exécuter Bilanprérequis |
+|
+Voir Saut |
+|
+Commentaire:
+>>>>> présentation de l'organisation de la mémoire pour PLUSSIE. <<<<<
+chaque adresse mémoire permet d'accéder à deux autres adresses mémoire
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher /        \Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Saut |
+|
+Voir Saut |
+|
+Commentaire:
+ces paires d'adresses mémoires, ou atomes, sont chaînées entre elles
+
+Chaîne finalisée :
+^^^^^^^^^^^^^^^ 
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+|
+|
+Pourafficher Flècheàdroite Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+|
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |@|<<| Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Commentaire:
+une fin de chaine est atteinte quand la suite de l'atome l'adresse lui même (noté |<< sur le shéma)
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+|
+|
+Commentaire:
+objet de base de valeur v qui s'appelle Nom: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher /        \Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher |v_|__|Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher  |  _|__|Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Espace Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher  |m_|__|Exécuter Afficher |
+|
+Voir Saut |
+|
+|
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |o_|__| Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Flècheàdroite Exécuter Afficher Pourafficher Hautdecase Exécuter Afficher Voir Tiretbas |
+|
+Voir Saut |
+|
+Voir Espace Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |N_|<<| Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+|
+|
+Commentaire:
+action de l'instruction unique: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+AVANT
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher |A_|__| Exécuter Afficher Pourafficher  <<  Exécuter Afficher Pourafficher |B_|__| Exécuter Afficher |
+|
+Voir Saut |
+|
+Commentaire:
+
+
+APRÈS
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Casemémoire Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher Casemémoire Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher _|____Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher _|____Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher |B_|__| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |B_|__| Exécuter Afficher |
+|
+Voir Saut |
+|
+Commentaire:
+requiert documentation présentation de la structure
+
+Requiert Outils_de_présentation Exécuter Testrequis |
+|
+Exécuter Bilanprérequis |
+|
+Commentaire:
+
+****** illustration du fonctionnement de l'instruction fondamentale, la copie en double indirection *****
+
+
+création des variables 
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Crée A< |
+|
+A<< A< A< A |
+|
+Crée D< |
+|
+D<< D< D< D |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Commentaire:
+initialisation des deux chaînes de pointeurs 
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+A B A C |
+|
+D E D F |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+|
+|
+Pourafficher exécution de l'instruction Exécuter Afficher |
+|
+Pourafficher A<< Exécuter Afficher |
+|
+Pourafficher <== Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher |
+|
+A D |
+|
+|
+|
+Voir Saut Voir Saut |
+|
+Pourafficher A<< Exécuter Afficher Pourafficher A< Exécuter Afficher Pourafficher A Exécuter Afficher |
+|
+Pourafficher Décalageboite Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher Pourafficher D< Exécuter Afficher Pourafficher D Exécuter Afficher |
+|
+Commentaire:
+comme ce fichier contient des affectations initiales de variables, si on l'exécute une
+seconde fois on n'obtient pas le même résultat. c'est parce que Plushie apprend et retient
+les informations ainsi a b a c à la seconde interprétation écrit b à la place du c initial
+
+
+En shéma cela donne:
+
+Pourafficher Commentaire:Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher Situation intiale Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Voir Espace Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|B_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|E_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|C_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|F_| Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+Pourafficher exécution de l'instruction Exécuter Afficher |
+|
+Pourafficher A<< Exécuter Afficher |
+|
+Pourafficher <== Exécuter Afficher |
+|
+Pourafficher D<< Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Voir Espace Pourafficher Hautdecase Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Voir Espace Pourafficher Hautdecase Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|A_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|D_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|B_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|E_| Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Liendepointeur Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Voir Espace Pourafficher Liendepointeur Exécuter Afficher |
+|
+Voir Saut Pourafficher |__|F_| Exécuter Afficher Pourafficher Décalageboite Exécuter Afficher Pourafficher |__|F_| Exécuter Afficher |
+|
+Voir Saut Voir Saut Voir Saut |
+|
+Pourafficher conséquences: Exécuter Afficher |
+|
+Voir Saut Voir Saut |
+|
+Pourafficher si on commence par déclarer un atome comme bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et qu'on s'en sert pour en déclarer un autre Exécuter Afficher |
+|
+Bonjour Salut! Pourafficher comme cela : Exécuter Afficher Voir Saut Pourafficher bonjour salut! suivi d'un mot connu Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher alors quand on exécute à nouveau Pourafficher bonjour exécuter afficher Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher on obtient : Exécuter Afficher Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et la seconde fois qu'on crée un nouvel atome en faisant bonjour vous allez bien ? Exécuter Afficher |
+|
+Voir Saut |
+|
+Bonjour Vous allez bien? |
+|
+Pourafficher on obtient en affichant bonjour : Exécuter Afficher Voir Saut |
+|
+Pourafficher Bonjour Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et plus fort, si on affiche salut! on obtient en fait: Exécuter Afficher Voir Saut |
+|
+Pourafficher Salut! Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et la troisième fois me direz-vous ? cela change la valeur de bonjour! et vous allez bien est perdu car l'instruction unique engage deux étages d'indirection Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher bonjour et bienvenue donne alors quand on affiche bonjour Exécuter Afficher Bonjour et bienvenue ! Pourafficher Bonjour Exécuter Afficher Pourafficher et salut! devient aussi Exécuter Afficher |
+|
+Pourafficher Salut! Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher sans pointeur vers bonjour il est difficile de le faire afficher à nouveau. la chaine de caractère n'est pas perdue, le mot reste connu
+mais pour le voir à l'écran il faut l'appeler par un pointeur de niveau deux Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher un pointeur de niveau un peut être recréé en cherchant le mot bonjour dans le dictionnaire des mots connus avec une fonction avancée Exécuter Afficher |
+|
+Voir Saut |
+|
+Pourafficher et pour la chaîne vous allez bien, c'est pareil si on n'a pas sauvegardé avant sa référence Exécuter Afficher |
+|
+Voir Saut |
+|
+Voir Saut |
+|
