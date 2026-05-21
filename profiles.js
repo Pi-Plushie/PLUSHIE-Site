@@ -66,7 +66,7 @@ function applyProfile(profile) {
      
     let textchoix =
     {
-        public: " ✦_✦ une nouvelle manière simple d'aborder la programmation",
+        public: " ✦_✦ une nouvelle manière simple d'aborder la programmation ✦_✦ ",
         curieux: " ?_? un langage original et intrigant",
         chercheur: " 🔬 un modèle computationnel basé sur l’auto-modification et les systèmes émergents",
         prof: " ABC un langage facile à apprendre... et à enseigner",
@@ -123,15 +123,15 @@ function applyProfile(profile) {
 
     let Textprésentation =
     {
-        public: "Un langage qui apprend et se transforme",
-        curieux: "",
-        chercheur: "PLUSHIE explore un modèle computationnel basé sur l’auto-modification et les systèmes émergents.",
-        prof: "",
-        math: "",
-        hacker: "PLUSHIE casse les règles classiques : le code peut se modifier lui-même en temps réel.",
-        geek: "Un langage minimaliste avec une seule instruction… et des comportements inattendus.",
-        philo: "",
-        poete: "",
+        public: "PLUSHIE, un langage simple",
+        curieux: "PLUSHIE, un langage à une seule instruction ?",
+        chercheur: "PLUSHIE un langage à étudier",
+        prof: "PLUSHIE, un exemple à enseigner",
+        math: "PLUSHIE, le langage de l'évolution",
+        hacker: "PLUSHIE, un langage qui se modifie",
+        geek: "PLUSHIE, un langage minimaliste",
+        philo: "PLUSHIE vous pousse à la réflexion",
+        poete: "PLUSHIE va vous épater",
     }
   
     setText("Textprésentation", Textprésentation[profile]);

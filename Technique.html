@@ -212,8 +212,8 @@
         <div class="section-schéma " id="interpréteur">
             <h2>Fonctionnement de l'interpréteur de base</h2>
             Cet interpréteur est codé en PLUSHIE dans le ficher plusbase.mem. Il lit le caractère contenu dans le registre d'entrée, puis l'ajoute à la liste chaînée de lecture.
-            
-            
+
+
             <div class="atome-zone">
                 Liste chaînée :
                 <div class="cellule">
@@ -271,14 +271,14 @@
             </div>
             <p>
                 <br>
-                
-                    Il détermine ensuite si les derniers caractères de la liste de lecture correspondent à un mot connu.<br>
-                    Si non, il continue à lire. <br>
-                    Si oui, il apprend le mot correspondant à la partie de la liste de lecture qui précède le mot connu, sous forme d'un
-                    <b>atome connu :</b>
-               
+
+                Il détermine ensuite si les derniers caractères de la liste de lecture correspondent à un mot connu.<br>
+                Si non, il continue à lire. <br>
+                Si oui, il apprend le mot correspondant à la partie de la liste de lecture qui précède le mot connu, sous forme d'un
+                <b>atome connu :</b>
+
             </p>
-            
+
             <div class="atome-zone">
                 <div class="cellule">
                     <div class="case tete">Valeur</div>
@@ -420,127 +420,129 @@
                 </div>
 
             </div>
-            <p>
+        </div>
+            <div class="section-schéma " id="instructionunique">
+                <h2>Instruction unique</h2>
                 ensuite, il exécute immédiatement l'instruction principale de PLUSHIE: <font color="#facc15">la copie en double indirection</font>
-            </p>
-            <div class="instruction">
-                <div class="cellule">
-                    <div class="case tete"></div>
-                    <div class="case suite"></div>
+                </p>
+                <div class="instruction" >
+                    <div class="cellule">
+                        <div class="case tete"></div>
+                        <div class="case suite"></div>
+                    </div>
+                    <div class="zone-pointeur">
+                        <svg class="pointeur-svg" width="3" height="40">
+                            <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                            <line x1="-130"
+                                  y1="20"
+                                  x2="-130"
+                                  y2="80"
+                                  stroke="#22c55e"
+                                  stroke-width="2" />
+                            <polygon points="-130,85 -135,80 -125,80"
+                                     fill="#22c55e" />
+                        </svg>
+                    </div>
+
+                    <div class="cellule">
+                        <div class="case tete"></div>
+                        <div class="case suite"></div>
+                    </div>
+                    <div class="zone-pointeur">
+                        <svg class="pointeur-svg" width="3" height="40">
+                            <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                            <line x1="-130"
+                                  y1="20"
+                                  x2="-130"
+                                  y2="80"
+                                  stroke="#22c55e"
+                                  stroke-width="2" />
+                            <polygon points="-130,85 -135,80 -125,80"
+                                     fill="#22c55e" />
+                        </svg>
+                    </div>
+
                 </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="40">
-                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
-                        <line x1="-130"
-                              y1="20"
-                              x2="-130"
-                              y2="80"
-                              stroke="#22c55e"
-                              stroke-width="2" />
-                        <polygon points="-130,85 -135,80 -125,80"
-                                 fill="#22c55e" />
-                    </svg>
+                <div class="instruction"><p></p></div>
+
+                <div class="instruction">
+                    <div class="cellule">
+                        <div class="case tete"></div>
+                        <div class="case suite"></div>
+                    </div>
+                    <div class="zone-pointeur">
+                        <svg class="pointeur-svg" width="3" height="40">
+                            <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                            <line x1="-130"
+                                  y1="20"
+                                  x2="-130"
+                                  y2="80"
+                                  stroke="#22c55e"
+                                  stroke-width="2" />
+                            <polygon points="-130,85 -135,80 -125,80"
+                                     fill="#22c55e" />
+                        </svg>
+                    </div>
+
+                    <div class="cellule">
+                        <div class="case tete"></div>
+                        <div class="case suite"></div>
+                    </div>
+                    <div class="zone-pointeur">
+                        <svg class="pointeur-svg" width="3" height="40">
+                            <circle cx="-130" cy="20" r="4" fill="#22c55e" />
+                            <line x1="-130"
+                                  y1="20"
+                                  x2="-130"
+                                  y2="80"
+                                  stroke="#22c55e"
+                                  stroke-width="2" />
+                            <polygon points="-130,85 -135,80 -125,80"
+                                     fill="#22c55e" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="instruction"><p></p></div>
+                <div class="instruction">
+                    <div class="cellule">
+                        <div class="case tete">X</div>
+                        <div class="case suite"></div>
+                    </div>
+                    <div class="zone-pointeur">
+                        <svg class="pointeur-svg" width="3" height="20">
+                            <circle cx="100" cy="10" r="4" fill="#facc15" />
+                            <polyline points="-65,10,100,10"
+                                      stroke="#facc15"
+                                      stroke-width="2"
+                                      Fill="none" />
+                            <polygon points="-65,10 -60,5 -60,15"
+                                     fill="#facc15" />
+                        </svg>
+                    </div>
+                    <div class="cellule">
+                        <div class="case tete">X</div>
+                        <div class="case suite"></div>
+                    </div>
+
                 </div>
 
-                <div class="cellule">
-                    <div class="case tete"></div>
-                    <div class="case suite"></div>
-                </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="40">
-                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
-                        <line x1="-130"
-                              y1="20"
-                              x2="-130"
-                              y2="80"
-                              stroke="#22c55e"
-                              stroke-width="2" />
-                        <polygon points="-130,85 -135,80 -125,80"
-                                 fill="#22c55e" />
-                    </svg>
-                </div>
 
-            </div>
-            <div class="instruction"><p></p></div>
-
-            <div class="instruction">
-                <div class="cellule">
-                    <div class="case tete"></div>
-                    <div class="case suite"></div>
-                </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="40">
-                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
-                        <line x1="-130"
-                              y1="20"
-                              x2="-130"
-                              y2="80"
-                              stroke="#22c55e"
-                              stroke-width="2" />
-                        <polygon points="-130,85 -135,80 -125,80"
-                                 fill="#22c55e" />
-                    </svg>
-                </div>
-
-                <div class="cellule">
-                    <div class="case tete"></div>
-                    <div class="case suite"></div>
-                </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="40">
-                        <circle cx="-130" cy="20" r="4" fill="#22c55e" />
-                        <line x1="-130"
-                              y1="20"
-                              x2="-130"
-                              y2="80"
-                              stroke="#22c55e"
-                              stroke-width="2" />
-                        <polygon points="-130,85 -135,80 -125,80"
-                                 fill="#22c55e" />
-                    </svg>
-                </div>
-
-            </div>
-            <div class="instruction"><p></p></div>
-            <div class="instruction">
-                <div class="cellule">
-                    <div class="case tete">X</div>
-                    <div class="case suite"></div>
-                </div>
-                <div class="zone-pointeur">
-                    <svg class="pointeur-svg" width="3" height="20">
-                        <circle cx="100" cy="10" r="4" fill="#facc15" />
-                        <polyline points="-65,10,100,10"
-                                  stroke="#facc15"
-                                  stroke-width="2"
-                                  Fill="none" />
-                        <polygon points="-65,10 -60,5 -60,15"
-                                 fill="#facc15" />
-                    </svg>
-                </div>
-                <div class="cellule">
-                    <div class="case tete">X</div>
-                    <div class="case suite"></div>
-                </div>
-
-            </div>
-
-
-            <div class="section">
+                <div class="section">
 
 
 
-                <h2>💡 Exemple</h2>
-                <pre>
+                    <h2>💡 Exemple</h2>
+                    <pre>
     Affiche Bonjour le monde À l'écran
     Bonjour le monde 
         </pre>
-                <p>
-                    Ici, une nouvelle expression, <i>Bonjour le monde</i>, est définie puis utilisée immédiatement.
-                </p>
-                <a href="demo.html">Voir la démo</a>
+                    <p>
+                        Ici, une nouvelle expression, <i>Bonjour le monde</i>, est définie puis utilisée immédiatement.
+                    </p>
+                    <a href="demo.html">Voir la démo</a>
+                </div>
             </div>
-        </div>
             </div> 
     <footer>
         <div class="barredeliens">
