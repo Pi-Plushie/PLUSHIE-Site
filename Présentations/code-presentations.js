@@ -107,7 +107,7 @@ function updateDynamicText() {
 
     if (dynamicZone) {
 
-        dynamicZone.innerHTML =
+        dynamicZone.textContent =
             messages[currentMessage];
 
         currentMessage++;
@@ -147,7 +147,7 @@ function updateTransfer() {
         "transfer-line"
     );
     if (line) {
-       line.innerHTML = frames[frame];
+       line.testContent = frames[frame];
 
         frame++;
 

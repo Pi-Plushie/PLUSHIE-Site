@@ -6,17 +6,9 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background: #020617;
-            color: #38bdf8;
-            font-family: monospace;
-            padding: 40px;
-        }
+        
 
-        h1 {
-            color: white;
-        }
-
+        
         #Zblurg {
             opacity: 0;
             transition: opacity 2s;
@@ -36,64 +28,68 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="boutonsprofil">
-            <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
-            <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
-            <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
-            <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
-            <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
-            <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
-            <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
-            <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
-            <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
-        </div></div>
-        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+    <header>
+        <a href="index.html"><h1>PLUSHIE </h1></a>
         <div class="container">
+            <div class="boutonsprofil">
+                <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+                <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+                <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+                <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+                <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+                <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+                <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+                <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+                <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+            </div>
+        </div>
+    </header>
+    <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+    <div class="container">
 
-            <div class="section">
-                <h1>🧪 Éveil de PLUSHIE</h1>
+        <div class="section">
+            <h2 >🧪 Éveil de PLUSHIE</h2>
 
-                <i>Exemple de séquence de démarrage</i> <br><br><br>
-                <div id="entrée" style="font-size:1.3em;color:var(--green)"></div><br>
-                <div id="code"></div>
-                <div id="output"> </div>
-                <div id="commentaires">
-                    <i>
+            <i>Exemple de séquence de démarrage</i> <br><br><br>
+            <div id="entrée" style="font-size:1.3em;color:var(--green)"></div><br>
+            <div id="code"></div>
+            <div id="output"> </div>
+            <div id="commentaires">
+                <i>
 
-                        Ce code est testable tel quel dans <a href="Moteur PLUSHIE version web/PLUSHIE.html"> l'outil de démonstration</a>
-                    </i>
-                </div>
-                <script>
-                    let steps = [
-                        `PLUSHIE nait d'un seul mot: Lien `,
-                        `Mais ce mot suffit à l'éveiller`,
-                        `Éveil `,
-                        `PLUSHIE apprend ses mots au fur et à mesure qu'il les découvre `,
-                        `ce qui le motive à continuer `,
-                        `curieux de découvrir la suite  `,
-                        `Communiquer avec le monde `,
-                        `Mais comment ?`,
-                        `Par les mots ! `,
-                        `Par les mots ! `,
-                        `...Et l'étoile apparaît !  `,
-                        `...Et l'étoile apparaît !  `,
+                    Ce code est testable tel quel dans <a href="Moteur PLUSHIE version web/PLUSHIE.html"> l'outil de démonstration</a>
+                </i>
+            </div>
+            <script>
+                let steps = [
+                    `PLUSHIE nait d'un seul mot: Lien `,
+                    `Mais ce mot suffit à l'éveiller`,
+                    `Mais ce mot suffit à l'éveiller `,
+                    `PLUSHIE apprend ses mots au fur et à mesure qu'il les découvre `,
+                    `ce qui le motive à continuer `,
+                    `curieux de découvrir la suite  `,
+                    `Communiquer avec le monde `,
+                    `Mais comment ?`,
+                    `Par les mots ! `,
+                    `Par les mots ! `,
+                    `...Et l'étoile apparaît !  `,
+                    `...Et l'étoile apparaît !  `,
 
-                    ];
+                ];
 
-                    let code = [
-                        "Lien ",
-                        "Éveil Lien ",
-                        "Éveil Lien " + "\n" + "Éveil ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot ",
-                        "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot " + "\n" + "\n" + "Dire Étoile ",
-                        `Éveil Lien |
+                let code = [
+                    "Lien ",
+                    "Éveil Lien ",
+                    "Éveil Lien " + "\n" + "Éveil ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot ",
+                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot " + "\n" + "\n" + "Dire Étoile ",
+                    `Éveil Lien |
 Éveil |
 |
 Suite Éveil Crée Éveil |
@@ -111,51 +107,51 @@ Pointer Mot Suitede *Pointer Suite |
 Étoile Mot |
 |
 Dire Étoile `
-                    ];
-                    let sortie = [
-                        ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
-                        `*`,
-                        `*`,
-                        '*',
-                    ];
-                    let i = 0;
+                ];
+                let sortie = [
+                    ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
+                    `*`,
+                    `*`,
+                    '*',
+                ];
+                let i = 0;
 
-                    function showStep() {
-                        document.getElementById("entrée").textContent = steps[i];
-                        document.getElementById("code").textContent = code[i];
-                        document.getElementById("output").textContent = sortie[i];
-                        i++;
-                        if (i < steps.length) {
-                            setTimeout(showStep, 2200);
-                        }
-                        else {
-                            document.getElementById("Zblurg").style.opacity = "1";
-                            document.getElementById("Zblurg").style.display = "block";
-                            document.getElementById("WTF").style.opacity = "1";
-                        }
+                function showStep() {
+                    document.getElementById("entrée").textContent = steps[i];
+                    document.getElementById("code").textContent = code[i];
+                    document.getElementById("output").textContent = sortie[i];
+                    i++;
+                    if (i < steps.length) {
+                        setTimeout(showStep, 2200);
                     }
+                    else {
+                        document.getElementById("Zblurg").style.opacity = "1";
+                        document.getElementById("Zblurg").style.display = "block";
+                        document.getElementById("WTF").style.opacity = "1";
+                    }
+                }
 
-                    showStep();
-                    document.getElementById("Zblurg").style.opacity = "1";
+                showStep();
+                document.getElementById("Zblurg").style.opacity = "1";
 
 
-                </script>
-            </div>
-            <div class="section">
+            </script>
+        </div>
+        <div class="section">
 
 
 
-                <div id="Zblurg">
-                    <p id="Zblurg" style="display:none;">
-                        <details>
-                            <summary>Ces mots vous semblent courants...</summary>
+            <div id="Zblurg">
+                <p id="Zblurg" style="display:none;">
+                    <details>
+                        <summary>Ces mots vous semblent courants...</summary>
 
-                            <p>
-                                ... mais la magie de PLUSHIE est qu'ils n'ont pas d'importance
-                                PLUSHIE comprend aussi bien le Zblurg:
-                            </p>
-                           
-                                <div id="code">Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
+                        <p>
+                            ... mais la magie de PLUSHIE est qu'ils n'ont pas d'importance
+                            PLUSHIE comprend aussi bien le Zblurg:
+                        </p>
+
+                        <div id="code">Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
 Argl Zglu |
 |
 Zglu Vloofde Zglu Vloof  |
@@ -168,12 +164,13 @@ Vlank Xal |
 |
 Vloofde *Vlank Vloof  Star Xal Yeuk Star |
 |
-Yeuk Zglu Yeuk Star Yeuk Star </div>
-                                <div id="output">*</div>
+Yeuk Zglu Yeuk Star Yeuk Star
+                        </div>
+                        <div id="output">*</div>
 
-                            
 
-                        
+
+
 
                         <div class="section">
                             <details>
@@ -197,9 +194,9 @@ Yeuk Zglu Yeuk Star Yeuk Star </div>
                                 </div>
                             </details>
                         </div>
-                </div>
             </div>
-          
+        </div>
+    </div>
         <footer>
             <div class="barredeliens">
                 <a href="index.html">← Retour à l’accueil</a>
