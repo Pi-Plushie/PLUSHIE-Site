@@ -260,11 +260,12 @@ function executer() {
    
 
     running = true;
-    executerBloc(currentRun);
+    if (texte.value.length>= ( Numérocaractère + 2 ) )  executerBloc(currentRun);
+
 
     document.getElementById("output").textContent += ecranoutput; //  affiche à l'écran ce qui n'a pas encore été affiché
     ecranoutput = "";
-
+    
     setStatus("Durée Totale: " + ((performance.now() - Timer) / 1000) + " s ");
 }
 
