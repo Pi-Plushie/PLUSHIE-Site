@@ -140,6 +140,7 @@ body {
         text-align: center;
         box-shadow: 0 4px 14px rgba(0,0,0,0.45);
         transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        z-index: 30;
     }
 
         .boutonsprofil button:hover {
