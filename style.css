@@ -126,11 +126,11 @@ body {
     background: #1e2940;
     background: linear-gradient( 145deg, #2b3150, #1a1f33 );
     border-radius: 8px;
-    z-index: 100;
+    z-index: 20;
 }
 
     .boutonsprofil button {
-         margin: 10px;
+        margin: 10px;
         border: 1px solid #6fd3ff;
         border-radius: 8px;
         background: #1a1a1a;
@@ -262,7 +262,7 @@ important {
     right: 20px;
     width: 200px;
     height: auto;
-    z-index: 1000;
+    z-index: 10;
     opacity: 0.9;
     transition: 0.1s;
     filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
@@ -280,7 +280,7 @@ important {
     left: 20px;
     width: 250px;
     height: auto;
-    z-index: 1000;
+    z-index: 10;
     opacity: 0.9;
     transition: 0.1s;
     filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
