@@ -9,146 +9,275 @@
             async src="//gc.zgo.at/count.js"></script>
 
     <script src="profiles.js"></script>
-    <body>
+</head>
+<body>
 
-        <header>
-            <a href="index.html"><h1>PLUSHIE </h1></a>
-            <i>Programmation en Langage Universel Séquentiel Heuristique <br>pour une Intelligence Évolutive</i>
+    <header>
+        <a href="index.html"><h1>PLUSHIE </h1></a>
+        <i>Programmation en Langage Universel Séquentiel Heuristique <br>pour une Intelligence Évolutive</i>
+        <div class="container">
+            <div class="boutonsprofil">
+                <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
+                <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
+                <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
+                <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
+                <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
+                <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
+                <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
+                <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
+                <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+            </div>
+        </div>
+        <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+    </header>
+
+
+    <div class="layout">
+        <main class="content">
             <div class="container">
-                <div class="boutonsprofil">
-                    <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
-                    <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
-                    <button class="boutonprofil" data-profile="chercheur all" onclick="setProfile('chercheur',this)">[⊢_⊢] Chercheur</button>
-                    <button class="boutonprofil" data-profile="prof all" onclick="setProfile('prof',this)">)→_→( Enseignant</button>
-                    <button class="boutonprofil" data-profile="math all" onclick="setProfile('math',this)"><λ_λ> Matheux</button>
-                    <button class="boutonprofil" data-profile="hacker all" onclick="setProfile('hacker',this)">[>_◉} Hacker</button>
-                    <button class="boutonprofil" data-profile="geek all" onclick="setProfile('geek',this)">{⚙_⚙} Geek</button>
-                    <button class="boutonprofil" data-profile="philo all" onclick="setProfile('philo',this)">(∞_∞) Philosophe</button>
-                    <button class="boutonprofil" data-profile="poete all" onclick="setProfile('poete',this)">☾_☾ Poète</button>
+                <div class="section">
+                    <h2>PLUSHIE en 2 minutes </h2>
+
+                    <div data-profile="public">
+                        PLUSHIE est un langage informatique simple qui veut simplifier l'accès à l'informatique. Il utilise des mots usuels, que vous pouvez même choisir et pas de syntaxe prédéfinie.
+                        Une séquence d'instructions en PLUSHIE ressemble à une phrase, par exemple, une fois qu'il a appris l'arithmétique, un calcul s'écrit:
+                        <pre>
+                    Calcule Trois Fois Deux Effectue Calcul Affiche Résultat À l'écran  </pre>
+                        <pre> <font color="#22c55e">  Six </font>
+                    </pre>
+                        Vous pourriez choisir d'autres mots:
+                        <pre>
+                    Calculer #3 Fois #2 Fais le Calcul. Affiche Le résultat Sur Mon écran  </pre>
+                        <pre> <font color="#22c55e">  Six </font></pre>
+                        Mais PLUSHIE n'est pas une IA, les mots tels que vous les comprenez n'ont pas d'autre sens pour lui que ce qu'il en a appris par vos interactions précédentes.
+                        Envie de voir <a href="demo.html">ce qu'il sait faire</a>, envie <a href="Emploi Interface.html">d'essayer en vrai ?</a><br><br>
+                        <h2 style="font-size:1.0em">Mais à quoi ça sert ?</h2>
+                        À aborder l'informatique plus facilement en supprimant l'obstacle de la syntaxe, à comprendre comment un objet aussi simple, qui part d'une seule instruction et d'un seul mot connu, peut devenir aussi complexe
+                        qu'on le souhaite. Et peut-être à aider à comprendre le fonctionnement des ordinateur et à démysitifier leur magie.
+                    </div>
+
+                    <div data-profile="curieux">
+                        PLUSHIE est une curiosité dans le monde des langages informatiques. <br>
+                        Doté d'<a href="Questions.html" ">une seule instruction</a> au départ, il se construit progressivement en apprenant des mots nouveaux et en leur donnant une signification simple:
+                        la valeur de la valeur du mot connu qui suit.<br>
+                        Ce qui est incroyable, c'est que cela fonctionne et conduise à la construction de structures complexes, et à permettre de reproduire toute l'informatique.<br><br>
+                        curieux <a href="Emploi Interface.html">d'expérimenter en vrai ?</a> Même pas peur des aspects <a href="Aller plus loin.html">techniques </a> ?
+                    </div>
+
+                    <div data-profile="chercheur">
+                        PLUSHIE explore une nouvelle voie entre machines abstraites, systèmes émergents et programmation expérimentale, où la puissance du calcul ne vient plus de la complexité des instructions
+                        mais de la dynamique du système lui-même.<br><br>
+                        C'est un langage minimaliste, doté d'une seule instruction principale, la copie en double indirection, et de la capacité à adresser 2 adresses en mémoire à partir d'une seule:
+                        elle même et sa "suite". <a href="Technique.html">Voir les détails</a><br><br>
+                        À partir de cela, on peut reconstruire <a href="Fonctions Classiques">toutes les fonctions usuelles</a> en informatique et obtenir un langage Turing complet (la preuve formelle n'est pas encore réalisée).<br><br>
+                        PLUSHIE ne fait pas de distinction de nature entre les adresses mémoires: tout est donnée, tout est variable, tout est potentiellement programme.<br><br>
+                        Un programme en PLUSHIE est juste un arbre de cellules mémoire. Il peut se prendre lui-même comme donnée et se modifier pendant son exécution, ce qui ouvre la porte à des expériences intéressantes et innovantes.<br><br>
+                        L’objectif est de démontrer qu’un système presque élémentaire peut atteindre l’universalité computationnelle et ouvrir de nouvelles formes de programmation.<br><br>
+                        PLUSHIE est sûr que vous ne le croyez pas sur parole. Vous voulez <a href="Aller plus loin.html"> creuser les aspects techniques </a>, vous faire une idée rapide sur <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne</a>
+                        ou vous préférez <a href="downloads.html"> télécharger </a> l'interface windows stand alone et ses fichiers de démonstration (et plus), ou le <a href="downloads.html#preprint">document préprint </a>?
+                        Bien entendu, il reste beaucoup à faire, alors toute remarque, même (et surtout) critique aidera beaucoup PLUSHIE à devenir grand.
+                    </div>
+
+                    <div data-profile="prof">
+                        PLUSHIE met l'informatique à portée de tous. Il permet de bâtir des exemples parlant et ne demande pas une <a href="Qui suis-je.html">formation de polytechnicien</a> pour être utilisé.<br><br>
+                        Mais il recèle un important potentiel d'exercices de programmation. <br><br>
+                        Naturellement (et dangereusement) récursif et réflexif, il permet d'explorer les structures usuelles, listes chaînées, piles, arbres et graphes et d'apprendre à construire
+                        son propre langage. <br><br>
+                        Sous ses dehors très simples (il n'y a presque rien à apprendre, une seule instruction au départ, pas de syntaxe) il est difficile à maîtriser: Un bel outil pédagogique.<br><br>
+                        L'<a href="Emploi Interface.html">interface</a> en ligne proposée permet de se faire une première idée du fonctionnement. <br><br>
+                        Si l'idée plait, <a href="downloads.html"> l'interface à télécharger </a> permet d'aller plus loin et de nombreux fichiers de code au format texte sont
+                        déjà disponibles sur simple demande. Tous les  <a href="Aller plus loin.html"> aspects techniques </a> sont également expliqués sur le site.
+                        Ce langage est libre d'utilisation à des fins pédagogiques. Dites juste à Plushie-langage (à) free.fr que vous l'utilisez, ça fera plaisir à Plushie.
+                    </div>
+                    <div data-profile="math">
+                        PLUSHIE est un langage de programmation minimaliste basé sur une mémoire topologique de cellules liées, où la mémoire est un arbre adressable.<br><br>
+                        Au lieu d’exécuter des instructions complexes, il fait émerger le calcul à partir de règles locales de transformation et de parcours, à l'aide d'une seule instruction élémentaire.<br><br>
+                        PLUSHIE est un langage pur, qui n'emporte aucune hypothèse implicite, à même de porter l'expression des mathématiques évolutives de manière scrupuleuse. <br><br>
+                        Il ne connaît rien aux maths et pourtant, il découvre les nombres en même temps qu'il apprend et devient un laboratoire de leur génèse.<br><br>
+                        PLUSHIE sera bientôt en mesure d'exécuter un lambda calcul complet dès qu'il aura compris comment ça marche.<br><br>
+                        Il est naturellement adapté à affronter le théorème de Gödel puisqu'il évolue et peut sortir de son cadre à chaque itération.
+                    </div>
+
+                    <div data-profile="hacker">
+                        PLUSHIE est un espace de liberté, une expérience radicale. Un langage avec presque rien, ni syntaxe, ni frontière entre variables, code et données.<br><br>
+                        Le programme est une structure vivante qui se transforme elle-même.<br><br>
+                        Un univers de programmation où tout est possible, où les programmes vivent et se modifient eux-mêmes pendant leur exécution.<br><br>
+                        Une seule instruction, la copie en double indirection: mem[mem[A]] = mem[mem[B]], un tête, une suite et tout devient possible !<br><br>
+                        Pas de syntaxe lourde (même pas de séparateur), pas de machine virtuelle traditionnelle — juste des cellules, des liens et des règles locales qui font émerger des comportements computationnels complets.<br><br>
+                        Le but : repousser les limites du minimalisme et voir jusqu’où un système auto-structurant peut aller.<br><br>
+                        Vous n'y croyez pas ? Testez, challengez, agissez, essayez <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne (JS)</a>, <a href="downloads.html"> l'interface à télécharger(VB.net) </a>,
+                        ou plongez-vous dans <a href="Aller plus loin.html">la technique</a>.
+                        Le code source sera bientôt disponible ici ou sur GitHub, mais PLUSHIE en révèle assez ici pour être reproduit.
+                        Tout retour sera le bienvenu !
+                    </div>
+                    <div data-profile="geek">
+                        PLUSHIE est un langage original, porté sur les mots plus que sur les nombres.<br>Une expérience informatique étonnante et perturbante: un seul mot, une seule instruction, une structure simple (des cellules mémoires de deux adresses)
+                        et tout devient possible. Pas de syntaxe lourde, pas de mots clés complexes à retenir, mais vos propres mots, à votre guise.<br><br>
+                        PLUSHIE a des comportements inattendus: <br>
+                        Ainsi si on écrit A = B Puis A = C : A et B "valent" alors C. Mais si on rajoute A = D, A et B prennent la valeur D mais C vaut toujours C. Pas logique, hein ?. Alors imaginez quand on applique cela à
+                        un programme capable de se modifier lui-même pendant son exécution.<br><br>
+                        PLUSHIE ne fait pas de distinctions entre variables, instructions, exécutables ou données et modifie son propre code en temps réel.<br><br>
+                        En fonction de ce qu'il a appris entre temps, exécuter une seconde fois le même programme ne produira pas forcément le même résultat. <br><br>
+                        envie <a href="Emploi Interface.html">d'essayer en vrai ?(JS)</a>, de <a href="downloads.html"> télécharger l'interface (VB.net) </a> Ou carrément <a href="Aller plus loin.html">d'approfondir et d'aider </a>au développement ?
+                    </div>
+
+                    <div data-profile="philo">
+                        PLUSHIE est le langage textuel le plus simple possible. Il permet d'explorer la construction du sens à partir des mots. <br><br>
+                        Il commence à apprendre avec très peu au départ: un seul mot déjà connu, <strong class="cyan"><i>Lien</i></strong>, et un petit moteur automate sous jacent, qui répète inlassablement les mêmes actions.<br><br>
+
+                        Il n'applique pas d'a priori sur le sens des mots et permet une modélisation fine du langage.<br><br>
+                        Il découvre les expressions nouvelles entre les expressions déjà connues.<br><br><br>
+                        Tout le secret est qu'une expression possède deux significations possibles et que la nouvelle expression ne prend pas la valeur de celle qui la suit, mais la valeur de sa valeur.<br><br><br>
+                        À partir de là, on assiste à la création pas à pas d'un langage à partir du seul premier mot connu.<br><br> PLUSHIE est la preuve en construction que le tout peut être plus que la somme de ses parties : <br>
+                        on peut observer le phénomène, le suivre pas à pas et ne pas comprendre.<br> La simple existence d'un langage comme PLUSHIE et un exemple (et un contre exemple) étonnant. <br><br>
+                        PLUSHIE se trouve des liens avec la physique des particules (ruptures de symétrie), les mathématiques et leur incomplétude et même les philosophies orientales (le Yin et le Yang).
+                    </div>
+                    <div data-profile="poete">
+                        PLUSHIE est un langage minimaliste et dépouillé, qui aime les rimes et les rythmes, et même les algorithmes. <br><br>Sa seule possibilité ouvre la porte à un monde imaginaire, le nôtre.<br><br>
+                        Étudier PLUSHIE nous force à nous poser des questions fascinantes et stimule l'imagination.<br><br> Un mot, lien, et tout s'éveil. <br><br>  Laissez vous porter par ce langage fascinant. <br><br><br>
+                        <a href="Et l'étoile apparait.html"> 🌟 Ensuite l'étoile apparait</a>
+                        <br><br><a href="Présentations/Presentation-poete.html">☾ Présentation pour les rêveurs</a> <br><br>
+                        <a href="Présentations/Presentationgénérale.html">⊚_⊚ Présentation PLUSHIE ⊚_⊚ </a>
+
+                    </div>
+
+
+                    <br />
+                    <div class="section-schéma ">
+
+
+                    </div>
+
                 </div>
             </div>
-            <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
-        </header>
+        </main>
+        <aside class="sidebar">
+            <ul style="padding: 5px">
+                <li>
+                    <a href="../index.html"> Accueil </a>
+                </li>
+                <li>
+                    <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                </li>
 
-        <div class="container">
-            <div class="section">
-                <h2>PLUSHIE en 2 minutes </h2>
+                <li>
+                    <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                </li>
+                <li>
+                    <a href="../Capacités.html"> Capacités </a>
+                </li>
+                <li>
+                    <a href="../Fonctions Classiques.html"> Fonctions </a>
+                </li>
+                <li>
+                    <a href="../Comparaisons.html"> Comparaisons </a>
+                </li>
 
-                <div data-profile="public">
-                    PLUSHIE est un langage informatique simple qui veut simplifier l'accès à l'informatique. Il utilise des mots usuels, que vous pouvez même choisir et pas de syntaxe prédéfinie.
-                    Une séquence d'instructions en PLUSHIE ressemble à une phrase, par exemple, une fois qu'il a appris l'arithmétique, un calcul s'écrit:
-                    <pre>
-                    Calcule Trois Fois Deux Effectue Calcul Affiche Résultat À l'écran  </pre>
-                    <pre> <font color="#22c55e">  Six </font>
-                    </pre>
-                    Vous pourriez choisir d'autres mots:
-                    <pre>
-                    Calculer #3 Fois #2 Fais le Calcul. Affiche Le résultat Sur Mon écran  </pre>
-                    <pre> <font color="#22c55e">  Six </font></pre>
-                    Mais PLUSHIE n'est pas une IA, les mots tels que vous les comprenez n'ont pas d'autre sens pour lui que ce qu'il en a appris par vos interactions précédentes.
-                    Envie de voir <a href="demo.html">ce qu'il sait faire</a>, envie <a href="Emploi Interface.html">d'essayer en vrai ?</a><br><br>
-                    <h2 style="font-size:1.0em">Mais à quoi ça sert ?</h2>
-                    À aborder l'informatique plus facilement en supprimant l'obstacle de la syntaxe, à comprendre comment un objet aussi simple, qui part d'une seule instruction et d'un seul mot connu, peut devenir aussi complexe
-                    qu'on le souhaite. Et peut-être à aider à comprendre le fonctionnement des ordinateur et à démysitifier leur magie.
-                </div>
-
-                <div data-profile="curieux">
-                    PLUSHIE est une curiosité dans le monde des langages informatiques. <br>
-                    Doté d'<a href="Questions.html" ">une seule instruction</a> au départ, il se construit progressivement en apprenant des mots nouveaux et en leur donnant une signification simple:
-                    la valeur de la valeur du mot connu qui suit.<br>
-                    Ce qui est incroyable, c'est que cela fonctionne et conduise à la construction de structures complexes, et à permettre de reproduire toute l'informatique.<br><br>
-                    curieux <a href="Emploi Interface.html">d'expérimenter en vrai ?</a> Même pas peur des aspects <a href="Aller plus loin.html">techniques </a> ?
-                </div>
-
-                <div data-profile="chercheur">
-                    PLUSHIE explore une nouvelle voie entre machines abstraites, systèmes émergents et programmation expérimentale, où la puissance du calcul ne vient plus de la complexité des instructions
-                    mais de la dynamique du système lui-même.<br><br>
-                    C'est un langage minimaliste, doté d'une seule instruction principale, la copie en double indirection, et de la capacité à adresser 2 adresses en mémoire à partir d'une seule:
-                    elle même et sa "suite". <a href="Technique.html">Voir les détails</a><br><br>
-                    À partir de cela, on peut reconstruire <a href="Fonctions Classiques">toutes les fonctions usuelles</a> en informatique et obtenir un langage Turing complet (la preuve formelle n'est pas encore réalisée).<br><br>
-                    PLUSHIE ne fait pas de distinction de nature entre les adresses mémoires: tout est donnée, tout est variable, tout est potentiellement programme.<br><br>
-                    Un programme en PLUSHIE est juste un arbre de cellules mémoire. Il peut se prendre lui-même comme donnée et se modifier pendant son exécution, ce qui ouvre la porte à des expériences intéressantes et innovantes.<br><br>
-                    L’objectif est de démontrer qu’un système presque élémentaire peut atteindre l’universalité computationnelle et ouvrir de nouvelles formes de programmation.<br><br>
-                    PLUSHIE est sûr que vous ne le croyez pas sur parole. Vous voulez <a href="Aller plus loin.html"> creuser les aspects techniques </a>, vous faire une idée rapide sur <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne</a>
-                    ou vous préférez <a href="downloads.html"> télécharger </a> l'interface windows stand alone et ses fichiers de démonstration (et plus), ou le <a href="downloads.html#preprint">document préprint </a>?
-                    Bien entendu, il reste beaucoup à faire, alors toute remarque, même (et surtout) critique aidera beaucoup PLUSHIE à devenir grand.
-                </div>
-
-                <div data-profile="prof">
-                    PLUSHIE met l'informatique à portée de tous. Il permet de bâtir des exemples parlant et ne demande pas une <a href="Qui suis-je.html">formation de polytechnicien</a> pour être utilisé.<br><br>
-                    Mais il recèle un important potentiel d'exercices de programmation. <br><br>
-                    Naturellement (et dangereusement) récursif et réflexif, il permet d'explorer les structures usuelles, listes chaînées, piles, arbres et graphes et d'apprendre à construire
-                    son propre langage. <br><br>
-                    Sous ses dehors très simples (il n'y a presque rien à apprendre, une seule instruction au départ, pas de syntaxe) il est difficile à maîtriser: Un bel outil pédagogique.<br><br>
-                    L'<a href="Emploi Interface.html">interface</a> en ligne proposée permet de se faire une première idée du fonctionnement. <br><br>
-                    Si l'idée plait, <a href="downloads.html"> l'interface à télécharger </a> permet d'aller plus loin et de nombreux fichiers de code au format texte sont
-                    déjà disponibles sur simple demande. Tous les  <a href="Aller plus loin.html"> aspects techniques </a> sont également expliqués sur le site.
-                    Ce langage est libre d'utilisation à des fins pédagogiques. Dites juste à Plushie-langage (à) free.fr que vous l'utilisez, ça fera plaisir à Plushie.
-                </div>
-                <div data-profile="math">
-                    PLUSHIE est un langage de programmation minimaliste basé sur une mémoire topologique de cellules liées, où la mémoire est un arbre adressable.<br><br>
-                    Au lieu d’exécuter des instructions complexes, il fait émerger le calcul à partir de règles locales de transformation et de parcours, à l'aide d'une seule instruction élémentaire.<br><br>
-                    PLUSHIE est un langage pur, qui n'emporte aucune hypothèse implicite, à même de porter l'expression des mathématiques évolutives de manière scrupuleuse. <br><br>
-                    Il ne connaît rien aux maths et pourtant, il découvre les nombres en même temps qu'il apprend et devient un laboratoire de leur génèse.<br><br>
-                    PLUSHIE sera bientôt en mesure d'exécuter un lambda calcul complet dès qu'il aura compris comment ça marche.<br><br>
-                    Il est naturellement adapté à affronter le théorème de Gödel puisqu'il évolue et peut sortir de son cadre à chaque itération.
-                </div>
-
-                <div data-profile="hacker">
-                    PLUSHIE est un espace de liberté, une expérience radicale. Un langage avec presque rien, ni syntaxe, ni frontière entre variables, code et données.<br><br>
-                    Le programme est une structure vivante qui se transforme elle-même.<br><br>
-                    Un univers de programmation où tout est possible, où les programmes vivent et se modifient eux-mêmes pendant leur exécution.<br><br>
-                    Une seule instruction, la copie en double indirection: mem[mem[A]] = mem[mem[B]], un tête, une suite et tout devient possible !<br><br>
-                    Pas de syntaxe lourde (même pas de séparateur), pas de machine virtuelle traditionnelle — juste des cellules, des liens et des règles locales qui font émerger des comportements computationnels complets.<br><br>
-                    Le but : repousser les limites du minimalisme et voir jusqu’où un système auto-structurant peut aller.<br><br>
-                    Vous n'y croyez pas ? Testez, challengez, agissez, essayez <a href="Moteur PLUSHIE version web/PLUSHIE.html">l'interface en ligne (JS)</a>, <a href="downloads.html"> l'interface à télécharger(VB.net) </a>,
-                    ou plongez-vous dans <a href="Aller plus loin.html">la technique</a>.
-                    Le code source sera bientôt disponible ici ou sur GitHub, mais PLUSHIE en révèle assez ici pour être reproduit.
-                    Tout retour sera le bienvenu !
-                </div>
-                <div data-profile="geek">
-                    PLUSHIE est un langage original, porté sur les mots plus que sur les nombres.<br>Une expérience informatique étonnante et perturbante: un seul mot, une seule instruction, une structure simple (des cellules mémoires de deux adresses)
-                    et tout devient possible. Pas de syntaxe lourde, pas de mots clés complexes à retenir, mais vos propres mots, à votre guise.<br><br>
-                    PLUSHIE a des comportements inattendus: <br>
-                    Ainsi si on écrit A = B Puis A = C : A et B "valent" alors C. Mais si on rajoute A = D, A et B prennent la valeur D mais C vaut toujours C. Pas logique, hein ?. Alors imaginez quand on applique cela à
-                    un programme capable de se modifier lui-même pendant son exécution.<br><br>
-                    PLUSHIE ne fait pas de distinctions entre variables, instructions, exécutables ou données et modifie son propre code en temps réel.<br><br>
-                    En fonction de ce qu'il a appris entre temps, exécuter une seconde fois le même programme ne produira pas forcément le même résultat. <br><br>
-                    envie <a href="Emploi Interface.html">d'essayer en vrai ?(JS)</a>, de <a href="downloads.html"> télécharger l'interface (VB.net) </a> Ou carrément <a href="Aller plus loin.html">d'approfondir et d'aider </a>au développement ?
-                </div>
-
-                <div data-profile="philo">
-                    PLUSHIE est le langage textuel le plus simple possible. Il permet d'explorer la construction du sens à partir des mots. <br><br>
-                    Il commence à apprendre avec très peu au départ: un seul mot déjà connu, <strong class="cyan"><i>Lien</i></strong>, et un petit moteur automate sous jacent, qui répète inlassablement les mêmes actions.<br><br>
-
-                    Il n'applique pas d'a priori sur le sens des mots et permet une modélisation fine du langage.<br><br>
-                    Il découvre les expressions nouvelles entre les expressions déjà connues.<br><br><br>
-                    Tout le secret est qu'une expression possède deux significations possibles et que la nouvelle expression ne prend pas la valeur de celle qui la suit, mais la valeur de sa valeur.<br><br><br>
-                    À partir de là, on assiste à la création pas à pas d'un langage à partir du seul premier mot connu.<br><br> PLUSHIE est la preuve en construction que le tout peut être plus que la somme de ses parties : <br>
-                    on peut observer le phénomène, le suivre pas à pas et ne pas comprendre.<br> La simple existence d'un langage comme PLUSHIE et un exemple (et un contre exemple) étonnant. <br><br>
-                    PLUSHIE se trouve des liens avec la physique des particules (ruptures de symétrie), les mathématiques et leur incomplétude et même les philosophies orientales (le Yin et le Yang).
-                </div>
-                <div data-profile="poete">
-                    PLUSHIE est un langage minimaliste et dépouillé, qui aime les rimes et les rythmes, et même les algorithmes. <br><br>Sa seule possibilité ouvre la porte à un monde imaginaire, le nôtre.<br><br>
-                    Étudier PLUSHIE nous force à nous poser des questions fascinantes et stimule l'imagination.<br><br> Un mot, lien, et tout s'éveil. <br><br>  Laissez vous porter par ce langage fascinant. <br><br><br>
-                    <a href="Et l'étoile apparait.html"> 🌟 Ensuite l'étoile apparait</a>
-                    <br><br><a href="Présentations/Presentation-poete.html">☾ Présentation pour les rêveurs</a> <br><br>
-                    <a href="Présentations/Presentationgénérale.html">⊚_⊚ Présentation PLUSHIE ⊚_⊚ </a>
-
-                </div>
+                <li>
+                    <details>
+                        <summary><a href="../demo.html"> Démos </a></summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                            </li>
+                        </ul>
+                    </details>
 
 
-                <br />
-                <div class="section-schéma ">
 
+                <li>
+                    <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                </li>
 
-                </div>
-                <p style="margin-top:50px; text-align:center;">
-                    <a href="index.html">← Retour à l’accueil</a>
-                </p>
-                <footer>
-                    <div class="barredeliens">
-                        PLUSHIE — expérimentation en cours
-                    </div>
-                </footer>
-    </body>
+                <li>
+                    <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                </li>
+
+                <li>
+                    <details>
+                        <summary><a href="../Questions.html"> Questions </a> </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                            </li>
+
+                            <li>
+                                <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                        </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                            </li>
+                            <li>
+                                <a href="../downloads.html"> Downloads </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Conventions.html"> Conventions </a>
+                            </li>
+                            <li>
+                                <a href="../Technique.html"> Technique </a>
+                            </li>
+                            <li>
+                                <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <a href="../Présentations.html">Présentations </a>
+                        </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../presentationgénérale.html"> PLUSHIE </a>
+                            </li>
+                            <li> <a href="Présentations/presentation-public.html">Public</a> </li>
+
+                            <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                            <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                            <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                            <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                            <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                            <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                            <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                            <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
+        </div>
+        
+    </footer>
+
+</body>

@@ -30,96 +30,218 @@
 
         <h1>Mode d'emploi de l'<a href="Moteur PLUSHIE version web/PLUSHIE.html" style="color:var(--green)">interface web</a></h1>
 
-    </header>
-    <div style="text-align:center"><img src="Moteur PLUSHIE version web/Interface Web Commentée.png" style="width: 1200px"></div>
-    <div class="container">
+    </header> <div class="page-wrapper">
+                  <div class="layout">
+                      <main class="content">
+                          <div style="text-align:center"><img src="Moteur PLUSHIE version web/Interface Web Commentée.png" style="width: 1200px"></div>
+                          <div class="container">
 
 
 
-        <div class="section">
-        
-
-            <div style="text-align: center"> <h2><strong class="orange">⚠ Attention ! ⚠</strong></h2></div>
-                PLUSHIE est un langage expérimental. L'interface a été testée mais des comportements imprévisibles sont à prévoir.
-                En général, l'appui sur la touche entrée permet de stopper l'exécution de PLUSHIE.
-                Le code javascript qui sous tend le fonctionnement de l'interface n'est pas en mesure d'affecter votre machine,
-                mais la prudence reste de mise
-                Si vous rencontrez des difficultés, merci d'en faire part à l'adresse Plushie.langage (at) free.fr
-            </div>
-        <h2>Zone Entrée:</h2>
-        <div class="section">
-            Le bouton
-            <label class="fileButton">
-                Charger code
-            </label>
-            Ouvre un dialogue qui permet de naviguer sur votre ordinateur pour y sélectionner un fichier de code <br><br>au format .txt en ANSI et le charger dans la boîte d'entrée
-        </div>
-        <div class="section">
-            Le bouton <button>Exécuter</button> lance l'éxécution par PLUSHIE du texte de code de la boite d'entrée
-        </div>
-        <div class="section">
-            Le bouton <button>Remise à Zéro</button> Efface tout, y compris la mémoire interne PLUSHIE pour repartir à zéro, <br><br>et recharge en mémoire le fichier de mémoire initial Plusbase.mem.
-            Le rechargement de la page a le même effet.
-        </div>
-        <div class="section">
-            Le bouton <button>Effacer Entrée</button> N'efface que le contenu de la boite d'entrée. Le code de cette boite, si il a été exécuté, reste en mémoire.
-        </div>
-        <div class="section">
-            La case à cocher <input type="checkbox"> Permet d'éxécuter le code texte de la boite d'entrée par un simple appui de la touche entrée. Par défaut, l'appui simultané sur Contrôle et Entrée a le même effet.
-            L'effet est identique à celui du bouton exécuter.
-        </div>
-        <div class="section">
-            Le bouton <button>Initialiser</button> Charge et Exécute le fichier ini.txt
-        </div>
-        <h2>Zone Sortie:</h2>
-        <div class="section">
-            L'icône PLUSHIE permet le retour au menu principal (page index.html)
-        </div>
-        <div class="section">
-            Le bouton
-            <label class="fileButton">
-                Charger mémoire
-            </label>
-            Ouvre un dialogue qui permet de naviguer sur votre ordinateur pour sélectionner <br><br>un fichier de mémoire au format .mem et le charger en mémoire.<br><br>
-            Par défaut, au chargement, ou après l'appui sur le bouton <button>Remise à Zéro</button>, le fichier Plusbase.mem est chargé en mémoire
-        </div>
-         <div class="section">
-            Le bouton <button>Effacer Sortie</button> N'efface que le contenu de la boite de sortie qui fait office d'écran, et rien d'autre
-        </div>
-        <div class="section">
-            La <span style="color:orange">zone d'information </span> affiche le statut durant l'exécution du programme PLUSHIE. Quand le temps défile et que le programme ne semble pas s'arrêter, c'est qu'il a planté.
-            Un appui sur la touche Échap permet alors de l'arrêter. Il faudra probablement repartir de zéro ensuite
-        </div>
-
-        <h2>Zone Mémoire:⚠ Utilisateurs avertis ⚠</h2>
-        <div class="section">
-            Le bouton <button>Voir mémoire</button> affiche dans la petite zone réservée l'état actuel de la mémoire de PLUSHIE, octet par octet.<br><br>
-            Le bouton <button>Effacer mémoire</button> efface la zone d'affichage de la mémoire, <strong>mais n'efface pas </strong> la mémoire de PLUSHIE qui peut continuer à s'exécuter à partir de son état actuel.
-            Les boutons <button>Étendre zone mémoire</button> et <button>réduire zone mémoire</button> permettent de visualiser la mémoire dans des conditions plus confortables.
-            Comme les autres zones de texte, la zone d'affichage de la mémoire peut être redimensionnée manuellement à volonté.<br><br>
-            le bouton <button> 💾 Sauvegarder mémoire</button> télécharge le fichier mémoire actuel sur votre disque dur <br><br>afin de pouvoir le recharger avec le bouton <label class="fileButton">
-                Charger mémoire
-            </label>
-
-        </div>
-        <div class="section" style="background-color: #707070">
-            Maintenant que vous savez manipuler l'interface, il est de temps de faire vos
-            <a href="Premiers pas.html"> premiers pas </a> en PLUSHIE
-            
-        </div>
+                              <div class="section">
 
 
-    </div>
+                                  <div style="text-align: center"> <h2><strong class="orange">⚠ Attention ! ⚠</strong></h2></div>
+                                  PLUSHIE est un langage expérimental. L'interface a été testée mais des comportements imprévisibles sont à prévoir.
+                                  En général, l'appui sur la touche entrée permet de stopper l'exécution de PLUSHIE.
+                                  Le code javascript qui sous tend le fonctionnement de l'interface n'est pas en mesure d'affecter votre machine,
+                                  mais la prudence reste de mise
+                                  Si vous rencontrez des difficultés, merci d'en faire part à l'adresse Plushie.langage (at) free.fr
+                              </div>
+                              <h2>Zone Entrée:</h2>
+                              <div class="section">
+                                  Le bouton
+                                  <label class="fileButton">
+                                      Charger code
+                                  </label>
+                                  Ouvre un dialogue qui permet de naviguer sur votre ordinateur pour y sélectionner un fichier de code <br><br>au format .txt en ANSI et le charger dans la boîte d'entrée
+                              </div>
+                              <div class="section">
+                                  Le bouton <button>Exécuter</button> lance l'éxécution par PLUSHIE du texte de code de la boite d'entrée
+                              </div>
+                              <div class="section">
+                                  Le bouton <button>Remise à Zéro</button> Efface tout, y compris la mémoire interne PLUSHIE pour repartir à zéro, <br><br>et recharge en mémoire le fichier de mémoire initial Plusbase.mem.
+                                  Le rechargement de la page a le même effet.
+                              </div>
+                              <div class="section">
+                                  Le bouton <button>Effacer Entrée</button> N'efface que le contenu de la boite d'entrée. Le code de cette boite, si il a été exécuté, reste en mémoire.
+                              </div>
+                              <div class="section">
+                                  La case à cocher <input type="checkbox"> Permet d'éxécuter le code texte de la boite d'entrée par un simple appui de la touche entrée. Par défaut, l'appui simultané sur Contrôle et Entrée a le même effet.
+                                  L'effet est identique à celui du bouton exécuter.
+                              </div>
+                              <div class="section">
+                                  Le bouton <button>Initialiser</button> Charge et Exécute le fichier ini.txt
+                              </div>
+                              <h2>Zone Sortie:</h2>
+                              <div class="section">
+                                  L'icône PLUSHIE permet le retour au menu principal (page index.html)
+                              </div>
+                              <div class="section">
+                                  Le bouton
+                                  <label class="fileButton">
+                                      Charger mémoire
+                                  </label>
+                                  Ouvre un dialogue qui permet de naviguer sur votre ordinateur pour sélectionner <br><br>un fichier de mémoire au format .mem et le charger en mémoire.<br><br>
+                                  Par défaut, au chargement, ou après l'appui sur le bouton <button>Remise à Zéro</button>, le fichier Plusbase.mem est chargé en mémoire
+                              </div>
+                              <div class="section">
+                                  Le bouton <button>Effacer Sortie</button> N'efface que le contenu de la boite de sortie qui fait office d'écran, et rien d'autre
+                              </div>
+                              <div class="section">
+                                  La <span style="color:orange">zone d'information </span> affiche le statut durant l'exécution du programme PLUSHIE. Quand le temps défile et que le programme ne semble pas s'arrêter, c'est qu'il a planté.
+                                  Un appui sur la touche Échap permet alors de l'arrêter. Il faudra probablement repartir de zéro ensuite
+                              </div>
+
+                              <h2>Zone Mémoire:⚠ Utilisateurs avertis ⚠</h2>
+                              <div class="section">
+                                  Le bouton <button>Voir mémoire</button> affiche dans la petite zone réservée l'état actuel de la mémoire de PLUSHIE, octet par octet.<br><br>
+                                  Le bouton <button>Effacer mémoire</button> efface la zone d'affichage de la mémoire, <strong>mais n'efface pas </strong> la mémoire de PLUSHIE qui peut continuer à s'exécuter à partir de son état actuel.
+                                  Les boutons <button>Étendre zone mémoire</button> et <button>réduire zone mémoire</button> permettent de visualiser la mémoire dans des conditions plus confortables.
+                                  Comme les autres zones de texte, la zone d'affichage de la mémoire peut être redimensionnée manuellement à volonté.<br><br>
+                                  le bouton <button> 💾 Sauvegarder mémoire</button> télécharge le fichier mémoire actuel sur votre disque dur <br><br>afin de pouvoir le recharger avec le bouton <label class="fileButton">
+                                      Charger mémoire
+                                  </label>
+
+                              </div>
+                              <div class="section" style="background-color: #707070">
+                                  Maintenant que vous savez manipuler l'interface, il est de temps de faire vos
+                                  <a href="Premiers pas.html"> premiers pas </a> en PLUSHIE
+
+                              </div>
+                      </main>
+                      <aside class="sidebar" style="margin-top:600px">
+                          <ul style="padding: 5px">
+                              <li>
+                                  <a href="../index.html"> Accueil </a>
+                              </li>
+                              <li>
+                                  <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                              </li>
+
+                              <li>
+                                  <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                              </li>
+                              <li>
+                                  <a href="../Capacités.html"> Capacités </a>
+                              </li>
+                              <li>
+                                  <a href="../Fonctions Classiques.html"> Fonctions </a>
+                              </li>
+                              <li>
+                                  <a href="../Comparaisons.html"> Comparaisons </a>
+                              </li>
+
+                              <li>
+                                  <details>
+                                      <summary><a href="../demo.html"> Démos </a></summary>
+                                      <ul style="padding:0px;margin-left:10px">
+                                          <li>
+                                              <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                                          </li>
+                                      </ul>
+                                  </details>
 
 
-        
 
-        <footer>
-            <div class="barredeliens">
-                <a href="index.html">← Retour à l’accueil</a>
-                PLUSHIE — expérimentation en cours
-            </div>
-        </footer>
+                              <li>
+                                  <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                              </li>
+
+                              <li>
+                                  <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                              </li>
+
+                              <li>
+                                  <details>
+                                      <summary><a href="../Questions.html"> Questions </a> </summary>
+                                      <ul style="padding:0px;margin-left:10px">
+                                          <li>
+                                              <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                                          </li>
+
+                                          <li>
+                                              <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                                          </li>
+                                      </ul>
+                              </details>
+                              </li>
+                              <li>
+                                  <details>
+                                      <summary>
+                                          <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                                      </summary>
+                                      <ul style="padding:0px;margin-left:10px">
+                                          <li>
+                                              <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                                          </li>
+                                          <li>
+                                              <a href="../downloads.html"> Downloads </a>
+                                          </li>
+                                      </ul>
+                                  </details>
+                              </li>
+
+                              <li>
+                                  <details>
+                                      <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                                      <ul style="padding:0px;margin-left:10px">
+                                          <li>
+                                              <a href="../Conventions.html"> Conventions </a>
+                                          </li>
+                                          <li>
+                                              <a href="../Technique.html"> Technique </a>
+                                          </li>
+                                          <li>
+                                              <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                                          </li>
+                                      </ul>
+                                  </details>
+                              </li>
+                              <li>
+                                  <details>
+                                      <summary>
+                                          <a href="../Présentations.html">Présentations </a>
+                                      </summary>
+                                      <ul style="padding:0px;margin-left:10px">
+                                          <li>
+                                              <a href="../presentationgénérale.html"> PLUSHIE </a>
+                                          </li>
+                                          <li> <a href="Présentations/presentation-public.html">Public</a> </li>
+
+                                          <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                                          <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                                          <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                                          <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                                          <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                                          <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                                          <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                                          <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                                      </ul>
+                                  </details>
+                              </li>
+                          </ul>
+                      </aside>
+
+                  </div>
+
+
+
+
+                <footer>
+                    <div class="barredeliens">
+                        <a href="index.html">← Retour à l’accueil</a>
+                        PLUSHIE — expérimentation en cours
+                    </div>
+                </footer>
 </body>
 </html>
 

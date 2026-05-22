@@ -37,116 +37,240 @@
         <div class="subtitle"></div>
 
     </header>
-    
-
-        
-            
-            <div class="container">
-                <i> Est-ce important au fond ? Mais si vous êtes là, c'est que vous êtes curieux, alors parlons-en : </i>
-                <div class="section">
-                    <h2>Pi. mais pas 3.14 </h2> <img align="right" style="width:25%" src="Pi-r.jpg"><span>
-    Je m'appelle Pierre, Pi. sur internet, et je ne suis plus tout jeune.<br>
-    Non, je n'ai pas une formation d'informaticien. Je n'ai aucune légitimité scientifique dans ce domaine.<br><br>
-    Je suis diplômé de l'École Polytechnique de Palaiseau (l'X pour les intimes) où j'ai eu le plaisir d'entrer en <a href="https://www.youtube.com/watch?v=EOEvzbub4wk&list=RDEOEvzbub4wk&start_radio=1">1987</a> et j'ai fait une thèse en biopharmacie.
-    <br><br> Et oui, ça n'a rien à voir avec PLUSHIE.<br><br>
-    Je me suis marié, et nous avons eu quatre enfants.<br>
-    Ça non plus, ça n'a pas de rapport direct, mais c'est important, le plus important à mes yeux d'ailleurs.<br>
-    <br>J'ai travaillé pour gagner ma vie comme on dit, l'argent ne tombe pas du ciel. Rien de bien palpitant.<br><br><br><br></span>
-
-                </div>
-                <div class="section">
-                    <h2> Pourquoi ce projet ?</h2>
-                    Mais une idée me travaillait, comme je l'explique <a href="Pourquoi PLUSHIE.html">ici</a> à la convergence de plusieurs questions :
-                    <ul>
-                        ¤ Comment fonctionne un ordinateur ? Je veux dire, comprendre vraiment son fonctionnement.
-                        <br>
-                        ¤ Comment peut-on faire des choses aussi complexes à partir de simples transistors ? Quand on y réfléchit, c'est une chance incroyable.
-                        <br>
-                        ¤ Comment fonctionne l'apprentissage, précisément. Quels sont les algorithmes en jeu ?
-                        <br>
-                        ¤ Comment passe-t-on d'une cellule-oeuf originelle à un humain avec un cerveau fonctionnel, support d'une intelligence remarquable et d'une conscience ?
-                        <br>
-                        ¤ Comment sont définis les mots que nous utilisons tous les jours ? Par quels mots commencer pour définir les mots ?
-                        <br>
-                    </ul>
-                    J'ai progressivement découvert la notion que j'appelle <i>complexité</i> faute d'un terme plus précis. La complexité est ce qui fait qu'un tout est plus que la somme de ses parties.<br><br>
-                    Et toutes les questions se rejoignent en une seule : comment un système passe du simple au plus complexe ?<br><br>
-                    Pour exprimer cela, sans y adjoindre de traces de subjectivité ou d'hypothèses implicites, il me fallait un support. Et quoi de mieux d'un ordinateur pour ça ? Après tout, c'est bête un ordinateur, non ? Ça
-                    n'invente rien ? Et il fallait un langage, le plus simple possible, le plus dépouillé possible.<br><br>
-                    En raisonnant sur la manière dont fonctionnent les ordinateurs j'ai compris que, aussi sophisitiqués soient-ils, ils ne faisaient que déplacer de l'information d'un endroit à un autre.
-                    D'où l'idée de réduire à une seule instruction ces opérations. Une copie. Mais pas n'importe quelle copie.
-                    Ce n'est pas le registre qui compte. Ce n'est pas le contenu du registre qui permet de construire des structures complexes en mémoire. C'est le contenu du contenu du registre, soit 2 étages.<br><br>
-                    Ce nombre, 2, est crucial. On ne peut pas construire de structure complexe si on ne dispose que d'une liaison : juste des listes linéaires dont la seule donnée est l'adresse suivante. Pensez aux Legos.
-                    Pour bâtir un système "intéressant", il faut au moins 2 sorties, 2 connexions. Ce qui est magique, c'est que disposer de trois ou quatre connexions ne permet pas de bâtir quelque chose de plus complexe.
-                    Plus efficace, oui, mais pas plus complexe.
-                    Donc des cellules mémoires de 2 adresses, une copie en double indirection.  
-                    <details>
-                        <summary>Plus un certain nombre de registres.</summary>
-                        En réduisant au maximum, j'en suis à 7 à rendre disponibles au niveau supérieur:<br>
-                                                                                                        <ul>
-                                                                                                            <li>une adresse fixe pour une perception en entrée (un caractère),</li>
-                                                                                                            <li>
-                                                                                                                une adresse fixe pour la sortie (un écran, une imprimante...),
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                une adresse fixe où trouver une adresse mémoire disponible,
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                une adresse pour entrer l'adresse pour laquelle on cherche la seconde adresse pointée,
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                une adresse où retrouver cette seconde adresse pointée,
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                une adresse fixe qui contient l'adresse du pointeur d'exécution,
-                                                                                                            </li>
-                                                                                                            <li>et une adresse qui contient un compteur d'arrêt pour sortir de l'exécution</li>
-                                                                                                        </ul>
-                        et deux registres internes pour pouvoir opérer les copies en double indirection.<br>
-                        et des constantes: la valeur vide pour l'entrée, la valeur vide pour la sortie, le critère d'arrêt pour le compteur.
-                    </details>
+    <div class="page-wrapper">
+        <div class="layout">
+            <main class="content">
 
 
-                </div>
-                <div class="section">
-                    <h2> Pourquoi maintenant ?</h2>
-                    La réponse la plus simple est :<ul>
-    <li>j'ai le temps.</li>
-    <li>
-        le projet a eu le temps de mûrir pendant plus de 20 ans.
-    </li>
-    <li>
-        mon énergie est fluctuante et là, ça m'a pris.
-    </li>
-    <li>
-       l'IA aide bien à rattraper le retard pris sur les technologies (j'étais un newbie en htlm/javascript et web il y a encore deux mois).
-    </li>
-</ul>
-                </div>
-                <div class="section">
-                    <h2> Contact</h2>
-                    Pour toute question concernant ce site ou le langage PLUSHIE, une seule adresse :<br><br>
-                    <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
-                    Je ne sais pas si de nos jours ça change vraiment quelquechose de remplacer le @ par (à), mais c'est une précaution. Mes autres boites mail sont déjà bien assez saturées comme ça...
-                    Envoyez-moi un message, même juste pour dire que vous êtes passés, ça me fera plaisir.🤩<br>
-                    Ou alors dites-moi pourquoi vous ne vous êtes pas attardés plus que ça.🥴<br>
-                    Toute remarque sur PLUSHIE sera la bienvenue.👍<br>
-                    Et surtout, amusez-vous avec PLUSHIE à découvrir l'informatique autrement.
-                </div>
-            </div><div class="container">
-                <div class="section" style="text-align:center;">
-                    <div Class="entravaux">
-                        🏗
+
+                <div class="container">
+                    <i> Est-ce important au fond ? Mais si vous êtes là, c'est que vous êtes curieux, alors parlons-en : </i>
+                    <div class="section">
+                        <h2>Pi. mais pas 3.14 </h2> <img align="right" style="width:25%" src="Pi-r.jpg"><span>
+                            Je m'appelle Pierre, Pi. sur internet, et je ne suis plus tout jeune.<br>
+                            Non, je n'ai pas une formation d'informaticien. Je n'ai aucune légitimité scientifique dans ce domaine.<br><br>
+                            Je suis diplômé de l'École Polytechnique de Palaiseau (l'X pour les intimes) où j'ai eu le plaisir d'entrer en <a href="https://www.youtube.com/watch?v=EOEvzbub4wk&list=RDEOEvzbub4wk&start_radio=1">1987</a> et j'ai fait une thèse en biopharmacie.
+                            <br><br> Et oui, ça n'a rien à voir avec PLUSHIE.<br><br>
+                            Je me suis marié, et nous avons eu quatre enfants.<br>
+                            Ça non plus, ça n'a pas de rapport direct, mais c'est important, le plus important à mes yeux d'ailleurs.<br>
+                            <br>J'ai travaillé pour gagner ma vie comme on dit, l'argent ne tombe pas du ciel. Rien de bien palpitant.<br><br><br><br>
+                        </span>
+
                     </div>
-                    En construction, plus à venir
+                    <div class="section">
+                        <h2> Pourquoi ce projet ?</h2>
+                        Mais une idée me travaillait, comme je l'explique <a href="Pourquoi PLUSHIE.html">ici</a> à la convergence de plusieurs questions :
+                        <ul>
+                            ¤ Comment fonctionne un ordinateur ? Je veux dire, comprendre vraiment son fonctionnement.
+                            <br>
+                            ¤ Comment peut-on faire des choses aussi complexes à partir de simples transistors ? Quand on y réfléchit, c'est une chance incroyable.
+                            <br>
+                            ¤ Comment fonctionne l'apprentissage, précisément. Quels sont les algorithmes en jeu ?
+                            <br>
+                            ¤ Comment passe-t-on d'une cellule-oeuf originelle à un humain avec un cerveau fonctionnel, support d'une intelligence remarquable et d'une conscience ?
+                            <br>
+                            ¤ Comment sont définis les mots que nous utilisons tous les jours ? Par quels mots commencer pour définir les mots ?
+                            <br>
+                        </ul>
+                        J'ai progressivement découvert la notion que j'appelle <i>complexité</i> faute d'un terme plus précis. La complexité est ce qui fait qu'un tout est plus que la somme de ses parties.<br><br>
+                        Et toutes les questions se rejoignent en une seule : comment un système passe du simple au plus complexe ?<br><br>
+                        Pour exprimer cela, sans y adjoindre de traces de subjectivité ou d'hypothèses implicites, il me fallait un support. Et quoi de mieux d'un ordinateur pour ça ? Après tout, c'est bête un ordinateur, non ? Ça
+                        n'invente rien ? Et il fallait un langage, le plus simple possible, le plus dépouillé possible.<br><br>
+                        En raisonnant sur la manière dont fonctionnent les ordinateurs j'ai compris que, aussi sophisitiqués soient-ils, ils ne faisaient que déplacer de l'information d'un endroit à un autre.
+                        D'où l'idée de réduire à une seule instruction ces opérations. Une copie. Mais pas n'importe quelle copie.
+                        Ce n'est pas le registre qui compte. Ce n'est pas le contenu du registre qui permet de construire des structures complexes en mémoire. C'est le contenu du contenu du registre, soit 2 étages.<br><br>
+                        Ce nombre, 2, est crucial. On ne peut pas construire de structure complexe si on ne dispose que d'une liaison : juste des listes linéaires dont la seule donnée est l'adresse suivante. Pensez aux Legos.
+                        Pour bâtir un système "intéressant", il faut au moins 2 sorties, 2 connexions. Ce qui est magique, c'est que disposer de trois ou quatre connexions ne permet pas de bâtir quelque chose de plus complexe.
+                        Plus efficace, oui, mais pas plus complexe.
+                        Donc des cellules mémoires de 2 adresses, une copie en double indirection.
+                        <details>
+                            <summary>Plus un certain nombre de registres.</summary>
+                            En réduisant au maximum, j'en suis à 7 à rendre disponibles au niveau supérieur:<br>
+                            <ul>
+                                <li>une adresse fixe pour une perception en entrée (un caractère),</li>
+                                <li>
+                                    une adresse fixe pour la sortie (un écran, une imprimante...),
+                                </li>
+                                <li>
+                                    une adresse fixe où trouver une adresse mémoire disponible,
+                                </li>
+                                <li>
+                                    une adresse pour entrer l'adresse pour laquelle on cherche la seconde adresse pointée,
+                                </li>
+                                <li>
+                                    une adresse où retrouver cette seconde adresse pointée,
+                                </li>
+                                <li>
+                                    une adresse fixe qui contient l'adresse du pointeur d'exécution,
+                                </li>
+                                <li>et une adresse qui contient un compteur d'arrêt pour sortir de l'exécution</li>
+                            </ul>
+                            et deux registres internes pour pouvoir opérer les copies en double indirection.<br>
+                            et des constantes: la valeur vide pour l'entrée, la valeur vide pour la sortie, le critère d'arrêt pour le compteur.
+                        </details>
+
+
+                    </div>
+                    <div class="section">
+                        <h2> Pourquoi maintenant ?</h2>
+                        La réponse la plus simple est :<ul>
+                            <li>j'ai le temps.</li>
+                            <li>
+                                le projet a eu le temps de mûrir pendant plus de 20 ans.
+                            </li>
+                            <li>
+                                mon énergie est fluctuante et là, ça m'a pris.
+                            </li>
+                            <li>
+                                l'IA aide bien à rattraper le retard pris sur les technologies (j'étais un newbie en htlm/javascript et web il y a encore deux mois).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h2> Contact</h2>
+                        Pour toute question concernant ce site ou le langage PLUSHIE, une seule adresse :<br><br>
+                        <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+                        Je ne sais pas si de nos jours ça change vraiment quelquechose de remplacer le @ par (à), mais c'est une précaution. Mes autres boites mail sont déjà bien assez saturées comme ça...
+                        Envoyez-moi un message, même juste pour dire que vous êtes passés, ça me fera plaisir.🤩<br>
+                        Ou alors dites-moi pourquoi vous ne vous êtes pas attardés plus que ça.🥴<br>
+                        Toute remarque sur PLUSHIE sera la bienvenue.👍<br>
+                        Et surtout, amusez-vous avec PLUSHIE à découvrir l'informatique autrement.
+                    </div>
+            </main>
+            <aside class="sidebar">
+                <ul style="padding: 5px">
+                    <li>
+                        <a href="../index.html"> Accueil </a>
+                    </li>
+                    <li>
+                        <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                    </li>
+
+                    <li>
+                        <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                    </li>
+                    <li>
+                        <a href="../Capacités.html"> Capacités </a>
+                    </li>
+                    <li>
+                        <a href="../Fonctions Classiques.html"> Fonctions </a>
+                    </li>
+                    <li>
+                        <a href="../Comparaisons.html"> Comparaisons </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../demo.html"> Démos </a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                                </li>
+                            </ul>
+                        </details>
+
+
+
+                    <li>
+                        <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                    </li>
+
+                    <li>
+                        <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../Questions.html"> Questions </a> </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                                </li>
+                                <li>
+                                    <a href="../downloads.html"> Downloads </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Conventions.html"> Conventions </a>
+                                </li>
+                                <li>
+                                    <a href="../Technique.html"> Technique </a>
+                                </li>
+                                <li>
+                                    <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Présentations.html">Présentations </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../presentationgénérale.html"> PLUSHIE </a>
+                                </li>
+                                <li> <a href="Présentations/presentation-public.html">Public</a> </li>
+
+                                <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                                <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                                <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                                <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                                <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                                <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                                <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                                <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </aside>
+        </div><div class="container">
+                    <div class="section" style="text-align:center;">
+                        <div Class="entravaux">
+                            🏗
+                        </div>
+                        En construction, plus à venir
+                    </div>
                 </div>
-            </div>
-            <footer>
-                <div class="barredeliens">
-                    <a href="index.html">← Retour à l’accueil</a>
-                    PLUSHIE — expérimentation en cours
-                </div>
-            </footer>
+                <footer>
+                    <div class="barredeliens">
+                        <a href="index.html">← Retour à l’accueil</a>
+                        PLUSHIE — expérimentation en cours
+                    </div>
+                </footer>
 
 </body>
 </html>

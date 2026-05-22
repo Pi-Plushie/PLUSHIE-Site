@@ -42,101 +42,226 @@
         <i> <span class="subtitle" id="Tag line"> Un langage qui apprend et se transforme</span></i>
 
     </header>
+    <div class="page-wrapper">
+        <div class="layout">
+            <main class="content">
 
+                <div class="container">
 
-    <div class="container">
+                    <div class="section">
+                        <h2>Une seule instruction ?</h2>
+                        <details>
+                            <summary>Hum...</summary>
 
-        <div class="section">
-            <h2>Une seule instruction ?</h2>
-            <details>
-                <summary>Hum...</summary>
-
-                <p>
-                    En effet, <span data-profile="public,curieux,math,philo,prof,poete,philo,all">rien ne vous <button>Échap</button></span> Avec 1, on ne crée pas de ramifications, de branches, de complexité.
-
-                    Alors s'il est vrai que PLUSHIE n'utilise qu'une seule instruction versatile et ne fait en permanence que copier (indirectement) une adresse mémoire à une autre adresse, il s'appuie
-                    sur un support non modifiable qui peut être considéré comme transmettant des fonctions implicites, bien que rigides.
-                    <ul>
-                        <li>L'accès à la suite</li>
-                        <p>
-                            Le simple fait de pouvoir adresser 2 adresses mémoires à partir d'une seule peut légitimement être considéré comme une fonction. Sans cette possibilité, PLUSHIE ne pourrait pas explorer des structures de type arbre et ne
-                            pourrait pas gérer des données d'un niveau de complexité équivalent à l'arithmétique.
-                        </p>
-                        <li>                Variables prédéfinies            </li>
-                        <p>
-                            Comme PLUSHIE ne fait pas la différence entre une donnée, une variable ou une demi-instruction de <a href="Technique.html#instructionunique">l'instruction unique Destination ↞ Source</a>, la donnée d'une variable sous-jacente peut
-                            également être considérée comme une fonction. Dans le <a href="Technique.html#moteur">moteur </a> minimal actuel, elles sont au nombre de trois (en plus de la semi-fonction à une variable suite) :
-</p>
-
-                        <ul>
-                            <li>L'entrée de donnée</li>
                             <p>
-                                PLUSHIE, comme le cerveau humain, a besoin d'informations provenant de l'extérieur pour se développer. Le plus simple est la lecture de caractère qui est proposée actuellement. <br>
-                                <details>Si l'on veut disposer d'autres sources d'entrées, il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique
-                                (il faut a minima une adresse identifiée réservée comme entrée pour le nouveau media).</details>
-                            </p>
-                            <li>La sortie de donnée</li>
-                            <p>
-                                Afin de pouvoir interagir avec son environnement, PLUSHIE a besoin d'au moins une possibilité de le modifier.
-                            </p>
-                            <li>L'exécution</li>
-                            <p>
-                                Il est également nécessaire de savoir à quel endroit du code on se situe pour la partie interprétée des données.
-                            </p>
+                                En effet, <span data-profile="public,curieux,math,philo,prof,poete,philo,all">rien ne vous <button>Échap</button></span> Avec 1, on ne crée pas de ramifications, de branches, de complexité.
 
-                        </ul>
-                    </ul>
-</details>
-        </div>
-        <div class="section">
-            <h2>Pourquoi PLUSHIE ?</h2>
-            Cette question mérite à elle seule <a href="Pourquoi PLUSHIE.html">une page entière</a>.
+                                Alors s'il est vrai que PLUSHIE n'utilise qu'une seule instruction versatile et ne fait en permanence que copier (indirectement) une adresse mémoire à une autre adresse, il s'appuie
+                                sur un support non modifiable qui peut être considéré comme transmettant des fonctions implicites, bien que rigides.
+                                <ul>
+                                    <li>L'accès à la suite</li>
+                                    <p>
+                                        Le simple fait de pouvoir adresser 2 adresses mémoires à partir d'une seule peut légitimement être considéré comme une fonction. Sans cette possibilité, PLUSHIE ne pourrait pas explorer des structures de type arbre et ne
+                                        pourrait pas gérer des données d'un niveau de complexité équivalent à l'arithmétique.
+                                    </p>
+                                    <li>                Variables prédéfinies            </li>
+                                    <p>
+                                        Comme PLUSHIE ne fait pas la différence entre une donnée, une variable ou une demi-instruction de <a href="Technique.html#instructionunique">l'instruction unique Destination ↞ Source</a>, la donnée d'une variable sous-jacente peut
+                                        également être considérée comme une fonction. Dans le <a href="Technique.html#moteur">moteur </a> minimal actuel, elles sont au nombre de trois (en plus de la semi-fonction à une variable suite) :
+                                    </p>
 
-        </div>
-        <div class="section">
-            <h2>Qui est derrière PLUSHIE ?</h2>
-            Consultez la page <a href="Qui suis-je.html">Qui suis-je ?</a>
+                                    <ul>
+                                        <li>L'entrée de donnée</li>
+                                        <p>
+                                            PLUSHIE, comme le cerveau humain, a besoin d'informations provenant de l'extérieur pour se développer. Le plus simple est la lecture de caractère qui est proposée actuellement. <br>
+                                            <details>
+                                                Si l'on veut disposer d'autres sources d'entrées, il faut nécessairement modifier le hardware, ça ne peut pas passer uniquement par l'instruction unique
+                                                (il faut a minima une adresse identifiée réservée comme entrée pour le nouveau media).
+                                            </details>
+                                        </p>
+                                        <li>La sortie de donnée</li>
+                                        <p>
+                                            Afin de pouvoir interagir avec son environnement, PLUSHIE a besoin d'au moins une possibilité de le modifier.
+                                        </p>
+                                        <li>L'exécution</li>
+                                        <p>
+                                            Il est également nécessaire de savoir à quel endroit du code on se situe pour la partie interprétée des données.
+                                        </p>
 
-        </div>
-        <div class="section">
-            <h2>En quoi c'est nouveau ?</h2>
-            Direction la page <a href="index.html#différent">pourquoi c'est différent</a> et aussi la <a href="Comparaisons.html">comparaison</a> avec les autres langages et concepts informatiques.
+                                    </ul>
+                                </ul>
+                        </details>
+                    </div>
+                    <div class="section">
+                        <h2>Pourquoi PLUSHIE ?</h2>
+                        Cette question mérite à elle seule <a href="Pourquoi PLUSHIE.html">une page entière</a>.
 
-        </div>
-        <div class="section">
-            <h2>Comment ça marche ?</h2>
-            Attention, détails techniques pas forcément immédiats à comprendre !<br>
-            cf. les <a href="Conventions.html">conventions</a> de notation, puis plongez dans les <a href="Technique.html">aspects techniques</a>.
-        </div>
-        <div class="section" id="aider">
+                    </div>
+                    <div class="section">
+                        <h2>Qui est derrière PLUSHIE ?</h2>
+                        Consultez la page <a href="Qui suis-je.html">Qui suis-je ?</a>
 
-            <h2>Puis-je participer ?</h2>
-            Bien entendu ! La page GitHub sera bientôt accessible ! Mais en attendant, vous pouvez partager vos commentaires sur ce site via  <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
-            Essayez les interfaces et rapportez ce qui vous a posé problème (ou au contraire, ce qui vous a plu).<br><br>
-            Parlez-en autour de vous, faites le buzz autour de PLUSHIE !
-        </div>
-        <div class="section">
-            <h2>D'autres questions ?</h2>
-            Demandez à PLUSHIE ! <br><strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+                    </div>
+                    <div class="section">
+                        <h2>En quoi c'est nouveau ?</h2>
+                        Direction la page <a href="index.html#différent">pourquoi c'est différent</a> et aussi la <a href="Comparaisons.html">comparaison</a> avec les autres langages et concepts informatiques.
 
-        </div>
-    </div>
-    <div class="container">
-        <div class="section" style="text-align:center;">
-            <div Class="entravaux">
-                🏗
-            </div>
-            En construction, plus à venir
-        </div>
-    </div>
+                    </div>
+                    <div class="section">
+                        <h2>Comment ça marche ?</h2>
+                        Attention, détails techniques pas forcément immédiats à comprendre !<br>
+                        cf. les <a href="Conventions.html">conventions</a> de notation, puis plongez dans les <a href="Technique.html">aspects techniques</a>.
+                    </div>
+                    <div class="section" id="aider">
+
+                        <h2>Puis-je participer ?</h2>
+                        Bien entendu ! La page GitHub sera bientôt accessible ! Mais en attendant, vous pouvez partager vos commentaires sur ce site via  <strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+                        Essayez les interfaces et rapportez ce qui vous a posé problème (ou au contraire, ce qui vous a plu).<br><br>
+                        Parlez-en autour de vous, faites le buzz autour de PLUSHIE !
+                    </div>
+                    <div class="section">
+                        <h2>D'autres questions ?</h2>
+                        Demandez à PLUSHIE ! <br><strong class="green">Plushie.langage (à) free.fr</strong><br><br>
+
+                    </div>
+            </main>
+            <aside class="sidebar">
+                <ul style="padding: 5px">
+                    <li>
+                        <a href="../index.html"> Accueil </a>
+                    </li>
+                    <li>
+                        <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                    </li>
+
+                    <li>
+                        <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                    </li>
+                    <li>
+                        <a href="../Capacités.html"> Capacités </a>
+                    </li>
+                    <li>
+                        <a href="../Fonctions Classiques.html"> Fonctions </a>
+                    </li>
+                    <li>
+                        <a href="../Comparaisons.html"> Comparaisons </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../demo.html"> Démos </a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                                </li>
+                            </ul>
+                        </details>
 
 
-    <footer>
-        <div class="barredeliens">
-            <a href="index.html">← Retour à l’accueil</a>
-            PLUSHIE — expérimentation en cours
+
+                    <li>
+                        <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                    </li>
+
+                    <li>
+                        <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../Questions.html"> Questions </a> </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                                </li>
+                                <li>
+                                    <a href="../downloads.html"> Downloads </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Conventions.html"> Conventions </a>
+                                </li>
+                                <li>
+                                    <a href="../Technique.html"> Technique </a>
+                                </li>
+                                <li>
+                                    <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Présentations.html">Présentations </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../presentationgénérale.html"> PLUSHIE </a>
+                                </li>
+                                <li> <a href="Présentations/presentation-public.html">Public</a> </li>
+
+                                <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                                <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                                <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                                <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                                <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                                <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                                <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                                <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </aside>
         </div>
-    </footer>
+                <div class="container">
+                    <div class="section" style="text-align:center;">
+                        <div Class="entravaux">
+                            🏗
+                        </div>
+                        En construction, plus à venir
+                    </div>
+                </div>
+
+
+                <footer>
+                    <div class="barredeliens">
+                        <a href="index.html">← Retour à l’accueil</a>
+                        PLUSHIE — expérimentation en cours
+                    </div>
+                </footer>
 
 </body>
 </html>

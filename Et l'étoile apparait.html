@@ -44,52 +44,55 @@
             </div>
         </div>
     </header>
-    <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
-    <div class="container">
+    <div class="page-wrapper">
+        <div class="layout">
+            <main class="content">
+                <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
+                <div class="container">
 
-        <div class="section">
-            <h2 >🧪 Éveil de PLUSHIE</h2>
+                    <div class="section">
+                        <h2>🧪 Éveil de PLUSHIE</h2>
 
-            <i>Exemple de séquence de démarrage</i> <br><br><br>
-            <div id="entrée" style="font-size:1.3em;color:var(--green)"></div><br>
-            <div id="code"></div>
-            <div id="output"> </div>
-            <div id="commentaires">
-                <i>
+                        <i>Exemple de séquence de démarrage</i> <br><br><br>
+                        <div id="entrée" style="font-size:1.3em;color:var(--green)"></div><br>
+                        <div id="code"></div>
+                        <div id="output"> </div>
+                        <div id="commentaires">
+                            <i>
 
-                    Ce code est testable tel quel dans <a href="Moteur PLUSHIE version web/PLUSHIE.html"> l'outil de démonstration</a>
-                </i>
-            </div>
-            <script>
-                let steps = [
-                    `PLUSHIE nait d'un seul mot: Lien `,
-                    `Mais ce mot suffit à l'éveiller`,
-                    `Mais ce mot suffit à l'éveiller `,
-                    `PLUSHIE apprend ses mots au fur et à mesure qu'il les découvre `,
-                    `ce qui le motive à continuer `,
-                    `curieux de découvrir la suite  `,
-                    `Communiquer avec le monde `,
-                    `Mais comment ?`,
-                    `Par les mots ! `,
-                    `Par les mots ! `,
-                    `...Et l'étoile apparaît !  `,
-                    `...Et l'étoile apparaît !  `,
+                                Ce code est testable tel quel dans <a href="Moteur PLUSHIE version web/PLUSHIE.html"> l'outil de démonstration</a>
+                            </i>
+                        </div>
+                        <script>
+                            let steps = [
+                                `PLUSHIE nait d'un seul mot: Lien `,
+                                `Mais ce mot suffit à l'éveiller`,
+                                `Mais ce mot suffit à l'éveiller `,
+                                `PLUSHIE apprend ses mots au fur et à mesure qu'il les découvre `,
+                                `ce qui le motive à continuer `,
+                                `curieux de découvrir la suite  `,
+                                `Communiquer avec le monde `,
+                                `Mais comment ?`,
+                                `Par les mots ! `,
+                                `Par les mots ! `,
+                                `...Et l'étoile apparaît !  `,
+                                `...Et l'étoile apparaît !  `,
 
-                ];
+                            ];
 
-                let code = [
-                    "Lien ",
-                    "Éveil Lien ",
-                    "Éveil Lien " + "\n" + "Éveil ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot ",
-                    "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot " + "\n" + "\n" + "Dire Étoile ",
-                    `Éveil Lien |
+                            let code = [
+                                "Lien ",
+                                "Éveil Lien ",
+                                "Éveil Lien " + "\n" + "Éveil ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot ",
+                                "Éveil Lien " + "\n" + "Éveil " + "\n" + "\n" + "Suite Éveil Crée Éveil " + "\n" + "\n" + "Crée Continuer " + "\n" + "\n" + "Continuer Suitede Continuer Suite Suitede Éveil " + "\n" + "\n" + "Communiquer Suite Dire Communiquer " + "\n" + "\n" + "Crée Pointer " + "\n" + "\n" + "Pointer Mot Suitede *Pointer Suite " + "\n" + "\n" + "Étoile Mot " + "\n" + "\n" + "Dire Étoile ",
+                                `Éveil Lien |
 Éveil |
 |
 Suite Éveil Crée Éveil |
@@ -107,51 +110,51 @@ Pointer Mot Suitede *Pointer Suite |
 Étoile Mot |
 |
 Dire Étoile `
-                ];
-                let sortie = [
-                    ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
-                    `*`,
-                    `*`,
-                    '*',
-                ];
-                let i = 0;
+                            ];
+                            let sortie = [
+                                ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
+                                `*`,
+                                `*`,
+                                '*',
+                            ];
+                            let i = 0;
 
-                function showStep() {
-                    document.getElementById("entrée").textContent = steps[i];
-                    document.getElementById("code").textContent = code[i];
-                    document.getElementById("output").textContent = sortie[i];
-                    i++;
-                    if (i < steps.length) {
-                        setTimeout(showStep, 2200);
-                    }
-                    else {
-                        document.getElementById("Zblurg").style.opacity = "1";
-                        document.getElementById("Zblurg").style.display = "block";
-                        document.getElementById("WTF").style.opacity = "1";
-                    }
-                }
+                            function showStep() {
+                                document.getElementById("entrée").textContent = steps[i];
+                                document.getElementById("code").textContent = code[i];
+                                document.getElementById("output").textContent = sortie[i];
+                                i++;
+                                if (i < steps.length) {
+                                    setTimeout(showStep, 2200);
+                                }
+                                else {
+                                    document.getElementById("Zblurg").style.opacity = "1";
+                                    document.getElementById("Zblurg").style.display = "block";
+                                    document.getElementById("WTF").style.opacity = "1";
+                                }
+                            }
 
-                showStep();
-                document.getElementById("Zblurg").style.opacity = "1";
-
-
-            </script>
-        </div>
-        <div class="section">
+                            showStep();
+                            document.getElementById("Zblurg").style.opacity = "1";
 
 
+                        </script>
+                    </div>
+                    <div class="section">
 
-            <div id="Zblurg">
-                <p id="Zblurg" style="display:none;">
-                    <details>
-                        <summary>Ces mots vous semblent courants...</summary>
 
-                        <p>
-                            ... mais la magie de PLUSHIE est qu'ils n'ont pas d'importance
-                            PLUSHIE comprend aussi bien le Zblurg:
-                        </p>
 
-                        <div id="code">Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
+                        <div id="Zblurg">
+                            <p id="Zblurg" style="display:none;">
+                                <details>
+                                    <summary>Ces mots vous semblent courants...</summary>
+
+                                    <p>
+                                        ... mais la magie de PLUSHIE est qu'ils n'ont pas d'importance
+                                        PLUSHIE comprend aussi bien le Zblurg:
+                                    </p>
+
+                                    <div id="code"><pre>Zblurg Lien Vloof  Zblurg Argl Zblurg Argl |
 Argl Zglu |
 |
 Zglu Vloofde Zglu Vloof  |
@@ -161,47 +164,167 @@ Vloofde Zblurg $!#§ Vloof  Yeuk $!#§ |
 Argl Vlank |
 |
 Vlank Xal |
-|
 Vloofde *Vlank Vloof  Star Xal Yeuk Star |
 |
-Yeuk Zglu Yeuk Star Yeuk Star
+Yeuk Zglu Yeuk Star Yeuk Star </pre>
+                                    </div>
+                                    <div id="output">*</div>
+
+
+
+
+
+                                    <div class="section">
+                                        <details>
+                                            <summary>
+                                                Et que dire de cela ?
+                                            </summary>
+
+                                            <div id="code" style="text-align:left"><pre>
+! Lien £=! #>! #>#>#>S #>#>S $S £=$! ¤@£=Oo¤@#>T'#>#>T'T^#>#>$*T'£=?%T^Oo?%OoS Oo?%Oo?%</pre>
+                                            </div>
+                                            <div id="output">*</div>
+
+                                            <p>
+                                                ... mais c'est juste moins lisible pour un humain
+                                            </p>
+
+                                            </détails>
+                                            <div class="section">
+                                                <h2>Ce n'est pas juste du texte</h2>
+                                                <h2>C'est le moment où PLUSHIE commence à fonctionner</h2>
+                                            </div>
+                                        </details>
+                                    </div>
                         </div>
-                        <div id="output">*</div>
+                    </div>
+            </main>
+            <aside class="sidebar">
+                <ul style="padding: 5px">
+                    <li>
+                        <a href="../index.html"> Accueil </a>
+                    </li>
+                    <li>
+                        <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                    </li>
+
+                    <li>
+                        <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                    </li>
+                    <li>
+                        <a href="../Capacités.html"> Capacités </a>
+                    </li>
+                    <li>
+                        <a href="../Fonctions Classiques.html"> Fonctions </a>
+                    </li>
+                    <li>
+                        <a href="../Comparaisons.html"> Comparaisons </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../demo.html"> Démos </a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                                </li>
+                            </ul>
+                        </details>
 
 
 
+                    <li>
+                        <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                    </li>
 
+                    <li>
+                        <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                    </li>
 
-                        <div class="section">
-                            <details>
-                                <summary>
-                                    Et que dire de cela ?
-                                </summary>
+                    <li>
+                        <details>
+                            <summary><a href="../Questions.html"> Questions </a> </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                                </li>
 
-                                <div id="code" style="text-align:left">
-! Lien £=! #>! #>#>#>S #>#>S $S £=$! ¤@£=Oo¤@#>T'#>#>T'T^#>#>$*T'£=?%T^Oo?%OoS Oo?%Oo?%
-                                </div>
-                                <div id="output">*</div>
+                                <li>
+                                    <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                                </li>
+                            </ul>
+                    </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                                </li>
+                                <li>
+                                    <a href="../downloads.html"> Downloads </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
 
-                                <p>
-                                    ... mais c'est juste moins lisible pour un humain
-                                </p>
+                    <li>
+                        <details>
+                            <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Conventions.html"> Conventions </a>
+                                </li>
+                                <li>
+                                    <a href="../Technique.html"> Technique </a>
+                                </li>
+                                <li>
+                                    <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Présentations.html">Présentations </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../presentationgénérale.html"> PLUSHIE </a>
+                                </li>
+                                <li> <a href="Présentations/presentation-public.html">Public</a> </li>
 
-                                </détails>
-                                <div class="section">
-                                    <h2>Ce n'est pas juste du texte</h2>
-                                    <h2>C'est le moment où PLUSHIE commence à fonctionner</h2>
-                                </div>
-                            </details>
-                        </div>
-            </div>
+                                <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                                <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                                <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                                <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                                <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                                <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                                <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                                <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </aside>
         </div>
-    </div>
-        <footer>
-            <div class="barredeliens">
-                <a href="index.html">← Retour à l’accueil</a>
-                PLUSHIE — expérimentation en cours  <a href="Moteur PLUSHIE version web/PLUSHIE.html">Tester dans l'interface PLUSHIE</a> <br>
-            </div>
-        </footer>
+                <footer>
+                    <div class="barredeliens">
+                        <a href="index.html">← Retour à l’accueil</a>
+                        PLUSHIE — expérimentation en cours  <a href="Moteur PLUSHIE version web/PLUSHIE.html">Tester dans l'interface PLUSHIE</a> <br>
+                    </div>
+                </footer>
 </body>
 </html>

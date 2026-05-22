@@ -181,6 +181,10 @@ button {
     max-width: 900px;
     margin: auto;
     padding: 5px;
+ 
+}
+.content {
+    width: 50%;
 }
 details {
     margin-top: 0px;
@@ -243,7 +247,11 @@ important {
     color: darkorange;
     font-weight: bold;
 }
-
+.layout {
+    justify-content:center;
+    display: flex;
+    gap: 10px;
+}
 .logo {
     margin-bottom: 0px;
     margin-top: 0px;
@@ -276,14 +284,49 @@ important {
     filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
 }
 
+@media (max-width: 900px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+
+        .sidebar a.active {
+            color: #68cfff;
+            font-weight: bold;
+        }
+    }
+}
+.sidebar {
+    width: fit-content;
+    padding: 15px;
+    background: #111827;
+    border-right: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+    margin-top:13px;
+    position: sticky;
+    top: 0px;
+    height: fit-content;
+    line-height: 30px;
+    border-radius: 12px;
+
+    .sidebar a.active {
+        color: #68cfff;
+        font-weight: bold;
+    }
+}
 .section {
     max-width: 900px;
-    background: #1e293b;
+      background: #1e293b;
     margin-left: 20px 0;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 12px;
+   
 }
 
 .section-schéma {

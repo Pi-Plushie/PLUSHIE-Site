@@ -13,6 +13,7 @@
 
 <body>
     <header>
+
         <a href="index.html"><h1>PLUSHIE </h1></a>
         <div class="container">
             <div class="boutonsprofil">
@@ -31,348 +32,472 @@
 
         <h1>Conventions</h1>
     </header>
+    <div class="page-wrapper">
+        <div class="layout">
+            <main class="content">
+                <div class="container">
+                    <div class="section">
+                        Afin d'obtenir un environnement stable pour PLUSHIE, il faut décider de certaines conventions.<br>
+                        Elles sont nécessaires, mais non prescriptives : on peut librement en choisir d'autres.
+                        <br><br><br>
 
-    <div class="container">
-        <div class="section">
-            Afin d'obtenir un environnement stable pour PLUSHIE, il faut décider de certaines conventions.<br>
-            Elles sont nécessaires, mais non prescriptives : on peut librement en choisir d'autres.
-            <br><br><br>
+                        <h2> 1- Sens de l'instruction principale</h2>
 
-            <h2> 1- Sens de l'instruction principale</h2>
+                        La première décision concerne la chiralité initiale de l’instruction principale. Il y a le choix entre :
+                        <p class="green">
+                            SOURCE → DESTINATION
+                        </p>
+                        et
+                        <p class="green">
+                            DESTINATION ← SOURCE
+                        </p>
+                        Les fichiers de code texte sont actuellement écrits en utilisant :
+                        <p class="green">
+                            DESTINATION ← SOURCE
+                        </p>
+                        <details>
 
-            La première décision concerne la chiralité initiale de l’instruction principale. Il y a le choix entre :
-            <p class="green">
-                SOURCE → DESTINATION
-            </p>
-            et
-            <p class="green">
-                DESTINATION ← SOURCE
-            </p>
-            Les fichiers de code texte sont actuellement écrits en utilisant :
-            <p class="green">
-                DESTINATION ← SOURCE
-            </p>
-            <details>
+                            <summary> Conséquences </summary>
+                            <p class="grey">
+                                <ul>
+                                    <li>Ce choix n'a pas d'importance, mais il faut écrire tous les fichiers de texte de code en cohérence et s'y tenir au moins le temps de définir un autre interpréteur.</li>
+                                    <li>Le tout début du fichier ini est un petit peu plus complexe à écrire en notation inversée <span class="green">SOURCE → DESTINATION </span>ou bien il faut modifier le fichier de boot plusbase.mem</li>
+                                    <li>La notation <span class="green">DESTINATION ← SOURCE </span> se rapproche plus d'une écriture d'affectation usuelle en informatique du type <span class="green">A = B</span></li>
+                                    <li>
+                                        Ce choix ne peut pas facilement être inversé par du code PLUSHIE, il faut modifier l'interpréteur de base dans plusbase.mem
+                                        <details>
+                                            <summary> Plus loin encore </summary>
+                                            en poussant PLUSHIE plus loin, on pourrait disposer d'un interpréteur de chaque sens et d'une instruction PLUSHIE pour basculer le mode et avoir ainsi des portions de codes chirales l'une à l'autre.
+                                        </details>
+                                    </li>
+                                </ul>
+                            </p>
+                        </details>
+                        <i> ☞ On notera que ce choix constitue la première</i> <strong class="orange">rupture de symétrie</strong> <i> du langage.</i>
+                        <br><br>
+                    </div>
+                    <div class="section">
+                        <h2> 2- Affectation des rôles des cases mémoire</h2>
+                        Le minimalisme a imposé de n'avoir que 2 adresses adressables par une adresse donnée, ce qui est le minimum pour construire des structures complexes.<br>
 
-                <summary> Conséquences </summary>
-                <p class="grey">
-                    <ul>
-                        <li>Ce choix n'a pas d'importance, mais il faut écrire tous les fichiers de texte de code en cohérence et s'y tenir au moins le temps de définir un autre interpréteur.</li>
-                        <li>Le tout début du fichier ini est un petit peu plus complexe à écrire en notation inversée <span class="green">SOURCE → DESTINATION </span>ou bien il faut modifier le fichier de boot plusbase.mem</li>
-                        <li>La notation <span class="green">DESTINATION ← SOURCE </span> se rapproche plus d'une écriture d'affectation usuelle en informatique du type <span class="green">A = B</span></li>
-                        <li>Ce choix ne peut pas facilement être inversé par du code PLUSHIE, il faut modifier l'interpréteur de base dans plusbase.mem
+
+                        Cellule mémoire élémentaire :
+
+                        <div class="cellule">
+                            <div class="case tete">Tête</div>
+                            <div class="case suite">Suite</div>
+
+                        </div><br><br>Elles sont appelées tête et suite, mais pourraient être appelées gauche et droite ou première et seconde. Les chaînes de caractères caractérisant les mots appris doivent être pointées soit par l'une, soit par l'autre.
+                        Une forme de chiralité apparaît entre :
+
+                        <ul>
+                            <li>
+                                les listes chaînées par leur suite (c'est la suite d'une case mémoire qui pointe vers la suite de la chaîne), appelées simplement listes.
+                            </li>
+                            <li>
+                                les listes chaînées par leur tête (c'est la tête d'une case mémoire qui pointe vers la suite de la chaîne), appelées cascades.<br>
+                                Par exemple, les pointeurs sont organisés en cascade du niveau le plus élevé au niveau le plus faible.
+                            </li>
+                        </ul>
+                        L'autre case de la cellule mémoire contient alors la valeur de la cellule.<br>
+                        <i> ☞ Ce choix constitue une deuxième </i> <strong class="orange">rupture de symétrie</strong> <i> du langage.</i>
+                        <details>
+                            <summary>
+                                Complément
+                            </summary>
+                            <p>
+                                Toute autre convention est recevable pour nommer les deux adresses des cellules : <br>
+                                droite/gauche, première/seconde, etc.
+                                On peut même choisir qu'une adresse pointe vers plus de 2 adresses pour faciliter la gestion des hypergraphes.
+                            </p>
                             <details>
-                                <summary> Plus loin encore </summary>
-                                en poussant PLUSHIE plus loin, on pourrait disposer d'un interpréteur de chaque sens et d'une instruction PLUSHIE pour basculer le mode et avoir ainsi des portions de codes chirales l'une à l'autre.
+                                <summary> Plus loin </summary>
+                                Là aussi, on peut gérer en parallèle deux types de chaînes au prix d'une gestion très pointue.
                             </details>
-                        </li>
+                        </details>
+                        <br><br>
+                    </div>
+                    <div class="section">
+                        <h2> 3- Ordre d'enregistrement des caractères lus</h2>
+                        Avec l'interpréteur de base proposé ici, les caractères lus sont enregistrés dans une structure de pile, par insertion en tête de la chaîne d'entrée.<br>
+                        Il serait aussi possible de faire le choix d'une insertion en fin de la chaîne d'entrée.
+                        <details>
+
+                            <summary> Conséquences </summary>
+                            <p class="grey">
+                                <ul>
+                                    <li>Pour afficher à l'endroit une chaîne de caractère, il est nécessaire de l'inverser avant.</li>
+                                    <li>l'autre option demande un code de plusbase.mem un peu plus gros en petite contradiction avec l'objectif de minimalisme initial. </li>
+
+                                </ul>
+                        </details>
+                        <i> ☞ ce choix constitue une troisième (mais faible) </i> <span class="orange">rupture de symétrie</span><i> du langage.</i>
+                        <br><br>
+                    </div>
+                    <div class="section">
+                        <h2> 4- Convention d'interprétation des bouclages</h2>
+                        En PLUSHIE, il n'existe au départ aucun caractère spécial que ce soit un séparateur ou une valeur <i>null</i>, pas plus qu'un signal de fin de liste. Toute la structure repose sur la topologie.<br>
+
+                        Lorsqu'une liste est parcourue par un pointeur, cela peut se terminer en boucle infinie si l''un des éléments de la liste pointe vers un élément de la liste qui le précède (liste partiellement cyclique).
+                        À l'extrême, une cellule peut voir ses adresses en tête et/ou en suite pointer sur elle-même.<br><br>
+
+
+                        Il est naturel de choisir qu'une liste se termine quand la suite d'un élément pointe sur lui-même, et qu'une cascade se termine quand la tête d'un élément pointe sur lui-même (atome).
+
+                        Quatre bouclages d'une cellule mémoire sur elle-même sont possibles :
+                        <ul>
+                            <li>
+                                La tête pointe vers sa propre adresse : cela caractérise un atome. Si la suite pointe aussi vers l'adresse, il s'agit d'un atome élémentaire.
+                                <br><br>
+
+                                <div class="section-schéma ">
+
+                                    <div class="section-schéma">
+
+                                        <span>Atome (nommé) </span>
+                                        <div class="atome-zone">
+                                            <div class="cellule">
+                                                <div class="case tete"></div>
+                                                <div class="case suite"></div>
+                                            </div>
+                                            <div class="zone-pointeur">
+                                                <svg class="pointeur-svg" width="3" height="40">
+                                                    <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                                                    <polygon points="3,20 -2,15 -2,25"
+                                                             fill="#22c55e" />
+                                                    <circle cx="-72" cy="20" r="4" fill="#22c55e" />
+                                                    <polyline points="-72,20,-72,50,-115,50,-115,20,-95,20"
+                                                              stroke="#22c55e"
+                                                              stroke-width="2"
+                                                              fill="none" />
+                                                    <polygon points="-95,20 -100,15 -100,25"
+                                                             fill="#22c55e" />
+
+                                                    <line x1="-30"
+                                                          y1="20"
+                                                          x2="-0"
+                                                          y2="20"
+                                                          stroke="#22c55e"
+                                                          stroke-width="2" />
+                                                </svg>
+                                            </div>
+
+                                            <span>Nom de l'atome (liste chaînée) </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="section-schéma">
+
+                                        <span>  Atome élémentaire </span>
+                                        <div class="atome-zone">
+                                            <div class="cellule">
+
+                                                <div class="case tete"></div>
+                                                <div class="case suite"></div>
+
+                                            </div>
+                                            <div class="zone-pointeur">
+                                                <svg class="pointeur-svg" width="3" height="20">
+                                                    <circle cx="-73" cy="10" r="4" fill="#22c55e" />
+                                                    <polyline points="-73,10,-73,40,-110,40,-110,10,-95,10"
+                                                              stroke="#22c55e"
+                                                              stroke-width="2"
+                                                              fill="none" />
+
+                                                    <polygon points="-95,10 -100,5 -100,15"
+                                                             fill="#22c55e" />
+
+
+                                                    <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                                                    <polyline points="-30,10,-30,40,-65,40,-65,30"
+                                                              stroke="#22c55e"
+                                                              stroke-width="2"
+                                                              fill="none" />
+                                                    <polygon points="-65,30 -70,35 -60,35"
+                                                             fill="#22c55e" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            <li>La suite pointe vers l'adresse de la suite de la cellule. Cela caractérise une fin de liste, en toute logique.</li>
+                            <br>
+                            <div class="section-schéma ">
+                                <div class="section-schéma ">
+                                    <div class="atome-zone">
+                                        <div class="cellule">
+                                            <div class="case tete"></div>
+                                            <div class="case suite"></div>
+                                        </div>
+                                        <div class="zone-pointeur">
+                                            <svg class="pointeur-svg" width="3" height="40">
+                                                <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                                                <line x1="-30"
+                                                      y1="20"
+                                                      x2="20"
+                                                      y2="20"
+                                                      stroke="#22c55e"
+                                                      stroke-width="2" />
+                                                <polygon points="13,20 8,15 8,25"
+                                                         fill="#22c55e" />
+                                            </svg>
+                                        </div>
+                                        <div class="cellule">
+                                            <div class="case tete"></div>
+                                            <div class="case suite"></div>
+                                        </div>
+                                        <div class="zone-pointeur">
+                                            <svg class="pointeur-svg" width="3" height="40">
+                                                <circle cx="-30" cy="20" r="4" fill="#22c55e" />
+                                                <line x1="-30"
+                                                      y1="20"
+                                                      x2="20"
+                                                      y2="20"
+                                                      stroke="#22c55e"
+                                                      stroke-width="2" />
+                                                <polygon points="13,20 8,15 8,25"
+                                                         fill="#22c55e" />
+                                            </svg>
+                                        </div>
+
+                                        <div class="cellule">
+
+                                            <div class="case tete"></div>
+                                            <div class="case suite"></div>
+
+                                        </div>
+                                        <div class="zone-pointeur">
+                                            <svg class="pointeur-svg" width="3" height="20">
+                                                <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                                                <polyline points="-30,10,-30,40,-65,40,-65,30"
+                                                          stroke="#22c55e"
+                                                          stroke-width="2"
+                                                          fill="none" />
+                                                <polygon points="-65,30 -70,35 -60,35"
+                                                         fill="#22c55e" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <li>
+                                La suite pointe vers sa propre adresse. Cela constitue potentiellement une <span class="red"> anomalie de structure </span>et peut conduire à des comportements inattendus.
+                                Cela peut également être considéré comme la caractérisation d'un atome chiral d'un atome standard.<br>
+                            </li>
+
+
+                            <div class="section-schéma ">
+                                <div class="atome-zone">
+                                    <div class="cellule">
+
+                                        <div class="case tete"></div>
+                                        <div class="case suite"></div>
+
+                                    </div>
+                                    <div class="zone-pointeur">
+                                        <svg class="pointeur-svg" width="3" height="20">
+                                            <circle cx="-30" cy="10" r="4" fill="#22c55e" />
+                                            <polyline points="-30,10,-30,40,0,40,0,10,-5,10"
+                                                      stroke="#22c55e"
+                                                      stroke-width="2"
+                                                      fill="none" />
+                                            <polygon points="-10,10 -5,5 -5,15"
+                                                     fill="#22c55e" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <li>La tête pointe vers l'adresse de la suite de la cellule. Cela peut également être considéré comme une fin de cascade. </li>
+                            <div class="section-schéma ">
+                                <div class="atome-zone">
+                                    <div class="cellule">
+
+                                        <div class="case tete"></div>
+                                        <div class="case suite"></div>
+
+                                    </div>
+                                    <div class="zone-pointeur">
+                                        <svg class="pointeur-svg" width="3" height="20">
+                                            <circle cx="-75" cy="10" r="4" fill="#22c55e" />
+                                            <polyline points="-75,10,-75,40,0,40,0,10,-5,10"
+                                                      stroke="#22c55e" stroke-width="2" fill="none" />
+                                            <polygon points="-10,10 -5,5 -5,15"
+                                                     fill="#22c55e" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+
                     </ul>
-                </p>
-            </details>
-            <i> ☞ On notera que ce choix constitue la première</i> <strong class="orange">rupture de symétrie</strong> <i> du langage.</i>
-            <br><br>
-        </div>
-        <div class="section">
-            <h2> 2- Affectation des rôles des cases mémoire</h2>
-            Le minimalisme a imposé de n'avoir que 2 adresses adressables par une adresse donnée, ce qui est le minimum pour construire des structures complexes.<br>
-            
-                
-                    Cellule mémoire élémentaire :
-               
-                <div class="cellule">
-                    <div class="case tete">Tête</div>
-                    <div class="case suite">Suite</div>
-             
-            </div><br><br>Elles sont appelées tête et suite, mais pourraient être appelées gauche et droite ou première et seconde. Les chaînes de caractères caractérisant les mots appris doivent être pointées soit par l'une, soit par l'autre.
-            Une forme de chiralité apparaît entre :
 
-            <ul>
-                <li>
-                    les listes chaînées par leur suite (c'est la suite d'une case mémoire qui pointe vers la suite de la chaîne), appelées simplement listes.
-                </li>
-                <li>
-                    les listes chaînées par leur tête (c'est la tête d'une case mémoire qui pointe vers la suite de la chaîne), appelées cascades.<br>
-                    Par exemple, les pointeurs sont organisés en cascade du niveau le plus élevé au niveau le plus faible.
-                </li>
-            </ul>
-            L'autre case de la cellule mémoire contient alors la valeur de la cellule.<br>
-            <i> ☞ Ce choix constitue une deuxième </i> <strong class="orange">rupture de symétrie</strong> <i> du langage.</i>
-            <details>
-                <summary>
-                    Complément
-                </summary>
-                <p>
-                    Toute autre convention est recevable pour nommer les deux adresses des cellules : <br>
-                    droite/gauche, première/seconde, etc.
-                    On peut même choisir qu'une adresse pointe vers plus de 2 adresses pour faciliter la gestion des hypergraphes.
-                </p>
-                <details>
-                    <summary> Plus loin </summary>
-                    Là aussi, on peut gérer en parallèle deux types de chaînes au prix d'une gestion très pointue.
-                </details>
-            </details>
-            <br><br>
-        </div>
-        <div class="section">
-            <h2> 3- Ordre d'enregistrement des caractères lus</h2>
-            Avec l'interpréteur de base proposé ici, les caractères lus sont enregistrés dans une structure de pile, par insertion en tête de la chaîne d'entrée.<br>
-            Il serait aussi possible de faire le choix d'une insertion en fin de la chaîne d'entrée.
-            <details>
+                    <div class="section">
+                        <h2> 5- Convention de typographie des mots</h2>
+                        Comme le montre <a href="Et%20l'%C3%A9toile%20apparait.html#Zblurg">cet exemple</a>, PLUSHIE fonctionne très bien sans convention.
+                        C'est pour la lecture humaine, et pour éviter des erreurs de syntaxe trop faciles, qu'il est recommandé de s'assurer que l'interpréteur de PLUSHIE va découper les séquences de caractères aux endroits attendus.
+                        <br>Pour cela, il faut s'assurer que la fin d'une expression ne correspond pas à un mot connu. Le plus simple est de convenir de symboles de début et de symboles de fin.
+                        <br>De façon à ce que les instructions se rapprochent le plus possible du langage courant, la typographie suivante est recommandée :
+                        les expressions à découper commencent, si possible, par une majuscule et se terminent par un caractère espace.
+                        <strong class="orange">Cela ne fait pas de l'espace un séparateur au sens usuel.</strong> L'interpréteur de base de PLUSHIE n'a aucune notion de séparateur.
+                        <details>
+                            <summary> Plus loin </summary>
+                            D'autres conventions sont possibles et peuvent être mélangées indistinctement dans un code PLUSHIE.
+                            Mais il convient d'être rigoureux, les pseudo-bugs liés au découpage des phrases par l'interpréteur de base peuvent parfois se montrer retors dans ces cas de figure.
+                        </details>
+                    </div>
+                    <div class="section">
+                        <h2> 6- Convention de nommage des pointeurs</h2>
+                        Rien n'oblige à identifier clairement par le nom qu'un mot pointe vers un autre.<br>
+                        Il est toutefois pratique pour le programmeur de choisir une convention pour désigner les pointeurs successifs et les reconnaître, surtout s'il s'agit d'intermédiaires de programmation.<br>
+                        Il existe de nombreuses possibilités. Le choix actuel s'est porté sur des symboles "<" placés à la fin du mot (mais avant l'espace de séparation si on préfère le conserver).
+                        <details>
+                            <summary> Exemple </summary>
+                            Ainsi "A<<< " désigne un pointeur de niveau 3 vers A, qui pointe donc en intermédiaire vers "A<< ", puis vers "A< " et enfin vers "A "<br>
+                            Notons que la convention inverse de prendre > placé avant le mot pointé ne fonctionne pas.
+                            En effet, dès que ">A " est un mot connu, ">>A " se fait découper en ">" et ">A " par l'interpréteur de base.
+                            Ensuite, une fois ">" isolé comme mot connu, tous les pointeurs notés en ">" se font découper.
+                        </details>
 
-                <summary> Conséquences </summary>
-                <p class="grey">
-                    <ul>
-                        <li>Pour afficher à l'endroit une chaîne de caractère, il est nécessaire de l'inverser avant.</li>
-                        <li>l'autre option demande un code de plusbase.mem un peu plus gros en petite contradiction avec l'objectif de minimalisme initial. </li>
-
-                    </ul>
-            </details>
-            <i> ☞ ce choix constitue une troisième (mais faible) </i> <span class="orange">rupture de symétrie</span><i> du langage.</i>
-            <br><br>
-        </div>
-        <div class="section">
-            <h2> 4- Convention d'interprétation des bouclages</h2>
-            En PLUSHIE, il n'existe au départ aucun caractère spécial que ce soit un séparateur ou une valeur <i>null</i>, pas plus qu'un signal de fin de liste. Toute la structure repose sur la topologie.<br>
-
-            Lorsqu'une liste est parcourue par un pointeur, cela peut se terminer en boucle infinie si l''un des éléments de la liste pointe vers un élément de la liste qui le précède (liste partiellement cyclique).
-            À l'extrême, une cellule peut voir ses adresses en tête et/ou en suite pointer sur elle-même.<br><br>
-
-
-            Il est naturel de choisir qu'une liste se termine quand la suite d'un élément pointe sur lui-même, et qu'une cascade se termine quand la tête d'un élément pointe sur lui-même (atome).
-
-            Quatre bouclages d'une cellule mémoire sur elle-même sont possibles :
-            <ul>
-                <li>
-                    La tête pointe vers sa propre adresse : cela caractérise un atome. Si la suite pointe aussi vers l'adresse, il s'agit d'un atome élémentaire.
-                    <br><br>
-
-                    <div class="section-schéma ">
-
-                        <div class="section-schéma">
-
-                            <span>Atome (nommé) </span>
-                            <div class="atome-zone">
-                                <div class="cellule">
-                                    <div class="case tete"></div>
-                                    <div class="case suite"></div>
-                                </div>
-                                <div class="zone-pointeur">
-                                    <svg class="pointeur-svg" width="3" height="40">
-                                        <circle cx="-30" cy="20" r="4" fill="#22c55e" />
-                                        <polygon points="3,20 -2,15 -2,25"
-                                                 fill="#22c55e" />
-                                        <circle cx="-72" cy="20" r="4" fill="#22c55e" />
-                                        <polyline points="-72,20,-72,50,-115,50,-115,20,-95,20"
-                                                  stroke="#22c55e"
-                                                  stroke-width="2"
-                                                  fill="none" />
-                                        <polygon points="-95,20 -100,15 -100,25"
-                                                 fill="#22c55e" />
-
-                                        <line x1="-30"
-                                              y1="20"
-                                              x2="-0"
-                                              y2="20"
-                                              stroke="#22c55e"
-                                              stroke-width="2" />
-                                    </svg>
-                                </div>
-
-                                <span>Nom de l'atome (liste chaînée) </span>
-
-                            </div>
-                        </div>
-                        <div class="section-schéma">
-
-                            <span>  Atome élémentaire </span>
-                            <div class="atome-zone">
-                                <div class="cellule">
-
-                                    <div class="case tete"></div>
-                                    <div class="case suite"></div>
-
-                                </div>
-                                <div class="zone-pointeur">
-                                    <svg class="pointeur-svg" width="3" height="20">
-                                        <circle cx="-73" cy="10" r="4" fill="#22c55e" />
-                                        <polyline points="-73,10,-73,40,-110,40,-110,10,-95,10"
-                                                  stroke="#22c55e"
-                                                  stroke-width="2"
-                                                  fill="none" />
-
-                                        <polygon points="-95,10 -100,5 -100,15"
-                                                 fill="#22c55e" />
-
-
-                                        <circle cx="-30" cy="10" r="4" fill="#22c55e" />
-                                        <polyline points="-30,10,-30,40,-65,40,-65,30"
-                                                  stroke="#22c55e"
-                                                  stroke-width="2"
-                                                  fill="none" />
-                                        <polygon points="-65,30 -70,35 -60,35"
-                                                 fill="#22c55e" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-          
-                <li>La suite pointe vers l'adresse de la suite de la cellule. Cela caractérise une fin de liste, en toute logique.</li>
-                <br>
-                <div class="section-schéma ">
-                    <div class="section-schéma ">
-                        <div class="atome-zone">
-                            <div class="cellule">
-                                <div class="case tete"></div>
-                                <div class="case suite"></div>
-                            </div>
-                            <div class="zone-pointeur">
-                                <svg class="pointeur-svg" width="3" height="40">
-                                    <circle cx="-30" cy="20" r="4" fill="#22c55e" />
-                                    <line x1="-30"
-                                          y1="20"
-                                          x2="20"
-                                          y2="20"
-                                          stroke="#22c55e"
-                                          stroke-width="2" />
-                                    <polygon points="13,20 8,15 8,25"
-                                             fill="#22c55e" />
-                                </svg>
-                            </div>
-                            <div class="cellule">
-                                <div class="case tete"></div>
-                                <div class="case suite"></div>
-                            </div>
-                            <div class="zone-pointeur">
-                                <svg class="pointeur-svg" width="3" height="40">
-                                    <circle cx="-30" cy="20" r="4" fill="#22c55e" />
-                                    <line x1="-30"
-                                          y1="20"
-                                          x2="20"
-                                          y2="20"
-                                          stroke="#22c55e"
-                                          stroke-width="2" />
-                                    <polygon points="13,20 8,15 8,25"
-                                             fill="#22c55e" />
-                                </svg>
-                            </div>
-
-                            <div class="cellule">
-
-                                <div class="case tete"></div>
-                                <div class="case suite"></div>
-
-                            </div>
-                            <div class="zone-pointeur">
-                                <svg class="pointeur-svg" width="3" height="20">
-                                    <circle cx="-30" cy="10" r="4" fill="#22c55e" />
-                                    <polyline points="-30,10,-30,40,-65,40,-65,30"
-                                              stroke="#22c55e"
-                                              stroke-width="2"
-                                              fill="none" />
-                                    <polygon points="-65,30 -70,35 -60,35"
-                                             fill="#22c55e" />
-                                </svg>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </main>
+            <aside class="sidebar">
+                <ul style="padding: 5px">
+                    <li>
+                        <a href="../index.html"> Accueil </a>
+                    </li>
+                    <li>
+                        <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                    </li>
+
+                    <li>
+                        <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                    </li>
+                    <li>
+                        <a href="../Capacités.html"> Capacités </a>
+                    </li>
+                    <li>
+                        <a href="../Fonctions Classiques.html"> Fonctions </a>
+                    </li>
+                    <li>
+                        <a href="../Comparaisons.html"> Comparaisons </a>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary><a href="../demo.html"> Démos </a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                                </li>
+                            </ul>
+                        </details>
 
 
-                <li>
-                    La suite pointe vers sa propre adresse. Cela constitue potentiellement une <span class="red"> anomalie de structure </span>et peut conduire à des comportements inattendus.
-                    Cela peut également être considéré comme la caractérisation d'un atome chiral d'un atome standard.<br>
-                </li>
-                
 
-                <div class="section-schéma ">
-                    <div class="atome-zone">
-                        <div class="cellule">
+                    <li>
+                        <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                    </li>
 
-                            <div class="case tete"></div>
-                            <div class="case suite"></div>
+                    <li>
+                        <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                    </li>
 
-                        </div>
-                        <div class="zone-pointeur">
-                            <svg class="pointeur-svg" width="3" height="20">
-                                <circle cx="-30" cy="10" r="4" fill="#22c55e" />
-                                <polyline points="-30,10,-30,40,0,40,0,10,-5,10"
-                                          stroke="#22c55e"
-                                          stroke-width="2"
-                                          fill="none" />
-                                <polygon points="-10,10 -5,5 -5,15"
-                                         fill="#22c55e" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+                    <li>
+                        <details>
+                            <summary><a href="../Questions.html"> Questions </a> </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                                </li>
 
-                <li>La tête pointe vers l'adresse de la suite de la cellule. Cela peut également être considéré comme une fin de cascade. </li>
-                <div class="section-schéma ">
-                    <div class="atome-zone">
-                        <div class="cellule">
+                                <li>
+                                    <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                                </li>
+                            </ul>
+                    </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                                </li>
+                                <li>
+                                    <a href="../downloads.html"> Downloads </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
 
-                            <div class="case tete"></div>
-                            <div class="case suite"></div>
+                    <li>
+                        <details>
+                            <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../Conventions.html"> Conventions </a>
+                                </li>
+                                <li>
+                                    <a href="../Technique.html"> Technique </a>
+                                </li>
+                                <li>
+                                    <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <a href="../Présentations.html">Présentations </a>
+                            </summary>
+                            <ul style="padding:0px;margin-left:10px">
+                                <li>
+                                    <a href="../presentationgénérale.html"> PLUSHIE </a>
+                                </li>
+                                <li> <a href="Présentations/presentation-public.html">Public</a> </li>
 
-                        </div>
-                        <div class="zone-pointeur">
-                            <svg class="pointeur-svg" width="3" height="20">
-                                <circle cx="-75" cy="10" r="4" fill="#22c55e" />
-                                <polyline points="-75,10,-75,40,0,40,0,10,-5,10"
-                                          stroke="#22c55e" stroke-width="2" fill="none" />
-                                <polygon points="-10,10 -5,5 -5,15"
-                                         fill="#22c55e" />
-                            </svg>
-                        </div>
-                    </div>
+                                <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
 
-                </div>
-        </div>
+                                <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
 
-        </ul>
-     
-        <div class="section">
-            <h2> 5- Convention de typographie des mots</h2>
-            Comme le montre <a href="Et%20l'%C3%A9toile%20apparait.html#Zblurg">cet exemple</a>, PLUSHIE fonctionne très bien sans convention.
-            C'est pour la lecture humaine, et pour éviter des erreurs de syntaxe trop faciles, qu'il est recommandé de s'assurer que l'interpréteur de PLUSHIE va découper les séquences de caractères aux endroits attendus.
-            <br>Pour cela, il faut s'assurer que la fin d'une expression ne correspond pas à un mot connu. Le plus simple est de convenir de symboles de début et de symboles de fin.
-            <br>De façon à ce que les instructions se rapprochent le plus possible du langage courant, la typographie suivante est recommandée :
-            les expressions à découper commencent, si possible, par une majuscule et se terminent par un caractère espace.
-            <strong class="orange">Cela ne fait pas de l'espace un séparateur au sens usuel.</strong> L'interpréteur de base de PLUSHIE n'a aucune notion de séparateur.
-            <details>
-                <summary> Plus loin </summary>
-                D'autres conventions sont possibles et peuvent être mélangées indistinctement dans un code PLUSHIE.
-                Mais il convient d'être rigoureux, les pseudo-bugs liés au découpage des phrases par l'interpréteur de base peuvent parfois se montrer retors dans ces cas de figure.
-            </details>
-        </div>
-            <div class="section">
-                <h2> 6- Convention de nommage des pointeurs</h2>
-                Rien n'oblige à identifier clairement par le nom qu'un mot pointe vers un autre.<br>
-                Il est toutefois pratique pour le programmeur de choisir une convention pour désigner les pointeurs successifs et les reconnaître, surtout s'il s'agit d'intermédiaires de programmation.<br>
-                Il existe de nombreuses possibilités. Le choix actuel s'est porté sur des symboles "<" placés à la fin du mot (mais avant l'espace de séparation si on préfère le conserver).
-                <details>
-                    <summary> Exemple </summary>
-                    Ainsi "A<<< " désigne un pointeur de niveau 3 vers A, qui pointe donc en intermédiaire vers "A<< ", puis vers "A< " et enfin vers "A "<br>
-                    Notons que la convention inverse de prendre > placé avant le mot pointé ne fonctionne pas.
-                    En effet, dès que ">A " est un mot connu, ">>A " se fait découper en ">" et ">A " par l'interpréteur de base.
-                    Ensuite, une fois ">" isolé comme mot connu, tous les pointeurs notés en ">" se font découper.
-                </details>
+                                <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
 
+                                <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                                <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                                <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                                <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                                <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </aside>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="section" style="text-align:center;">
-                ⏩ <a href="Technique.html">Continuer vers technique</a>
+            <div class="container">
+                <div class="section" style="text-align:center;">
+                    ⏩ <a href="Technique.html">Continuer vers technique</a>
+                </div>
             </div>
-        </div>
-    <footer>
-        <div class="barredeliens">
-            <a href="index.html">← Retour à l’accueil</a>
-            PLUSHIE — expérimentation en cours <a href="Technique.html">Technique</a>
-        </div>
-    </footer>
+            <footer>
+                <div class="barredeliens">
+                    <a href="index.html">← Retour à l’accueil</a>
+                    PLUSHIE — expérimentation en cours <a href="Technique.html">Technique</a>
+                </div>
+            </footer>
 
 </body>
 </html>

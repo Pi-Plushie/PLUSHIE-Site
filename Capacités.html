@@ -17,7 +17,10 @@
 
     <header>
         <a href="index.html"><h1>PLUSHIE </h1></a>
+        <div class="subtitle">Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</div>
+        <div class="subtitle" id="Tag line">Un langage qui apprend et se transforme</div>
         <div class="container">
+
             <div class="boutonsprofil">
                 <button class="boutonprofil" data-profile="public all" onclick="setProfile('public',this)">(✦_✦) Public</button>
                 <button class="boutonprofil" data-profile="curieux all" onclick="setProfile('curieux',this)">(?_?) Curieux</button>
@@ -33,185 +36,311 @@
         <a href="index.html" title="Retour au menu principal"><img class="logo" src="Logo Lapin PLUSHIE.png" alt="Logo PLUSHIE"></a>
 
         <h1>Ce que sait déjà faire PLUSHIE</h1>
-        <div class="subtitle" id="Tag line">Un langage qui apprend et se transforme</div>
-        <div class="subtitle">Programmation en Langage Universel Séquentiel Heuristique pour une Intelligence Évolutive</div>
+
+
     </header>
 
 
-    <div class="container">
+    <div class="layout">
+        <main class="content">
+            <div class="container">
 
-        <div class="section">
-            <p>En chargeant les programmes au format texte adaptés,<h2> PLUSHIE... </h2></p>
-            <ul>
-                <details><summary>sait déjà :</summary>
+                <div class="section">
+                    <p>En chargeant les programmes au format texte adaptés,<h2> PLUSHIE... </h2></p>
                     <ul>
-                        <li>
-                            retrouver les
-                            <a href="Fonctions classiques.html">fonctions et procédures classiques</a> en informatique :
-                        </li>
-                        <br>
-
-                        <ul>
-                            <li>Faire des sauts non conditionnels (ce bon vieux <a href="Fonctions classiques.html#goto">GOTO</a>)</li>
-                            <li>Faire des <a href="Fonctions classiques.html#test">tests</a> si a=b alors 1 sinon 2</li>
-                            <li>
-                                Faire des boucles
-                            </li>
-                            <br>
-                        </ul>
-                        <li>
-                            Faire des procédures récursives
-                        </li><br>
-                        <li>Enregistrer des macros</li>
-                        <br>
-                        <br>
-                        <li>
-                            Manipuler des listes, des piles, des chaînes de caractères :
-                            <details>
-                                <ul>
-                                    <li>trouver la fin, même pour une liste cyclique bouclée sur elle-même</li>
-                                    <li>lister tous les types de listes, même cycliques</li>
-                                    <li>extraire</li>
-                                    <li>copier tous les types de listes</li>
-                                    <li>insérer dans</li>
-                                    <li>concaténer</li>
-                                </ul>
-                            </details>
-                        </li>
-
-                        <br>
-                        </li>
-                        <li>
-                            Comparer deux listes
+                        <details>
+                            <summary>sait déjà :</summary>
                             <ul>
-                                <li>identiques</li>
-                                <li>plus grande ou plus petite</li>
-                            </ul>
-                            <br>
+                                <li>
+                                    retrouver les
+                                    <a href="Fonctions classiques.html">fonctions et procédures classiques</a> en informatique :
+                                </li>
+                                <br>
 
-                        </li>
-                        <li>
-                            Chercher dans des listes, ou utiliser des index
-                        </li>
-                        <br>
-                        <li>
-                            Gérer des tables à plusieurs entrées
-                        </li>
-                        <br>
-                        <li>
-                            Compter, même s'il se débrouille mieux avec les nombres en toutes lettres !
-                        </li>
-                        <br>
-                        <li>
-                            Effectuer les opérations arithmétiques de base :<details>
                                 <ul>
-                                    <li>addition</li>
-                                    <li>soustraction</li>
-                                    <li>multiplication (par récursion)</li>
-                                    <li>division </li>
-                                    <li>puissance (par récursion)</li>
-                                    <li>factorielle (par récursion)</li>
-                                    <li>écrire les nombres en chiffres et les chiffres en nombres</li>
+                                    <li>Faire des sauts non conditionnels (ce bon vieux <a href="Fonctions classiques.html#goto">GOTO</a>)</li>
+                                    <li>Faire des <a href="Fonctions classiques.html#test">tests</a> si a=b alors 1 sinon 2</li>
                                     <li>
-                                        convertir les nombre d'une base à une autre
+                                        Faire des boucles
                                     </li>
+                                    <br>
                                 </ul>
-                            </details><br>
-                        </li>
-                        <li> Gérer les arbres </li>
-                        <ul>
-                            <li>
-                                Lire une structure d'arbre et la charger en mémoire
-                            </li>
-                            </li>
-                            <li>   Parcourir un arbre et afficher la liste des noeuds uniques rencontrés </li>
-                            <li>   afficher graphiquement la structure d'un arbre </li>
-                        </ul>
-                        <br>
-                        <li>
-                            Savoir ce qu'il sait déjà et l'afficher
-                        </li>
-                        <br>
-                        <li>
-                            Déclarer des variables sans redéclarer celles qui existent déjà
-                        </li>
-                        <br>
-                        <li>
-                            Afficher tous les caractères
-                        </li>
-                        <br>
-                        <li>
-                            Se protéger contre certaines boucles infinies
-                        </li>
-                        <br>
-                        <li>
-                            Récupérer la mémoire utilisée devenue inutile, oublier proprement ce qui ne sert plus (les commentaires de code par exemple)
-                        </li>
-                        <br>
+                                <li>
+                                    Faire des procédures récursives
+                                </li>
+                                <br>
+                                <li>Enregistrer des macros</li>
+                                <br>
+                                <br>
+                                <li>
+                                    Manipuler des listes, des piles, des chaînes de caractères :
+                                    <details>
+                                        <ul>
+                                            <li>trouver la fin, même pour une liste cyclique bouclée sur elle-même</li>
+                                            <li>lister tous les types de listes, même cycliques</li>
+                                            <li>extraire</li>
+                                            <li>copier tous les types de listes</li>
+                                            <li>insérer dans</li>
+                                            <li>concaténer</li>
+                                        </ul>
+                                    </details>
+                                </li>
 
-                        <li>
-                            Afficher sa mémoire
-                        </li>
-                        <br>
-                        <li>
-                            Faire le listing détaillé des procédures qu'il connaît
-                        </li>
-                        <br>
-                        <li>
-                            Modifier sa chaine d'exécution initiale de manière réversible
-                        </li>
-                        <br>
+                                <br>
+                                </li>
+                                <li>
+                                    Comparer deux listes
+                                    <ul>
+                                        <li>identiques</li>
+                                        <li>plus grande ou plus petite</li>
+                                    </ul>
+                                    <br>
+
+                                </li>
+                                <li>
+                                    Chercher dans des listes, ou utiliser des index
+                                </li>
+                                <br>
+                                <li>
+                                    Gérer des tables à plusieurs entrées
+                                </li>
+                                <br>
+                                <li>
+                                    Compter, même s'il se débrouille mieux avec les nombres en toutes lettres !
+                                </li>
+                                <br>
+                                <li>
+                                    Effectuer les opérations arithmétiques de base :<details>
+                                        <ul>
+                                            <li>addition</li>
+                                            <li>soustraction</li>
+                                            <li>multiplication (par récursion)</li>
+                                            <li>division </li>
+                                            <li>puissance (par récursion)</li>
+                                            <li>factorielle (par récursion)</li>
+                                            <li>écrire les nombres en chiffres et les chiffres en nombres</li>
+                                            <li>
+                                                convertir les nombre d'une base à une autre
+                                            </li>
+                                        </ul>
+                                    </details><br>
+                                </li>
+                                <li> Gérer les arbres </li>
+                                <ul>
+                                    <li>
+                                        Lire une structure d'arbre et la charger en mémoire
+                                    </li>
+                                    </li>
+                                    <li>   Parcourir un arbre et afficher la liste des noeuds uniques rencontrés </li>
+                                    <li>   afficher graphiquement la structure d'un arbre </li>
+                                </ul>
+                                <br>
+                                <li>
+                                    Savoir ce qu'il sait déjà et l'afficher
+                                </li>
+                                <br>
+                                <li>
+                                    Déclarer des variables sans redéclarer celles qui existent déjà
+                                </li>
+                                <br>
+                                <li>
+                                    Afficher tous les caractères
+                                </li>
+                                <br>
+                                <li>
+                                    Se protéger contre certaines boucles infinies
+                                </li>
+                                <br>
+                                <li>
+                                    Récupérer la mémoire utilisée devenue inutile, oublier proprement ce qui ne sert plus (les commentaires de code par exemple)
+                                </li>
+                                <br>
+
+                                <li>
+                                    Afficher sa mémoire
+                                </li>
+                                <br>
+                                <li>
+                                    Faire le listing détaillé des procédures qu'il connaît
+                                </li>
+                                <br>
+                                <li>
+                                    Modifier sa chaine d'exécution initiale de manière réversible
+                                </li>
+                                <br>
+                            </ul>
+                        </details>
+
                     </ul>
-                </details>
-
-            </ul>
-            <h2> PLUSHIE ne sait pas encore...</h2>
-            <ul>
-                <details><summary>Faire</summary>
+                    <h2> PLUSHIE ne sait pas encore...</h2>
                     <ul>
-                        <li>
-                            une copie d'un graphe de complexité quelconque
-                        </li>
-                        <li>
-                            usage des fichiers textes au format UTF8 (et ça l'énerve !)
-                        </li>
-                        <li>
-                            vivre des processus indépendants
-                        </li>
-                        <li>
-                            une escapade en dehors de son cadre
-                        </li>
-                        <li data-profile="math,chercheur">
-                            de la réduction λ ou du λ-calcul
-                        </li>
+                        <details>
+                            <summary>Faire</summary>
+                            <ul>
+                                <li>
+                                    une copie d'un graphe de complexité quelconque
+                                </li>
+                                <li>
+                                    usage des fichiers textes au format UTF8 (et ça l'énerve !)
+                                </li>
+                                <li>
+                                    vivre des processus indépendants
+                                </li>
+                                <li>
+                                    une escapade en dehors de son cadre
+                                </li>
+                                <li data-profile="math,chercheur">
+                                    de la réduction λ ou du λ-calcul
+                                </li>
+                        </details>
+                </div>
+                <div class="section">
+                    <h2>D'autres idées de votre côté de ce que PLUSHIE pourrait faire ?</h2><br>
+                    <strong class="green">Plushie.langage (à) free.fr</strong>
+                    <br>
+                    <br>
+
+
+                </div>
+
+            </div>
+        </main>
+        <aside class="sidebar">
+            <ul style="padding: 5px">
+                <li>
+                    <a href="../index.html"> Accueil </a>
+                </li>
+                <li>
+                    <a href="../PLUSHIE en 2 min.html">  2 min </a>
+                </li>
+
+                <li>
+                    <a href="../ce qu est Plushie.html"> PLUSHIE est </a>
+                </li>
+                <li>
+                    <a href="../Capacités.html"> Capacités </a>
+                </li>
+                <li>
+                    <a href="../Fonctions Classiques.html"> Fonctions </a>
+                </li>
+                <li>
+                    <a href="../Comparaisons.html"> Comparaisons </a>
+                </li>
+
+                <li>
+                    <details>
+                        <summary><a href="../demo.html"> Démos </a></summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Et l'étoile apparait.html"> Démo Éveil </a>
+                            </li>
+                        </ul>
+                    </details>
+
+
+
+                <li>
+                    <a href="../État actuel de PLUSHIE.html"> État du projet </a>
+                </li>
+
+                <li>
+                    <a href="../Forces et faiblesses.html"> Forces et Limites </a>
+                </li>
+
+                <li>
+                    <details>
+                        <summary><a href="../Questions.html"> Questions </a> </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Pourquoi PLUSHIE.html"> Pourquoi ? </a>
+                            </li>
+
+                            <li>
+                                <a href="../Qui suis-je.html"> Quis suis-je ? </a>
+                            </li>
+                        </ul>
                 </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <a href="../Moteur PLUSHIE version web/PLUSHIE.html"> Interface </a>
+                        </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Emploi Interface.html"> Mode d'emploi </a>
+                            </li>
+                            <li>
+                                <a href="../downloads.html"> Downloads </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary><a href="../Aller plus loin.html">Plus loin</a></summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../Conventions.html"> Conventions </a>
+                            </li>
+                            <li>
+                                <a href="../Technique.html"> Technique </a>
+                            </li>
+                            <li>
+                                <a href="../Code Source.html"> Code Source <br> (à venir)</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <a href="../Présentations.html">Présentations </a>
+                        </summary>
+                        <ul style="padding:0px;margin-left:10px">
+                            <li>
+                                <a href="../presentationgénérale.html"> PLUSHIE </a>
+                            </li>
+                            <li> <a href="Présentations/presentation-public.html">Public</a> </li>
+
+                            <li> <a href="Présentations/presentation-curieux.html">Curieux</a> </li>
+
+                            <li> <a href="Présentations/presentation-chercheur.html">Chercheurs</a> </li>
+
+                            <li> <a href="Présentations/presentation-prof.html">Enseignants</a> </li>
+
+                            <li> <a href="Présentations/presentation-math.html">Matheux</a> </li>
+
+                            <li> <a href="Présentations/presentation-hacker.html">Hacker</a> </li>
+
+                            <li> <a href="Présentations/presentation-geek.html">Geek</a> </li>
+
+                            <li> <a href="Présentations/presentation-philo.html">Philosophe</a> </li>
+
+                            <li> <a href="Présentations/presentation-poete.html">Poète</a> </li>
+
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <div class="container">
+        <div class="section" style="text-align:center;">
+            <div Class="entravaux">
+                🏗
+            </div>
+            En construction, plus à venir
         </div>
-        <div class="section">
-            <h2>D'autres idées de votre côté de ce que PLUSHIE pourrait faire ?</h2><br>
-            <strong class="green">Plushie.langage (à) free.fr</strong>
-            <br>
-            <br>
-
-
-        </div>
-
     </div>
 
-        <div class="container">
-            <div class="section" style="text-align:center;">
-                <div Class="entravaux">
-                    🏗
-                </div>
-                En construction, plus à venir
-            </div>
+    <footer>
+        <div class="barredeliens">
+            <a href="index.html">← Retour à l’accueil</a>
+            PLUSHIE — expérimentation en cours
         </div>
-
-        <footer>
-            <div class="barredeliens">
-                <a href="index.html">← Retour à l’accueil</a>
-                PLUSHIE — expérimentation en cours
-            </div>
-        </footer>
+    </footer>
 
 </body>
 </html>
