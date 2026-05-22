@@ -284,13 +284,14 @@ important {
     filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
     .layout {
         flex-direction: column;
     }
 
     .sidebar {
+        margin-top:250px;
         width: 100%;
         position: relative;
 
@@ -299,6 +300,14 @@ important {
             font-weight: bold;
         }
     }
+    .boutonsprofils {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+        .boutonsprofils button {
+            font-size: 0.9em;
+            padding: 6px 10px;
+        }
 }
 .sidebar {
     width: fit-content;
