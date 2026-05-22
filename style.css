@@ -118,16 +118,18 @@ body {
 
 .boutonsprofil {
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     padding: 0px 0px;
     margin-right: 0px;
-    gap: 00px;
+    gap: 07px;
     background: #1e2940;
     background: linear-gradient( 145deg, #2b3150, #1a1f33 );
     border-radius: 8px;
 }
 
     .boutonsprofil button {
+        flex-wrap: wrap;
         margin: 10px;
         border: 1px solid #6fd3ff;
         border-radius: 8px;
@@ -284,7 +286,7 @@ important {
     filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     .layout {
         flex-direction: column;
