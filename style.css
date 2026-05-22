@@ -118,7 +118,7 @@ body {
 
 .boutonsprofil {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0px 0px;
     margin-right: 0px;
@@ -126,6 +126,7 @@ body {
     background: #1e2940;
     background: linear-gradient( 145deg, #2b3150, #1a1f33 );
     border-radius: 8px;
+    z-index: 100;
 }
 
     .boutonsprofil button {
