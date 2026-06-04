@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pi-plushie.github.io/PLUSHIE-Site/sitemap.xml
