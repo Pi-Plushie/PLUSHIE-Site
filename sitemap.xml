@@ -1,130 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://pi-plushie.github.io/PLUSHIE-Site/</loc>
+	
+		<url><loc>https://pi-plushie.github.io/PLUSHIE-Site/</loc></url>
 
-		<loc>
+		<url><loc>
 			https://index.html
-		</loc>
-		<loc>
+		</loc></url>
+		<url><loc>
 			https://PLUSHIE%20en%202%20min.html
-		</loc>
+		</loc></url>
 
-		<loc>
+		<url><loc>
 			https://ce%20qu%20est%20Plushie.html
-		</loc>
-		<loc>
+		</loc></url>
+		<url><loc>
 			https://Capacit&#x0E9;s.html
-		</loc>
-		<loc>
+		</loc></url>
+		<url><loc>
 			https://Fonctions%20Classiques.html
-		</loc>
-		<loc>
+		</loc></url>
+		<url><loc>
 			https://Comparaisons.html
-</loc>
-		<loc>	
-					https://demo.html</loc>
-				<loc>
+</loc></url>
+		<url><loc>	
+					https://demo.html</loc></url>
+				<url><loc>
 					https://Et%20l'étoile%20apparait.html
-				</loc>
+				</loc></url>
 			
 		
-			<loc>
+			<url><loc>
 				https://État%20actuel%20de%20PLUSHIE.html
-			</loc>
+			</loc></url>
 
-			<loc>
+			<url><loc>
 				https://Forces%20et%20faiblesses.html
-			</loc>
+			</loc></url>
 
-			<loc>
+			<url><loc>
 
 				https://Questions.html
-			</loc>
+			</loc></url>
 					
-						<loc>
+						<url><loc>
 							https://Pourquoi%20PLUSHIE.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Qui%20suis-je.html
-						</loc>
+						</loc></url>
 					
-			<loc>
-				https://Moteur%20PLUSHIE%20version%20web/PLUSHIE.html</loc>
+			<url><loc>
+				https://Moteur%20PLUSHIE%20version%20web/PLUSHIE.html</loc></url>
 					
-						<loc>
+						<url><loc>
 							https://Emploi%20Interface.html
-						</loc>
-						<loc>
+						</loc></url>
+						<url><loc>
 							https://Premiers%20pas.html
-						</loc>
-						<loc>
+						</loc></url>
+						<url><loc>
 							https://downloads.html
-						</loc>
+						</loc></url>
 					
 
-			<loc>
+			<url><loc>
 
-				https://Aller%20plus%20loin.html</loc>
+				https://Aller%20plus%20loin.html</loc></url>
 
 
-		<loc>
+		<url><loc>
 							https://Conventions.html
-						</loc>
-						<loc>
+						</loc></url>
+						<url><loc>
 							https://Technique.html
-						</loc>
-						<loc>
+						</loc></url>
+						<url><loc>
 							https://Code%20Source.html
-						</loc>
+						</loc></url>
 					
-			<loc>
+			<url><loc>
 				
-						https://Pr&#x0E9;sentations.html</loc>
+						https://Pr&#x0E9;sentations.html</loc></url>
 
 
-						<loc>
+						<url><loc>
 							https://presentationg&#x0E9;n&#x0E9;rale.html
-						</loc>
-						<loc>
+						</loc></url>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-public.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-curieux.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-chercheur.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-prof.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-math.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-hacker.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-geek.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-philo.html
-						</loc>
+						</loc></url>
 
-						<loc>
+						<url><loc>
 							https://Pr&#x0E9;sentations/presentation-poete.html
-						</loc>
+						</loc></url>
 
 		<lastmod>2026-05-24</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
-	</url>
+	
 </urlset>
