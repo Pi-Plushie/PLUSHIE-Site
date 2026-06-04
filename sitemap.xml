@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
-		<url><loc>https://pi-plushie.github.io/PLUSHIE-Site/pi-plushie.github.io/PLUSHIE-Site/</loc>
+		<url><loc>https://pi-plushie.github.io/PLUSHIE-Site/</loc>
 			<lastmod>2026-05-24</lastmod>
 			<changefreq>monthly</changefreq>
 			<priority>1.0</priority>
 		</url>
 
-		<url><loc>
-			https://pi-plushie.github.io/PLUSHIE-Site/index.html
-		</loc></url>
+	<url>
+		<loc>https://pi-plushie.github.io/PLUSHIE-Site/index.html</loc>
+	</url>
 		<url><loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/PLUSHIE%20en%202%20min.html
 		</loc></url>
