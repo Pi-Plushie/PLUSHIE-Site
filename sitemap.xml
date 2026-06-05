@@ -1,131 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	
-<url>
-<loc>
-	https://pi-plushie.github.io/PLUSHIE-Site/
-</loc>
-<lastmod>2026-05-24</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-	   <url><loc>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/
+		</loc>
+		<lastmod>2026-05-24</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/PLUSHIE%20en%202%20min.html
-		</loc></url>
+		</loc>
+	</url>
 
-		<url><loc>
+	<url>
+		<loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/ce%20qu%20est%20Plushie.html
-		</loc></url>
-		<url><loc>
+		</loc>
+	</url>
+	<url>
+		<loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/Capacit%C3%A9s.html
-		</loc></url>
-		<url><loc>
+		</loc>
+	</url>
+	<url>
+		<loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/Fonctions%20Classiques.html
-		</loc></url>
-		<url><loc>
+		</loc>
+	</url>
+	<url>
+		<loc>
 			https://pi-plushie.github.io/PLUSHIE-Site/Comparaisons.html
-		</loc></url>
-		<url><loc>	
-					https://pi-plushie.github.io/PLUSHIE-Site/demo.html</loc></url>
-				<url><loc>
-					https://pi-plushie.github.io/PLUSHIE-Site/Et%20l'%C3%A9toile%20apparait.html
-				</loc></url>
-			
-		
-			<url><loc>
-				https://pi-plushie.github.io/PLUSHIE-Site/%C3%89tat%20actuel%20de%20PLUSHIE.html
-			</loc></url>
-
-			<url><loc>
-				https://pi-plushie.github.io/PLUSHIE-Site/Forces%20et%20faiblesses.html
-			</loc></url>
-
-			<url><loc>
-
-				https://pi-plushie.github.io/PLUSHIE-Site/Questions.html
-			</loc></url>
-					
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pourquoi%20PLUSHIE.html
-						</loc></url>
-
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Qui%20suis-je.html
-						</loc></url>
-					
-			<url><loc>
-				https://pi-plushie.github.io/PLUSHIE-Site/Moteur%20PLUSHIE%20version%20web/PLUSHIE.html</loc></url>
-					
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Emploi%20Interface.html
-						</loc></url>
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Premiers%20pas.html
-						</loc></url>
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/downloads.html
-						</loc></url>
-					
-
-			<url><loc>
-
-				https://pi-plushie.github.io/PLUSHIE-Site/Aller%20plus%20loin.html</loc></url>
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/demo.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Et%20l'%C3%A9toile%20apparait.html
+		</loc>
+	</url>
 
 
-		<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Conventions.html
-						</loc></url>
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Technique.html
-						</loc></url>
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Code%20Source.html
-						</loc></url>
-					
-			<url><loc>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/%C3%89tat%20actuel%20de%20PLUSHIE.html
+		</loc>
+	</url>
 
-				https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations.html
-			</loc></url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Forces%20et%20faiblesses.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+
+			https://pi-plushie.github.io/PLUSHIE-Site/Questions.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pourquoi%20PLUSHIE.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Qui%20suis-je.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Moteur%20PLUSHIE%20version%20web/PLUSHIE.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Emploi%20Interface.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Premiers%20pas.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/downloads.html
+		</loc>
+	</url>
 
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentationg%C3%A9n%C3%A9rale.html
-						</loc></url>
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-public.html
-						</loc></url>
+	<url>
+		<loc>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-curieux.html
-						</loc></url>
+			https://pi-plushie.github.io/PLUSHIE-Site/Aller%20plus%20loin.html
+		</loc>
+	</url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-chercheur.html
-						</loc></url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-prof.html
-						</loc></url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Conventions.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Technique.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Code%20Source.html
+		</loc>
+	</url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-math.html
-						</loc></url>
+	<url>
+		<loc>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-hacker.html
-						</loc></url>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations.html
+		</loc>
+	</url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-geek.html
-						</loc></url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-philo.html
-						</loc></url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentationg%C3%A9n%C3%A9rale.html
+		</loc>
+	</url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-public.html
+		</loc>
+	</url>
 
-						<url><loc>
-							https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-poete.html
-						</loc></url>
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-curieux.html
+		</loc>
+	</url>
 
-		
-	
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-chercheur.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-prof.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-math.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-hacker.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-geek.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-philo.html
+		</loc>
+	</url>
+
+	<url>
+		<loc>
+			https://pi-plushie.github.io/PLUSHIE-Site/Pr%C3%A9sentations/presentation-poete.html
+		</loc>
+	</url>
+
+
+
 </urlset>
