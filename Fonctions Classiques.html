@@ -119,7 +119,7 @@
                         <p>
                             Problème : avec la double indirection qui saute un étage de pointeur, comment récupérer la première adresse vers laquelle pointe une adresse ?<br><br>
                             Les cases mémoire étant repérées par d'autres adresses mémoires avec un étage d'indirection supplémentaire, il faut effectivement penser à conserver l'adresse d'un atome nommé avant de lui affecter
-                            une valeur. Sinon il ne sera pas simplement adressable. On pourrait le retrouver dans le dictionnaire des mots connus, mais c'est' compliqué.<br>
+                            une valeur. Sinon il ne sera pas simplement adressable. On pourrait le retrouver dans le dictionnaire des mots connus, mais c'est compliqué.<br>
                             Il faut donc créer un pointeur vers l'atome et un pointeur vers ce pointeur (oui, double indirection oblige).
                             C'est pourquoi vous verrez souvent, au moins avant que la fonction <i>Déclarer</i> ne soit définie, des créations de variables de la forme :
 
@@ -154,7 +154,7 @@
                         Ainsi si Valeur2 est égale à Valeur1, la seconde copie écrase la première et on exécute Procédurea
                         et sinon on exécute Procédureb.<br><br>
 
-                        Tout informaticien détectera la faille majeure. Ce test est destructifv: les valeurs initiales pointées par Si et Alors sont écrasées.
+                        Tout informaticien détectera la faille majeure. Ce test est destructif: les valeurs initiales pointées par Si et Alors sont écrasées.
                         Il convient donc au préalable de les sauvegarder, puis de les restaurer en fin de test.(Tête< désigne toujours un pointeur vers Tête).<br>
                         Le code suivant
 
@@ -171,7 +171,7 @@
                         permet de contourner le problème.
 
                         Bien entendu, il  n'est pas question de réécrire tout ce code à chaque test. Le fichier ini.txt propose ainsi une fonction testidentique dont la syntaxe est :
-                        <pre>Si Valeur1 Égale Valeur2 Alors Procédurea Sinon ProcédurebExécuter Testidentique</pre>
+                        <pre>Si Valeur1 Égale Valeur2 Alors Procédurea Sinon Procédureb Exécuter Testidentique</pre>
                     </div>
                     <div class="section">
                         <h2>Suite</h2>
