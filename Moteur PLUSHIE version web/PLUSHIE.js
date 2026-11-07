@@ -21,9 +21,9 @@ let ValeurInputVide = 17;               //
 let Entrée = 19;                        //
 
 let Compteur = 0;                       // utilitaire de terminaison du programme PLUSHIE
-let InitialiserCompteur = 0;            //
+let InitialiserCompteur = 27;           // 
 
-let prochaineAdresseMemoire = 1;      // redéterminée au démarrage
+let prochaineAdresseMemoire = 1;        // redéterminée au démarrage
 let stop = false;                       // utilitaires d'interruption d'urgence en cas de plantage
 let executionInterrompue = false;       //
 
@@ -124,9 +124,8 @@ function RechargerVariables() {
     Exec = Pointeur;                            //
     Pointeur = Tete[Suiv(Pointeur)];
     SuiteVar = Pointeur;                        // Variable de la la fonction suite: suite prend la valeur de suiv(SuiteVar)
-    InitialiserCompteur = Suiv(Pointeur);       //
     Pointeur = Tete[Suiv(Pointeur)];            // utilitaire de fin de code PLUSHIE
-    Compteur = Suiv(Pointeur);                  //         
+    Compteur = Suiv(Pointeur);
     Pointeur = Tete[Suiv(Pointeur)];            
     ValeurInputVide = Suiv(Pointeur);           // valeur considérée comme null pour les caractères en entrée
     Pointeur = Tete[Suiv(Pointeur)];
@@ -220,8 +219,8 @@ async function charger(fichier) {
     const response = await fetch( fichier + ".txt" );
 
     if (!response.ok) {
-        throw new Error("Fichier ini introuvable");
-        setStatus("Fichier ini introuvable");
+        throw new Error("Fichier " + fichier + " introuvable");
+        setStatus("Fichier " + fichier + " introuvable");
     }
 
     const buffer = await response.arrayBuffer();
@@ -360,8 +359,9 @@ function SiMémoireSaturée() {
 
     if (prochaineAdresseMemoire > MémoireMaximum - 2) ExtrapolerMemoire() ;
 
-    Tete[Suiv(prochaineAdresseMemoire)] = Tete[MémoireLibre] ;
-    Tete[MémoireLibre] = prochaineAdresseMemoire ;
+    Tete[Suiv(prochaineAdresseMemoire)] = Tete[MémoireLibre];
+    Tete[MémoireLibre] = prochaineAdresseMemoire;
+    Tete[Tete[MémoireLibre]] = 120;
     prochaineAdresseMemoire = prochaineAdresseMemoire + 2 ;
 
  // ================================|

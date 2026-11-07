@@ -39,17 +39,15 @@ Exécuter Apprendre Instruction Saut<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retourdirect<< |
-|
-Exécuter Apprendre Instruction Noteretour<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
+Reprendre Aupointderetour |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
+|
+Pointderetour Instruction< |
 |
 Exécuter Apprendre Instruction Nouvelle<< |
 |
@@ -71,17 +69,15 @@ Exécuter Apprendre Instruction Nouvelle<< |
 |
 Exécuter Apprendre Instruction Retournouvelle<< |
 |
-Exécuter Apprendre Instruction Retourdirect<< |
-|
-Exécuter Apprendre Instruction Noteretour<< |
-|
-Exécuter Apprendre Instruction Exécuter<< |
+Reprendre Aupointderetour |
 |
 Exécuter Apprendre Instruction Exécuter<< |
 |
 Exécuter Apprendre Instruction Fonctionnouvelle<< |
 |
 Exécuter Apprendre Instruction Suitede<< |
+|
+Pointderetour Instruction< |
 |
 Exécuter Apprendre Instruction Nouvelle<< |
 |

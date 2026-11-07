@@ -23,6 +23,19 @@ body {
         transform: scale(1.05);
         opacity: 1;
     }
+.logo-gauche {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 10%;
+    height: auto;
+    z-index: 10;
+    opacity: 0.9;
+    transition: 0.1s;
+    filter: drop-shadow(0 0 5px rgba(56,189,248,0.3));
+}
 
 
 /* CONTAINER PRINCIPAL */

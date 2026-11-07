@@ -507,7 +507,27 @@ pre {
         padding-left: 20px;
         margin-top: 20px;
     }
+.language-button {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #263449;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    border: 1px solid var(--cyan);
+    box-shadow: 0 2px 5px #0003;
+    transition: all 0.2s ease;
+}
 
+    .language-button:hover {
+        color: #d7f1ff;
+        border-color: var(--cyan);
+        box-shadow: 0 0 10px rgba(80,180,255,0.35), 0 2px 8px rgba(0,0,0,0.5);
+        transform: translateY(-2px);
+        background: #38bdf8;
+        border-bottom: 3px solid #6fd3ff;
+    }
    
 
     
